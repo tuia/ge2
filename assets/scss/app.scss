@@ -1,15 +1,15 @@
 /*
+** GENERIC
+** Todos os componentes reutilizaveis
+*/
+@import 'generic/_mixin';
+
+/*
 ** DEFAULT
 ** Onde você coloca todas as suas variaveis
 */
 @import 'default';
 
-
-/*
-** GENERIC
-** Todos os componentes reutilizaveis
-*/
-@import 'generic/mixin';
 
 /*
 ** PARTIALS

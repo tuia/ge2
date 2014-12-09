@@ -1,5 +1,76 @@
 @charset "UTF-8";
 /*
+** GENERIC
+** Todos os componentes reutilizaveis
+*/
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you
+
+  Mixins available:
+    -   background-gradient     - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-size         - arguments: Width: 100%, Height: 100%
+    -   border-radius           - arguments: Radius: 5px
+    -   border-radius-separate  - arguments: Top Left: 5px, Top Left: 5px, Bottom Left: 5px, Bottom Right: 5px
+    -   box                     - arguments: Orientation: horizontal, Pack: center, Align: center
+    -   box-rgba                - arguments: R: 60, G: 3, B: 12, Opacity: 0.23, Color: #3C3C3C
+    -   box-shadow              - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   box-sizing              - arguments: Type: border-box
+    -   columns                 - arguments: Count: 3, Gap: 10
+    -   double-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Radius: 0
+    -   flex                    - arguments: Value: 1
+    -   flip                    - arguments: ScaleX: -1
+    -   font-face               - arguments: Font Family: myFont, Eot File Src: myFont.eot, Woff File Src: myFont.woff, Ttf File Src: myFont.ttf
+    -   opacity                 - arguments: Opacity: 0.5
+    -   outline radius          - arguments: Radius: 5px
+    -   resize                  - arguments: Direction: both
+    -   rotate                  - arguments: Degree: 0, M11: 0, M12: 0, M21: 0, M22: 0
+    CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+    -   text-shadow             - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   transform               - arguments: Parameters: null
+    -   transition              - arguments: What: all, Length: 1s, Easing: ease-in-out
+    -   triple-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Color Three: #000000, Radius: 0
+
+------------------------------------------------------------- */
+/* BACKGROUND GRADIENT */
+/* BACKGROUND SIZE */
+/* BORDER RADIUS */
+/* BOX */
+/* BOX RGBA */
+/* BOX SHADOW */
+/* BOX SIZING */
+/* COLUMNS */
+/* DOUBLE BORDERS */
+/* FLEX */
+/* FLIP */
+/* FONT FACE */
+/* OPACITY */
+/* OUTLINE RADIUS */
+/* RESIZE */
+/* ROTATE*/
+/* TEXT SHADOW */
+/* TRANSFORM  */
+/* TRANSITION */
+/* TRIPLE BORDERS */
+/* -------------------------------------------------------------
+
+ANIMATIONS
+
+-------------------------------------------------------------  */
+/* ROTATE */
+@keyframes anim-rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* example: animation: anim-rotate 2s infinite linear; */
+/*
 ** DEFAULT
 ** Onde você coloca todas as suas variaveis
 */
@@ -8,159 +79,93 @@
 /* Cores */
 /*Media queries breakpoints*/
 /* COMPONENTS */
-/* STYLES */
-body {
-  border: 30px solid red;
+/* dropdown-inverse */
+.dropdown-inverse {
+  background-color: #222;
+  border-color: #080808;
+}
+.dropdown-inverse > li > a {
+  color: #999;
+}
+.dropdown-inverse > li > a:hover {
+  color: #fff;
+  background-color: #000;
+}
+.dropdown-inverse > .divider {
+  background-color: #000;
 }
 
-/*
-** GENERIC
-** Todos os componentes reutilizaveis
-*/
-/* COISINHAS QUE SE REPETEM */
-/* MIXINS */
-/* COMPONENTES REUTILIZÁVEIS */
+/* vertical divider */
+.divider-vertical {
+  display: block;
+  float: left;
+  font-size: 32px;
+}
+
+/* STYLES */
 html, body {
   height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-body {
-  font-weight: lighter;
-  min-height: 100%;
-  position: relative;
-  padding: 0;
+#navigation {
+  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.75);
+  height: 70px;
 }
-
-.hidden-content {
-  display: none;
+#navigation .notifications .dropdown-toggle, #navigation .messages .dropdown-toggle {
+  padding: 22px 20px;
 }
-
-/* Helper para páginas com altura fixa */
-body.fixed-height #footer {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
+#navigation .notifications .dropdown-toggle .glyphicon, #navigation .messages .dropdown-toggle .glyphicon {
+  font-size: 20px;
 }
-@media (min-width: 1200px) {
-  body.fixed-height .navbar {
-    margin: 0;
-  }
+#navigation .dropdown-toggle {
+  padding: 8px 25px 8px 15px;
 }
-
-/* links */
-a {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: normal;
+#navigation .dropdown-toggle strong {
+  display: block;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1;
 }
-
-/* tipografia */
-h4 {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-p {
-  font-size: 1em;
-  line-height: 1.55em;
-  margin-bottom: 1.2em;
-}
-@media (min-width: 1200px) {
-  p {
-    font-size: 1.2em;
-  }
-}
-
-.txt-container {
-  padding: 2em 4em;
-}
-
-/* navbar */
-.navbar {
-  border: none;
-}
-.navbar .navbar-brand {
-  height: 72px;
-  margin-top: -2px;
-}
-.navbar .navbar-nav li > a {
-  font-weight: 700;
-}
-.navbar .navbar-nav li > a:hover {
-  text-decoration: underline;
-}
-.navbar .navbar-nav > li > a {
-  padding-top: 35px;
-}
-.navbar form {
-  margin: 18px 0;
-}
-
-/* footer */
-#footer {
-  background: white;
+#navigation .dropdown-toggle small {
   text-transform: uppercase;
   font-size: 10px;
 }
-@media (min-width: 1200px) {
-  #footer {
-    -webkit-box-sizing: border-box;
-    /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;
-    /* Firefox, other Gecko */
-    box-sizing: border-box;
-    /* Opera/IE 8+ */
-    height: 50px;
-    overflow: hidden;
-  }
+#navigation .dropdown-toggle .caret {
+  position: absolute;
+  top: 50%;
+  right: 7px;
 }
-#footer h4 {
-  margin-bottom: 0.2em;
+#navigation .divider-vertical {
+  padding: 12px 8px;
 }
-#footer .social-links a {
-  font-weight: 700;
-  padding: 15px 10px;
-  display: inline-block;
+#navigation .search-form {
+  padding: 8px;
+  margin-right: -32px;
+}
+#navigation .search-form .form-control, #navigation .search-form button {
+  background-color: transparent;
+  color: #FFFFFF;
+}
+#navigation .search-form .form-control {
+  font-style: italic;
+  border-bottom: 1px solid #999999;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  padding: 6px 32px 6px 12px;
+  /*@include box-shadow(0,0,0);
+  @include border-radius(0px);*/
+}
+#navigation .search-form button {
+  position: relative;
+  left: -40px;
 }
 
-/* carousel */
-.carousel {
-  background: white;
-  overflow: hidden;
-}
-@media (min-width: 1200px) {
-  .carousel {
-    height: calc(100% - 120px);
-  }
-}
-.carousel .item {
-  -webkit-transition: opacity 0.7s ease-in-out;
-  -moz-transition: opacity 0.7s ease-in-out;
-  -ms-transition: opacity 0.7s ease-in-out;
-  -o-transition: opacity 0.7s ease-in-out;
-  transition: opacity 0.7s ease-in-out;
-  opacity: 0;
-}
-.carousel .item img {
-  width: 100%;
-}
-.carousel .item.active {
-  opacity: 1;
-}
-.carousel .active.left, .carousel .active.right {
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.carousel .next, .carousel .prev {
-  left: 0;
-  z-index: 1;
-}
-.carousel .carousel-control {
-  z-index: 3;
+#content.map-bg {
+  background: url(../img/map-bg.png);
+  height: 100%;
 }
 
 /*

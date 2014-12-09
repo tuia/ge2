@@ -9,12 +9,105 @@
 
 
 	/*Media queries breakpoints*/
-	$screen-lg-min: 1200px;
+	$screen-lg-min: 1024px;
 
 
 /* COMPONENTS */
 
+	/* dropdown-inverse */
+	.dropdown-inverse {
+		background-color: #222;
+		border-color: #080808;
+		&>li>a{
+			color: #999;
+		&:hover{
+			color: #fff;
+			background-color: #000;
+			}
+		}
+		&>.divider {
+			background-color: #000;
+		}
+	}
+
+	/* vertical divider */
+	.divider-vertical {
+		display: block;
+		float: left;
+		font-size: 32px;
+	}
+
+
+
 /* STYLES */
-body {
-	border: 30px solid red;
+html, body {
+	height:100%;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#navigation {
+	background-color: #222222;
+	background-color: rgba(34,34,34,.75);
+	height: 70px;
+
+	.notifications, .messages {
+		.dropdown-toggle {
+			padding: 22px 20px;
+			.glyphicon {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.dropdown-toggle {
+		padding: 8px 25px 8px 15px;
+		strong {
+			display: block;
+			font-weight: 300;
+			font-size: 32px;
+			line-height: 1;
+		}
+		small {
+			text-transform: uppercase;
+			font-size: 10px;
+		}
+		.caret {
+			position: absolute;
+			top: 50%;
+			right: 7px;
+		}
+	}
+	.divider-vertical {
+		padding: 12px 8px;
+	}
+
+	.search-form {
+		padding: 8px;
+		margin-right: -32px;
+		.form-control, button {
+			background-color: transparent;
+			color: #FFFFFF;
+		}
+		.form-control {
+			font-style: italic;
+			border-bottom: 1px solid #999999;
+			border-right: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-top: 1px solid transparent;
+			padding: 6px 32px 6px 12px;
+			/*@include box-shadow(0,0,0);
+			@include border-radius(0px);*/
+		}
+		button {
+			position: relative;
+			left: -40px;
+		}
+	}
+}
+
+#content {
+	&.map-bg {
+		background: url(../img/map-bg.png);
+		height: 100%;
+	}
 }

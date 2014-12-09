@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/*
+** DEFAULT
+** Onde você coloca todas as suas variaveis
+*/
+/* GE2 - NATHALIA TUIA XAVIER */
+/* VARIAVEIS */
+/* Cores */
+/*Media queries breakpoints*/
+/* COMPONENTS */
+/* STYLES */
+body {
+  border: 30px solid red;
+}
+
+/*
+** GENERIC
+** Todos os componentes reutilizaveis
+*/
+/* COISINHAS QUE SE REPETEM */
+/* MIXINS */
+/* COMPONENTES REUTILIZÁVEIS */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-weight: lighter;
+  min-height: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.hidden-content {
+  display: none;
+}
+
+/* Helper para páginas com altura fixa */
+body.fixed-height #footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+@media (min-width: 1200px) {
+  body.fixed-height .navbar {
+    margin: 0;
+  }
+}
+
+/* links */
+a {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* tipografia */
+h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.55em;
+  margin-bottom: 1.2em;
+}
+@media (min-width: 1200px) {
+  p {
+    font-size: 1.2em;
+  }
+}
+
+.txt-container {
+  padding: 2em 4em;
+}
+
+/* navbar */
+.navbar {
+  border: none;
+}
+.navbar .navbar-brand {
+  height: 72px;
+  margin-top: -2px;
+}
+.navbar .navbar-nav li > a {
+  font-weight: 700;
+}
+.navbar .navbar-nav li > a:hover {
+  text-decoration: underline;
+}
+.navbar .navbar-nav > li > a {
+  padding-top: 35px;
+}
+.navbar form {
+  margin: 18px 0;
+}
+
+/* footer */
+#footer {
+  background: white;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+@media (min-width: 1200px) {
+  #footer {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    height: 50px;
+    overflow: hidden;
+  }
+}
+#footer h4 {
+  margin-bottom: 0.2em;
+}
+#footer .social-links a {
+  font-weight: 700;
+  padding: 15px 10px;
+  display: inline-block;
+}
+
+/* carousel */
+.carousel {
+  background: white;
+  overflow: hidden;
+}
+@media (min-width: 1200px) {
+  .carousel {
+    height: calc(100% - 120px);
+  }
+}
+.carousel .item {
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -moz-transition: opacity 0.7s ease-in-out;
+  -ms-transition: opacity 0.7s ease-in-out;
+  -o-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+  opacity: 0;
+}
+.carousel .item img {
+  width: 100%;
+}
+.carousel .item.active {
+  opacity: 1;
+}
+.carousel .active.left, .carousel .active.right {
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.carousel .next, .carousel .prev {
+  left: 0;
+  z-index: 1;
+}
+.carousel .carousel-control {
+  z-index: 3;
+}
+
+/*
+** PARTIALS
+** partial são as suas páginas
+
+@import 'partials/home';*/

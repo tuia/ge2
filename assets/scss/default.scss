@@ -166,10 +166,18 @@ html, body {
 	}
 
 	.search-form {
-		margin: 3px 0 0 0;
-		position: relative;
-		input[type="text"] {
+		background: rgba(204,204,204,.85);
+		margin: 0;
+		position: absolute;
+		right: 0;
+		padding: 8px 4px;
+		.contextual-search {
 			width: 215px;
+			-webkit-transition: width .5s ease-in-out;
+			-moz-transition: width .5s ease-in-out;
+			-ms-transition: width .5s ease-in-out;
+			-o-transition: width .5s ease-in-out;
+			transition: width .5s ease-in-out;
 		}
 		.search-options {
 			display: none;
@@ -178,10 +186,11 @@ html, body {
 			height: auto;
 			width: auto;
 			background: rgba(204,204,204,.85);
+			top: 100%;
 			.nav-tabs > li > a {
 				margin-right: 0;
 				@include border-radius(0);
-				padding: 10px 8px;
+				padding: 10px 5px;
 			}
 			.tab-pane {
 				background: rgba(204,204,204,.85);
@@ -193,7 +202,11 @@ html, body {
 					color: #666666;
 					padding: 12px 0;
 					display: inline-block;
+					text-align: right;
 				}
+			}
+			.hidden-item {
+				display: none;
 			}
 		}
 	}

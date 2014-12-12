@@ -23,7 +23,7 @@
 
     <!--/NAVIGATION-->
     <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container-fluid">
 
         <ul class="nav navbar-nav">
           <li class="dropdown">
@@ -53,14 +53,12 @@
               <small>geo-referenciado</small>
               <span class="caret"></span>
             </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+            <ul class="dropdown-menu dropdown-inverse op-list" role="menu">
+              <li><a href="#"><span class="op-badge">OP</span> Operação</a></li>
+              <li><a href="#"><span class="op-badge">CP</span> Cadastro e Projeto</a></li>
+              <li class="active"><a href="#"><span class="op-badge">GE</span> Georeferenciado</a></li>
+              <li><a href="#"><span class="op-badge">SC</span> Serviço de Campo</a></li>
+              <li><a href="#"><span class="op-badge">IQ</span> Indicadores de Qualidade</a></li>
             </ul>
           </li>
         </ul>
@@ -75,13 +73,13 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Perfil A - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+              <li><a href="#">Perfil B - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+              <li><a href="#">Perfil C - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+              <li><a href="#">Perfil D - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+              <li><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#" class="text-center">editar perfis</a></li>
             </ul>
           </li>
         </ul>
@@ -93,6 +91,7 @@
           <li class="dropdown notifications">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+              <span class="badge">99</span>
             </a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
               <li><a href="#">Action</a></li>
@@ -109,6 +108,7 @@
           <li class="dropdown messages">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+              <span class="badge">99</span>
             </a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
               <li><a href="#">Action</a></li>
@@ -150,6 +150,120 @@
       </div>
     </nav>
 
+    <!--/SUBNAV-->
+    <nav id="subnav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Análise</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Operação</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exibir</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Localizar</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Vista</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Relatório</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Janela</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="sub-divider">|</li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Legenda</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ajuda</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li><!--/.dropdown-->
+
+        </ul>
+
+        <form class="navbar-form navbar-right search-form" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control contextual-search" placeholder="buscar no mapa">
+          </div>
+          <button type="submit" class="btn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+
+          <div class="search-options" role="tabpanel">
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#dispositivo" aria-controls="dispositivo" role="tab" data-toggle="tab">Dispositivo</a></li>
+                <li><a href="#trafo" aria-controls="trafo" role="tab" data-toggle="tab">Trafo</a></li>
+                <li><a href="#se" aria-controls="se" role="tab" data-toggle="tab">SE</a></li>
+                <li><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="dispositivo">
+                  <div class="row">
+                    <div class="col-xs-2"><span class="scale-label">Escala</span></div>
+                    <div class="col-xs-10">
+                      <div class="scale-container">
+                        <input type="text" class="input-scale">
+                      </div>
+                    </div>
+                  </div><!--/.row-->
+                </div><!--/.tabpanel-->
+                <div role="tabpanel" class="tab-pane" id="trafo">
+                  ...
+                </div><!--/.tabpanel-->
+                <div role="tabpanel" class="tab-pane" id="SE">...</div><!--/.tabpanel-->
+                <div role="tabpanel" class="tab-pane" id="Veículo">...</div><!--/.tabpanel-->
+              </div>
+
+          </div><!--/.search-options-->
+        </form>
+
+      </div><!-- /.container-fluid -->
+    </nav>
+
     <!--/CONTEÚDO-->
     <div id="content" class="map-bg">
       <div class="container">
@@ -158,8 +272,33 @@
       
     </div><!--/#content-->
 
+
+
+    <!-- MODAIS -->
+
+    <!--/POSTE-->
+    <div class="modal fade" id="poste" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">fechar</span></button>
+            <a href="#" class="bookmark-button" data-toggle="tooltip" data-title="adicionar aos favoritos">adicionar aos favoritos</a>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--/SCRIPTS-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/powerange.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
   </body>
 </html>

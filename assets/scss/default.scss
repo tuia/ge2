@@ -3,9 +3,23 @@
 
 /* VARIAVEIS */
 
-	/* Cores */
+	/* THEME COLORS */
 	$background-color: #FFFFFF;
 	$theme-color: #c03538;
+	$lightbox-color: #F8f8f8;
+	$light-border: #f0f0f0;
+
+	/* TEXT COLORS */
+	$dark-text: #333333;
+	$default-text: #666666;
+	$light-text: #999999;
+	$lighter-text: #BBBBBB;
+	$inverse-text: #FFFFFF;
+
+	/* FONT-SIZES */
+	$label-size: 11px;
+	$default-text-size: 14px;
+	$paragraph-size: 16px;
 
 
 	/*RESPONSIVENESS*/
@@ -20,8 +34,64 @@
 	text-align: center;
 }
 
+.expandable-container {
+	.hidden-item {
+		display: none;
+	}
+}
+
+.badge {
+	&.badge-primary {
+		background: $theme-color;
+	}
+	&.align-top {
+		position: relative;
+		top: -10px;
+		left: -10px;
+		margin: -10px -20px 0 0;
+	}
+}
+
+
+/* TYPOGRAPHY */
+
+	.unity {
+		color: $lighter-text;
+	}
+	/* labels */
+	label, dt, th {
+		color: $light-text;
+		font-weight: 300;
+		font-size: 11px;
+		font-size: $label-size;		
+	}
+	label, dt {
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+
+	/* description list */
+	dl {
+		margin: 10px 0 15px;
+
+		dt {
+			line-height: 1.5em;
+		}
+		dd {
+			color: $default-text;
+			line-height: 1.2em;
+		}
+	}
+
 
 /* COMPONENTS */
+
+	/* buttons */
+	.btn-link {
+		&:hover {
+			background-color: darken( #FFFFFF, 5% );
+		}
+	}
 
 	/* dropdown-inverse */
 	.dropdown-inverse {
@@ -44,6 +114,62 @@
 		display: block;
 		float: left;
 		font-size: 32px;
+	}
+
+	/* condensed nav-tabs*/
+	.nav.nav-tabs.nav-condensed {
+		li {
+			& > a {
+				padding: 5px 10px;
+			}
+		}
+	}
+
+	/* tables */
+		.table {
+			margin: 10px 0 15px;
+		}
+		/* vertical table */
+		.table.table-vertical {
+			tr td, tr th {
+				border-top: 1px solid transparent;
+				border-right: 1px solid #dddddd;
+			}
+			tr td:last-child, tr th:last-child {
+				border-top: 1px solid transparent;
+				border-right: none;
+			}
+		}
+		/* ultra-condensed table */
+		.table-ultra-condensed > thead > tr > th, .table-ultra-condensed > tbody > tr > th, .table-ultra-condensed > tfoot > tr > th, .table-ultra-condensed > thead > tr > td, .table-ultra-condensed > tbody > tr > td, .table-ultra-condensed > tfoot > tr > td {
+			padding: 2px 5px;
+			font-size: 13px;
+		}
+		.table-ultra-condensed > thead > tr > th, .table-ultra-condensed > tbody > tr > th, .table-ultra-condensed > tfoot > tr > th {
+			font-size: 10px;
+		}
+		/* first-column-title */
+		.table.first-column-title {
+			tr td:first-child {
+				text-align: right;
+				font-size: 10px;
+				padding: 5px 5px 0 0;
+				color: $light-text;
+				line-height: 1.2em;
+			}
+		}
+
+
+
+	/* bordered rows */
+	.row.bordered {
+		border-bottom: 1px solid $light-border;
+		&>.col-xs-1, &>.col-xs-2, &>.col-xs-3, &>.col-xs-4, &>.col-xs-5, &>.col-xs-6, &>.col-xs-7, &>.col-xs-8, &>.col-xs-9, &>.col-xs-10, &>.col-xs-11, &>.col-xs-12 {
+			border-right: 1px solid $light-border;
+		}
+		&>.col-xs-1:last-child, &>.col-xs-2:last-child, &>.col-xs-3:last-child, &>.col-xs-4:last-child, &>.col-xs-5:last-child, &>.col-xs-6:last-child, &>.col-xs-7:last-child, &>.col-xs-8:last-child, &>.col-xs-9:last-child, &>.col-xs-10:last-child, &>.col-xs-11:last-child, &>.col-xs-12 {
+			border-right: none
+		}
 	}
 
 
@@ -157,7 +283,7 @@ html, body {
 	z-index: 999;
 	.navbar-nav > li > a {color: #666666} 
 	.dropdown-toggle {
-		font-size: 16px;
+		font-size: $paragraph-size;
 	}
 	.sub-divider {
 		color: #999;
@@ -204,9 +330,6 @@ html, body {
 					text-align: right;
 				}
 			}
-			.hidden-item {
-				display: none;
-			}
 		}
 	}
 }
@@ -215,5 +338,68 @@ html, body {
 	&.map-bg {
 		background: url(../img/map-bg.png);
 		height: 100%;
+	}
+}
+
+
+/* MODALS */
+.entity-modal {
+
+	.modal-header {
+		background: $lightbox-color;
+		padding: 5px 10px;
+		position: relative;
+		height: 30px;
+
+		.bookmark-button {
+			color: $dark-text;
+			font-size: 23px;
+			position: absolute;
+			top: -8px;
+			left: 0;
+			padding: 0 5px;
+		}
+	}
+	.modal-body {
+		padding: 0; 
+
+		.entity-header {
+			margin-bottom: 2px;
+
+			.entity-symbol {
+				background: $theme-color;
+				display: inline-block;
+				float: left;
+				text-align: center;
+				color: $inverse-text;
+				padding: 5px;
+				height: 58px;
+				width: 58px;
+				.fa {
+					font-size: 30px;
+				}
+			}
+			.entity-header-data {
+				float: left;
+				padding: 3px 10px;
+				height: 58px;
+
+				.entity-title {
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 20px;
+				}
+				.entity-coordinates {
+					font-size: 12px;
+					color: $light-text;
+				}
+			}
+		}
+		.tab-content .tab-pane {
+			padding: 0 15px;
+		}
+	}
+	.modal-footer {
+		text-align: center;
 	}
 }

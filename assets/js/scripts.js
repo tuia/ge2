@@ -2,7 +2,7 @@
 $(document).ready( function() {
 
 	//BOOTSTRAP
-	//$('#poste').modal('show');
+	$('#poste').modal('show');
 
 	//SUBNAV SEARCH BOX
 	$("#subnav .contextual-search").bind('focus', function() {

@@ -2,8 +2,8 @@
 $(document).ready( function() {
 
 	//BOOTSTRAP
-	$('#poste').modal('show');
-	$('[data-toggle="tooltip"]').tooltip({container: 'body'});
+	//$('#poste').modal('show');
+	$('[data-toggle="tooltip"]').tooltip();
 
 	//SHOW-MORE BTN (...)
 	$('.show-more').click(function() {
@@ -50,6 +50,17 @@ $(document).ready( function() {
 		$("#subnav .contextual-search").css('width', totalWidth);
 		return false
 	});
+
+
+	//ENTITY CLICK
+	$('.entity-button').click(function(event) {
+        console.log('Left Mouse button pressed.');
+	});
+	$('.entity-button').on('contextmenu', function(){
+		$(this).parents('.dropdown').find('.dropdown-menu').first().stop(true, true).slideToggle();
+	  	return false;
+	});
+
 
 	//RANGE SLIDER
 	var elem = document.querySelector('.input-scale');

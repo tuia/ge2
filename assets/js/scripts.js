@@ -3,7 +3,7 @@ $(document).ready( function() {
 
 	//BOOTSTRAP
 	//$('#poste').modal('show');
-	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="tooltip"]').tooltip({container: 'body'});
 
 	//SHOW-MORE BTN (...)
 	$('.show-more').click(function() {
@@ -82,6 +82,9 @@ $(document).ready( function() {
 	$('.entity-button').on('contextmenu', function(){
 		$(this).parents('.dropdown').find('.dropdown-menu').first().stop(true, true).slideToggle();
 	  	return false;
+	});
+	$('.map-bg').click(function(event){
+	    $('.dropdown-entity').slideUp();
 	});
 
 

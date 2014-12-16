@@ -8,6 +8,29 @@ $(document).ready( function() {
 	//SHOW-MORE BTN (...)
 	$('.show-more').click(function() {
 		$(this).parents('.expandable-container').find('.hidden-item').slideToggle();
+		return false
+	});
+
+	//USER MENU
+	$('.user-menu .user-menu-link').click( function() {
+		var target = $(this).attr('href');
+
+		$(this).parents('.nav').find('.user-menu > .dropdown-menu > li').removeClass('active');
+		$(this).parent().addClass('active');
+		$(this).parents('.user-menu').find('.user-menu-content').addClass('open');
+		$(this).parents('.user-menu').find('.tab').not(target).removeClass('open');
+		$(this).parents('.user-menu').find(target).addClass('open');
+		return false
+	});
+	$('.user-menu').on('hide.bs.dropdown', function () {
+	  $(this).find('.user-menu-content').removeClass('open');
+	  $(this).removeClass('active');
+	  $(this).parent().find('.user-menu > .dropdown-menu > li').removeClass('active');
+	});	
+	$('.user-menu-content .nav-pills > li > a').click(function (e) {
+	    e.preventDefault();
+	    $(this).tab('show');
+	    return false
 	});
 
 	//BOOKMARK BTN

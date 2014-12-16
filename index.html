@@ -126,21 +126,80 @@
           </li>
 
           <!--/USER MENU-->
-          <li class="dropdown">
+          <li class="dropdown user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               <strong>PH</strong>
               <small>Axxiom</small>
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Paulo Henrique</a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#user-menu-dispositivos" class="user-menu-link">Dispositivos e SE <span class="badge bookmark">12</span></a> </li>
+              <li><a href="#user-menu-equipes" class="user-menu-link">Equipes <span class="badge bookmark">4</span></a></li>
+              <li><a href="#user-menu-servicos" class="user-menu-link">Serviços <span class="badge bookmark">8</span></a></li>
+              <li><a href="#user-menu-manobras" class="user-menu-link">Manobras <span class="badge bookmark">6</span></a></li>
               <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#"><i class="fa fa-sign-out"></i> Sair do sistema</a></li>
             </ul>
+            <div class="user-menu-content">
+
+              <!--/DISPOSITIVOS E SE-->
+              <div id="user-menu-dispositivos" class="tab open" role="tabpanel">
+
+                <div class="tab-header">
+
+                  <span class="tab-title">Dispositivos e SE</span>
+
+                  <ul class="nav nav-pills" role="tablist">
+                    <li class="active"><a href="#dispositivos-favoritos" role="tab" data-toggle="tab" ><span class="badge bookmark">12</span> Favoritos</a></li>
+                    <li><a href="#dispositivos-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
+                  </ul>
+
+                  <a href="#dispositivos-e-se-modal" data-toggle="modal" class="btn btn-xs pull-right"><i class="fa fa-expand"></i></a>
+                </div><!--/tab-header-->
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="dispositivos-favoritos">
+                    
+                    <!--/LISTAGEM DE DISPOSITIVOS-->
+                    <div class="entity-list">
+                      <div class="entity-box">
+
+                        <div class="entity-header">
+                          <div class="entity-symbol">
+                            <i class="fa fa-plug"></i>
+                            <span>064621</span>
+                          </div>
+                          <div class="entity-header-data">
+                            <div class="entity-title">Poste <span class="badge id">064621</span></div>
+                          </div>
+                          <span class="clearfix"></span>
+                        </div><!--/.entity-header-->
+
+                      </div><!--/.entity-box-->
+                      
+                    </div><!--/.entity-list-->
+
+
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="dispositivos-ultimos">dispositivos-ultimos</div>
+                </div>
+
+              </div><!--/#user-menu-dispositivos .tabpanel-->
+
+
+              <!--/EQUIPES-->
+              <div id="user-menu-equipes" class="tab open" role="tabpanel">equipes</div><!--/#user-menu-equipes .tabpanel-->
+
+              <!--/SERVIÇOS-->
+              <div id="user-menu-servicos" class="tab open" role="tabpanel">serviços</div><!--/#user-menu-servicos .tabpanel-->
+
+              <!--/MANOBRAS-->
+              <div id="user-menu-manobras" class="tab open" role="tabpanel">manobras</div><!--/#user-menu-manobras .tabpanel-->
+            </div><!--/.user-menu-content-->
+
           </li>
         </ul>
 
@@ -284,8 +343,8 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu dropdown-inverse" role="menu">
-            <li><a href="#">poste</a></li>
-            <li><a href="#">Another action</a></li>
+            <li><a href="#"><i class="fa fa-plug"></i> poste</a></li>
+            <li><a href="#"><i class="fa fa-bolt"></i> transformador</a></li>
             <li class="dropdown-submenu">
               <a tabindex="-1" href="#">Hover me for more options</a>
               <ul class="dropdown-menu dropdown-inverse">
@@ -459,10 +518,10 @@
 
           </div><!--/.entity, modal-body-->
           <div class="modal-footer">
-            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="adicionar tarefa"><img src="assets/img/icons/task-icon.png" alt="tarefas"/> <span class="badge align-top badge-primary">0</span></button>
-            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="localizar"><img src="assets/img/icons/track-icon.png" alt="localizar"/></button>
-            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="street view"><img src="assets/img/icons/streetview-icon.png" alt="street view"/></button>
-            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="editar"><img src="assets/img/icons/edit-icon.png" alt="editar"/></button>
+            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="adicionar manobra serviço"><img src="assets/img/icons/task-icon.png" alt="tarefas"/> <span class="badge align-top badge-primary">0</span></button>
+            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="localizar no mapa"><img src="assets/img/icons/track-icon.png" alt="localizar"/></button>
+            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="ver no street view"><img src="assets/img/icons/streetview-icon.png" alt="street view"/></button>
+            <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="tooltip" data-title="adicionar placa de advertência"><img src="assets/img/icons/edit-icon.png" alt="editar"/></button>
           </div>
         </div>
       </div>

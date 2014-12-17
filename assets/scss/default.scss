@@ -254,22 +254,29 @@
 	}
 
 	/* entity */
-	.entity-list, .entity-modal {
+	.entity-list, .entity-window {
+		.entity-symbol {
+			background: $theme-color;
+			display: inline-block;
+			float: left;
+			text-align: center;
+			color: $inverse-text;
+			padding: 2px;
+			height: 40px;
+			width: 40px;
+			.fa {
+				font-size: 14px;
+			}
+			span {font-size: 10px;}
+		}
 		.entity-header {
 			margin-bottom: 2px;
-
 			.entity-symbol {
-				background: $theme-color;
-				display: inline-block;
-				float: left;
-				text-align: center;
-				color: $inverse-text;
-				padding: 5px;
 				height: 58px;
 				width: 58px;
 				.fa {
 					font-size: 30px;
-				}
+				}				
 			}
 			.entity-header-data {
 				float: left;
@@ -451,8 +458,6 @@ html, body {
 						}
 					}
 				}
-				.tab-pane {
-				}
 			 }
 		}
 	}
@@ -527,13 +532,29 @@ html, body {
 
 
 /* MODALS */
-.entity-modal {
+.entity-window {
+	z-index: 1040;
 
-	.modal-header {
+	.entity-content {
+		background-clip: padding-box;
+    	background-color: #fff;
+    	border: 1px solid rgba(0, 0, 0, 0.2);
+		width: 300px;
+		position: relative;
+		outline: 0 none;
+		@include border-radius(6px);
+		@include box-shadow(0,5px,15px,rgba(0, 0, 0, 0.5))
+	}
+
+	.entity-window-header {
 		background: $lightbox-color;
+		cursor: move;
 		padding: 3px 10px;
 		position: relative;
 		height: 25px;
+		border-bottom: 1px solid #e5e5e5;		
+		position: relative;
+		padding: 3px 10px;
 
 		.bookmark-button {
 			color: $dark-text;
@@ -544,16 +565,72 @@ html, body {
 			padding: 0 5px;
 		}
 	}
-	.modal-body {
+
+	.entity-body {
 		padding: 0; 
+		position: relative;
 		.tab-content .tab-pane {
-			padding: 0 15px;
+			padding: 5px;
 			overflow-y: auto;
+			overflow-x: hidden;
 			max-height: 320px;
 		}
+		.show-more.btn-default {
+			border: none;
+			margin-bottom: 15px;
+		}
+		.historic-table {
+			tr {
+				position: relative;
+				&> td:last-child {
+					position: absolute;
+					top: 5px;
+					right: 0;
+					width: 60px;
+					display: none;
+					border: none;
+				}
+				&:hover {
+					background: #f8f8f8;
+					td:last-child {
+						display: block;
+					}
+				}
+			}			
+			.date, .hour {color: #999999}
+			.address, .comment {color: #666666}
+			.date, .hour, .address, .comment {
+				display: block;
+				line-height: 1em;
+				margin: 0 0 5px 0;
+			}
+			.hour {font-size: 10px}
+			.comment {
+				font-size: 11px;
+				font-style: italic;
+			}
+		}
 	}
-	.modal-footer {
+	.entity-footer {
+		border-top: 1px solid #e5e5e5;
 		text-align: center;
-		padding: 10px;
+		padding: 5px 10px;
+		.entity-flags {
+			border-bottom: 1px solid #e5e5e5;
+			margin: 0 -10px;
+			padding: 3px 10px;
+			.flag {
+				background: url(../img/icons/flag-icon.png);
+				color: $inverse-text;
+				font-size: 10px;
+				font-weight: bold;
+				text-align: center;
+				width: 25px;
+				height: 29px;
+				display: inline-block;
+				margin: 5px 10px;
+				padding: 4px 0 4px 4px;
+			}
+		}
 	}
 }

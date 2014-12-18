@@ -2,8 +2,7 @@
 $(document).ready( function() {
 
 	//BOOTSTRAP
-	$('[data-toggle="tooltip"]').tooltip({container: 'body'});
-	$('.hastooltip').tooltip();
+	$('[data-toggle="tooltip"], .hastooltip').tooltip({container: 'body'});
 
 	//SHOW-MORE BTN (...)
 	$('.show-more').click(function() {
@@ -93,14 +92,18 @@ $(document).ready( function() {
 		var offset = $(this).offset();
 		var height = $(this).height();
 		var width = $(this).width();
-		var top = offset.top + height + "px";
+		var top = offset.top;
 		var right = offset.left + width + "px";
 
 		$('.entity-window').css( {
-			'position': absolute,
-		    'right': right,
-		    'top': top
+			'position': 'absolute',
+		    'left': right,
+		    'top': top,
+		    'display': 'block'
 		});
+	});
+	$('.entity-window .close').click( function() {
+		$(this).parents('.entity-window').hide();
 	});
 	/*
 	//RANGE SLIDER

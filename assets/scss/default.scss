@@ -113,6 +113,9 @@
 				position: absolute;
 				top: 5px;
 				right: 5px;
+				.dropdown {
+					display: inline-block;
+				}
 			}
 			&:hover {
 				.hover-buttons {
@@ -271,7 +274,14 @@
 
 		}
 	}
-
+	.active > a > .badge.bookmark {
+		background: #FFFFFF;
+		color: #666666;
+		&:after {
+			border-left: 9px solid #FFFFFF;
+			border-right: 9px solid #FFFFFF;
+		}
+	}
 	/* entity */
 	.entity-list, .entity-window {
 		.entity-symbol {
@@ -677,22 +687,31 @@ html, body {
 			}
 		}	
 		&.to-do {
-			.date, .hour, .address, .comment {
+			.date, .hour, .acao, .description {
 				color: red;
 				font-weight: bold;
 			}
 		}		
-		.date, .hour {color: #999999}
-		.address, .comment {color: #666666}
-		.date, .hour, .address, .comment {
+		.date, .hour, .description {color: #999999}
+		.date, .hour, .acao, .description {
 			display: block;
 			line-height: 1em;
 			margin: 0 0 5px 0;
 		}
 		.hour {font-size: 10px}
-		.comment {
+		.description {
 			font-size: 11px;
 			font-style: italic;
+			.executor {
+				font-style: normal;
+				text-transform: uppercase;
+			}
+		}
+		.acao {
+			color: #666666;
+			small {
+				color: #999999;
+			}
 		}
 	}
 }

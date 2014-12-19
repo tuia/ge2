@@ -98,13 +98,11 @@
               <span class="badge">99</span>
             </a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Notificação A</a></li>
+              <li><a href="#">Notificação B</a></li>
+              <li><a href="#">Notificação C</a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#" class="text-center">limpar notificações</a></li>
             </ul>
           </li>
 
@@ -115,13 +113,11 @@
               <span class="badge">99</span>
             </a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Mensagem A</a></li>
+              <li><a href="#">Mensagem B</a></li>
+              <li><a href="#">Mensagem C</a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#" class="text-center">ver todas mensagens</a></li>
             </ul>
           </li>
 
@@ -301,9 +297,10 @@
                 <li><a href="#se" aria-controls="se" role="tab" data-toggle="tab">SE</a></li>
                 <li><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
                 <li><a href="#" class="expand-menu">...</a></li>
-                <li class="hidden-item"><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
-                <li class="hidden-item"><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
-                <li class="hidden-item"><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
+                <li class="hidden-item"><a href="#endereco" aria-controls="veiculo" role="tab" data-toggle="tab">Endereço</a></li>
+                <li class="hidden-item"><a href="#coordenada" aria-controls="veiculo" role="tab" data-toggle="tab">Coordenada</a></li>
+                <li class="hidden-item"><a href="#gerador-movel" aria-controls="veiculo" role="tab" data-toggle="tab">Gerador móvel</a></li>
+                <li class="hidden-item"><a href="#ponto-subterraneo" aria-controls="veiculo" role="tab" data-toggle="tab">Ponto subterrâneo</a></li>
 
               </ul>
 
@@ -509,9 +506,9 @@
                     </div><!--!auto-->
 
                     <div class="entity-panefooter">
-                      <a href="#" class="flag">FA</a>
-                      <a href="#" class="flag">TR</a>
-                      <a href="#" class="flag">NO</a>
+                      <a href="#" class="flag" data-toggle="tooltip" data-title="função alterada">FA</a>
+                      <a href="#" class="flag" data-toggle="tooltip" data-title="não opere esta chave">NO</a>
+                      <a href="#" class="flag" data-toggle="tooltip" data-title="comparar fases">CF</a>
                     </div><!--/.entity-panefooter-->     
 
                   </div><!--/tabpanel #GERAL-->
@@ -523,10 +520,10 @@
                         <tr>
                           <th>finalizada&nbsp;em</th>
                           <th>equipe</th>
-                          <th>local de serviço/comentário</th>
+                          <th>ação, executor e descrição</th>
                           <th></th>
                         </tr>
-                        <tr>
+                        <tr class="hover-buttons-container">
                           <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
                           <td>
                               <a href="#" class="entity-symbol">
@@ -534,34 +531,24 @@
                                 <span>064621</span>
                               </a>
                           </td>
-                          <td><span class="address">Rua Laffayete Pimenta de Athayde</span> <p class="comment">Comentário que pode ser escrito pelos operadores</p></td>
                           <td>
+                            <span class="acao">Rua Laffayete Pimenta de Athayde <small>(D-MA01)</small></span>
+                            <p class="description"><span class="executor">cod</span> - Tarefa realizada com sucesso</p>
+                          </td>
+                          <td class="hover-buttons">
                             <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="abrir manobra em nova janela"><i class="fa fa-expand"></i></a>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar data</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar equipe</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar endereço</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar comentário</a></li>
+                              </ul>
+                            </div><!--/dropdown-->
                           </td>
                         </tr>
-                        <tr>
-                          <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
-                          <td>
-                              <div class="dropdown">
-                                <a href="#" class="entity-symbol dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                  <i class="fa fa-car"></i>
-                                  <span>064621</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="dropdownMenu1">
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-car"></i> 064621</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-cab"></i> 467298</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-bus"></i> 064621</a></li>
-                                </ul>
-                              </div>
-                          </td>
-                          <td><span class="address">Rua Muzambinho</span></td>
-                          <td>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="abrir manobra em nova janela"><i class="fa fa-expand"></i></a>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
+                        <tr class="hover-buttons-container">
                           <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
                           <td>
                               <a href="#" class="entity-symbol">
@@ -569,38 +556,21 @@
                                 <span>064621</span>
                               </a>
                           </td>
-                          <td><span class="address">Rua São Tomás</span> <p class="comment">Comentário que pode ser escrito pelos operadores</p></td>
                           <td>
+                            <span class="acao">Rua Laffayete Pimenta de Athayde <small>(D-MA01)</small></span>
+                            <p class="description"><span class="executor">cod</span> - Tarefa realizada com sucesso</p>
+                          </td>
+                          <td class="hover-buttons">
                             <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="abrir manobra em nova janela"><i class="fa fa-expand"></i></a>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
-                          <td>
-                              <a href="#" class="entity-symbol">
-                                <i class="fa fa-car"></i>
-                                <span>064621</span>
-                              </a>
-                          </td>
-                          <td><span class="address">Rua Antônio Moreira da Silva</span></td>
-                          <td>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="abrir manobra em nova janela"><i class="fa fa-expand"></i></a>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
-                          <td>
-                              <a href="#" class="entity-symbol">
-                                <i class="fa fa-car"></i>
-                                <span>064621</span>
-                              </a>
-                          </td>
-                          <td><span class="address">Rua São Judas</span> <p class="comment">Poste danificado</p></td>
-                          <td>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="abrir manobra em nova janela"><i class="fa fa-expand"></i></a>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar data</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar equipe</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar endereço</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar comentário</a></li>
+                              </ul>
+                            </div><!--/dropdown-->
                           </td>
                         </tr>
                       </table>
@@ -614,7 +584,7 @@
                           <th>local de serviço/comentário</th>
                           <th></th>
                         </tr>
-                        <tr>
+                        <tr class="hover-buttons-container">
                           <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
                           <td>
                               <a href="#" class="entity-symbol">
@@ -623,13 +593,21 @@
                               </a>
                           </td>
                           <td><span class="address">Rua São Judas</span> <p class="comment">Poste danificado</p></td>
-                          <td>
+                          <td class="hover-buttons">
                             <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="abrir manobra em nova janela"><i class="fa fa-expand"></i></a>
-                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar data</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar equipe</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar endereço</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar comentário</a></li>
+                              </ul>
+                            </div><!--/dropdown-->
                           </td>
                         </tr>
                       </table>
-                      <a href="#" class="btn btn-primary btn-block">incluir manobra</a><br>
+                      <a href="#" class="btn btn-primary btn-block btn-sm">incluir manobra</a><br>
                     </div>
                   </div><!--/tab-pane-->
                 </div>
@@ -638,10 +616,10 @@
 
             </div><!--/.entity, entity-body-->
             <div class="entity-footer">
-              <button type="button" class="btn btn-link" data-toggle="tooltip" data-title="adicionar manobra serviço"><img src="assets/img/icons/task-icon.png" alt="tarefas"/> <span class="badge align-top badge-primary">0</span></button>
+              <button type="button" class="btn btn-link" data-toggle="tooltip" data-title="nova manobra/serviço"><img src="assets/img/icons/task-icon.png" alt="nova manobra/serviço"/> <span class="badge align-top badge-primary">0</span></button>
               <button type="button" class="btn btn-link" data-toggle="tooltip" data-title="localizar no mapa"><img src="assets/img/icons/track-icon.png" alt="localizar"/></button>
               <button type="button" class="btn btn-link" data-toggle="tooltip" data-title="ver no street view"><img src="assets/img/icons/streetview-icon.png" alt="street view"/></button>
-              <button type="button" class="btn btn-link" data-toggle="tooltip" data-title="adicionar placa de advertência"><img src="assets/img/icons/add-flag-icon.png" alt="adicionar placa de advertência"/></button>
+              <button type="button" class="btn btn-link" data-toggle="tooltip" data-title="nova placa de advertência"><img src="assets/img/icons/add-flag-icon.png" alt="nova placa de advertência"/></button>
             </div>
           </div><!--/.entity-content-->
         </div><!--/.entity-window-->

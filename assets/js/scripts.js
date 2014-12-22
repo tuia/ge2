@@ -77,10 +77,11 @@ $(document).ready( function() {
 	//ENTITY CLICK
 	$('.entity-button').click(function(event) {
         console.log('Left Mouse button pressed.');
+        $(this).parents('.dropdown').find('.dropdown-menu').first().stop(true, true).slideToggle();
+	  	return false;
 	});
 	$('.entity-button').on('contextmenu', function(){
-		$(this).parents('.dropdown').find('.dropdown-menu').first().stop(true, true).slideToggle();
-	  	return false;
+		console.log('right Mouse button pressed.');
 	});
 	$('.map-bg').click(function(event){
 	    $('.dropdown-entity').slideUp();

@@ -161,6 +161,8 @@
                     
                     <!--/LISTAGEM DE DISPOSITIVOS-->
                     <div class="entity-list">
+
+
                       <div class="entity-box">
 
                         <div class="entity-header">
@@ -187,7 +189,21 @@
 
 
               <!--/EQUIPES-->
-              <div id="user-menu-equipes" class="tab open" role="tabpanel">equipes</div><!--/#user-menu-equipes .tabpanel-->
+              <div id="user-menu-equipes" class="tab open" role="tabpanel">
+
+                <div class="tab-header">
+
+                  <span class="tab-title">Equipes</span>
+
+                  <ul class="nav nav-pills" role="tablist">
+                    <li class="active"><a href="#equipes-favoritos" role="tab" data-toggle="tab" ><span class="badge bookmark">12</span> Favoritos</a></li>
+                    <li><a href="#equipes-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
+                  </ul>
+
+                  <a href="#equipes-modal" data-toggle="modal" class="btn btn-xs pull-right"><i class="fa fa-expand"></i></a>
+                </div><!--/tab-header-->
+
+              </div><!--/#user-menu-equipes .tabpanel-->
 
               <!--/SERVIÇOS-->
               <div id="user-menu-servicos" class="tab open" role="tabpanel">serviços</div><!--/#user-menu-servicos .tabpanel-->
@@ -356,8 +372,7 @@
                 </li>
                 <li><a href="#">link</a></li>
               </ul>
-              <li><a href="#">link</a></li>
-              <li><a href="#">link</a></li>
+              <li><a href="#"><i class="fa fa-bullseye"></i> estação</a></li>
             </li>
           </ul>
         </div>

@@ -6,6 +6,7 @@
 	/* THEME COLORS */
 	$background-color: #FFFFFF;
 	$theme-color: #c03538;
+	$positive-color: #00B22D;
 	$lightbox-color: #F8f8f8;
 	$light-border: #f0f0f0;
 
@@ -54,7 +55,7 @@
 	}
 	&.id {
 		background: #999999;
-		font-size: 18px;
+		font-size: 13px;
 		@include border-radius(3px);
 		.copy-button {
 			color: $inverse-text;
@@ -246,6 +247,20 @@
 			border-right: none
 		}
 	}
+	/* mini-table rows */
+	.row.mini-table {
+		margin-top: 8px;
+		padding: 0 10px;
+		font-size: 13px;
+		color: #999999;
+		&>.col-xs-1, &>.col-xs-2, &>.col-xs-3, &>.col-xs-4, &>.col-xs-5, &>.col-xs-6, &>.col-xs-7, &>.col-xs-8, &>.col-xs-9, &>.col-xs-10, &>.col-xs-11, &>.col-xs-12 {
+			border-right: 1px solid $light-border;
+			padding: 0 10px;
+		}
+		&>.col-xs-1:last-child, &>.col-xs-2:last-child, &>.col-xs-3:last-child, &>.col-xs-4:last-child, &>.col-xs-5:last-child, &>.col-xs-6:last-child, &>.col-xs-7:last-child, &>.col-xs-8:last-child, &>.col-xs-9:last-child, &>.col-xs-10:last-child, &>.col-xs-11:last-child, &>.col-xs-12 {
+			border-right: none
+		}
+	}
 
 	/* STYLED BADGES */
 	.badge {
@@ -275,17 +290,17 @@
 		}
 	}
 	.active > a > .badge.bookmark {
-		background: #FFFFFF;
-		color: #666666;
+		background: #333333;
+		color: #FFFFFF;
 		&:after {
-			border-left: 9px solid #FFFFFF;
-			border-right: 9px solid #FFFFFF;
+			border-left: 9px solid #333333;
+			border-right: 9px solid #333333;
 		}
 	}
 	/* entity */
 	.entity-list, .entity-window {
 		.entity-symbol {
-			background: $theme-color;
+			background: #999999;
 			display: inline-block;
 			float: left;
 			text-align: center;
@@ -293,10 +308,21 @@
 			padding: 2px;
 			height: 40px;
 			width: 40px;
-			.fa {
+			position: relative;
+			&>.fa {
 				font-size: 14px;
+				margin-top: 5px;
 			}
 			span {font-size: 10px;}
+			.bookmark-button {
+				position: absolute;
+				top: -3px;
+				left: 3px;
+				color: #666666;
+				i.fa {
+					font-size: 20px;
+				}
+			}
 		}
 		a.entity-symbol:hover {
 			background: darken($theme-color, 10%);
@@ -314,12 +340,9 @@
 			.entity-header-data {
 				float: left;
 				padding: 3px 10px;
-				height: 58px;
 
 				.entity-title {
 					font-weight: 700;
-					text-transform: uppercase;
-					font-size: 20px;
 				}
 				.entity-coordinates {
 					font-size: 12px;
@@ -328,6 +351,26 @@
 			}
 		}
 
+	}
+
+	.entity-list {
+		.entity-box {
+			border-bottom: 1px solid #dddddd;
+
+			&.available {
+				.entity-symbol {background: $positive-color;}
+			}
+			.entity-header {
+				.entity-header-data {
+					width: calc(100% - 58px);
+					padding: 5px;
+					.entity-title {
+						display: inline;
+						height: auto;
+					}					
+				}
+			}
+		}
 	}
 
 
@@ -452,6 +495,9 @@ html, body {
 				}
 			}
 		}
+		.user-menu-content, &>.dropdown-menu {
+			@include box-shadow(0,5px,15px,rgba(0, 0, 0, 0.5))
+		}
 		.user-menu-content {
 			background: white;
 			position: absolute;
@@ -467,8 +513,12 @@ html, body {
 
 			.tab {
 				display: none;
+				overflow-x:  hidden;
 				&.open {display: block}
-				.tab-header {
+				.tab-header {					
+					border-bottom: 1px solid #777777;
+					margin-bottom: 5px;
+
 					.tab-title {
 						font-weight: bold;
 						font-size: 15px;
@@ -478,13 +528,23 @@ html, body {
 						padding: 3px 5px;
 						text-transform: uppercase;
 					}
+
 					.nav-pills {
 						display: inline-block;
 						margin: 0 30px;
+
 						li {
+							&.active {
+								a {
+									color: #333333;
+									font-weight: bold;
+									background: transparent;
+								}
+							}
 							a {
-								padding: 5px 10px;
+								padding: 2px 8px;
 								font-size: 13px;
+
 								.badge {
 									margin: 0 3px 0;
 								}
@@ -612,6 +672,16 @@ html, body {
 	.entity-body {
 		padding: 0; 
 		position: relative;
+
+		.entity-header-data {			
+			height: 58px;
+			.entity-title {				
+				text-transform: uppercase;
+				font-size: 20px;
+				.badge.id { font-size: 18px}
+			}
+		}
+
 		.tab-content .tab-pane {
 			.auto {
 				padding: 5px;

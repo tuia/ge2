@@ -152,7 +152,7 @@
                     <li><a href="#dispositivos-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
                   </ul>
 
-                  <a href="#dispositivos-e-se-modal" data-toggle="modal" class="btn btn-xs pull-right"><i class="fa fa-expand"></i></a>
+                  <a href="#dispositivos-e-se-modal" data-toggle="modal" class="btn btn-xs btn-default pull-right"><i class="fa fa-expand"></i></a>
                 </div><!--/tab-header-->
 
                 <!-- Tab panes -->
@@ -200,7 +200,7 @@
                     <li><a href="#equipes-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
                   </ul>
 
-                  <a href="#equipes-modal" data-toggle="modal" class="btn btn-xs pull-right"><i class="fa fa-expand"></i></a>
+                  <a href="#equipes-modal" data-toggle="modal" class="btn btn-xs pull-right btn-default"><i class="fa fa-expand"></i></a>
                 </div><!--/tab-header-->
 
 
@@ -554,6 +554,36 @@
 
         <br><br><br><br><br><br><br>
 
+        <!--/ Ára em torno do local clicado quando houver mais de um ícone num espaço pequeno -->
+        <div class="click-area dropdown">
+
+          <span id="transformador0523-icon" class="click-area-icon"><i class="fa fa-bolt"></i></span>
+          <span id="poste064621-icon" class="click-area-icon"><i class="fa fa-plug"></i></span>
+          <span id="estacao0523-icon" class="click-area-icon"><i class="fa fa-bullseye"></i></span>
+
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">selecionar entidade</a>
+
+          <ul class="dropdown-menu dropdown-inverse" role="menu">
+            <li><a href="#poste064621" class="entity-icon"><i class="fa fa-plug"></i> poste 064621</a></li>
+            <li><a href="#estacao0523" class="entity-icon"><i class="fa fa-bullseye"></i> estação 0523</a></li>
+            <li class="dropdown-submenu">
+              <a tabindex="-1" href="#transformador0523"><i class="fa fa-bolt"></i> transformador 0523</a>
+              <ul class="dropdown-menu dropdown-inverse">
+                <li><a tabindex="-1" href="#">link</a></li>
+                <li class="dropdown-submenu">
+                  <a href="#">link</a>
+                  <ul class="dropdown-menu dropdown-inverse">
+                    <li><a href="#">link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/dropdown, click area-->
+
+        <br><br><br><br>
+
         <div class="dropdown">
           <a href="#" class="entity-button"><img src="assets/img/icons/entity.png" alt="tarefas"/></a>
           <ul class="dropdown-menu dropdown-inverse dropdown-entity" role="menu">
@@ -577,11 +607,14 @@
 
 
         <!--/POSTE-->
-        <div class="entity-window" id="poste">
+        <div class="entity-window" id="poste064621">
           <div class="entity-content">
             <div class="entity-window-header">
               <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
-              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">fechar</span></button>
+              <div class="pull-right">
+                <a href="#" class="btn btn-xs btn-default"><i class="fa fa-expand"></i></a>
+                <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+              </div>
             </div>
             <div class="entity-body">
 
@@ -736,6 +769,7 @@
                           <th>ação, executor e descrição</th>
                           <th></th>
                         </tr>
+
                         <tr class="hover-buttons-container">
                           <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
                           <td>
@@ -761,6 +795,40 @@
                             </div><!--/dropdown-->
                           </td>
                         </tr>
+
+                        <tr class="hover-buttons-container">
+                          <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="entity-symbol dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <i class="fa fa-car"></i>
+                                <span>064621</span>
+                              </a>
+                              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-car"></i> 064621</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-cab"></i> 467298</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-bus"></i> 064621</a></li>
+                              </ul>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="acao">Rua Laffayete Pimenta de Athayde <small>(D-MA01)</small></span>
+                            <p class="description"><span class="executor">cod</span> - Tarefa realizada com sucesso</p>
+                          </td>
+                          <td class="hover-buttons">
+                            <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="abrir manobra em nova janela"><i class="fa fa-expand"></i></a>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar data</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar equipe</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar endereço</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">copiar comentário</a></li>
+                              </ul>
+                            </div><!--/dropdown-->
+                          </td>
+                        </tr>
+
                         <tr class="hover-buttons-container">
                           <td><span class="date">03/06/14</span> <span class="hour">4:00 -16:00</span></td>
                           <td>

@@ -324,10 +324,22 @@
 				}
 			}
 		}
-		a.entity-symbol:hover {
-			background: darken($theme-color, 10%);
-			text-decoration: none;
+		
+		&.danger {
+			background: $theme-color;
 		}
+
+		a.entity-symbol {
+			&:hover {
+				background: darken(#999999, 10%);
+				text-decoration: none;
+			}
+			&.danger:hover {
+				background: darken($theme-color, 10%);
+			}
+		}
+
+
 		.entity-header {
 			margin-bottom: 2px;
 			.entity-symbol {
@@ -367,6 +379,7 @@
 					.entity-title {
 						display: inline;
 						height: auto;
+						margin-right: 10px;
 					}					
 				}
 			}
@@ -711,7 +724,11 @@ html, body {
 	.entity-footer {
 		border-top: 1px solid #e5e5e5;
 		text-align: center;
-		padding: 5px 10px;
+		padding: 5px;
+		&> .btn, &> .dropdown {
+			display: inline-block;
+		}
+		.btn-link {color: #666} 
 	}
 
 	.entity-panefooter {

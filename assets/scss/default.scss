@@ -5,10 +5,12 @@
 
 	/* THEME COLORS */
 	$background-color: #FFFFFF;
-	$theme-color: #c03538;
-	$positive-color: #00B22D;
 	$lightbox-color: #F8f8f8;
 	$light-border: #f0f0f0;
+	
+	/* CONTEXTUAL COLORS */
+	$danger-color: #c03538;
+	$success-color: #00B22D;
 
 	/* TEXT COLORS */
 	$dark-text: #333333;
@@ -45,7 +47,7 @@
 
 .badge {
 	&.badge-primary {
-		background: $theme-color;
+		background: $danger-color;
 	}
 	&.align-top {
 		position: relative;
@@ -325,9 +327,12 @@
 			}
 		}
 		
-		&.danger {
-			background: $theme-color;
+		.entity-symbol {
+			&.danger {
+				background: $danger-color;
+			}
 		}
+		
 
 		a.entity-symbol {
 			&:hover {
@@ -335,7 +340,7 @@
 				text-decoration: none;
 			}
 			&.danger:hover {
-				background: darken($theme-color, 10%);
+				background: darken($danger-color, 10%);
 			}
 		}
 
@@ -370,7 +375,7 @@
 			border-bottom: 1px solid #dddddd;
 
 			&.available {
-				.entity-symbol {background: $positive-color;}
+				.entity-symbol {background: $success-color;}
 			}
 			.entity-header {
 				.entity-header-data {
@@ -441,7 +446,7 @@ html, body {
 				font-size: 20px;
 			}
 			.badge {
-				background-color: $theme-color;
+				background-color: $danger-color;
 				position: relative;
 				top: -15px;
 				left: -15px;
@@ -762,7 +767,7 @@ html, body {
 				position: absolute;
 				top: 5px;
 				right: 0;
-				width: 60px;
+				width: 65px;
 				display: none;
 				border: none;
 			}
@@ -773,9 +778,9 @@ html, body {
 				}
 			}
 		}	
-		&.to-do {
-			.date, .hour, .acao, .description {
-				color: red;
+		&.danger {
+			.date, .hour, .address, .description {
+				color: $danger-color;
 				font-weight: bold;
 			}
 		}		

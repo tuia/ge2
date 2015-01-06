@@ -76,12 +76,12 @@ $(document).ready( function() {
 
 	//ENTITY CLICK
 	$('.entity-button').click(function(event) {
-        console.log('Left Mouse button pressed.');
         $(this).parents('.dropdown').find('.dropdown-menu').first().stop(true, true).slideToggle();
 	  	return false;
 	});
-	$('.entity-button').on('contextmenu', function(){
+	$('.entity-button').on('contextmenu', function(event) {
 		console.log('right Mouse button pressed.');
+		event.preventDefault();
 	});
 	$('.map-bg').click(function(event){
 	    $('.dropdown-entity').slideUp();
@@ -119,10 +119,5 @@ $(document).ready( function() {
 	$('.entity-window .btn-close').click( function() {
 		$(this).parents('.entity-window').slideUp('fast');
 	});
-	/*
-	//RANGE SLIDER
-	var elem = document.querySelector('.input-scale');
-	var init = new Powerange(elem, { min: 100, max: 1000, start: 100, step: 100 });
-	*/
 
 });

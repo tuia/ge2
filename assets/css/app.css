@@ -760,8 +760,9 @@ html, body {
   text-align: center;
   padding: 5px;
 }
-.entity-window .entity-footer > .btn, .entity-window .entity-footer > .dropdown {
+.entity-window .entity-footer > .btn, .entity-window .entity-footer > .dropup {
   display: inline-block;
+  position: relative;
 }
 .entity-window .entity-footer .btn-link {
   color: #666;

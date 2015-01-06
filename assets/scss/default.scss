@@ -122,9 +122,13 @@
 			}
 			&:hover {
 				.hover-buttons {
-					display: block;
+					display: block !important;
 				}
 			}			
+		}
+		/* inside tables */
+		tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
+			display: block;
 		}
 
 	/* dropdown-inverse */
@@ -431,13 +435,6 @@ html, body {
 	background-color: #222222;
 	background-color: rgba(34,34,34,.75);
 	height: 70px;
-
-	.search-form {
-		padding: 8px;
-		.form-control, button {
-			color: #FFFFFF;
-		}
-	}
 
 	.notifications, .messages {
 		.dropdown-toggle {
@@ -758,23 +755,16 @@ html, body {
 	.historic-table {
 		text-align: left;
 		tr {
-			position: relative;
-
 			td {
 				padding: 5px;
 			}
-			&> td:last-child {
-				position: absolute;
-				top: 5px;
-				right: 0;
-				width: 65px;
-				display: none;
-				border: none;
-			}
 			&:hover {
 				background: #f8f8f8;
-				td:last-child {
-					display: block;
+				& > .hover-buttons-container{
+					padding: 0;
+					.hover-buttons {
+						width: 50px
+					}
 				}
 			}
 		}	

@@ -43,6 +43,24 @@ $(document).ready( function() {
 		}
 	});
 
+	//ABSOLUTE BUTTONS INSIDE TABLES
+	$.fn.InsideTableBtns = function() {
+	    var $el;
+	    return this.each(function() {
+	    	$el = $(this);
+	    	var newDiv = $("<div />", {
+	    		"class": "innerWrapper",
+	    		"css"  : {
+	    			"height"  : $el.height(),
+	    			"width"   : "100%",
+	    			"position": "relative"
+	    		}
+	    	});
+	    	$el.wrapInner(newDiv);    
+	    });
+	};
+	$("td.hover-buttons-container").InsideTableBtns();
+
 	//SUBNAV SEARCH BOX
 	$("#subnav .contextual-search").bind('focus', function() {
 		var menu = $(this).parents('.search-form').find('.search-options');

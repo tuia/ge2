@@ -171,6 +171,11 @@ dl dd {
   display: inline-block;
 }
 .hover-buttons-container:hover .hover-buttons {
+  display: block !important;
+}
+
+/* inside tables */
+tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
   display: block;
 }
 
@@ -469,12 +474,6 @@ html, body {
   background-color: rgba(34, 34, 34, 0.75);
   height: 70px;
   /* user menu */
-}
-#navigation .search-form {
-  padding: 8px;
-}
-#navigation .search-form .form-control, #navigation .search-form button {
-  color: #FFFFFF;
 }
 #navigation .notifications .dropdown-toggle, #navigation .messages .dropdown-toggle {
   padding: 22px 0 22px 10px;
@@ -787,25 +786,17 @@ html, body {
 .entity-window .historic-table {
   text-align: left;
 }
-.entity-window .historic-table tr {
-  position: relative;
-}
 .entity-window .historic-table tr td {
   padding: 5px;
-}
-.entity-window .historic-table tr > td:last-child {
-  position: absolute;
-  top: 5px;
-  right: 0;
-  width: 65px;
-  display: none;
-  border: none;
 }
 .entity-window .historic-table tr:hover {
   background: #f8f8f8;
 }
-.entity-window .historic-table tr:hover td:last-child {
-  display: block;
+.entity-window .historic-table tr:hover > .hover-buttons-container {
+  padding: 0;
+}
+.entity-window .historic-table tr:hover > .hover-buttons-container .hover-buttons {
+  width: 50px;
 }
 .entity-window .historic-table.danger .date, .entity-window .historic-table.danger .hour, .entity-window .historic-table.danger .address, .entity-window .historic-table.danger .description {
   color: #c03538;

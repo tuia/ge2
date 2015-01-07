@@ -728,12 +728,16 @@
     <!--/CONTEÚDO-->
     <div id="content" class="map-bg">
       <div class="container">
-        
 
-        <br><br><br><br><br><br><br>
-        <a href="#" class="entity-icon"><img src="assets/img/icons/entity.png" alt=""/></a>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
 
-        <br><br><br><br><br><br><br>
+        <a href="#manobra4564321" class="entity-icon btn btn-default">janela manobra</a>
+
+        <br/><br/>
+
+        <a href="#poste064621" class="entity-icon btn btn-default">janela poste</a>
+
+        <br/><br/>
 
         <!--/ Ára em torno do local clicado quando houver mais de um ícone num espaço pequeno -->
         <div class="click-area dropdown">
@@ -768,7 +772,6 @@
 
     <!--/JANELAS-->
 
-    <!--/PONTO FÍSICO-->
     <!--/POSTE-->
     <div class="entity-window" id="poste064621">
       <div class="entity-content">
@@ -925,7 +928,7 @@
               <div role="tabpanel" class="tab-pane" id="detalhes-064621">...</div>
               <div role="tabpanel" class="tab-pane" id="manobras-064621">
                 <div class="auto">
-                  <table class="table table-ultra-condensed historic-table">
+                  <table class="table table-ultra-condensed maneuver-table">
                     <tr>
                       <th>término</th>
                       <th>equipe</th>
@@ -1025,9 +1028,10 @@
                     </tr>
                   </table>
                 </div><!--/.auto-->
+
                 <div class="entity-panefooter">
                   
-                  <table class="table table-ultra-condensed historic-table danger">
+                  <table class="table table-ultra-condensed maneuver-table danger">
                     <tr>
                       <th>término</th>
                       <th>equipe</th>
@@ -1084,10 +1088,76 @@
       </div><!--/.entity-content-->
     </div><!--/.entity-window-->
 
+
+    <!--/MANOBRA-->
+    <div class="entity-window" id="manobra4564321">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar poste"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/.entity-window-header-->
+        <div class="entity-body">
+          <div class="entity-header">
+            <div class="entity-header-data">
+              <div class="entity-title">
+                <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png">
+                Manobra
+                <span class="badge id">4564321 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>
+              </div>
+              <p class="entity-subitem">
+                <i class="fa fa-plug"></i>
+                <span class="title">Poste</span>
+                <small class="id">4564321 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></small>
+              </p>
+            </div>
+            <span class="clearfix"></span>
+          </div><!--/.entity-header-->
+
+          
+            <form class="form-box">
+
+              <div class="alert alert-danger" role="alert">Previsão de início inválida</div>
+
+              <div class="row bordered">
+                <div class="form-group col-xs-6 has-error">
+                  <label for="">previsão de início</label>
+                  <input type="text" value="" class="form-control datetimepicker input-sm">
+                </div><!--/.form-group-->
+                <div class="form-group col-xs-6">
+                  <label for="">previsão de término</label>
+                  <input type="text" value="" class="form-control datetimepicker input-sm">
+                </div><!--/.form-group-->
+                <div class="form-group col-xs-12">
+                  <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <label class="btn btn-default btn-sm active">
+                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Geração transmissão
+                    </label>
+                    <label class="btn btn-default btn-sm">
+                      <input type="radio" name="options" id="option2" autocomplete="off"> Subestação
+                    </label>
+                    <label class="btn btn-default btn-sm">
+                      <input type="radio" name="options" id="option3" autocomplete="off"> Rede de distribuição
+                    </label>
+                  </div>
+                </div><!--/.form-group-->
+                <div class="form-group col-xs-12">
+                  <input type="text" class="form-control input-sm" placeholder="Observações"/>
+                </div><!--/.form-group-->
+              </div><!--/.row-->
+            </form>
+
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->
+    </div><!--/.entity-window-->
+
     <!--/SCRIPTS-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>

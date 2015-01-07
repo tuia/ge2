@@ -45,6 +45,8 @@
 	overflow: auto;
 }
 
+.form-box {padding: 10px;}
+
 .badge {
 	&.badge-primary {
 		background: $danger-color;
@@ -67,6 +69,13 @@
 		}
 	}
 }
+small.id {
+	color: #999999;
+	padding: 2px 5px;
+	a {
+		color: #999999
+	}
+}
 
 
 /* TYPOGRAPHY */
@@ -85,6 +94,13 @@
 		text-transform: uppercase;
 		font-weight: 400;
 	}
+	label{
+		&.btn {text-transform: none;}
+	}
+	/* bootstrap validation */
+	.has-error label {color: #a94442}
+	.has-success label {color: #a94442}
+	.has-warning label {color: #8a6d3b}
 
 	/* description list */
 	dl {
@@ -101,6 +117,12 @@
 
 
 /* COMPONENTS */
+
+	/* alerts */
+	.alert {
+		margin-bottom: 10px;
+		padding: 5px 10px;
+	}
 
 	/* buttons */
 		.btn-link {
@@ -129,6 +151,13 @@
 		/* inside tables */
 		tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
 			display: block;
+		}
+		/* button groups */
+		.btn-group-justified {
+			.btn {
+				white-space: normal;
+				line-height: 1.1em;
+			}
 		}
 
 	/* dropdown-inverse */
@@ -159,7 +188,7 @@
 	}
 
 	/*dropdown submenu*/
-	.dropdown-submenu {    position: relative;}
+	.dropdown-submenu {position: relative;}
 	.dropdown-submenu>.dropdown-menu {
 	    top: 0;
 	    left: 100%;
@@ -249,7 +278,7 @@
 		&>.col-xs-1, &>.col-xs-2, &>.col-xs-3, &>.col-xs-4, &>.col-xs-5, &>.col-xs-6, &>.col-xs-7, &>.col-xs-8, &>.col-xs-9, &>.col-xs-10, &>.col-xs-11, &>.col-xs-12 {
 			border-right: 1px solid $light-border;
 		}
-		&>.col-xs-1:last-child, &>.col-xs-2:last-child, &>.col-xs-3:last-child, &>.col-xs-4:last-child, &>.col-xs-5:last-child, &>.col-xs-6:last-child, &>.col-xs-7:last-child, &>.col-xs-8:last-child, &>.col-xs-9:last-child, &>.col-xs-10:last-child, &>.col-xs-11:last-child, &>.col-xs-12 {
+		&>.col-xs-1:last-child, &>.col-xs-2:last-child, &>.col-xs-3:last-child, &>.col-xs-4:last-child, &>.col-xs-5:last-child, &>.col-xs-6:last-child, &>.col-xs-6:nth-child(2), &>.col-xs-7:last-child, &>.col-xs-8:last-child, &>.col-xs-9:last-child, &>.col-xs-10:last-child, &>.col-xs-11:last-child, &>.col-xs-12 {
 			border-right: none
 		}
 	}
@@ -371,7 +400,6 @@
 				}
 			}
 		}
-
 	}
 
 	.entity-list {
@@ -694,6 +722,14 @@ html, body {
 				font-size: 20px;
 				.badge.id { font-size: 18px}
 			}
+			.entity-subitem {
+				margin-top: 5px;
+				color: #666;
+				.title {
+					font-size: 12px;
+					text-transform: uppercase;
+				}
+			}
 		}
 
 		.tab-content .tab-pane {
@@ -732,7 +768,7 @@ html, body {
 			position: relative;
 		}
 		.btn-link {color: #666} 
-	}
+	} 
 
 	.entity-panefooter {
 		border-top: 1px solid #e5e5e5;
@@ -753,7 +789,7 @@ html, body {
 	}
 
 
-	.historic-table {
+	.maneuver-table {
 		text-align: left;
 		tr {
 			td {

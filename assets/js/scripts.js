@@ -4,6 +4,11 @@ $(document).ready( function() {
 	//BOOTSTRAP
 	$('[data-toggle="tooltip"], .hastooltip').tooltip({container: 'body'});
 
+	//DATE TIME PICKER
+	$('.datetimepicker').datetimepicker({
+	    format: 'mm-dd-yy hh:ii'
+	});
+
 	//SHOW-MORE BTN (...)
 	$('.show-more').click(function() {
 		$(this).parents('.expandable-container').find('.hidden-item').slideToggle();
@@ -121,18 +126,21 @@ $(document).ready( function() {
 	//DRAGGABLE MODAL
 	$( ".entity-window" ).draggable({ scroll: false , handle: ".entity-window-header", containment: "#content"});
 	$('.entity-icon').click( function() {
+		var target = $(this).attr('href');
 		var offset = $(this).offset();
 		var height = $(this).parents('dropdown-menu').outerHeight();
 		var width = $(this).parents('dropdown-menu').width();
 		var top = offset.top;
 		var right = offset.left + width + "px";
 
-		$('.entity-window').css( {
+		$(target).css( {
 			'position': 'absolute',
 		    'left': right,
 		    'top': top
 		});
-		$('.entity-window').slideDown('fast');
+		$(target).slideDown('fast');
+
+		return false
 	});
 	$('.entity-window .btn-close').click( function() {
 		$(this).parents('.entity-window').slideUp('fast');

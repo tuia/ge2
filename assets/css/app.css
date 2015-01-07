@@ -99,7 +99,16 @@ ANIMATIONS
 }
 
 .form-box {
-  padding: 10px;
+  padding: 0;
+}
+.form-box .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-horizontal label {
+  text-align: right;
+  text-transform: none;
 }
 
 .badge.badge-primary {
@@ -430,6 +439,12 @@ tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
 .entity-list .entity-symbol.danger, .entity-window .entity-symbol.danger {
   background: #c03538;
 }
+.entity-list .entity-symbol.idless, .entity-window .entity-symbol.idless {
+  background: transparent;
+}
+.entity-list .entity-symbol.idless > img, .entity-list .entity-symbol.idless > .fa, .entity-window .entity-symbol.idless > img, .entity-window .entity-symbol.idless > .fa {
+  margin-top: 10px;
+}
 .entity-list a.entity-symbol:hover, .entity-window a.entity-symbol:hover {
   background: gray;
   text-decoration: none;
@@ -438,7 +453,8 @@ tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
   background: #982a2c;
 }
 .entity-list .entity-header, .entity-window .entity-header {
-  margin-bottom: 2px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
 }
 .entity-list .entity-header .entity-symbol, .entity-window .entity-header .entity-symbol {
   height: 58px;
@@ -767,7 +783,7 @@ html, body {
   font-size: 18px;
 }
 .entity-window .entity-body .entity-header-data .entity-subitem {
-  margin-top: 5px;
+  margin-top: 5px 0 0;
   color: #666;
 }
 .entity-window .entity-body .entity-header-data .entity-subitem .title {

@@ -634,8 +634,15 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Localizar</a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
+            <li><a href="#"> link</a></li>
+            <li class="dropdown-submenu">
+              <a href="#">clientes</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+              </ul>
+            </li>
+          </ul>
           </li><!--/.dropdown-->
 
           <li class="dropdown">
@@ -1095,15 +1102,17 @@
         <div class="entity-window-header">
           <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
           <div class="pull-right">
-            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar poste"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar manobra"><i class="fa fa-external-link"></i></a>
             <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
           </div>
         </div><!--/.entity-window-header-->
         <div class="entity-body">
           <div class="entity-header">
+            <div class="entity-symbol idless">
+              <img alt="nova manobra" src="assets/img/icons/task-icon.png">
+            </div>
             <div class="entity-header-data">
               <div class="entity-title">
-                <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png">
                 Manobra
                 <span class="badge id">4564321 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>
               </div>
@@ -1117,39 +1126,97 @@
           </div><!--/.entity-header-->
 
           
-            <form class="form-box">
+          <form class="form-box">
 
-              <div class="alert alert-danger" role="alert">Previsão de início inválida</div>
+            <!--exemplo de alerta de validação-->
+            <!--<div class="alert alert-danger" role="alert">Previsão de início inválida</div>-->
 
-              <div class="row bordered">
-                <div class="form-group col-xs-6 has-error">
-                  <label for="">previsão de início</label>
-                  <input type="text" value="" class="form-control datetimepicker input-sm">
-                </div><!--/.form-group-->
-                <div class="form-group col-xs-6">
-                  <label for="">previsão de término</label>
-                  <input type="text" value="" class="form-control datetimepicker input-sm">
-                </div><!--/.form-group-->
-                <div class="form-group col-xs-12">
-                  <div class="btn-group btn-group-justified" data-toggle="buttons">
-                    <label class="btn btn-default btn-sm active">
-                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Geração transmissão
-                    </label>
-                    <label class="btn btn-default btn-sm">
-                      <input type="radio" name="options" id="option2" autocomplete="off"> Subestação
-                    </label>
-                    <label class="btn btn-default btn-sm">
-                      <input type="radio" name="options" id="option3" autocomplete="off"> Rede de distribuição
-                    </label>
-                  </div>
-                </div><!--/.form-group-->
-                <div class="form-group col-xs-12">
-                  <input type="text" class="form-control input-sm" placeholder="Observações"/>
-                </div><!--/.form-group-->
-              </div><!--/.row-->
-            </form>
+            <div class="row bordered">
+              <div class="form-group col-xs-6 has-error">
+                <label for="">previsão de início</label>
+                <input type="text" value="" class="form-control datetimepicker input-sm">
+              </div><!--/.form-group-->
+              <div class="form-group col-xs-6">
+                <label for="">previsão de término</label>
+                <input type="text" value="" class="form-control datetimepicker input-sm">
+              </div><!--/.form-group-->
+              <div class="form-group col-xs-12">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                  <label class="btn btn-default btn-sm active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Geração transmissão
+                  </label>
+                  <label class="btn btn-default btn-sm">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Subestação
+                  </label>
+                  <label class="btn btn-default btn-sm">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Rede de distribuição
+                  </label>
+                </div>
+              </div><!--/.form-group-->
+              <div class="form-group col-xs-12">
+                <input type="text" class="form-control input-sm" placeholder="Observações"/>
+              </div><!--/.form-group-->
+            </div><!--/.row-->
+          </form>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading btn btn-block" role="tab">
+              <a data-toggle="collapse" href="#new-maneuver-form" aria-expanded="true" aria-controls="#new-maneuver-form">adicionar item de manobra</a>
+            </div>
+            <div id="new-maneuver-form" class="panel-collapse collapse" role="tabpanel">
+              <div class="panel-body">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Ação</label>
+                    <div class="col-sm-9">
+                      <select class="form-control input-sm">
+                        <option>D-MA01 Abrir Equipamento</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                  </div><!--/form-group-->
+                  <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Operação</label>
+                    <div class="col-sm-9">
+                      <select class="form-control input-sm">
+                        <option>Com carga</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                  </div><!--/form-group-->
+                  <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Executor</label>
+                    <div class="col-sm-9">
+                      <select class="form-control input-sm">
+                        <option>COD</option>
+                        <option>2</option>
+                      </select>
+                    </div>
+                  </div><!--/form-group-->
+                  <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Previsão</label>
+                    <div class="col-sm-9">
+                      <input type="text" value="" class="form-control datetimepicker input-sm">
+                    </div>
+                  </div><!--/form-group-->
+
+                  <div class="form-group">
+                    <div class="col-xs-12">
+                      <input type="text" class="form-control input-sm" placeholder="Observações"/>
+                    </div>
+                  </div><!--/.form-group-->
+
+                  <a href="#" class="btn btn-primary btn-block">cadastrar e prosseguir para manobra</a>
+                </form>
+              </div>
+            </div>
+          </div><!--/.panel-->
 
         </div><!--/.entity-body-->
+        <div class="entity-footer">
+          <a href="#" class="btn-block btn btn-primary">cadastrar manobra</a>
+        </div>
       </div><!--/entity-content-->
     </div><!--/.entity-window-->
 

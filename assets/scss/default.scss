@@ -45,7 +45,19 @@
 	overflow: auto;
 }
 
-.form-box {padding: 10px;}
+.form-box {
+	padding: 0;
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+.form-horizontal {
+	label {
+		text-align: right;
+		text-transform: none;
+	}
+}
 
 .badge {
 	&.badge-primary {
@@ -97,6 +109,7 @@ small.id {
 	label{
 		&.btn {text-transform: none;}
 	}
+
 	/* bootstrap validation */
 	.has-error label {color: #a94442}
 	.has-success label {color: #a94442}
@@ -364,6 +377,12 @@ small.id {
 			&.danger {
 				background: $danger-color;
 			}
+			&.idless {
+				background: transparent;
+				&>img, &>.fa {
+					margin-top: 10px
+				}
+			}
 		}
 		
 
@@ -379,7 +398,8 @@ small.id {
 
 
 		.entity-header {
-			margin-bottom: 2px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #cccccc;
 			.entity-symbol {
 				height: 58px;
 				width: 58px;
@@ -723,7 +743,7 @@ html, body {
 				.badge.id { font-size: 18px}
 			}
 			.entity-subitem {
-				margin-top: 5px;
+				margin-top: 5px 0 0;
 				color: #666;
 				.title {
 					font-size: 12px;

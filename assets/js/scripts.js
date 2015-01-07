@@ -6,6 +6,7 @@ $(document).ready( function() {
 
 	//DATE TIME PICKER
 	$('.datetimepicker').datetimepicker({
+	    autoclose: true,
 	    format: 'mm-dd-yy hh:ii'
 	});
 

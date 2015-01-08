@@ -841,7 +841,8 @@ html, body {
 .messages-board .message .date {
   display: block;
   color: #999999;
-  margin-top: 5px;
+  margin-top: 3px;
+  font-size: 10px;
 }
 .messages-board .messages-status {
   text-align: center;

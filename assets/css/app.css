@@ -785,7 +785,7 @@ html, body {
 
 /* MODALS */
 .entity-window {
-  z-index: 1040;
+  z-index: 1010;
   width: 300px;
   display: none;
   margin-bottom: 50px;

@@ -65,6 +65,10 @@ small.id {
 
 /* TYPOGRAPHY */
 
+	.success {
+		color: $success-color;
+	}
+
 	.unity {
 		color: $lighter-text;
 	}
@@ -91,9 +95,9 @@ small.id {
 	/* description list */
 	dl {
 		margin: 10px 0 15px;
-
 		dt {
-			line-height: 1.5em;
+			line-height: 1.1em;
+			margin-bottom: 3px;
 		}
 		dd {
 			color: $default-text;
@@ -168,7 +172,16 @@ small.id {
 		}
 
 	/* DROPDOWN */
-
+	.dropdown {
+		.dropdown-header {
+			text-transform: uppercase;
+		}
+		&.has-title {
+			li > a {
+				text-indent: 20px;
+			}
+		}
+	}
 	/* dropdown-inverse */
 	.dropdown-inverse {
 		background-color: #222;
@@ -447,7 +460,7 @@ small.id {
 				.entity-title {
 					font-weight: 700;
 				}
-				.entity-coordinates {
+				.entity-details {
 					font-size: 12px;
 					color: $light-text;
 				}

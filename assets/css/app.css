@@ -117,6 +117,10 @@ small.id a {
 }
 
 /* TYPOGRAPHY */
+.success {
+  color: #00b22d;
+}
+
 .unity {
   color: #bbbbbb;
 }
@@ -157,7 +161,8 @@ dl {
   /* small description list */
 }
 dl dt {
-  line-height: 1.5em;
+  line-height: 1.1em;
+  margin-bottom: 3px;
 }
 dl dd {
   color: #666666;
@@ -231,6 +236,13 @@ tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
 }
 
 /* DROPDOWN */
+.dropdown .dropdown-header {
+  text-transform: uppercase;
+}
+.dropdown.has-title li > a {
+  text-indent: 20px;
+}
+
 /* dropdown-inverse */
 .dropdown-inverse {
   background-color: #222;
@@ -509,7 +521,7 @@ tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
 .entity-list .entity-header .entity-header-data .entity-title, .entity-window .entity-header .entity-header-data .entity-title {
   font-weight: 700;
 }
-.entity-list .entity-header .entity-header-data .entity-coordinates, .entity-window .entity-header .entity-header-data .entity-coordinates {
+.entity-list .entity-header .entity-header-data .entity-details, .entity-window .entity-header .entity-header-data .entity-details {
   font-size: 12px;
   color: #999999;
 }

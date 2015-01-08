@@ -45,42 +45,15 @@
 	overflow: auto;
 }
 
-.form-box {
-	padding: 0;
-	.row {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-.form-horizontal {
-	label {
-		text-align: right;
-		text-transform: none;
+.panel {
+	&.panel-sm {
+		margin-bottom: 10px;
+		.panel-body {background-color: #F5F5F5}
+		.panel-heading {padding: 6px 12px}
 	}
 }
 
-.badge {
-	&.badge-primary {
-		background: $danger-color;
-	}
-	&.align-top {
-		position: relative;
-		top: -10px;
-		left: -10px;
-		margin: -10px -20px 0 0;
-	}
-	&.id {
-		background: #999999;
-		font-size: 13px;
-		@include border-radius(3px);
-		.copy-button {
-			color: $inverse-text;
-			font-size: 12px;
-			position: relative;
-			top: -2px;
-		}
-	}
-}
+
 small.id {
 	color: #999999;
 	padding: 2px 5px;
@@ -126,6 +99,26 @@ small.id {
 			color: $default-text;
 			line-height: 1.2em;
 		}
+		/* small description list */
+		&.dl-sm {
+			margin-top: 0;
+			border-bottom: 1px solid #f5f5f5;
+			dt, dd {
+				border-top: 1px solid #f5f5f5;
+				margin-top: 0;
+				padding-top: 7px;
+				&:first-child, &:nth-child(2) {
+					border-top: none;
+					margin-top: 0;
+				}
+			}
+			dt {width: 70px}
+			dd {
+				margin-left: 70px;
+				margin-bottom: 5px;
+				padding-left: 10px;
+			}
+		}
 	}
 
 
@@ -143,6 +136,7 @@ small.id {
 				background-color: darken( #FFFFFF, 5% );
 			}
 		}
+		.btn-block {text-transform: uppercase; font-size: 12px}
 		/* show on hover buttons */
 		.hover-buttons-container {
 			position: relative;
@@ -173,6 +167,8 @@ small.id {
 			}
 		}
 
+	/* DROPDOWN */
+
 	/* dropdown-inverse */
 	.dropdown-inverse {
 		background-color: #222;
@@ -199,8 +195,7 @@ small.id {
 			}
 		}
 	}
-
-	/*dropdown submenu*/
+	/* dropdown submenu */
 	.dropdown-submenu {position: relative;}
 	.dropdown-submenu>.dropdown-menu {
 	    top: 0;
@@ -242,6 +237,21 @@ small.id {
 		font-size: 32px;
 	}
 
+	/* FORMS */
+	.form-box {
+		padding: 0;
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.form-horizontal {
+		label {
+			text-align: right;
+			text-transform: none;
+		}
+	}
+
 	/* condensed nav-tabs*/
 	.nav.nav-tabs.nav-condensed {
 		li {
@@ -251,7 +261,7 @@ small.id {
 		}
 	}
 
-	/* tables */
+	/* TABLES */
 		.table {
 			margin: 10px 0 15px;
 		}
@@ -285,6 +295,7 @@ small.id {
 			}
 		}
 
+	/* ROWS */
 	/* bordered rows */
 	.row.bordered {
 		border-bottom: 1px solid $light-border;
@@ -297,8 +308,7 @@ small.id {
 	}
 	/* mini-table rows */
 	.row.mini-table {
-		margin-top: 8px;
-		padding: 0 10px;
+		margin: 8px -5px 0;
 		font-size: 13px;
 		color: #999999;
 		&>.col-xs-1, &>.col-xs-2, &>.col-xs-3, &>.col-xs-4, &>.col-xs-5, &>.col-xs-6, &>.col-xs-7, &>.col-xs-8, &>.col-xs-9, &>.col-xs-10, &>.col-xs-11, &>.col-xs-12 {
@@ -311,7 +321,28 @@ small.id {
 	}
 
 	/* STYLED BADGES */
+	/* BADGES */
 	.badge {
+		&.badge-primary {
+			background: $danger-color;
+		}
+		&.align-top {
+			position: relative;
+			top: -10px;
+			left: -10px;
+			margin: -10px -20px 0 0;
+		}
+		&.id {
+			background: #999999;
+			font-size: 13px;
+			@include border-radius(3px);
+			.copy-button {
+				color: $inverse-text;
+				font-size: 12px;
+				position: relative;
+				top: -2px;
+			}
+		}
 		&.bookmark {
 			position: relative;
 			font-size: 10px;
@@ -345,7 +376,9 @@ small.id {
 			border-right: 9px solid #333333;
 		}
 	}
-	/* entity */
+
+
+	/* ENTITIES */
 	.entity-list, .entity-window {
 		.entity-symbol {
 			background: #999999;
@@ -701,6 +734,7 @@ html, body {
 	z-index: 1040;
 	width: 300px;
 	display: none;
+	margin-bottom: 50px;
 
 	.entity-content {
 		background-clip: padding-box;
@@ -824,36 +858,39 @@ html, body {
 					}
 				}
 			}
-		}	
-		&.danger {
-			.date, .hour, .address, .description {
-				color: $danger-color;
-				font-weight: bold;
-			}
-		}		
-		.date, .hour, .description {color: #999999}
-		.date, .hour, .acao, .description {
-			display: block;
-			line-height: 1em;
-			margin: 0 0 5px 0;
-		}
-		.hour {font-size: 10px}
-		.description {
-			font-size: 11px;
-			font-style: italic;
-			.executor {
-				font-style: normal;
-				text-transform: uppercase;
-			}
-		}
-		.acao {
-			color: #666666;
-			small {
-				color: #999999;
-			}
 		}
 	}
 }
+.maneuver-table, dl {
+	.danger, &.danger {
+		.date, .hour, .name, .description {
+			color: $danger-color;
+			font-weight: bold;
+		}
+	}		
+	.date, .hour, .description {color: #999999}
+	.date, .hour, .name, .description {
+		display: block;
+		line-height: 1em;
+		margin: 0 0 5px 0;
+	}
+	.date {margin-top: 3px}
+	.hour {font-size: 10px}
+	.description {
+		font-size: 11px;
+		font-style: italic;
+		.executor {
+			font-style: normal;
+			text-transform: uppercase;
+		}
+	}
+	.name {
+		small {
+			color: #999999;
+		}
+	}	
+}
+
 
 /* CLICKABLE AREA */
 .click-area {	

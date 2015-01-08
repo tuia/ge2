@@ -32,7 +32,7 @@ $(document).ready( function() {
 	  $(this).removeClass('active');
 	  $(this).parent().find('.user-menu > .dropdown-menu > li').removeClass('active');
 	});	
-	$('.user-menu-content .nav-pills > li > a').click(function (e) {
+	$('.user-menu-content *').click(function (e) {
 	    e.preventDefault();
 	    $(this).tab('show');
 	    return false

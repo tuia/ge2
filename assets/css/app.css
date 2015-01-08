@@ -357,6 +357,10 @@ tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
 }
 
 /* ultra-condensed table */
+.table-ultra-condensed {
+  margin: 5px 0;
+}
+
 .table-ultra-condensed > thead > tr > th, .table-ultra-condensed > tbody > tr > th, .table-ultra-condensed > tfoot > tr > th, .table-ultra-condensed > thead > tr > td, .table-ultra-condensed > tbody > tr > td, .table-ultra-condensed > tfoot > tr > td {
   padding: 2px 5px;
   font-size: 13px;
@@ -504,7 +508,7 @@ tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
   background: #982a2c;
 }
 .entity-list .entity-header, .entity-window .entity-header {
-  margin-bottom: 10px;
+  margin-bottom: -1px;
   border-bottom: 1px solid #cccccc;
 }
 .entity-list .entity-header .entity-symbol, .entity-window .entity-header .entity-symbol {
@@ -584,13 +588,13 @@ html, body {
   z-index: 1000;
   /* user menu */
 }
-#navigation .notifications .dropdown-toggle, #navigation .messages .dropdown-toggle {
+#navigation .notifications > .dropdown-toggle, #navigation .messages > .dropdown-toggle {
   padding: 22px 0 22px 10px;
 }
-#navigation .notifications .dropdown-toggle .glyphicon, #navigation .messages .dropdown-toggle .glyphicon {
+#navigation .notifications > .dropdown-toggle > .fa, #navigation .messages > .dropdown-toggle > .fa {
   font-size: 20px;
 }
-#navigation .notifications .dropdown-toggle .badge, #navigation .messages .dropdown-toggle .badge {
+#navigation .notifications > .dropdown-toggle > .badge, #navigation .messages > .dropdown-toggle > .badge {
   background-color: #c03538;
   position: relative;
   top: -15px;
@@ -870,7 +874,6 @@ html, body {
   z-index: 1010;
   width: 300px;
   display: none;
-  margin-bottom: 50px;
 }
 .entity-window .entity-content {
   background-clip: padding-box;
@@ -928,6 +931,7 @@ html, body {
 }
 .entity-window .entity-body .tab-content .tab-pane .auto {
   padding: 5px;
+  height: auto;
   max-height: 280px;
 }
 .entity-window .entity-body .tab-content .tab-pane .auto.messages-board {

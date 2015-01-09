@@ -1,1 +1,29 @@
 /* OP - NATHALIA TUIA XAVIER */
+
+/* DROPNAV */
+.dropnav-container {
+	.dropnav {
+		top: 120px;
+		z-index: 990;
+		.nav {
+			display: none;
+			&.active {display: block;}
+		}
+	}
+	#subnav {
+		position: relative;
+		.nav > li.active a {
+			position: relative;
+			&:after {			
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: calc(50% - 10px);
+				border-top: 10px solid #d4d4d4;
+				border-bottom: 10px solid transparent;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+			}
+		}		
+	}
+}

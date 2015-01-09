@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Georeferenciado 2.0</title>
+    <title>OP 2.0</title>
 
     <!-- STYLES -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -49,14 +49,14 @@
         <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <strong>GE</strong>
-              <small>geo-referenciado</small>
+              <strong>OP</strong>
+              <small>operação</small>
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-inverse op-list" role="menu">
-              <li><a href="#"><span class="op-badge">OP</span> Operação</a></li>
+              <li class="active"><a href="#"><span class="op-badge">OP</span> Operação</a></li>
               <li><a href="#"><span class="op-badge">CP</span> Cadastro e Projeto</a></li>
-              <li class="active"><a href="#"><span class="op-badge">GE</span> Georeferenciado</a></li>
+              <li><a href="#"><span class="op-badge">GE</span> Georeferenciado</a></li>
               <li><a href="#"><span class="op-badge">SC</span> Serviço de Campo</a></li>
               <li><a href="#"><span class="op-badge">IQ</span> Indicadores de Qualidade</a></li>
             </ul>
@@ -604,139 +604,58 @@
       </div>
     </nav>
 
-    <!--/SUBNAV-->
-    <nav id="subnav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+    <div class="dropnav-container">
 
-        <ul class="nav navbar-nav">
+      <!--/SUBNAV-->
+      <nav id="subnav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Análise</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
+          <ul class="nav navbar-nav">
+              <li><a href="#dropnav-atendimento" class="dropnav-toggle">Atendimento</a></li>
+              <li class="active"><a href="#dropnav-operacao" class="dropnav-toggle">Operação e Manutenção</a></li>
+              <li><a href="#dropnav-estudo" class="dropnav-toggle">Estudo de campo</a></li>
+              <li><a href="#dropnav-cadasdtros" class="dropnav-toggle">Cadastros</a></li>
+              <li><a href="#dropnav-qualidade" class="dropnav-toggle">Qualidade</a></li>
+              <li><a href="#dropnav-relatorios" class="dropnav-toggle">Relatórios</a></li>
+              <li><a href="#dropnav-integrador" class="dropnav-toggle">Integrador SW</a></li>
+              <li><a href="#dropnav-consultas" class="dropnav-toggle">Consultas</a></li>
+              <li><a href="#dropnav-admin" class="dropnav-toggle">Admnistração</a></li>
+              <li><a href="#dropnav-manuais" class="dropnav-toggle">Manuais</a></li>
+          </ul>
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Operação</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
+        </div><!-- /.container-fluid -->
+      </nav>
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exibir</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
+      <nav class="dropnav navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
 
-          <li class="dropdown has-title">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Localizar</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-              <li role="presentation" class="dropdown-header">Clientes</li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Action</a></li>
-              <li class="divider"></li>
-              <li role="presentation" class="dropdown-header">Clientes</li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
+          <ul id="dropnav-atendimento" class="nav navbar-nav">
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+          </ul><!--/.nav-->
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Vista</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
+          <ul id="dropnav-operacao" class="nav navbar-nav active">
+            <li class="active"><a href="#">Despachante</a></li>
+            <li><a href="#">Apoio</a></li>
+            <li><a href="#">Programação</a></li>
+            <li><a href="#">Manobra Programada</a></li>
+            <li><a href="#">Ortogonal</a></li>
+          </ul><!--/.nav-->
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Relatório</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
+        </div><!-- /.container-fluid -->
+      </nav><!--/dropnav-->
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Janela</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
+    </div><!--/dropnav-container-->
 
-          <li class="sub-divider">|</li>
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Legenda</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ajuda</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-            </ul>
-          </li><!--/.dropdown-->
-
-        </ul>
-
-        <form class="navbar-form search-form" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control contextual-search" placeholder="buscar no mapa">
-          </div>
-          <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-
-          <div class="search-options" role="tabpanel">
-
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
-                <li class="active"><a href="#dispositivo" aria-controls="dispositivo" role="tab" data-toggle="tab">Dispositivo</a></li>
-                <li><a href="#trafo" aria-controls="trafo" role="tab" data-toggle="tab">Trafo</a></li>
-                <li><a href="#se" aria-controls="se" role="tab" data-toggle="tab">SE</a></li>
-                <li><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
-                <li><a href="#" class="expand-menu">...</a></li>
-                <li class="hidden-item"><a href="#endereco" aria-controls="veiculo" role="tab" data-toggle="tab">Endereço</a></li>
-                <li class="hidden-item"><a href="#coordenada" aria-controls="veiculo" role="tab" data-toggle="tab">Coordenada</a></li>
-                <li class="hidden-item"><a href="#gerador-movel" aria-controls="veiculo" role="tab" data-toggle="tab">Gerador móvel</a></li>
-                <li class="hidden-item"><a href="#ponto-subterraneo" aria-controls="veiculo" role="tab" data-toggle="tab">Ponto subterrâneo</a></li>
-
-              </ul>
-
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="dispositivo">
-                  <div class="row">
-                    <div class="col-xs-2"><span class="scale-label">Escala</span></div>
-                    <div class="col-xs-10">
-                      <img src="assets/img/range.png" alt="tarefas"/>
-                       <!--/<div class="scale-container">
-                        <input type="text" class="input-scale">
-                      </div>-->
-                    </div>
-                  </div><!--/.row-->
-                </div><!--/.tabpanel-->
-                <div role="tabpanel" class="tab-pane" id="trafo">
-                  ...
-                </div><!--/.tabpanel-->
-                <div role="tabpanel" class="tab-pane" id="SE">...</div><!--/.tabpanel-->
-                <div role="tabpanel" class="tab-pane" id="Veículo">...</div><!--/.tabpanel-->
-              </div>
-
-          </div><!--/.search-options-->
-        </form>
-
-      </div><!-- /.container-fluid -->
-    </nav>
 
     <!--/CONTEÚDO-->
     <div id="content">
       <div class="container">
-      teste
+        <h1>Despacho de Serviços</h1>
       </div><!--/container-->
     </div><!--/container-->
 

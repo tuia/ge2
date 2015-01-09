@@ -582,6 +582,10 @@ html, body {
 			margin-right: -32px;
 		}
 	}
+	.container-fluid > .nav > li.active > a{
+		background: transparent;
+		font-weight: bold;
+	}
 }
 
 #navigation {
@@ -732,7 +736,10 @@ html, body {
 	background-color: rgba(204,204,204,.85);
 	top: 70px;
 	z-index: 999;
-	.navbar-nav > li > a {color: #666666} 
+	.navbar-nav > li > a {
+		color: #666666;
+		&:hover {color: #333333;}
+	} 
 	.dropdown-toggle {
 		font-size: $paragraph-size;
 	}

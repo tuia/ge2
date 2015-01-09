@@ -160,3 +160,21 @@ $(document).ready( function() {
 	});
 
 });
+
+
+// OP
+
+//DROPNAV
+$('.dropnav-toggle').click( function() {
+	var target = $(this).attr('href');
+	$(this).parents('.nav').find('li').removeClass('active');
+	$(this).parent().addClass('active');
+	$(this).parents('.dropnav-container').find('.dropnav .nav').removeClass('active');
+	$(this).parents('.dropnav-container').find(target).addClass('active');
+});
+
+
+
+
+
+

@@ -49,6 +49,18 @@ $(document).ready( function() {
 		}
 	});
 
+	//EDITABLE FIELDS
+	$('.editable-field-btn').click( function() {
+		$(this).parents('.editable-field-container').find('.editable-field-form').slideDown();
+		$(this).parents('.editable-field-container').find('.editable-value').slideUp();
+		$(this).parents('.editable-field-container').addClass('editing-field');
+	});
+	$('.editable-field-container .cancel, .editable-field-container .save').click( function() {
+		$(this).parents('.editable-field-container').find('.editable-field-form').slideUp();
+		$(this).parents('.editable-field-container').find('.editable-value').slideDown();
+		$(this).parents('.editable-field-container').removeClass('editing-field');
+	});
+
 	//ABSOLUTE BUTTONS INSIDE TABLES
 	$.fn.InsideTableBtns = function() {
 	    var $el;

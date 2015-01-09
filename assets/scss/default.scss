@@ -140,7 +140,9 @@ small.id {
 				background-color: darken( #FFFFFF, 5% );
 			}
 		}
-		.btn-block {text-transform: uppercase; font-size: 12px}
+		.btn-block {
+			text-transform: uppercase;
+		}
 		/* show on hover buttons */
 		.hover-buttons-container {
 			position: relative;
@@ -157,7 +159,14 @@ small.id {
 				.hover-buttons {
 					display: block !important;
 				}
-			}			
+			}
+			&.editing-field	{
+				&:hover {
+					.hover-buttons {
+						display: none !important;
+					}
+				}
+			}
 		}
 		/* inside tables */
 		tr:hover > .hover-buttons-container .innerWrapper .hover-buttons {
@@ -264,6 +273,9 @@ small.id {
 			text-transform: none;
 		}
 	}
+	.form-single {
+		padding: 30px 10px;
+	}
 
 	/* condensed nav-tabs*/
 	.nav.nav-tabs.nav-condensed {
@@ -277,6 +289,9 @@ small.id {
 	/* TABLES */
 		.table {
 			margin: 10px 0 15px;
+			tr th {
+				text-transform: uppercase;
+			}
 		}
 		/* vertical table */
 		.table.table-vertical {
@@ -390,6 +405,22 @@ small.id {
 		&:after {
 			border-left: 9px solid #333333;
 			border-right: 9px solid #333333;
+		}
+	}
+
+	/* EDITABLE FIELDS */
+	.editable-field-container {
+		.editable-field-form {
+			display: none;
+			margin: 10px 0 15px;
+			.editable-field {
+				margin: 0 0 5px;
+			}
+			textarea {
+				resize: vertical;
+				max-height: 130px;
+				min-height: 50px;
+			}
 		}
 	}
 
@@ -951,6 +982,9 @@ html, body {
 		tr {
 			td {
 				padding: 5px;
+				&:first-child {
+					text-align: right;
+				}
 			}
 			&:hover {
 				background: #f8f8f8;

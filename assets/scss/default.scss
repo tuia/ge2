@@ -8,9 +8,16 @@
 	$lightbox-color: #F8f8f8;
 	$light-border: #f0f0f0;
 	
-	/* CONTEXTUAL COLORS */
+	/* VALIDATION COLORS */
 	$danger-color: #c03538;
 	$success-color: #00B22D;
+
+	/* STATUS COLORS */
+	$default: #999999;
+	$pendente: #FF7F00;
+	$designado: #238C00;
+	$acionado: #00B2B2;	
+	$finalizado: #FF2626;
 
 	/* TEXT COLORS */
 	$dark-text: #333333;
@@ -428,7 +435,7 @@ small.id {
 	/* ENTITIES */
 	.entity-list, .entity-window {
 		.entity-symbol {
-			background: #999999;
+			background: $default;
 			display: inline-block;
 			float: left;
 			text-align: center;
@@ -437,6 +444,24 @@ small.id {
 			height: 40px;
 			width: 40px;
 			position: relative;
+
+			&.pendente {
+				background: $pendente;
+				&:hover { background: darken($pendente, 10%) }
+			}
+			&.designado {
+				background: $designado;
+				&:hover { background: darken($designado, 10%) }
+			}
+			&.acionado {
+				background: $acionado;
+				&:hover { background: darken($acionado, 10%) }
+			}
+			&.finalizado {
+				background: $finalizado;
+				&:hover { background: darken($finalizado, 10%) }
+			}
+
 			&>.fa {
 				font-size: 14px;
 				margin-top: 5px;

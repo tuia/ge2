@@ -72,13 +72,20 @@ small.id {
 
 /* TYPOGRAPHY */
 
-	.success {
-		color: $success-color;
+	h1 {
+		font-size: 24px;
 	}
 
-	.unity {
-		color: $lighter-text;
-	}
+	.success {color: $success-color;}
+
+	.unity {color: $lighter-text;}
+
+	.pendente-txt {color: $pendente}
+	.designado-txt {color: $designado}
+	.acionado-txt {color: $acionado}
+	.finalizado-txt {color: $finalizado}
+
+
 	/* labels */
 	label, dt, th {
 		color: $light-text;
@@ -186,6 +193,23 @@ small.id {
 				line-height: 1.1em;
 			}
 		}
+
+	/* page header */
+	.page-header {
+		border-bottom: 0;
+		margin: 30px 0;
+		h1 {
+			margin: 0
+		}
+		.summary {
+			text-transform: uppercase;
+			font-size: 18px;
+			color: #666666;
+			.category {
+				color: #999999;
+			}
+		}		
+	}
 
 	/* DROPDOWN */
 	.dropdown {
@@ -343,6 +367,7 @@ small.id {
 		&>.col-xs-1:last-child, &>.col-xs-2:last-child, &>.col-xs-3:last-child, &>.col-xs-4:last-child, &>.col-xs-5:last-child, &>.col-xs-6:last-child, &>.col-xs-6:nth-child(2), &>.col-xs-7:last-child, &>.col-xs-8:last-child, &>.col-xs-9:last-child, &>.col-xs-10:last-child, &>.col-xs-11:last-child, &>.col-xs-12 {
 			border-right: none
 		}
+		&.vertical {border-bottom: none;}
 	}
 	/* mini-table rows */
 	.row.mini-table {
@@ -431,84 +456,77 @@ small.id {
 		}
 	}
 
+	/* ENTITY-SYMBOL */
+	.entity-symbol, .item-symbol {
+		background: $default;
+		display: inline-block;
+		float: left;
+		text-align: center;
+		color: $inverse-text;
+		padding: 2px;
+		height: 40px;
+		width: 40px;
+		position: relative;
+
+		&.pendente {
+			background: $pendente;
+			&:hover { background: darken($pendente, 10%) }
+		}
+		&.designado {
+			background: $designado;
+			&:hover { background: darken($designado, 10%) }
+		}
+		&.acionado {
+			background: $acionado;
+			&:hover { background: darken($acionado, 10%) }
+		}
+		&.finalizado {
+			background: $finalizado;
+			&:hover { background: darken($finalizado, 10%) }
+		}
+
+		&>.fa {
+			font-size: 14px;
+			margin-top: 5px;
+		}
+		p {
+			margin-bottom: -5px;
+		}
+		span {font-size: 10px;}
+		.bookmark-button {
+			position: absolute;
+			top: -3px;
+			left: 3px;
+			color: #666666;
+			i.fa {
+				font-size: 20px;
+			}
+		}
+		&.idless {
+			background: transparent;
+			&>img, &>.fa {
+				margin-top: 10px
+			}
+		}
+	}		
+	a.entity-symbol, a.item-symbol {
+		&:hover {
+			background: darken(#999999, 10%);
+			text-decoration: none;
+			color: $inverse-text;
+		}
+	}
+
 
 	/* ENTITIES */
 	.entity-list, .entity-window {
-		.entity-symbol {
-			background: $default;
-			display: inline-block;
-			float: left;
-			text-align: center;
-			color: $inverse-text;
-			padding: 2px;
-			height: 40px;
-			width: 40px;
-			position: relative;
-
-			&.pendente {
-				background: $pendente;
-				&:hover { background: darken($pendente, 10%) }
-			}
-			&.designado {
-				background: $designado;
-				&:hover { background: darken($designado, 10%) }
-			}
-			&.acionado {
-				background: $acionado;
-				&:hover { background: darken($acionado, 10%) }
-			}
-			&.finalizado {
-				background: $finalizado;
-				&:hover { background: darken($finalizado, 10%) }
-			}
-
-			&>.fa {
-				font-size: 14px;
-				margin-top: 5px;
-			}
-			span {font-size: 10px;}
-			.bookmark-button {
-				position: absolute;
-				top: -3px;
-				left: 3px;
-				color: #666666;
-				i.fa {
-					font-size: 20px;
-				}
-			}
-		}
-		
-		.entity-symbol {
-			&.danger {
-				background: $danger-color;
-			}
-			&.idless {
-				background: transparent;
-				&>img, &>.fa {
-					margin-top: 10px
-				}
-			}
-		}
-		
-
-		a.entity-symbol {
-			&:hover {
-				background: darken(#999999, 10%);
-				text-decoration: none;
-			}
-			&.danger:hover {
-				background: darken($danger-color, 10%);
-			}
-		}
-
-
 		.entity-header {
 			margin-bottom: -1px;
 			border-bottom: 1px solid #cccccc;
 			.entity-symbol {
 				height: 58px;
 				width: 58px;
-				.fa {
+				& > .fa {
 					font-size: 30px;
 				}				
 			}
@@ -793,10 +811,9 @@ html, body {
 
 /* CONTEÚDO */
 #content {
-	position: fixed;
 	width: 100%;
 	height: 100%;
-	padding-top: 120px;
+	padding-top: 160px;
 	&.map-bg {
 		background: url(../img/map-bg.png) no-repeat center center fixed;
 		height: 100%;

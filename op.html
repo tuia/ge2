@@ -655,7 +655,459 @@
     <!--/CONTEÚDO-->
     <div id="content">
       <div class="container">
-        <h1>Despacho de Serviços</h1>
+
+        <!--/PAGE HEADER-->
+        <div class="page-header">
+          <div class="row">
+            <div class="col-xs-7">
+              <h1><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Despacho de Serviços</h1>              
+            </div><!--/col-6-->
+
+            <div class="col-xs-5">
+              <div class="summary row bordered vertical">
+                <div class="col-xs-4">
+                  <span class="category">novas</span> 6
+                </div><!--/col-4-->
+                <div class="col-xs-4">
+                  <span class="category">finalizadas</span> 6
+                </div><!--/col-4-->
+                <div class="col-xs-4">
+                  <i class="fa fa-clock-o"></i> 2:45
+                </div><!--/col-4-->                
+              </div><!--/row bordered-->
+
+            </div><!--/col-6-->
+          </div><!--/row-->
+        </div><!--page-header-->
+
+        <nav class="navbar navbar-default">
+          <ul class="nav navbar-nav">
+            <li><a href="#" class="hastooltip" title="manobra"><img src="assets/img/icons/manobra-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="manobra simples"><img src="assets/img/icons/manobra-simples-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="turma"><img src="assets/img/icons/turma-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="distância da base"><img src="assets/img/icons/dist-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="nota de serviço"><img src="assets/img/icons/note-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="triagem"><img src="assets/img/icons/triagem-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="atenção especial"><img src="assets/img/icons/atencao-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="ordenação inicial"><img src="assets/img/icons/ordeinit-icon.png" /></a></li>
+            <li><a href="#" class="hastooltip" title="ordenador dinâmico"><img src="assets/img/icons/ordenar-icon.png" /></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="hastooltip" title="ordenador dinâmico"><img src="assets/img/icons/ordenar-icon.png" /></a></li>            
+          </ul>
+        </nav><!--/navbar-->
+
+
+        <!--/PAGINATION-->
+        <nav class="pagination-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="#" class="disabled">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                ...
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li><a href="#">12</a></li>
+                <li><a href="#">13</a></li>
+                <li><a href="#">14</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav directional">
+            <li><a href="" class="disabled"><i class="fa fa-arrow-left"></i></a></li>
+            <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav jump-to">
+            <li><a href="" class="disabled">primeira</a></li>
+            <li><a href="">última</a></li>
+          </ul>
+        </nav><!--/.pagination-->
+
+        <!--/LIST-TABLE-->
+        <table class="list-table table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th colspan="3">Ordem de serviço</th>
+              <th>Equipe</th>
+              <th>Localização</th>
+              <th>Dispositivo</th>
+              <th>Contato</th>
+            </tr>
+            <tr class="sub-header">
+              <th>
+                Prioridade <a href="#filter" class="filter-btn"><i class="fa fa-filter"></i></a> / 
+                Tipo <a href="#filter" class="filter-btn"><i class="fa fa-filter"></i></a> / 
+                Clientes /
+                Custo
+              </th>
+              <th>Estimativa</th>
+              <th>Restante</th>
+              <th>Turma / Técnico / Comunicação / Status</th>
+              <th>
+                Local <a href="#filter" class="filter-btn"><i class="fa fa-filter"></i></a> / 
+                Bairro / Endereço PDF <a href="#filter" class="filter-btn"><i class="fa fa-filter"></i></a>
+              </th>
+              <th>
+                Equipamento <a href="#filter" class="filter-btn"><i class="fa fa-filter"></i></a> / 
+                Kwh / Aliment. <a href="#filter" class="filter-btn"><i class="fa fa-filter"></i></a>
+              </th>
+              <th>Ligar? / Última</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+
+              <!--/prioridade-->
+              <td>
+                <div class="data">
+                  <a href="#" class="item-symbol" data-toggle="tooltip" title="copiar">
+                    <p>C03</p>
+                    <span>064621</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Abrir equipamento</span>
+                    <span class="cell-subtext">D-MA01 / <i class="fa fa-users"></i><strong>546</strong> / R$<strong>120</strong>,00</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <div class="pull-left">
+
+                  </div><!--/pull-left-->
+                  <div class="pull-right">
+                    <a href="" class="hastooltip" title="despacho automático">
+                      <img src="assets/img/icons/da-icon.png" alt="despacho automático"/>
+                    </a>
+                    <a href="" class="hastooltip" title="imprimir">
+                      <img src="assets/img/icons/print-icon.png" alt="imprimir"/>
+                    </a>
+                    <a href="" class="hastooltip" title="ver nota">
+                      <img src="assets/img/icons/note-icon.png" alt="ver nota"/>
+                    </a>
+                    <a href="" class="hastooltip" title="adicionar ao lote">
+                      <img src="assets/img/icons/lote-icon.png" alt="adicionar ao lote"/>
+                    </a>
+                    <a href="" class="hastooltip" title="agrupar">
+                      <img src="assets/img/icons/group-icon.png" alt="agrupar"/>
+                    </a>
+                    <a href="" class="hastooltip" title="transferir">
+                      <img src="assets/img/icons/transf-icon.png" alt="transferir"/>
+                    </a>
+                    <a href="" class="hastooltip" title="cancelar">
+                      <img src="assets/img/icons/cancel-icon.png" alt="cancelar"/>
+                    </a>
+                  </div><!--/pull-right-->
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/estimativa-->
+              <td>
+                <div class="data">04:00</div>
+                <div class="options">&nbsp;</div>
+              </td>
+
+              <!--/restante-->
+              <td>
+                <div class="data">2:30</div>
+                <div class="options">&nbsp;</div>                
+              </td>
+
+              <!--/turma-->
+              <td>
+                <div class="data">
+                  <a href="#" class="entity-symbol acionado" data-toggle="tooltip" title="Acionado">
+                    <i class="fa fa-car"></i>
+                    <span>064621</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Paolo Andrades</span>
+                    <span class="acionado-txt"><i class="fa fa-headphones"></i> Acionado</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <span class="pull-left">Mensagem enviada</span>
+                  <div class="pull-right">
+                    <a href="" class="messages-btn hastooltip" title="mensagens">
+                      <img src="assets/img/icons/msg-icon.png" alt="mensagens"/>
+                      <span class="messages-length">2</span>
+                    </a>
+                    <a href="" class="hastooltip" title="abrir no mapa">
+                      <img src="assets/img/icons/openmap-icon.png" alt="abrir no mapa"/>
+                    </a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/local-->
+              <td>
+                <div class="data">
+                  <a href="#" class="item-symbol" data-toggle="tooltip" title="copiar">
+                    <p>632</p>
+                    <span>CX</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Sion</span>
+                    <span class="cell-subtext">Rua Antônio da Silva, 46</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <div class="pull-right">
+                    <a href="" class="hastooltip" title="ver no street view">
+                      <img src="assets/img/icons/street-icon.png" alt="ver no street view"/>
+                    </a>
+                    <a href="" class="hastooltip" title="abrir no mapa">
+                      <img src="assets/img/icons/openmap-icon.png" alt="abrir no mapa"/>
+                    </a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/equipamento-->
+              <td>
+                <div class="data">
+                  <a href="#" class="item-symbol" data-toggle="tooltip" title="copiar">
+                    <i class="fa fa-plug"></i>
+                    <span>ECD<br>223801</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Chave-faca</span>
+                    <span class="cell-subtext">6140 / IMT 011</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <div class="pull-right">                  
+                    <a href="" class="hastooltip" title="ver nota">
+                      <img src="assets/img/icons/note-icon.png" alt="ver nota"/>
+                    </a>
+                    <a href="" class="hastooltip" title="log de eventos">
+                      <img src="assets/img/icons/log-icon.png" alt="log de eventos"/>
+                    </a>
+                    <a href="" class="hastooltip" title="distância da base">
+                      <img src="assets/img/icons/dist-icon.png" alt="distância da base"/>
+                    </a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/ligar-->
+              <td>
+                <div class="data">
+                  <p>
+                    <span class="cell-text">SIM</span>
+                    <small class="cell-subtext">03/06/14<br/>16:00</small>
+                  </p>
+                </div>
+                <div class="options">&nbsp;</div>
+              </td>
+
+            </tr>
+            <tr>
+
+              <!--/prioridade-->
+              <td>
+                <div class="data">
+                  <a href="#" class="item-symbol" data-toggle="tooltip" title="copiar">
+                    <p>C03</p>
+                    <span>064621</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Abrir equipamento</span>
+                    <span class="cell-subtext">D-MA01 / <i class="fa fa-users"></i>546 / R$120,00</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <div class="pull-left">
+
+                  </div><!--/pull-left-->
+                  <div class="pull-right">
+                    <a href="" class="hastooltip" title="despacho automático">
+                      <img src="assets/img/icons/da-icon.png" alt="despacho automático"/>
+                    </a>
+                    <a href="" class="hastooltip" title="imprimir">
+                      <img src="assets/img/icons/print-icon.png" alt="imprimir"/>
+                    </a>
+                    <a href="" class="hastooltip" title="ver nota">
+                      <img src="assets/img/icons/note-icon.png" alt="ver nota"/>
+                    </a>
+                    <a href="" class="hastooltip" title="adicionar ao lote">
+                      <img src="assets/img/icons/lote-icon.png" alt="adicionar ao lote"/>
+                    </a>
+                    <a href="" class="hastooltip" title="agrupar">
+                      <img src="assets/img/icons/group-icon.png" alt="agrupar"/>
+                    </a>
+                    <a href="" class="hastooltip" title="transferir">
+                      <img src="assets/img/icons/transf-icon.png" alt="transferir"/>
+                    </a>
+                    <a href="" class="hastooltip" title="cancelar">
+                      <img src="assets/img/icons/cancel-icon.png" alt="cancelar"/>
+                    </a>
+                  </div><!--/pull-right-->
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/estimativa-->
+              <td>
+                <div class="data">04:00</div>
+                <div class="options">&nbsp;</div>
+              </td>
+
+              <!--/restante-->
+              <td>
+                <div class="data">2:30</div>
+                <div class="options">&nbsp;</div>                
+              </td>
+
+              <!--/turma-->
+              <td>
+                <div class="data">
+                  <a href="#" class="entity-symbol" data-toggle="tooltip" title="Em execução">
+                    <i class="fa fa-car"></i>
+                    <span>064621</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Paolo Andrades</span>
+                    <span class="status acionado"><i class="fa fa-headphones"></i> Acionado</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <span class="pull-left">Mensagem enviada</span>
+                  <div class="pull-right">
+                    <a href="" class="messages-btn hastooltip" title="mensagens">
+                      <img src="assets/img/icons/msg-icon.png" alt="mensagens"/>
+                      <span class="messages-length">2</span>
+                    </a>
+                    <a href="" class="hastooltip" title="abrir no mapa">
+                      <img src="assets/img/icons/openmap-icon.png" alt="abrir no mapa"/>
+                    </a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/local-->
+              <td>
+                <div class="data">
+                  <a href="#" class="item-symbol" data-toggle="tooltip" title="copiar">
+                    <p>632</p>
+                    <span>CX</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Sion</span>
+                    <span class="cell-subtext">Rua Antônio da Silva, 46</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <div class="pull-right">
+                    <a href="" class="hastooltip" title="ver no street view">
+                      <img src="assets/img/icons/street-icon.png" alt="ver no street view"/>
+                    </a>
+                    <a href="" class="hastooltip" title="abrir no mapa">
+                      <img src="assets/img/icons/openmap-icon.png" alt="abrir no mapa"/>
+                    </a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/equipamento-->
+              <td>
+                <div class="data">
+                  <a href="#" class="item-symbol" data-toggle="tooltip" title="copiar">
+                    <i class="fa fa-plug"></i>
+                    <span>ECD<br>223801</span>
+                  </a>
+                  <p>
+                    <span class="cell-text">Chave-faca</span>
+                    <span class="cell-subtext">6140 / IMT 011</span>
+                  </p>
+                </div>
+                <div class="options">
+                  <div class="pull-right">                  
+                    <a href="" class="hastooltip" title="ver nota">
+                      <img src="assets/img/icons/note-icon.png" alt="ver nota"/>
+                    </a>
+                    <a href="" class="hastooltip" title="log de eventos">
+                      <img src="assets/img/icons/log-icon.png" alt="log de eventos"/>
+                    </a>
+                    <a href="" class="hastooltip" title="distância da base">
+                      <img src="assets/img/icons/dist-icon.png" alt="distância da base"/>
+                    </a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div><!--/options-->
+              </td>
+
+              <!--/ligar-->
+              <td>
+                <div class="data">
+                  <p>
+                    <span class="cell-text">SIM</span>
+                    <small class="cell-subtext">03/06/14<br/>16:00</small>
+                  </p>
+                </div>
+                <div class="options">&nbsp;</div>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table><!--/.list-table-->
+
+
+
+        <!--/PAGINATION-->
+        <nav class="pagination-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="#" class="disabled">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                ...
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li><a href="#">12</a></li>
+                <li><a href="#">13</a></li>
+                <li><a href="#">14</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav directional">
+            <li><a href="" class="disabled"><i class="fa fa-arrow-left"></i></a></li>
+            <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav jump-to">
+            <li><a href="" class="disabled">primeira</a></li>
+            <li><a href="">última</a></li>
+          </ul>
+        </nav><!--/.pagination-->
       </div><!--/container-->
     </div><!--/container-->
 

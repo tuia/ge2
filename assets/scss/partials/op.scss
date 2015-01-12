@@ -5,13 +5,14 @@
 	.dropnav {
 		top: 120px;
 		z-index: 990;
+		position: fixed;
 		.nav {
 			display: none;
 			&.active {display: block;}
 		}
 	}
 	#subnav {
-		position: relative;
+		position: fixed;
 		.nav > li.active a {
 			position: relative;
 			&:after {			
@@ -25,5 +26,110 @@
 				border-right: 10px solid transparent;
 			}
 		}		
+	}
+}
+
+
+
+/* LIST TABLE */
+.list-table {
+    .entity-symbol, .item-symbol {
+    	width: 60px;
+    	height: 60px;
+    	padding: 10px;
+    	margin: 0 10px 0 0;
+    }
+    thead {
+    	tr:first-child {
+    		th {
+    			background: #EEEEEE;
+    			color: #666666;
+    			font-weight: 400;
+    			font-size: 14px;
+    			padding: 15px 10px;
+    			border-bottom: none;
+    		}
+    	}
+    	tr:last-child {
+    		th {
+    			border-bottom: 1px solid #888888;
+    		}
+    	}
+    }
+    tbody tr {
+    	transition: all .2s ease-in-out;
+    	.options {
+    		background: #eeeeee;
+    		display: none;
+    		padding: 5px;
+    		.messages-btn {
+    			position: relative;
+    			.messages-length {
+    				position: absolute;
+    				color: $inverse-text;
+    				width: 20px;
+    				height: 10px;
+    				font-size: 8px;
+    				line-height: 1;
+    				top: 5px;
+    				left: 0;
+    				text-align: center;
+    			}
+    		}
+    	}
+    	/*
+		&:hover {
+			.options {display: block;}
+		}
+    	*/
+    	td {
+    		padding: 0;
+    		vertical-align: middle;
+			strong {color: #333}
+    		.data {
+    			height: 60px;
+    		}
+    		.data:before,.data:after {content:"";display:table;}
+			.data:after {clear:both;}
+
+    		.cell-text {
+    			color: #666666;
+    			display: block;
+    			margin-top: 8px;
+    		}
+    		.cell-subtext {
+    			display: block;
+    			color: #999999;
+    			font-size: .9em
+    		}
+    		small.cell-subtext {font-size: .8em}
+    	}
+    }
+}
+
+
+/* PAGINATION */
+.pagination-nav {
+	display: block;
+	overflow: auto;
+	margin: 20px 0;
+	float: right;
+	.nav {
+		margin: 0 30px 0 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	.navbar-nav > li > a {
+		padding: 5px;
+		color: #666;
+		&:hover { background: transparent; text-decoration: underline;}
+		&.disabled {
+			color: #999999;
+			cursor: not-allowed;
+		}
+	}
+	.jump-to {
+		text-transform: uppercase;
 	}
 }

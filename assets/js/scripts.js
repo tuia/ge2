@@ -171,10 +171,13 @@ $('.dropnav-toggle').click( function() {
 	$(this).parent().addClass('active');
 	$(this).parents('.dropnav-container').find('.dropnav .nav').removeClass('active');
 	$(this).parents('.dropnav-container').find(target).addClass('active');
+	return false
 });
 
-
-
-
-
-
+$('.list-table tr').hover(
+	function() {
+		 $(this).find('.options').stop(true).slideDown(200);
+	}, function() {
+		 $(this).find('.options').stop(true).slideUp(200);
+	}
+);

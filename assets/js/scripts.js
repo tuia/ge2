@@ -2,7 +2,10 @@
 $(document).ready( function() {
 
 	//BOOTSTRAP
-	$('[data-toggle="tooltip"], .hastooltip').tooltip({container: 'body'});
+	$('[data-toggle="tooltip"], .hastooltip').tooltip({
+		container: 'body',
+		delay: 500
+	});
 
 	//DATE TIME PICKER
 	$('.datetimepicker').datetimepicker({
@@ -14,6 +17,22 @@ $(document).ready( function() {
 	$('.show-more').click(function() {
 		$(this).parents('.expandable-container').find('.hidden-item').slideToggle();
 		return false
+	});
+
+	//TOGGLE MENU
+	$('#navigation .toggle-menu-btn').click( function() {
+		var btn = $(this);
+		var	menus = $('#subnav, #dropnav');
+
+		if ( $('#subnav, .dropnav').hasClass('hidden-item') ){
+			btn.text('Esconder menu');
+			menus.removeClass('hidden-item');
+			$('#content').addClass('hasmenu');
+		} else {
+			btn.text('Exibir menu');
+			menus.addClass('hidden-item');	
+			$('#content').removeClass('hasmenu');		
+		}
 	});
 
 	//USER MENU

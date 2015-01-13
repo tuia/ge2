@@ -33,6 +33,11 @@
 
 /* LIST TABLE */
 .list-table {
+	.row.bordered {
+		border-bottom: none;
+		margin: 0 -10px;
+		.entity-symbol, .item-symbol {margin-left: -5px;}
+	}
     .entity-symbol, .item-symbol {
     	width: 60px;
     	height: 60px;
@@ -50,18 +55,23 @@
     			border-bottom: none;
     		}
     	}
-    	tr:last-child {
-    		th {
-    			border-bottom: 1px solid #888888;
-    		}
-    	}
     }
     tbody tr {
     	transition: all .2s ease-in-out;
-    	.options {
+    	&:hover {
     		background: #eeeeee;
+    	}
+    	td:last-child {
+    		text-align: center;
+    	}
+    	.options {
+    		background: #e5e5e5;
     		display: none;
     		padding: 5px;
+
+    		a {
+    			padding: 0 5px;
+    		}
     		.messages-btn {
     			position: relative;
     			.messages-length {
@@ -75,6 +85,12 @@
     				left: 0;
     				text-align: center;
     			}
+    		}
+    		.message-status {
+    			font-style: italic;
+    			float: left;
+    			font-size: 12px;
+    			margin: 2px 0;
     		}
     	}
     	/*
@@ -131,5 +147,19 @@
 	}
 	.jump-to {
 		text-transform: uppercase;
+	}
+}
+
+
+/* ACTIONS NAVBAR */
+#actions-navbar {
+	margin: -20px 0 0;
+	min-height: 40px;
+	.navbar-nav > li > a {
+		padding: 10px 15px;
+		opacity: .6;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }

@@ -44,7 +44,7 @@
 	text-align: center;
 }
 
-.expandable-container .hidden-item, .nav > li.hidden-item {
+.expandable-container .hidden-item, .nav > li.hidden-item, .hidden-item {
 		display: none;
 }
 
@@ -73,7 +73,7 @@ small.id {
 /* TYPOGRAPHY */
 
 	h1 {
-		font-size: 24px;
+		font-size: 26px;
 	}
 
 	.success {color: $success-color;}
@@ -84,6 +84,7 @@ small.id {
 	.designado-txt {color: $designado}
 	.acionado-txt {color: $acionado}
 	.finalizado-txt {color: $finalizado}
+	.default-txt {color: $default}
 
 
 	/* labels */
@@ -149,6 +150,10 @@ small.id {
 	}
 
 	/* buttons */
+		.bookmark-button {
+			color: $dark-text;
+			&:hover {color: darken($dark-text, 10%)}
+		}
 		.btn-link {
 			&:hover {
 				background-color: darken( #FFFFFF, 5% );
@@ -198,8 +203,13 @@ small.id {
 	.page-header {
 		border-bottom: 0;
 		margin: 30px 0;
+		text-align: center;
 		h1 {
-			margin: 0
+			margin: 0 0 0 10px;
+			text-align: left;
+		}
+		.bookmark-button {
+			margin-right: 10px;
 		}
 		.summary {
 			text-transform: uppercase;
@@ -493,11 +503,17 @@ small.id {
 			margin-bottom: -5px;
 		}
 		span {font-size: 10px;}
+		.entity-text {
+			line-height: 1.2em;
+			font-size: 11px;
+			text-transform: uppercase;
+			display: block;
+			margin-bottom: -2px;
+		}
 		.bookmark-button {
 			position: absolute;
 			top: -3px;
 			left: 3px;
-			color: #666666;
 			i.fa {
 				font-size: 20px;
 			}
@@ -643,6 +659,9 @@ html, body {
 			position: absolute;
 			top: 50%;
 			right: 7px;
+		}
+		&.toggle-menu {
+			padding: 20px;			
 		}
 	}
 	.divider-vertical {
@@ -813,11 +832,17 @@ html, body {
 #content {
 	width: 100%;
 	height: 100%;
-	padding-top: 160px;
+	padding-top: 70px;	
+	@include transition (all, .3s, ease-in-out);
+
+	&.hasmenu {
+		padding-top: 170px;
+	}
 	&.map-bg {
 		background: url(../img/map-bg.png) no-repeat center center fixed;
 		height: 100%;
 		padding-top: 0;
+		position: fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -935,7 +960,6 @@ html, body {
 		position: relative;
 
 		.bookmark-button {
-			color: $dark-text;
 			font-size: 23px;
 			position: absolute;
 			top: -8px;

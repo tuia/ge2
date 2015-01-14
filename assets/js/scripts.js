@@ -88,6 +88,16 @@ $(document).ready( function() {
 	    return false
 	});
 
+	//DROPDOWN
+	$('.dropdown-menu a[role="tab"]').click( function (e) {
+	    e.preventDefault();
+	    $(this).tab('show');
+	    return false
+	});
+	$('.dropdown-menu').on('hide.bs.dropdown', function () {
+		$(this).removeClass('active');
+	});
+
 	//BOOKMARK BTN
 	$('.bookmark-button').click( function() {
 		if ( $(this).hasClass('marked') ) {

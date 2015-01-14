@@ -27,6 +27,7 @@
       <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
 
+
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle toggle-menu" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -37,9 +38,6 @@
                 <li><a href="#" class="automatic-menu-btn">Exibir menu automaricamente</a></li>
               </ul>
             </li>
-          </ul>
-
-          <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 <strong>G-DIS</strong>
@@ -102,6 +100,8 @@
             </li>
           </ul>
 
+          <span class="divider-vertical"> / </span>
+
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -109,9 +109,42 @@
                 <small>Operação e manutenção</small>
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
-                <li><a href="#">Perfil A - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              </ul>
+              <div class="dropdown-menu dropdown-inverse" role="tabpanel" style="width:250px">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills nav-justified" role="tablist">
+                  <li class="active"><a href="#links-favoritos" role="tab" data-toggle="tab"><span class="badge bookmark">12</span>  Favoritos</a></li>
+                  <li ><a href="#links-ultimos" role="tab" data-toggle="tab">Últimos</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="links-favoritos">
+                    <div class="auto">
+                      <ul class="nav dropdown-inverse" role="menu">
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Action</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Another action</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Something else here</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Action</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Another action</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Something else here</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Action</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Another action</a></li>
+                        <li><a href="#"><i class="fa fa-bookmark"></i> Something else here</a></li>
+                      </ul>
+                    </div>
+                  </div><!--/.tab-pane-->
+                  <div role="tabpanel" class="tab-pane" id="links-ultimos">
+                    <ul class="nav dropdown-inverse" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Action</a></li>
+                    </ul>                    
+                  </div>
+                </div>
+
+              </div><!--/dropdown-menu-->
             </li>
           </ul>
 
@@ -647,7 +680,6 @@
                 <li><a href="#dropnav-integrador" class="dropnav-toggle">Integrador SW</a></li>
                 <li><a href="#dropnav-consultas" class="dropnav-toggle">Consultas</a></li>
                 <li><a href="#dropnav-admin" class="dropnav-toggle">Admnistração</a></li>
-                <li><a href="#dropnav-manuais" class="dropnav-toggle">Manuais</a></li>
             </ul>
 
           </div><!-- /.container-fluid -->

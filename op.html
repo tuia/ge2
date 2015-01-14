@@ -21,660 +21,663 @@
   </head>
   <body>
 
-    <!--/NAVIGATION-->
-    <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+    <div class="menus-container">
 
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle toggle-menu" data-toggle="dropdown" role="button" aria-expanded="false">
-              <i class="fa fa-bars fa-2x"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#" class="toggle-menu-btn">Esconder menu</a></li>
-              <li><a href="#" class="automatic-menu-btn">Exibir menu automaricamente</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <strong>G-DIS</strong>
-              <small>versão web</small>
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <span class="divider-vertical"> / </span>
-
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <strong>OP</strong>
-              <small>operação</small>
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse op-list" role="menu">
-              <li class="active"><a href="#"><span class="op-badge">OP</span> Operação</a></li>
-              <li><a href="#"><span class="op-badge">CP</span> Cadastro e Projeto</a></li>
-              <li><a href="#"><span class="op-badge">GE</span> Georeferenciado</a></li>
-              <li><a href="#"><span class="op-badge">SC</span> Serviço de Campo</a></li>
-              <li><a href="#"><span class="op-badge">IQ</span> Indicadores de Qualidade</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <span class="divider-vertical"> / </span>
-
-        <ul class="nav navbar-nav expandable-container">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <strong>Centro-Sul</strong>
-              <small>área 1, área 2, área 3, área 4...</small>
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Perfil A - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li><a href="#">Perfil B - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li><a href="#">Perfil C - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li><a href="#">Perfil D - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li class="hidden-item"><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li class="hidden-item"><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li class="hidden-item"><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-              <li><a href="#" class="text-center show-more">...</a></li>
-              <li class="divider"></li>
-              <li><a href="#" class="text-center">editar perfis</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <strong>Despacho de Serviços</strong>
-              <small>Operação e manutenção</small>
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Perfil A - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
-            </ul>
-          </li>
-        </ul>
-
-
-        <ul class="nav navbar-nav navbar-right">
-
-          <!--/NOTIFICATIONS-->
-          <li class="dropdown notifications">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <i class="fa fa-bell"></i>
-              <span class="badge">99</span>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Notificação A</a></li>
-              <li><a href="#">Notificação B</a></li>
-              <li><a href="#">Notificação C</a></li>
-              <li class="divider"></li>
-              <li><a href="#" class="text-center">limpar notificações</a></li>
-            </ul>
-          </li>
-
-          <!--/MESSAGES-->
-          <li class="dropdown messages">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <i class="fa fa-comment"></i>
-              <span class="badge">99</span>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#">Mensagem A</a></li>
-              <li><a href="#">Mensagem B</a></li>
-              <li><a href="#">Mensagem C</a></li>
-              <li class="divider"></li>
-              <li><a href="#" class="text-center">ver todas mensagens</a></li>
-            </ul>
-          </li>
-
-          <!--/USER MENU-->
-          <li class="dropdown user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <strong>PH</strong>
-              <small>Axxiom</small>
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-inverse" role="menu">
-              <li><a href="#"><i class="fa fa-user"></i> Paulo Henrique</a></li>
-              <li class="divider"></li>
-              <li><a href="#user-menu-dispositivos" class="user-menu-link">Dispositivos e SE <span class="badge bookmark">12</span></a> </li>
-              <li><a href="#user-menu-equipes" class="user-menu-link">Equipes <span class="badge bookmark">6</span></a></li>
-              <li><a href="#user-menu-servicos" class="user-menu-link">Serviços <span class="badge bookmark">8</span></a></li>
-              <li><a href="#user-menu-manobras" class="user-menu-link">Manobras <span class="badge bookmark">6</span></a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="fa fa-sign-out"></i> Sair do sistema</a></li>
-            </ul>
-            <div class="user-menu-content">
-
-              <!--/DISPOSITIVOS E SE-->
-              <div id="user-menu-dispositivos" class="tab open" role="tabpanel">
-
-                <div class="tab-header">
-
-                  <span class="tab-title">Dispositivos e SE</span>
-
-                  <ul class="nav nav-pills" role="tablist">
-                    <li class="active"><a href="#dispositivos-favoritos" role="tab" data-toggle="tab" ><span class="badge bookmark">12</span> Favoritos</a></li>
-                    <li><a href="#dispositivos-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
-                  </ul>
-
-                  <a href="#dispositivos-e-se-modal" data-title="expandir dispositivos" data-toggle="modal" class="btn btn-xs btn-default pull-right hastooltip"><i class="fa fa-expand"></i></a>
-                </div><!--/tab-header-->
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="dispositivos-favoritos">
-                    
-                    <!--/LISTAGEM DE DISPOSITIVOS-->
-                    <div class="entity-list">
-
-                      <div class="entity-box">
-
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-plug"></i>
-                            <span>064621</span>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Poste <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                          </div>
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-
-                      </div><!--/.entity-box-->
-                      
-                    </div><!--/.entity-list-->
-
-
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="dispositivos-ultimos">
-
-                  </div><!--/#dispositivos-ultimos-->
-                </div>
-
-              </div><!--/#user-menu-dispositivos .tabpanel-->
-
-
-              <!--/EQUIPES-->
-              <div id="user-menu-equipes" class="tab open" role="tabpanel">
-
-                <div class="tab-header">
-
-                  <span class="tab-title">Equipes</span>
-
-                  <ul class="nav nav-pills" role="tablist">
-                    <li class="active"><a href="#equipes-favoritos" role="tab" data-toggle="tab" ><span class="badge bookmark">6</span> Favoritos</a></li>
-                    <li><a href="#equipes-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
-                  </ul>
-
-                  <a href="#equipes-modal" data-toggle="modal" data-title="expandir equipes" class="btn btn-xs pull-right btn-default hastooltip"><i class="fa fa-expand"></i></a>
-                </div><!--/tab-header-->
-
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active" id="equipes-favoritos">
-                    
-                    <!--/LISTAGEM DE DISPOSITIVOS-->
-                    <div class="entity-list">
-
-                      <div class="entity-box available">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-car"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-bus"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-car"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-                      
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-cab"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-car"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-                      
-                    </div><!--/.entity-list-->
-
-
-                  </div>
-                  <div role="tabpanel" class="tab-pane" id="equipes-ultimos">
-                    
-                    <!--/LISTAGEM DE DISPOSITIVOS-->
-                    <div class="entity-list">
-
-                      <div class="entity-box available">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-car"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Mário Santos <span class="badge id">0636578 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-bus"></i>
-                            <span>123<strong> 546 </strong>8</span>
-                            <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Heleno Freitas <span class="badge id">123<strong> 546 </strong>8 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-car"></i>
-                            <span>594268</span>
-                            <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Marla Augusta <span class="badge id">594268 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-                      
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-cab"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-
-                      <div class="entity-box">
-                        <div class="entity-header">
-                          <div class="entity-symbol">
-                            <i class="fa fa-car"></i>
-                            <span>064621</span>
-                            <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
-                          </div>
-                          <div class="entity-header-data">
-                            <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            <span class="text-success">Disponível</span>
-                            <div class="row mini-table">
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-headphones"></i> Rádio</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span><i class="fa fa-map-marker"></i> Anchieta</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <span> Terceirizada</span>
-                              </div>
-                              <div class="col-xs-3">
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
-                                  <i class="fa fa-comment"></i>
-                                  <span class="badge align-top badge-primary">99</span>
-                                </a>
-                                <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
-                                  <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
-                                  <span class="badge align-top badge-primary">0</span>
-                                </a>
-                              </div>
-                            </div><!--/row-->
-                          </div><!--/.entity-header-data-->
-                          <span class="clearfix"></span>
-                        </div><!--/.entity-header-->
-                      </div><!--/.entity-box-->
-                      
-                    </div><!--/.entity-list-->
-                  </div><!--/equipes-ultimos-->
-                </div>
-
-
-
-              </div><!--/#user-menu-equipes .tabpanel-->
-
-              <!--/SERVIÇOS-->
-              <div id="user-menu-servicos" class="tab open" role="tabpanel">serviços</div><!--/#user-menu-servicos .tabpanel-->
-
-              <!--/MANOBRAS-->
-              <div id="user-menu-manobras" class="tab open" role="tabpanel">manobras</div><!--/#user-menu-manobras .tabpanel-->
-            </div><!--/.user-menu-content-->
-
-          </li>
-        </ul>
-
-      </div>
-    </nav>
-
-    <div class="dropnav-container">
-
-      <!--/SUBNAV-->
-      <nav id="subnav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!--/NAVIGATION-->
+      <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
 
           <ul class="nav navbar-nav">
-              <li><a href="#dropnav-atendimento" class="dropnav-toggle">Atendimento</a></li>
-              <li class="active"><a href="#dropnav-operacao" class="dropnav-toggle">Operação e Manutenção</a></li>
-              <li><a href="#dropnav-estudo" class="dropnav-toggle">Estudo de campo</a></li>
-              <li><a href="#dropnav-cadasdtros" class="dropnav-toggle">Cadastros</a></li>
-              <li><a href="#dropnav-qualidade" class="dropnav-toggle">Qualidade</a></li>
-              <li><a href="#dropnav-relatorios" class="dropnav-toggle">Relatórios</a></li>
-              <li><a href="#dropnav-integrador" class="dropnav-toggle">Integrador SW</a></li>
-              <li><a href="#dropnav-consultas" class="dropnav-toggle">Consultas</a></li>
-              <li><a href="#dropnav-admin" class="dropnav-toggle">Admnistração</a></li>
-              <li><a href="#dropnav-manuais" class="dropnav-toggle">Manuais</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle toggle-menu" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-bars fa-2x"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#" class="toggle-menu-btn">Esconder menu</a></li>
+                <li><a href="#" class="automatic-menu-btn">Exibir menu automaricamente</a></li>
+              </ul>
+            </li>
           </ul>
 
-        </div><!-- /.container-fluid -->
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <strong>G-DIS</strong>
+                <small>versão web</small>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <span class="divider-vertical"> / </span>
+
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <strong>OP</strong>
+                <small>operação</small>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse op-list" role="menu">
+                <li class="active"><a href="#"><span class="op-badge">OP</span> Operação</a></li>
+                <li><a href="#"><span class="op-badge">CP</span> Cadastro e Projeto</a></li>
+                <li><a href="#"><span class="op-badge">GE</span> Georeferenciado</a></li>
+                <li><a href="#"><span class="op-badge">SC</span> Serviço de Campo</a></li>
+                <li><a href="#"><span class="op-badge">IQ</span> Indicadores de Qualidade</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <span class="divider-vertical"> / </span>
+
+          <ul class="nav navbar-nav expandable-container">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <strong>Centro-Sul</strong>
+                <small>área 1, área 2, área 3, área 4...</small>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#">Perfil A - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li><a href="#">Perfil B - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li><a href="#">Perfil C - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li><a href="#">Perfil D - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li class="hidden-item"><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li class="hidden-item"><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li class="hidden-item"><a href="#">Perfil E - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+                <li><a href="#" class="text-center show-more">...</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="text-center">editar perfis</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <strong>Despacho de Serviços</strong>
+                <small>Operação e manutenção</small>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#">Perfil A - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <!--/NOTIFICATIONS-->
+            <li class="dropdown notifications">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-bell"></i>
+                <span class="badge">99</span>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#">Notificação A</a></li>
+                <li><a href="#">Notificação B</a></li>
+                <li><a href="#">Notificação C</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="text-center">limpar notificações</a></li>
+              </ul>
+            </li>
+
+            <!--/MESSAGES-->
+            <li class="dropdown messages">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-comment"></i>
+                <span class="badge">99</span>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#">Mensagem A</a></li>
+                <li><a href="#">Mensagem B</a></li>
+                <li><a href="#">Mensagem C</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="text-center">ver todas mensagens</a></li>
+              </ul>
+            </li>
+
+            <!--/USER MENU-->
+            <li class="dropdown user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <strong>PH</strong>
+                <small>Axxiom</small>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#"><i class="fa fa-user"></i> Paulo Henrique</a></li>
+                <li class="divider"></li>
+                <li><a href="#user-menu-dispositivos" class="user-menu-link">Dispositivos e SE <span class="badge bookmark">12</span></a> </li>
+                <li><a href="#user-menu-equipes" class="user-menu-link">Equipes <span class="badge bookmark">6</span></a></li>
+                <li><a href="#user-menu-servicos" class="user-menu-link">Serviços <span class="badge bookmark">8</span></a></li>
+                <li><a href="#user-menu-manobras" class="user-menu-link">Manobras <span class="badge bookmark">6</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i> Sair do sistema</a></li>
+              </ul>
+              <div class="user-menu-content">
+
+                <!--/DISPOSITIVOS E SE-->
+                <div id="user-menu-dispositivos" class="tab open" role="tabpanel">
+
+                  <div class="tab-header">
+
+                    <span class="tab-title">Dispositivos e SE</span>
+
+                    <ul class="nav nav-pills" role="tablist">
+                      <li class="active"><a href="#dispositivos-favoritos" role="tab" data-toggle="tab" ><span class="badge bookmark">12</span> Favoritos</a></li>
+                      <li><a href="#dispositivos-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
+                    </ul>
+
+                    <a href="#dispositivos-e-se-modal" data-title="expandir dispositivos" data-toggle="modal" class="btn btn-xs btn-default pull-right hastooltip"><i class="fa fa-expand"></i></a>
+                  </div><!--/tab-header-->
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="dispositivos-favoritos">
+                      
+                      <!--/LISTAGEM DE DISPOSITIVOS-->
+                      <div class="entity-list">
+
+                        <div class="entity-box">
+
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-plug"></i>
+                              <span>064621</span>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Poste <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                            </div>
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+
+                        </div><!--/.entity-box-->
+                        
+                      </div><!--/.entity-list-->
+
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="dispositivos-ultimos">
+
+                    </div><!--/#dispositivos-ultimos-->
+                  </div>
+
+                </div><!--/#user-menu-dispositivos .tabpanel-->
+
+
+                <!--/EQUIPES-->
+                <div id="user-menu-equipes" class="tab open" role="tabpanel">
+
+                  <div class="tab-header">
+
+                    <span class="tab-title">Equipes</span>
+
+                    <ul class="nav nav-pills" role="tablist">
+                      <li class="active"><a href="#equipes-favoritos" role="tab" data-toggle="tab" ><span class="badge bookmark">6</span> Favoritos</a></li>
+                      <li><a href="#equipes-ultimos" role="tab" data-toggle="tab">Últimos acesos</a></li>
+                    </ul>
+
+                    <a href="#equipes-modal" data-toggle="modal" data-title="expandir equipes" class="btn btn-xs pull-right btn-default hastooltip"><i class="fa fa-expand"></i></a>
+                  </div><!--/tab-header-->
+
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="equipes-favoritos">
+                      
+                      <!--/LISTAGEM DE DISPOSITIVOS-->
+                      <div class="entity-list">
+
+                        <div class="entity-box available">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-car"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-bus"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-car"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+                        
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-cab"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-car"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+                        
+                      </div><!--/.entity-list-->
+
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="equipes-ultimos">
+                      
+                      <!--/LISTAGEM DE DISPOSITIVOS-->
+                      <div class="entity-list">
+
+                        <div class="entity-box available">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-car"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Mário Santos <span class="badge id">0636578 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-bus"></i>
+                              <span>123<strong> 546 </strong>8</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Heleno Freitas <span class="badge id">123<strong> 546 </strong>8 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-car"></i>
+                              <span>594268</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Marla Augusta <span class="badge id">594268 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+                        
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-cab"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol">
+                              <i class="fa fa-car"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="text-success">Disponível</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-headphones"></i> Rádio</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-map-marker"></i> Anchieta</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span> Terceirizada</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+                        
+                      </div><!--/.entity-list-->
+                    </div><!--/equipes-ultimos-->
+                  </div>
+
+
+
+                </div><!--/#user-menu-equipes .tabpanel-->
+
+                <!--/SERVIÇOS-->
+                <div id="user-menu-servicos" class="tab open" role="tabpanel">serviços</div><!--/#user-menu-servicos .tabpanel-->
+
+                <!--/MANOBRAS-->
+                <div id="user-menu-manobras" class="tab open" role="tabpanel">manobras</div><!--/#user-menu-manobras .tabpanel-->
+              </div><!--/.user-menu-content-->
+
+            </li>
+          </ul>
+
+        </div>
       </nav>
 
-      <nav id="dropnav" class="dropnav navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
+      <div class="togglable-menus dropnav-container">
 
-          <ul id="dropnav-atendimento" class="nav navbar-nav">
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-          </ul><!--/.nav-->
+        <!--/SUBNAV-->
+        <nav id="subnav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
 
-          <ul id="dropnav-operacao" class="nav navbar-nav active">
-            <li class="active"><a href="#">Despachante</a></li>
-            <li><a href="#">Apoio</a></li>
-            <li><a href="#">Programação</a></li>
-            <li><a href="#">Manobra Programada</a></li>
-            <li><a href="#">Ortogonal</a></li>
-          </ul><!--/.nav-->
+            <ul class="nav navbar-nav">
+                <li><a href="#dropnav-atendimento" class="dropnav-toggle">Atendimento</a></li>
+                <li class="active"><a href="#dropnav-operacao" class="dropnav-toggle">Operação e Manutenção</a></li>
+                <li><a href="#dropnav-estudo" class="dropnav-toggle">Estudo de campo</a></li>
+                <li><a href="#dropnav-cadasdtros" class="dropnav-toggle">Cadastros</a></li>
+                <li><a href="#dropnav-qualidade" class="dropnav-toggle">Qualidade</a></li>
+                <li><a href="#dropnav-relatorios" class="dropnav-toggle">Relatórios</a></li>
+                <li><a href="#dropnav-integrador" class="dropnav-toggle">Integrador SW</a></li>
+                <li><a href="#dropnav-consultas" class="dropnav-toggle">Consultas</a></li>
+                <li><a href="#dropnav-admin" class="dropnav-toggle">Admnistração</a></li>
+                <li><a href="#dropnav-manuais" class="dropnav-toggle">Manuais</a></li>
+            </ul>
 
-        </div><!-- /.container-fluid -->
-      </nav><!--/dropnav-->
+          </div><!-- /.container-fluid -->
+        </nav>
 
-    </div><!--/dropnav-container-->
+        <nav id="dropnav" class="dropnav navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
+
+            <ul id="dropnav-atendimento" class="nav navbar-nav">
+              <li><a href="#">link</a></li>
+              <li><a href="#">link</a></li>
+              <li><a href="#">link</a></li>
+              <li><a href="#">link</a></li>
+              <li><a href="#">link</a></li>
+              <li><a href="#">link</a></li>
+            </ul><!--/.nav-->
+
+            <ul id="dropnav-operacao" class="nav navbar-nav active">
+              <li class="active"><a href="#">Despachante</a></li>
+              <li><a href="#">Apoio</a></li>
+              <li><a href="#">Programação</a></li>
+              <li><a href="#">Manobra Programada</a></li>
+              <li><a href="#">Ortogonal</a></li>
+            </ul><!--/.nav-->
+
+          </div><!-- /.container-fluid -->
+        </nav><!--/dropnav-->
+
+      </div><!--/dropnav-container-->
+    </div><!--/menus-container-->
 
 
     <!--/CONTEÚDO-->

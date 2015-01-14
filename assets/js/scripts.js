@@ -95,7 +95,7 @@ $(document).ready( function() {
 	    return false
 	});
 	$('.dropdown-menu').on('hide.bs.dropdown', function () {
-		$(this).removeClass('active');
+		$(this).parents('.dropdown').find('.dropdown-toggle').removeClass('active');
 	});
 
 	//BOOKMARK BTN

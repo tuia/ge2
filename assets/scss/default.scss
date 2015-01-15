@@ -293,6 +293,16 @@ small.id {
 	    border-radius: 6px 0 6px 6px;
 	}
 
+	/* STATUS DROPDOSN */
+	.status-dropdown {
+		display: inline-block;
+		margin-left: 0;
+		padding-left: 0;
+		.dropdown-toggle {
+			padding: 2px 7px;
+		}
+	}
+
 	/* vertical divider */
 	.divider-vertical {
 		display: block;

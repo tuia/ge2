@@ -14,9 +14,10 @@
 
 	/* STATUS COLORS */
 	$default: #999999;
-	$pendente: #FF7F00;
+	$pendente: #999999;
 	$designado: #238C00;
 	$acionado: #00B2B2;	
+	$em-execucao: #FF7F00;
 	$finalizado: #FF2626;
 
 	/* TEXT COLORS */
@@ -86,6 +87,7 @@ small.id {
 	.pendente-txt {color: $pendente}
 	.designado-txt {color: $designado}
 	.acionado-txt {color: $acionado}
+	.em-execucao-txt {color: $em-execucao}
 	.finalizado-txt {color: $finalizado}
 	.default-txt {color: $default}
 
@@ -202,28 +204,6 @@ small.id {
 				line-height: 1.1em;
 			}
 		}
-
-	/* page header */
-	.page-header {
-		border-bottom: 0;
-		margin: 30px 0;
-		text-align: center;
-		h1 {
-			margin: 0 0 0 10px;
-			text-align: left;
-		}
-		.bookmark-button {
-			margin-right: 10px;
-		}
-		.summary {
-			text-transform: uppercase;
-			font-size: 18px;
-			color: #666666;
-			.category {
-				color: #999999;
-			}
-		}		
-	}
 
 	/* DROPDOWN */
 	.dropdown {
@@ -518,6 +498,10 @@ small.id {
 		&.acionado {
 			background: $acionado;
 			&:hover { background: darken($acionado, 10%) }
+		}
+		&.em-execucao {
+			background: $em-execucao;
+			&:hover { background: darken($em-execucao, 10%) }
 		}
 		&.finalizado {
 			background: $finalizado;

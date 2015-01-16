@@ -116,6 +116,8 @@ $(document).ready( function() {
 	    	$(this).removeClass('finishing').dequeue();
 		});
 	});
+	//PDA AND ALARM BUTTONS
+	$('.alarm-btn, .pda-btn').click( function() { $(this).toggleClass('active'); return false });
 	
 
 	//EDITABLE FIELDS

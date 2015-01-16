@@ -95,7 +95,6 @@
             </li>
           </ul>
 
-
           <ul class="nav navbar-nav navbar-right">
 
             <!--/NOTIFICATIONS-->
@@ -594,8 +593,6 @@
                     </div><!--/equipes-ultimos-->
                   </div>
 
-
-
                 </div><!--/#user-menu-equipes .tabpanel-->
 
                 <!--/SERVIÇOS-->
@@ -606,7 +603,56 @@
               </div><!--/.user-menu-content-->
 
             </li>
-          </ul>
+          </ul><!--/navbar-right-->
+
+
+
+          <div class="navbar-nav nav navbar-right">
+            <form class="navbar-form search-form" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control contextual-search" placeholder="buscar no mapa">
+              </div>
+              <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+
+              <div class="search-options" role="tabpanel">
+
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#dispositivo" aria-controls="dispositivo" role="tab" data-toggle="tab">Dispositivo</a></li>
+                    <li><a href="#trafo" aria-controls="trafo" role="tab" data-toggle="tab">Trafo</a></li>
+                    <li><a href="#se" aria-controls="se" role="tab" data-toggle="tab">SE</a></li>
+                    <li><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
+                    <li><a href="#" class="expand-menu">...</a></li>
+                    <li class="hidden-item"><a href="#endereco" aria-controls="veiculo" role="tab" data-toggle="tab">Endereço</a></li>
+                    <li class="hidden-item"><a href="#coordenada" aria-controls="veiculo" role="tab" data-toggle="tab">Coordenada</a></li>
+                    <li class="hidden-item"><a href="#gerador-movel" aria-controls="veiculo" role="tab" data-toggle="tab">Gerador móvel</a></li>
+                    <li class="hidden-item"><a href="#ponto-subterraneo" aria-controls="veiculo" role="tab" data-toggle="tab">Ponto subterrâneo</a></li>
+
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="dispositivo">
+                      <div class="row">
+                        <div class="col-xs-2"><span class="scale-label">Escala</span></div>
+                        <div class="col-xs-10">
+                          <img src="assets/img/range.png" alt="tarefas"/>
+                           <!--/<div class="scale-container">
+                            <input type="text" class="input-scale">
+                          </div>-->
+                        </div>
+                      </div><!--/.row-->
+                    </div><!--/.tabpanel-->
+                    <div role="tabpanel" class="tab-pane" id="trafo">
+                      ...
+                    </div><!--/.tabpanel-->
+                    <div role="tabpanel" class="tab-pane" id="SE">...</div><!--/.tabpanel-->
+                    <div role="tabpanel" class="tab-pane" id="Veículo">...</div><!--/.tabpanel-->
+                  </div>
+
+              </div><!--/.search-options-->
+            </form>
+          </div>
 
         </div>
       </nav>
@@ -692,51 +738,6 @@
               </li><!--/.dropdown-->
 
             </ul>
-
-            <form class="navbar-form search-form" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control contextual-search" placeholder="buscar no mapa">
-              </div>
-              <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-
-              <div class="search-options" role="tabpanel">
-
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#dispositivo" aria-controls="dispositivo" role="tab" data-toggle="tab">Dispositivo</a></li>
-                    <li><a href="#trafo" aria-controls="trafo" role="tab" data-toggle="tab">Trafo</a></li>
-                    <li><a href="#se" aria-controls="se" role="tab" data-toggle="tab">SE</a></li>
-                    <li><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
-                    <li><a href="#" class="expand-menu">...</a></li>
-                    <li class="hidden-item"><a href="#endereco" aria-controls="veiculo" role="tab" data-toggle="tab">Endereço</a></li>
-                    <li class="hidden-item"><a href="#coordenada" aria-controls="veiculo" role="tab" data-toggle="tab">Coordenada</a></li>
-                    <li class="hidden-item"><a href="#gerador-movel" aria-controls="veiculo" role="tab" data-toggle="tab">Gerador móvel</a></li>
-                    <li class="hidden-item"><a href="#ponto-subterraneo" aria-controls="veiculo" role="tab" data-toggle="tab">Ponto subterrâneo</a></li>
-
-                  </ul>
-
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="dispositivo">
-                      <div class="row">
-                        <div class="col-xs-2"><span class="scale-label">Escala</span></div>
-                        <div class="col-xs-10">
-                          <img src="assets/img/range.png" alt="tarefas"/>
-                           <!--/<div class="scale-container">
-                            <input type="text" class="input-scale">
-                          </div>-->
-                        </div>
-                      </div><!--/.row-->
-                    </div><!--/.tabpanel-->
-                    <div role="tabpanel" class="tab-pane" id="trafo">
-                      ...
-                    </div><!--/.tabpanel-->
-                    <div role="tabpanel" class="tab-pane" id="SE">...</div><!--/.tabpanel-->
-                    <div role="tabpanel" class="tab-pane" id="Veículo">...</div><!--/.tabpanel-->
-                  </div>
-
-              </div><!--/.search-options-->
-            </form>
 
           </div><!-- /.container-fluid -->
         </nav>
@@ -967,7 +968,111 @@
 
               </div><!--/tabpanel #GERAL-->
 
-              <div role="tabpanel" class="tab-pane" id="detalhes-064621">...</div>
+              <div role="tabpanel" class="tab-pane" id="detalhes-064621">
+
+              <!--/TYPEAHEAD-->
+                <div class="typeahead-container">
+                  <div class="search-form last-results-container">
+                    <div class="form-group">
+                      <input class="form-control contextual-search" type="text" placeholder="O que você procura?">
+                    </div>
+                    <button class="btn" type="submit">
+                      <i class="fa fa-search"></i>
+                    </button>
+                    <ul class="last-results">
+                      <li class="dropdown-header">Últimos buscados</li>
+                      <li><a href="#">localidade</a></li>
+                      <li><a href="#">identificador</a></li>
+                      <li><a href="#">tensão</a></li>
+                      <li><a href="#">projetada</a></li>
+                      <li><a href="#">operada</a></li>
+                    </ul><!--/last-results-->
+                  </div><!--/search-form-->
+
+                  <div class="typeahead-content auto">
+                    <div class="form-group big-table">
+                      <p class="form-group-title">Equipamento</p>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Localidade</div><div class="col-xs-4">ABC</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Idenficador</div><div class="col-xs-4">204722</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Tipo</div><div class="col-xs-4">Religado</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Fases</div><div class="col-xs-4">fases ABC</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Posição projetada</div><div class="col-xs-4">fechada</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Posição operada</div><div class="col-xs-4">fechada</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Condição de abertura</div><div class="col-xs-4">-</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Corrente nominal (A)</div><div class="col-xs-4">630</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Corrente de atuação (A)</div><div class="col-xs-4">OA</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                    </div>
+                    <div class="form-group big-table">
+                      <p class="form-group-title">Detalhes</p>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Localidade</div><div class="col-xs-4">ABC</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Idenficador</div><div class="col-xs-4">204722</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Tipo</div><div class="col-xs-4">Religado</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Fases</div><div class="col-xs-4">fases ABC</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Posição projetada</div><div class="col-xs-4">fechada</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Posição operada</div><div class="col-xs-4">fechada</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Condição de abertura</div><div class="col-xs-4">-</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Corrente nominal (A)</div><div class="col-xs-4">630</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                      <div class="row bordered hover-buttons-container">
+                        <div class="col-xs-8">Corrente de atuação (A)</div><div class="col-xs-4">OA</div>
+                        <div class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="copiar"><i class="fa fa-files-o"></i></a></div><!--/hover-buttons-->
+                      </div>
+                    </div>
+                  </div><!--/typeahead-content-->
+
+                </div><!--/.typeahead-container-->
+
+              </div><!--/.tabpane #detalhes-->
               <div role="tabpanel" class="tab-pane" id="manobras-064621">
                 <div class="auto">
                   <table class="table table-ultra-condensed maneuver-table">

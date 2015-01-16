@@ -45,7 +45,6 @@ $(document).ready( function() {
 		var btn = $('.menus-container .automatic-menu-btn');
 
 		if ( !menus.hasClass('automatic') ) {
-			console.log('truee');
 			btn.prepend('<i class="fa fa-check"></i> &nbsp;');
 			menubtn.addClass('disabled');
 			menus.addClass('automatic');
@@ -56,7 +55,6 @@ $(document).ready( function() {
 			}
 			else {}
 		} else {
-			console.log('false');
 			btn.text('Exibir menu automaticamente');
 			menubtn.removeClass('disabled');
 			menus.removeClass('automatic');
@@ -191,7 +189,6 @@ $(document).ready( function() {
 		$(this).parents('.click-area').find(icontarget).addClass('active');
 	});
 	$('.click-area .dropdown-menu').on('hide.bs.dropdown', function () {
-		console.log('tuia')
 	  $(this).parents('.click-area').find('.click-area-icon').removeClass('active');
 	});
 

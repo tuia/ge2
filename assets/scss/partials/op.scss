@@ -167,6 +167,17 @@
 		.refresh-btn {
 			font-size: 24px;
 			color: #666666;
+			.fa.fa-refresh {display: none;}
+			&:hover {
+				color: #333333;
+				text-decoration: none;
+				.fa.fa-refresh {display: inline;}
+				.fa.fa-clock-o {display: none;}
+			}
+			&.finishing {
+				color: red;
+				&.remaining {color: #333333}
+			}
 		}
 	}
 }

@@ -107,6 +107,17 @@ $(document).ready( function() {
 		}
 	});
 
+	//REFRESH BUTTON
+	$('.refresh-btn').click( function() {
+		$(this).addClass('remaining').delay(3000).queue(function(){
+	    	$(this).removeClass('remaining').dequeue();
+		});
+		$(this).addClass('finishing').delay(3000).queue(function(){
+	    	$(this).removeClass('finishing').dequeue();
+		});
+	});
+	
+
 	//EDITABLE FIELDS
 	$('.editable-field-btn').click( function() {
 		$(this).parents('.editable-field-container').find('.editable-field-form').slideDown();

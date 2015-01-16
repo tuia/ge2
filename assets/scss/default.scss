@@ -353,7 +353,7 @@ small.id {
 
 	/* FORMS */
 	.form-box {
-		padding: 0;
+		padding: 10px;
 		.row {
 			margin-left: 0;
 			margin-right: 0;
@@ -426,6 +426,21 @@ small.id {
 			}
 		}
 	}
+	/* counter */
+	.input-counter-container {
+		position: relative;
+		.form-control {
+			padding-right: 40px;
+		}
+		.input-counter {
+			font-size: 22px;
+			color: #CCCCCC;
+			position: absolute;
+			right: 10px;
+			top: 0px;
+		}
+	}
+
 
 	/* condensed nav-tabs*/
 	.nav.nav-tabs.nav-condensed {
@@ -664,12 +679,12 @@ small.id {
 		.entity-header {
 			margin-bottom: -1px;
 			border-bottom: 1px solid #cccccc;
-			.entity-symbol {
+			.entity-symbol, .item-symbol {
 				height: 58px;
 				width: 58px;
 				& > .fa {
-					font-size: 30px;
-				}				
+					display: block;
+				}
 			}
 			.entity-header-data {
 				float: left;
@@ -677,6 +692,12 @@ small.id {
 
 				.entity-title {
 					font-weight: 700;
+					&.small {
+						text-transform: none;
+						font-size: 16px;
+						margin-top: 5px;
+						font-weight: normal;
+					}
 				}
 				.entity-details {
 					font-size: 12px;
@@ -1187,7 +1208,6 @@ html, body {
 			.row {
 				margin: 0 -5px;
 			}
-			.form-box .row {margin: 0}
 			.tooltip {position: fixed;}
 			.dropdown {
 				position: relative;

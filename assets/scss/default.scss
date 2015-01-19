@@ -410,10 +410,6 @@ small.id {
 	/* FORMS */
 	.form-box {
 		padding: 10px;
-		.row {
-			margin-left: 0;
-			margin-right: 0;
-		}
 	}
 	.form-horizontal {
 		label {
@@ -452,6 +448,15 @@ small.id {
 			padding: 6px 32px 6px 12px;
 			@include box-shadow(0,0,0);
 			@include border-radius(0px);
+		}
+	}
+	/* SMALL FORM WITH ARROWS AS STEPS */
+	.form-arrows {
+		label {
+			display: block;
+			.fa {
+				float: right;
+			}
 		}
 	}
 	.last-results-container {

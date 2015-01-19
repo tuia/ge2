@@ -731,40 +731,6 @@ small.id {
 
 
 	/* ENTITIES */
-	.entity-list, .entity-window {
-		.entity-header {
-			margin-bottom: -1px;
-			border-bottom: 1px solid #cccccc;
-			.entity-symbol, .item-symbol {
-				height: 58px;
-				width: 58px;
-				& > .fa {
-					display: block;
-				}
-			}
-			.entity-header-data {
-				float: left;
-				padding: 3px 10px;
-
-				.entity-title {
-					font-weight: 700;
-					&.small {
-						text-transform: none;
-						font-size: 16px;
-						margin-top: 5px;
-						font-weight: normal;
-					}
-				}
-				.entity-details {
-					font-size: 12px;
-					color: $light-text;
-				}				
-				.form-control[readonly] {
-				    cursor: default;
-				}
-			}
-		}
-	}
 
 	.entity-list {
 		.entity-box {
@@ -793,7 +759,6 @@ small.id {
 html, body {
 	height:100%;
 	font-family: 'Roboto Condensed', 'arial narrow', sans-serif;
-	min-width: 1024px;
 }
 
 
@@ -1232,138 +1197,7 @@ html, body {
 	.entity-body {
 		padding: 0; 
 		position: relative;
-
-		.entity-header-data {			
-			min-height: 58px;
-			.entity-title {				
-				text-transform: uppercase;
-				font-size: 20px;
-				max-width: 220px;
-				line-height: 1.1em;
-				.badge.id { font-size: 18px}
-			}
-			.entity-subitem {
-				margin-top: 5px 0 0;
-				color: #666;
-				.title {
-					font-size: 12px;
-					text-transform: uppercase;
-				}
-			}
-		}
-
-		.tab-content .tab-pane {
-			.auto {
-				padding: 5px;
-				height: auto;
-				max-height: 280px;
-				&.messages-board {
-					padding: 15px 5px;
-				}
-			}
-			.row {
-				margin: 0 -5px;
-			}
-			.tooltip {position: fixed;}
-			.dropdown {
-				position: relative;
-				.dropdown-menu {
-					position: fixed;
-					top: auto;
-					left: auto;
-				}
-				.entity-symbol{
-					@include box-shadow(-2px,2px,0,#333); 
-				}
-			}
-			table tr:first-child th { border-top: none;}
-		}
-		.show-more.btn-default {
-			border: none;
-			margin-bottom: 15px;
-		}
 	}
-	.entity-footer {
-		border-top: 1px solid #e5e5e5;
-		text-align: center;
-		padding: 5px;
-		&> .btn, &> .dropup {
-			display: inline-block;
-			position: relative;
-		}
-		.btn-link {color: #666} 
-	} 
-
-	.entity-panefooter {
-		border-top: 1px solid #e5e5e5;
-		padding: 3px 10px;
-		text-align: center;
-		.flag {
-			background: url(../img/icons/flag-icon.png);
-			color: $inverse-text;
-			font-size: 10px;
-			font-weight: bold;
-			text-align: center;
-			width: 25px;
-			height: 29px;
-			display: inline-block;
-			margin: 5px 10px;
-			padding: 4px 0 4px 4px;
-		}
-	}
-
-
-	.maneuver-table {
-		text-align: left;
-		tr {
-			td {
-				padding: 5px;
-				&:first-child {
-					text-align: right;
-				}
-			}
-			&:hover {
-				background: #f8f8f8;
-				& > .hover-buttons-container{
-					padding: 0;
-					.hover-buttons {
-						width: 50px
-					}
-				}
-			}
-		}
-	}
-}
-
-/* TABELA DE MANOBRAS */
-.maneuver-table, dl {
-	.danger, &.danger {
-		.date, .hour, .name, .description {
-			color: $danger-color;
-			font-weight: bold;
-		}
-	}		
-	.date, .hour, .description {color: #999999}
-	.date, .hour, .name, .description {
-		display: block;
-		line-height: 1em;
-		margin: 0 0 5px 0;
-	}
-	.date {margin-top: 3px}
-	.hour {font-size: 10px}
-	.description {
-		font-size: 11px;
-		font-style: italic;
-		.executor {
-			font-style: normal;
-			text-transform: uppercase;
-		}
-	}
-	.name {
-		small {
-			color: #999999;
-		}
-	}	
 }
 
 
@@ -1407,6 +1241,197 @@ html, body {
 }
 
 
+/* IFRAME */
+iframe {
+	border: none;
+	width: 100%;
+
+	/* AINDA NÃO É POSSÍVEL AJUSTAR A ALTURA
+
+	links que podem ajudar:
+
+	http://css-tricks.com/snippets/jquery/fit-iframe-to-content/
+	http://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using
+	*/
+	min-height: 470px;
+
+}
+body.entity-iframe {
+	width: 100%;
+	position: relative;
+}
+.entity-iframe, .entity-list, .entity-window {	
+
+	.entity-header {
+		margin-bottom: -1px;
+		border-bottom: 1px solid #cccccc;
+		.entity-symbol, .item-symbol {
+			height: 58px;
+			width: 58px;
+			& > .fa {
+				display: block;
+			}
+		}
+		.entity-header-data {
+			float: left;
+			padding: 3px 10px;
+
+			.entity-title {
+				font-weight: 700;
+				&.small {
+					text-transform: none;
+					font-size: 16px;
+					margin-top: 5px;
+					font-weight: normal;
+				}
+			}
+			.entity-details {
+				font-size: 12px;
+				color: $light-text;
+			}				
+			.form-control[readonly] {
+			    cursor: default;
+			}
+		}
+	}
+
+	.entity-header-data {			
+		min-height: 58px;
+		.entity-title {				
+			text-transform: uppercase;
+			font-size: 20px;
+			max-width: 220px;
+			line-height: 1.1em;
+			.badge.id { font-size: 18px}
+		}
+		.entity-subitem {
+			margin-top: 5px 0 0;
+			color: #666;
+			.title {
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.tab-content .tab-pane {
+		.auto {
+			padding: 5px;
+			height: auto;
+			max-height: 280px;
+			&.messages-board {
+				padding: 15px 5px;
+			}
+		}
+		.row {
+			margin: 0 -5px;
+		}
+		.tooltip {position: fixed;}
+		.dropdown {
+			position: relative;
+			.dropdown-menu {
+				position: fixed;
+				top: auto;
+				left: auto;
+			}
+			.entity-symbol{
+				@include box-shadow(-2px,2px,0,#333); 
+			}
+		}
+		table tr:first-child th { border-top: none;}
+	}
+	.show-more.btn-default {
+		border: none;
+		margin-bottom: 15px;
+	}
+
+
+	.entity-footer {
+		border-top: 1px solid #e5e5e5;
+		text-align: center;
+		padding: 5px;
+		&> .btn, &> .dropup {
+			display: inline-block;
+			position: relative;
+		}
+		.btn-link {color: #666} 
+	} 
+
+	.entity-panefooter {
+		border-top: 1px solid #e5e5e5;
+		padding: 3px 10px;
+		text-align: center;
+		.flag {
+			background: url(../img/icons/flag-icon.png);
+			color: $inverse-text;
+			font-size: 10px;
+			font-weight: bold;
+			text-align: center;
+			width: 25px;
+			height: 29px;
+			display: inline-block;
+			margin: 5px 10px;
+			padding: 4px 0 4px 4px;
+		}
+	}
+
+	.maneuver-table {
+		text-align: left;
+		tr {
+			td {
+				padding: 5px;
+				&:first-child {
+					text-align: right;
+				}
+			}
+			&:hover {
+				background: #f8f8f8;
+				& > .hover-buttons-container{
+					padding: 0;
+					.hover-buttons {
+						width: 50px
+					}
+				}
+			}
+		}
+	}
+
+	/* TABELA DE MANOBRAS */
+	.maneuver-table, dl {
+		.danger, &.danger {
+			.date, .hour, .name, .description {
+				color: $danger-color;
+				font-weight: bold;
+			}
+		}		
+		.date, .hour, .description {color: #999999}
+		.date, .hour, .name, .description {
+			display: block;
+			line-height: 1em;
+			margin: 0 0 5px 0;
+		}
+		.date {margin-top: 3px}
+		.hour {font-size: 10px}
+		.description {
+			font-size: 11px;
+			font-style: italic;
+			.executor {
+				font-style: normal;
+				text-transform: uppercase;
+			}
+		}
+		.name {
+			small {
+				color: #999999;
+			}
+		}	
+	}
+	
+}/*iframe*/
+
+
+
+/* REPOSNSIVE */
 @media (min-width: 768px) and (max-width: 1024px) {
 	.menus-container {
 		#navigation {

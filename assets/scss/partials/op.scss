@@ -150,23 +150,8 @@
 		float: left;
 		margin: 0 20px;
 		.alarm-btn, .pda-btn {
-			content: ' ';
-			padding: 0;
 			margin: 10px;
 		}
-		.alarm-btn {
-			background: url('../img/icons/alarme-icon.png') no-repeat top left;
-			width: 27px;
-			height: 25px;
-			&.active {background-position: bottom left;}		
-		}
-		.pda-btn {
-			background: url('../img/icons/pda-icon.png') no-repeat top left;
-			width: 14px;
-			height: 24px;	
-			&.active {background-position: bottom left;}				
-		}
-
 	}
 	.summary {
 		text-transform: uppercase;

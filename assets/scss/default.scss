@@ -209,7 +209,41 @@ small.id {
 		.btn-block {
 			text-transform: uppercase;
 		}
-		
+		.btn-inverse {
+			background-color: #222;
+			border-color: #080808;
+			color: #999;
+
+			&:hover{
+				color: #fff;
+				background-color: #000;
+			}
+			&:active, &:focus{
+				color: #fff;
+				background-color: #000;
+			}
+			&>.divider {
+				background-color: #000;
+			}
+		}
+		.alarm-pda-container {
+			.alarm-btn, .pda-btn {
+				content: ' ';
+				padding: 0;
+			}
+			.alarm-btn {
+				background: url('../img/icons/alarme-icon.png') no-repeat top left;
+				width: 27px;
+				height: 25px;
+				&.active {background-position: bottom left;}		
+			}
+			.pda-btn {
+				background: url('../img/icons/pda-icon.png') no-repeat top left;
+				width: 14px;
+				height: 24px;	
+				&.active {background-position: bottom left;}				
+			}
+		}
 		/* show on hover buttons */
 		.hover-buttons-container {
 			position: relative;
@@ -333,8 +367,30 @@ small.id {
 	    -moz-border-radius: 6px 0 6px 6px;
 	    border-radius: 6px 0 6px 6px;
 	}
+	/* DROPDOWN SELECT */
+	.dropdown-select {
+		.dropdown-toggle {
+			position: relative;
+			text-align: left;
+			padding-right: 25px;
+			max-width: 100%;
 
-	/* STATUS DROPDOSN */
+			span:first-child {
+				overflow: hidden;
+				display: block;
+				width: 100%;
+			}
+
+			.caret {
+				margin-top: -1px;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+			}
+		}
+	}
+
+	/* STATUS DROPDOWN */
 	.status-dropdown {
 		display: inline-block;
 		margin-left: 0;

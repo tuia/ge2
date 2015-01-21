@@ -97,6 +97,20 @@
 
           <ul class="nav navbar-nav navbar-right">
 
+            <!--/LIGA / DESLIGA-->
+            <li class="dropdown map-items">
+              <a href="#" class="dropdown-toggle hastooltip" data-toggle="dropdown" title="Exibir ou Esconder elementos do mapa">
+                <i class="fa fa-eye"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu">
+                <li><a href="#">Notificação A</a></li>
+                <li><a href="#">Notificação B</a></li>
+                <li><a href="#">Notificação C</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="text-center">limpar notificações</a></li>
+              </ul>
+            </li>
+
             <!--/NOTIFICATIONS-->
             <li class="dropdown notifications">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -146,6 +160,7 @@
               </ul>
               <div class="user-menu-content">
 
+
                 <!--/DISPOSITIVOS E SE-->
                 <div id="user-menu-dispositivos" class="tab open" role="tabpanel">
 
@@ -169,24 +184,108 @@
                       <div class="entity-list">
 
                         <div class="entity-box">
-
                           <div class="entity-header">
-                            <div class="entity-symbol">
-                              <i class="fa fa-plug"></i>
+                            <div class="entity-symbol finalizado">
+                              <i class="fa fa-car"></i>
                               <span>064621</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Poste <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                            </div>
+                              <span class="status finalizado-txt">Com demanda, sem manobra ou serviço</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-6">
+                                  <span><i class="fa fa-map-marker"></i> Santo Antônio, Rua Matipó</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-users"></i> 5517</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
                             <span class="clearfix"></span>
                           </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
 
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol pendente">
+                              <i class="fa fa-car"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Poste <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="status pendente-txt">Com demanda, sem manobra ou serviço</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-6">
+                                  <span><i class="fa fa-map-marker"></i> Santo Antônio, Rua Matipó</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-users"></i> 5517</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
+                        </div><!--/.entity-box-->
+
+                        <div class="entity-box">
+                          <div class="entity-header">
+                            <div class="entity-symbol finalizado">
+                              <i class="fa fa-car"></i>
+                              <span>064621</span>
+                              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+                            </div>
+                            <div class="entity-header-data">
+                              <div class="entity-title">Poste <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                              <span class="status finalizado-txt">Com demanda, sem manobra ou serviço</span>
+                              <div class="row mini-table">
+                                <div class="col-xs-6">
+                                  <span><i class="fa fa-map-marker"></i> Santo Antônio, Rua Matipó</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <span><i class="fa fa-users"></i> 5517</span>
+                                </div>
+                                <div class="col-xs-3">
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="mensagens">
+                                    <i class="fa fa-comment"></i>
+                                    <span class="badge align-top badge-primary">99</span>
+                                  </a>
+                                  <a href="#" class="btn btn-xs btn-link hastooltip" data-title="manobras/serviços">
+                                    <img alt="nova manobra/serviço" src="assets/img/icons/task-icon.png" width="12" height="16">
+                                    <span class="badge align-top badge-primary">0</span>
+                                  </a>
+                                </div>
+                              </div><!--/row-->
+                            </div><!--/.entity-header-data-->
+                            <span class="clearfix"></span>
+                          </div><!--/.entity-header-->
                         </div><!--/.entity-box-->
                         
                       </div><!--/.entity-list-->
 
 
-                    </div>
+                    </div><!--/#"dispositivos-favoritos-->
                     <div role="tabpanel" class="tab-pane" id="dispositivos-ultimos">
 
                     </div><!--/#dispositivos-ultimos-->
@@ -218,16 +317,16 @@
                       <!--/LISTAGEM DE DISPOSITIVOS-->
                       <div class="entity-list">
 
-                        <div class="entity-box available">
+                        <div class="entity-box">
                           <div class="entity-header">
-                            <div class="entity-symbol">
+                            <div class="entity-symbol designado">
                               <i class="fa fa-car"></i>
                               <span>064621</span>
                               <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -263,7 +362,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -299,7 +398,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -336,7 +435,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -372,7 +471,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -408,7 +507,7 @@
                       <!--/LISTAGEM DE DISPOSITIVOS-->
                       <div class="entity-list">
 
-                        <div class="entity-box available">
+                        <div class="entity-box">
                           <div class="entity-header">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
@@ -417,7 +516,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Mário Santos <span class="badge id">0636578 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -453,7 +552,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Heleno Freitas <span class="badge id">1235468 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -489,7 +588,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Marla Augusta <span class="badge id">594268 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -526,7 +625,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -562,7 +661,7 @@
                             </div>
                             <div class="entity-header-data">
                               <div class="entity-title">Jaime Vilete <span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-                              <span class="text-success">Disponível</span>
+                              <span class="status designado-txt">Disponível</span>
                               <div class="row mini-table">
                                 <div class="col-xs-3">
                                   <span><i class="fa fa-headphones"></i> Rádio</span>
@@ -607,7 +706,7 @@
 
 
 
-          <div class="navbar-nav nav navbar-right">
+          <div class="navbar-nav nav navbar-right search-form-container">
             <form class="navbar-form search-form" role="search">
               <div class="form-group">
                 <input type="text" class="form-control contextual-search" placeholder="buscar no mapa">
@@ -749,7 +848,7 @@
     <div id="content" class="map-bg">
       <div class="container">
 
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
 
         <a href="#poste064621" class="entity-icon btn btn-default">janela poste</a>
 
@@ -1864,7 +1963,7 @@
             </select>
           </div><!--/.form-box-->
           <div class="input-counter-container">
-            <input type="text" class="form-control" id="" placeholder="Observações">
+            <input type="text" class="form-control" id="" placeholder="Observações" maxlength="30">
             <div class="input-counter">30</div>
           </div>
           <div class="form-box expandable-container">
@@ -1873,11 +1972,11 @@
 
               <div class="col-xs-8">
                 <div class="dropdown dropdown-select">
-                  <button class="btn dropdown-toggle btn-inverse btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  <button class="btn dropdown-toggle btn-default btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                     <span>selecione</span>
                     <span class="caret"></span>
                   </button>
-                  <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="dropdownMenu1">
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                     <li><a href="#"><i class="fa fa-car"></i> 064621 - Raimundo Silveira</a></li>
                     <li><a href="#"><i class="fa fa-bus"></i> 064621 - Marcos Gomez</a></li>
                     <li><a href="#"><i class="fa fa-cab"></i> 064621 - Valdira Gonzales</a></li>
@@ -1913,29 +2012,29 @@
 
             <div class="form-arrows hidden-item">
               <div class="row">
-                <div class="col-xs-4">
+                <div class="col-xs-4 form-group">
                   <label for="">reclamação <i class="fa fa-long-arrow-right"></i></label>
                   <input type="text" class="form-control input-sm" id="" value="03/06  14:30">
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-4 form-group">
                   <label for="">designação <i class="fa fa-long-arrow-right"></i></label>
                   <input type="text" class="form-control input-sm" id="" disabled>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-4 form-group">
                   <label for="">acionamento <i class="fa fa-long-arrow-right"></i></label>
                   <input type="text" class="form-control input-sm" id="" disabled>
                 </div>
               </div><!--/.row-->
               <div class="row">
-                <div class="col-xs-4">
+                <div class="col-xs-4 form-group">
                   <label for="">localização <i class="fa fa-long-arrow-right"></i></label>
                   <input type="text" class="form-control input-sm" id="" disabled>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-4 form-group">
                   <label for="">previsão <i class="fa fa-long-arrow-right"></i></label>
                   <input type="text" class="form-control input-sm" id="" placeholder="">
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-4 form-group">
                   <label for="">finalizada <i class="fa fa-long-arrow-right"></i></label>
                   <input type="text" class="form-control input-sm" id="" disabled>
                 </div>

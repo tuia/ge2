@@ -4,6 +4,24 @@
 
 /* LIST TABLE */
 .list-table {
+	position: relative;
+
+	thead[data-spy="affix"].affix {
+		background: #FFFFFF;
+		z-index: 1000;
+		display: table-row;
+		top: 70px;
+	}
+
+	thead > tr > th, tbody > tr > td {
+
+		&:nth-child(1) {width: 40%;}
+		&:nth-child(2) {width: 17%;}
+		&:nth-child(3) {width: 19%;}
+		&:nth-child(4) {width: 17%;}
+		&:nth-child(5) {width: 7%;}
+	}
+
 	.row.bordered {
 		border-bottom: none;
 		margin: 0 -10px;
@@ -138,7 +156,7 @@
 	}
 	.navbar-right {margin-right: 10px;}
 	.navbar-title {
-		width: 300px;
+		width: 250px;
 		float: left;
 		h1 {
 			margin: 0;
@@ -148,7 +166,7 @@
 	}
 	.alarm-pda-container {
 		float: left;
-		margin: 0 20px;
+		margin: 0 10px;
 		.alarm-btn, .pda-btn {
 			margin: 10px;
 		}
@@ -159,14 +177,14 @@
 		text-align: right;
 		color: #666666;
 		float: left;
-		margin: 0 20px;
+		margin: 0 10px;
 		.category {
 			color: #999999;
 		}
 	}
 
 	.refresh-btn-container {
-		float: right;
+		float: left;
 		margin: 5px 0 5px 20px;
 		.refresh-btn {
 			font-size: 24px;

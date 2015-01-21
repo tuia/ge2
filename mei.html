@@ -15,7 +15,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body data-spy="scroll" data-target=".navbar-example">
+  <body data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!--/NAVBAR-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -25,8 +25,8 @@
 
         <!--/NAVIGATION-->
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#grid">grid</a></li>
+          <li><a href="#tipografia">tipografia</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -49,10 +49,11 @@
       <div class="intro">
         <div class="container">
           <div class="page-header">
+            <i class="fa fa-book fa-3x"></i> 
             <h1>Manual de Estilos de Interação <i>Axxiom</i> <small>versão 1.0</small></h1>
           </div><!--/page-header-->
 
-          <p>O Manual de Estilos de Interação tem como função auxiliar na contrução de novos compontentes dos softwares relacionados, com base nos padrões já estabelecidos, otimizando a usabilidade do produto final. Assim, o software se mantém consistente e os usuários sentem a diferença na produtividade.</p>
+          <p>O Manual de Estilos de Interação tem como função auxiliar na construção de novos compontentes dos softwares relacionados, com base nos padrões já estabelecidos, otimizando a usabilidade do produto final. Assim, o software se mantém consistente e os usuários sentem a diferença na produtividade.</p>
 
           <p>Seguir os padrões aqui apresentados é fundamental para manter o sistema conciso e usável. Este manual é dinâmico e deve ser atualizado pela equipe interna com os novos padrões estabelecidos.</p>
         </div>
@@ -60,7 +61,7 @@
 
       <div class="container">
 
-        <div id="grid">
+        <section id="grid">
           <h2>Sistema de Grid</h2>
           <p>Um sistema de grid serve para auxiliar na diagramação do conteúdo da página, posicionando e alinhando os elementos de forma proporcinal.</p>
           <p>Para isso, utiliza-se linhas (<code>.row</code>) e colunas (<code>.col</code>) de tamanhos variados. Algumas regras são necessárias para seu melhor funcionamento:</p>
@@ -70,7 +71,6 @@
             <li>O conteúdo deve estar dentro das colunas, e apenas estas devem ser as filhas diretas (elemento um nível abaixo no DOM) das linhas (rows).</li>
             <li>Uma linha (row) possui até 12 colunas. A largura da coluna é definida pelo número no final da classe <code>col-xs-</code>, sendo <code>.col-xs-1</code> o menor tamanho e <code>.col-xs-12</code> o maior.</li>
           </ul>
-
           <div class="row">
             <div class="col-xs-6">
               <h3>Exemplos</h3>
@@ -129,11 +129,37 @@
               </pre>
             </div><!--/col-xs-6-->
           </div><!--/row-->
+        </section><!--/#grid-->
 
-        </div><!--/#grid-->
+
+
+        <section id="tipografia">
+          <h2>Tipografia</h2>
+        </section><!--/#tipografia-->
+
+        <section id="icones">
+          <h2>Ícones</h2>
+        </section><!--/#icones-->
+
+        <section id="helpers">
+          <h2>Helpers</h2>
+        </section><!--/#helpers-->
+
+        <section id="botoes">
+          <h2>Botões</h2>
+        </section><!--/#botoes-->
+
+        <section id="dropdowns">
+          <h2>Dropdowns</h2>
+        </section><!--/#dropdowns-->
+
+
+
+
+
 
         <footer class="page-footer">
-          latitude14
+          <img src="assets/img/latitude-logo.png" />
         </footer>
 
       </div><!--/container-->

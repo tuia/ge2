@@ -1,0 +1,45 @@
+/* MEI */
+
+
+#mei-content {
+	background: url("http://subtlepatterns.com/patterns/paper_fibers.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	padding-top: 50px;
+
+	&>.container{
+		background: rgba(255,255,255,.8);
+	}
+
+	.intro{
+		margin: 10px 0 50px 0;
+		text-align: center;
+		p {
+			margin: 0px 120px 20px;
+			color: #666666;
+			font-size: 16px;
+		}
+		h1 {
+			font-size: 36px;
+		}
+	}
+
+	pre[class*="language-"] {padding: 0 1em}
+
+	.show-grid {
+		margin-bottom: 20px;
+		&>.col-xs-1, &>.col-xs-2, &>.col-xs-3, &>.col-xs-4, &>.col-xs-5, &>.col-xs-6, &>.col-xs-7, &>.col-xs-8, &>.col-xs-9, &>.col-xs-10, &>.col-xs-11, &>.col-xs-12 {
+			background-color: rgba(86, 61, 124, 0.15);
+			border: 1px solid rgba(86, 61, 124, 0.2);
+			padding: 10px 0;
+			text-align: center;
+		}
+	}/*show-grid*/
+
+	footer.page-footer {
+		margin-top: 50px;
+		border-top: 1px solid #CCCCCC;
+		padding: 20px 0;
+	}
+}/*mei-content*/
+
+
+

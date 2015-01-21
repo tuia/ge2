@@ -122,8 +122,6 @@
 		font-size: 26px;
 	}
 
-	.success {color: $success-color;}
-
 	.unity {color: $lighter-text;}
 
 	.pendente-txt {color: $pendente}
@@ -1212,6 +1210,10 @@ html, body {
 	z-index: 1030;
 	width: 320px;
 	display: none;
+
+	&.large {
+		width: 600px !important;
+	}
 
 	.entity-content {
 		background-clip: padding-box;

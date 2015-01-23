@@ -32,6 +32,7 @@
     	height: 60px;
     	padding: 2px 10px;
     	margin: 0 10px 0 0;
+    	float: left;
     	p {margin: 0; line-height: 1}
     }
     thead {
@@ -147,6 +148,11 @@
 	margin: 20px 0 0;
 	min-height: 40px;
 	padding: 5px 20px;
+
+	h1 {
+		font-size: 26px;
+	}
+	
 	.navbar-nav > li > a {
 		padding: 10px 15px;
 		opacity: .6;

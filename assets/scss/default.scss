@@ -10,12 +10,14 @@
 	$light-border: #f0f0f0;
 	
 	/* VALIDATION COLORS */
-	$danger-color: #c03538;
-	$success-color: #00B22D;
+	$error-color: #a94442;
+	$success-color: #a94442;
+	$warning-color: #8a6d3b;
+	$info-color: #5bc0de;
 
 	/* STATUS COLORS */
 	$default: #999999;
-	$pendente: #999999;
+	$pendente: #666666;
 	$designado: #238C00;
 	$acionado: #00B2B2;	
 	$em-execucao: #FF7F00;
@@ -118,10 +120,6 @@
 
 /************** TYPOGRAPHY **************/
 
-	h1 {
-		font-size: 26px;
-	}
-
 	.unity {color: $lighter-text;}
 
 	.pendente-txt {color: $pendente}
@@ -152,9 +150,9 @@
 	}
 
 	/* bootstrap validation */
-	.has-error label {color: #a94442}
-	.has-success label {color: #a94442}
-	.has-warning label {color: #8a6d3b}
+	.has-error label {color: $error-color}
+	.has-success label {color: $success-color}
+	.has-warning label {color: $warning-color}
 
 	/* description list */
 	dl {
@@ -194,7 +192,7 @@
 /************** COMPONENTS **************/
 
 	/* ALERTS */
-	.alert {
+	.alert.alert-small {
 		margin-bottom: 10px;
 		padding: 5px 10px;
 	}
@@ -600,7 +598,7 @@
 	/* BADGES */
 	.badge {
 		&.badge-primary {
-			background: $danger-color;
+			background: $error-color;
 		}
 		&.align-top {
 			position: relative;
@@ -673,13 +671,20 @@
 	.entity-symbol, .item-symbol {
 		background: $default;
 		display: inline-block;
-		float: left;
 		text-align: center;
 		color: $inverse-text;
 		padding: 2px;
 		height: 40px;
 		width: 40px;
 		position: relative;
+
+		&.large {
+			width: 58px;
+			height: 58px;
+			& > .fa {
+				margin-top: 5px;
+			}
+		}
 
 		&.pendente {
 			background: $pendente;
@@ -702,9 +707,21 @@
 			&:hover { background: darken($finalizado, 10%) }
 		}
 
+		&.error {
+			background: $error-color;
+		}
+		&.success {
+			background: $success-color;
+		}
+		&.warning {
+			background: $warning-color;
+		}
+		&.info {
+			background: $info-color;
+		}
+
 		&>.fa {
 			font-size: 14px;
-			margin-top: 5px;
 		}
 		p {
 			margin-bottom: -5px;
@@ -749,6 +766,7 @@
 
 			.entity-header {
 				.entity-symbol {
+					float: left;
 					& > .fa {
 						font-size: 16px;
 						margin-top: 10px; 
@@ -855,7 +873,7 @@ html, body {
 					font-size: 20px;
 				}
 				& > .badge {
-					background-color: $danger-color;
+					background-color: $error-color;
 					position: relative;
 					top: -15px;
 					left: -15px;
@@ -1215,6 +1233,16 @@ html, body {
 		width: 600px !important;
 	}
 
+				.entity-header {
+					.entity-symbol {
+						float: left;
+						& > .fa {
+							font-size: 16px;
+							margin-top: 10px; 
+						}
+					}
+				}
+
 	.entity-content {
 		background-clip: padding-box;
     	background-color: #fff;
@@ -1316,6 +1344,7 @@ body.entity-iframe {
 		margin-bottom: -1px;
 		border-bottom: 1px solid #cccccc;
 		.entity-symbol, .item-symbol {
+			float: left;
 			height: 58px;
 			width: 58px;
 			& > .fa {
@@ -1450,7 +1479,7 @@ body.entity-iframe {
 	.maneuver-table, dl {
 		.danger, &.danger {
 			.date, .hour, .name, .description {
-				color: $danger-color;
+				color: $error-color;
 				font-weight: bold;
 			}
 		}		

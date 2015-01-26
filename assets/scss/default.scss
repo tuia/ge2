@@ -668,7 +668,7 @@
 	}
 
 	/* ENTITY-SYMBOL */
-	.entity-symbol, .item-symbol {
+	.entity-symbol {
 		background: $default;
 		display: inline-block;
 		text-align: center;
@@ -682,7 +682,9 @@
 			width: 58px;
 			height: 58px;
 			& > .fa {
-				margin-top: 5px;
+				margin-top: 10px;
+				font-size: 16px;
+				display: block;
 			}
 		}
 
@@ -722,6 +724,8 @@
 
 		&>.fa {
 			font-size: 14px;
+			display: block;
+			margin: 4px 0 -2px;
 		}
 		p {
 			margin-bottom: -5px;
@@ -749,7 +753,7 @@
 			}
 		}
 	}		
-	a.entity-symbol, a.item-symbol {
+	a.entity-symbol {
 		&:hover {
 			background: darken(#999999, 10%);
 			text-decoration: none;
@@ -1233,15 +1237,14 @@ html, body {
 		width: 600px !important;
 	}
 
-				.entity-header {
-					.entity-symbol {
-						float: left;
-						& > .fa {
-							font-size: 16px;
-							margin-top: 10px; 
-						}
-					}
-				}
+	.entity-header {
+		.entity-symbol {
+			float: left;
+			& > .fa {
+				@extend .large;
+			}
+		}
+	}
 
 	.entity-content {
 		background-clip: padding-box;
@@ -1343,7 +1346,7 @@ body.entity-iframe {
 	.entity-header {
 		margin-bottom: -1px;
 		border-bottom: 1px solid #cccccc;
-		.entity-symbol, .item-symbol {
+		.entity-symbol {
 			float: left;
 			height: 58px;
 			width: 58px;

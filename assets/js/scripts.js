@@ -171,10 +171,17 @@
 
 	////////// FORMS /////////	
 
+		//DATE PICKER
+		$('.datepicker').datetimepicker({
+		    lang: 'pt-BR',
+		    timepicker: false,
+		    format:'d.m.Y H:i'
+		});
+
 		//DATE TIME PICKER
 		$('.datetimepicker').datetimepicker({
-		    autoclose: true,
-		    format: 'mm-dd-yy hh:ii'
+		    lang: 'pt-BR',
+		    format:'d.m.Y H:i'
 		});
 
 		//CHARACTERES COUNTER
@@ -304,4 +311,5 @@
 		});
 		$('.entity-window .btn-close').click( function() {
 			$(this).parents('.entity-window').slideUp('fast');
+			return false
 		});

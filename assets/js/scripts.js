@@ -185,6 +185,14 @@
 		    format:'d/m/Y H:i',
 		});
 
+		//MAXLENGTH
+		//IMPORTANT! though that if you are setting the maxlength via JavaScript, someone else could just as easily change the maxlength to whatever they like. You will still need to validate the submitted data on the server.
+		$('input[type="text"]').attr('maxLength','50').keypress(limitMe);
+		function limitMe(e) {
+		    if (e.keyCode == 8) { return true; }
+		    return this.value.length < $(this).attr("maxLength");
+		}
+
 		//CHARACTERES COUNTER
 		$('.input-counter-container .form-control').keyup( function() {
 			var len = $(this).val().length;
@@ -195,6 +203,16 @@
 		      if (len > 24) { $('.input-counter').css('color', 'red'); }
 		      else { $('.input-counter').css('color', 'inherit'); }
 		    }
+		});
+
+		//ALPHANUMERIC
+		$(".input-alphanumeric-container > input[type='text']").numeric({
+			allowMinus: false,
+			allowThouSep: false,
+			allowDecSep: false
+		});
+		$(".input-latin-container > input[type='text'], .input-latin-container > textarea").alphanum({
+			allow: '!?@":.,*-+/()[]=$#'
 		});
 
 		//EDITABLE FIELDS

@@ -393,7 +393,7 @@
               <h4>Exemplos</h4>
               <div class="well">                
                 <div class="form-group">
-                  <label for="">previsão de início</label>
+                  <label for="">data</label>
                   <input type="text" value="" class="form-control datepicker" />
                 </div><!--/.form-group-->
               </div>
@@ -402,7 +402,7 @@
               <h4>Código HTML</h4>
               <pre><code class="language-markup">
 &lt;div class=&quot;form-group&quot;&gt;
-  &lt;label&gt;previsão de início&lt;/label&gt;
+  &lt;label&gt;data&lt;/label&gt;
   &lt;input type=&quot;text&quot; class=&quot;form-control datepicker&quot; /&gt;
 &lt;/div&gt;</code></pre>
             </div>
@@ -412,7 +412,8 @@
 $('.datepicker').datetimepicker({
     lang: 'pt-BR',
     timepicker: false,
-    format:'d.m.Y H:i'
+    format:'d.m.Y H:i',
+    closeOnDateSelect:true
 });</code></pre>
             </div>
           </div>

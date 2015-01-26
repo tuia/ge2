@@ -175,13 +175,14 @@
 		$('.datepicker').datetimepicker({
 		    lang: 'pt-BR',
 		    timepicker: false,
-		    format:'d.m.Y H:i'
+		    format:'d.m.Y',
+		    closeOnDateSelect:true
 		});
 
 		//DATE TIME PICKER
 		$('.datetimepicker').datetimepicker({
 		    lang: 'pt-BR',
-		    format:'d.m.Y H:i'
+		    format:'d.m.Y H:i',
 		});
 
 		//CHARACTERES COUNTER

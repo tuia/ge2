@@ -29,6 +29,10 @@
           <li><a href="#introducao">introdução</a></li>
           <li><a href="#grid">grid</a></li>
           <li><a href="#tipografia">tipografia</a></li>
+          <li><a href="#icones">ícones</a></li>
+          <li><a href="#botoes">botões</a></li>
+          <li><a href="#dropdowns">dropdowns</a></li>
+          <li><a href="#tabelas">tabelas</a></li>
           <li><a href="#entidades">entidades</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -99,7 +103,8 @@
               </ul>
               <h3>Plugins</h3>
               <ul>
-                <li><a href="https://github.com/xdan/datetimepicker" target="blank">Date Time Picker</a> <small>(v2.4.1)</small></li>
+                <li><a href="http://silviomoreto.github.io/bootstrap-select/" target="blank">Bootstrap Select</a> <small>(v2.4.1)</small></li>
+                <li><a href="https://github.com/xdan/datetimepicker" target="blank">Date Time Picker</a> <small>(v1.6.3)</small></li>
                 <li><a href="https://github.com/KevinSheedy/jquery.alphanum" target="blank">jQuery Alphanum</a> <small>(v2.4.1)</small></li>
               </ul>
             </div>
@@ -236,6 +241,246 @@
         <section id="botoes">
           <h2>Botões</h2>
         </section><!--/#botoes-->
+
+        <section id="dropdowns">
+          <h2>Dropdowns <small>ou combobox</small></h2>
+          <p>Dropdowns são menus contextuais flutuantes para exibir links.</p>
+          <div class="row">
+            <div class="col-xs-4">
+              <h4>Exemplo</h4>
+              <div class="well">
+                <div class="dropdown">
+                  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Dropdown padrão
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;Dropdown&nbsp;padr&atilde;o
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;
+&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;1&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;2&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;3&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+
+          <h3>Alinhamento</h3>
+          <p>É possível alinhar os dropdowns acima, abaixo, à esquerda e à direita. O dropdown padrão é alinhado a esquerda. Os botões do exemplo possuem a classe <code>.btn-block</code> para evidenciar o alinhameto. Veja mais em <a href="#botoes">botões</a>.</p>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <h4>Exemplos</h4>
+              <div class="well">
+
+                <div class="dropdown">
+                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                    Dropdown padrão
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                  </ul>
+                </div><br />
+
+                <div class="dropdown">
+                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                    Dropdown alinhado à direita
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                  </ul>
+                </div><br />
+
+                <div class="dropup">
+                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                    Dropup
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                  </ul>
+                </div><br />
+
+                <div class="dropup">
+                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                    Dropup alinhado à direita
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;!--/padr&atilde;o--&gt;
+&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--/&agrave;&nbsp;direita--&gt;
+&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="col-xs-4">
+              <h4>&nbsp;</h4><pre><code class="language-markup">&lt;!--/acima--&gt;
+&lt;div&nbsp;class=&quot;dropup&quot;&gt;
+&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--/acima&nbsp;e&nbsp;&agrave;&nbsp;direita--&gt;
+&lt;div&nbsp;class=&quot;dropup&quot;&gt;
+&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div><!--/row-->
+
+          <h3>Cores</h3>
+          <p>É possível também fazer um dropdown de cor inversa, adicionando as classes <code>.btn-inverse</code> no botão e <code>.dropdown-inverse</code> no menu.</p>
+          <div class="row">
+            <div class="col-xs-4">
+              <h4>Exemplos</h4>
+              <div class="well">
+                <div class="dropdown">
+                  <a href="#" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+                    Dropdown de cor inversa
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-inverse">
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-inverse dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    Dropdown de cor inversa
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-inverse&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+
+          <h3>Dropdown Select</h3>
+          <p>O <code>.dropdown-select</code> funciona como o elemento <code>select</code> do HTML, porém, aceita mais opções de formatação, como opções que incluem ícones, por exemplo.</p>
+          <div class="row">
+            <div class="col-xs-4">
+              <h4>Exemplos</h4>
+              <div class="well">
+                <div class="dropdown dropdown-select">
+                  <button class="btn dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    <span>selecione</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#"><i class="fa fa-car"></i> 064621 - Raimundo Silveira</a></li>
+                    <li><a href="#"><i class="fa fa-bus"></i> 064621 - Marcos Gomez</a></li>
+                    <li><a href="#"><i class="fa fa-cab"></i> 064621 - Valdira Gonzales</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;div&nbsp;class=&quot;dropdown&nbsp;dropdown-select&quot;&gt;
+&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-car&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Raimundo&nbsp;Silveira&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-bus&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Marcos&nbsp;Gomez&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-cab&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Valdira&nbsp;Gonzales&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&lt;/ul&gt;</code></pre>
+            </div>
+          </div>
+
+          <h3>Dropdown Select Múltiplo</h3>
+          <p>O dropdown select múltiplo substitui o elemento HTML <code>select</code>, e permite a seleção de vários itens por vez.</p>
+          <p>Este elemento não suporta outros elementos nas opções, como ícones. Utiliza o framework <a href="http://silviomoreto.github.io/bootstrap-select/" target="blank">Bootstrap Select</a>. Em sua documentação, você pode conferir outras opções para o elemento.</p>
+          <div class="row">
+            <div class="col-xs-4">
+              <h4>Exemplos</h4>
+              <div class="well">
+                <div class="form">
+                  <div class="form-group">
+                    <label>Select múltiplo</label>
+                    <select class="selectpicker form-control" multiple data-selected-text-format="count>2">
+                      <option>carro</option>
+                      <option>moto</option>
+                      <option>van</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Select com busca</label>
+                    <select class="selectpicker form-control" data-live-search="true">
+                      <option>carro</option>
+                      <option>moto</option>
+                      <option>van</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;label&gt;Select&nbsp;m&uacute;ltiplo&lt;/label&gt;
+&lt;select&nbsp;class=&quot;selectpicker&nbsp;form-control&quot;&nbsp;multiple&nbsp;data-selected-text-format=&quot;count&gt;2&quot;&gt;
+&nbsp;&nbsp;&lt;option&gt;carro&lt;/option&gt;
+&nbsp;&nbsp;&lt;option&gt;moto&lt;/option&gt;
+&nbsp;&nbsp;&lt;option&gt;van&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;label&gt;Select&nbsp;com&nbsp;busca&lt;/label&gt;
+&lt;select&nbsp;class=&quot;selectpicker&nbsp;form-control&quot;&nbsp;data-live-search=&quot;true&quot;&gt;
+&nbsp;&nbsp;&lt;option&gt;carro&lt;/option&gt;
+&nbsp;&nbsp;&lt;option&gt;moto&lt;/option&gt;
+&nbsp;&nbsp;&lt;option&gt;van&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+            </div>
+          </div>
+        </section><!--/#dropdowns-->
 
         <section id="tabelas">
           <h2>Tabelas</h2>
@@ -857,7 +1102,8 @@ $('.datetimepicker').datetimepicker({
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/datetimepicker.js" charset="UTF-8"></script>
+    <script src="assets/js/datetimepicker.js"></script>
+    <script src="assets/js/bootstrap-select.js"></script>
     <script src="assets/js/jquery-alphanum.js"></script>
     <script src="assets/js/jquery-maskmoney.js"></script>
     <script src="assets/js/prism.js"></script>

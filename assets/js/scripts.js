@@ -185,18 +185,6 @@
 		    format:'d/m/Y H:i',
 		});
 
-		//CHARACTERES COUNTER
-		$('.input-counter-container .form-control').keyup( function() {
-			var len = $(this).val().length;
-		    if (len >= 31) {
-		      $(this).val() = $(this).val().substring(0, 30);
-		    } else {
-		      $('.input-counter').text(30 - len);
-		      if (len > 24) { $('.input-counter').css('color', 'red'); }
-		      else { $('.input-counter').css('color', 'inherit'); }
-		    }
-		});
-
 		//ALPHANUMERIC
 		$(".input-alphanumeric-container > input[type='text']").numeric({
 			allowMinus: false,
@@ -216,11 +204,23 @@
 
 		//MAXLENGTH
 		//IMPORTANT! though that if you are setting the maxlength via JavaScript, someone else could just as easily change the maxlength to whatever they like. You will still need to validate the submitted data on the server.
-		$('input[type="text"]').attr('maxLength','50').keypress(limitMe);
+		$('input[type="text"]').not('.input-counter-container .form-control').attr('maxLength','50').keypress(limitMe);
 		function limitMe(e) {
 		    if (e.keyCode == 8) { return true; }
 		    return this.value.length < $(this).attr("maxLength");
 		}
+
+		//CHARACTERES COUNTER
+		$('.input-counter-container .form-control').keyup( function() {
+			var len = $(this).val().length;
+		    if (len >= 31) {
+		      $(this).val() = $(this).val().substring(0, 30);
+		    } else {
+		      $('.input-counter').text(30 - len);
+		      if (len > 24) { $('.input-counter').css('color', 'red'); }
+		      else { $('.input-counter').css('color', 'inherit'); }
+		    }
+		});
 
 		//EDITABLE FIELDS
 		$('.editable-field-btn').click( function() {
@@ -337,5 +337,14 @@
 		});
 		$('.entity-window .btn-close').click( function() {
 			$(this).parents('.entity-window').slideUp('fast');
+			return false
+		});
+
+		//PAGE LOADER
+		$('.load-page-btn').click( function() {
+			$('body').addClass('loading');
+			setTimeout(function() {
+				$('body').removeClass('loading');
+			}, 2000);
 			return false
 		});

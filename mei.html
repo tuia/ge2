@@ -16,6 +16,7 @@
     <![endif]-->
   </head>
   <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="90">
+    <div id="page-loader"><i class="fa fa-circle-o-notch fa-pulse fa-spin"></i></div>
 
     <!--/NAVBAR-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -211,15 +212,295 @@
 
         <section id="icones">
           <h2>Ícones</h2>
-        </section><!--/#icones-->
+          <h3>Ícone de "carregando"</h3>
+          <p>Para o ícone de carregando, existem dois casos de uso. No primeiro, uma camada branca com o ícone ao centro cobre toda a tela. No segundo, esta mesma camada com o ícone aparece dentro de um painel.</p>
+          <div class="row">
+            <div class="col-xs-4">
+              <h4>Exemplos</h4>
+              <div class="well">
+                <a href="#" class="btn btn-primary btn-lg btn-block load-page-btn">simular página carregando</a><br />
+                <a href="#loading-window" class="btn btn-primary btn-lg btn-block entity-icon">abrir janela carregando</a>
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;!--&nbsp;A&nbsp;classe&nbsp;&apos;.loading&apos;&nbsp;aparece&nbsp;apenas&nbsp;enquanto&nbsp;o&nbsp;conte&uacute;do&nbsp;&eacute;&nbsp;carregado&nbsp;&nbsp;--&gt;
+&lt;body&nbsp;class=&quot;loading&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;id=&quot;page-loader&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-circle-o-notch&nbsp;fa-pulse&nbsp;fa-spin&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;...</code></pre>
 
-        <section id="helpers">
-          <h2>Helpers</h2>
-        </section><!--/#helpers-->
+            </div>
+          </div>
+        </section><!--/#icones-->
 
         <section id="botoes">
           <h2>Botões</h2>
         </section><!--/#botoes-->
+
+        <section id="tabelas">
+          <h2>Tabelas</h2>
+          <div class="row">
+            <div class="col-xs-3">
+              <p>Existem vários tipos de tabelas que podem ser utilizados. Para todos os casos, a estrutura básica é a mesma, variando apenas as classes do elemento <code>table</code></p>
+            </div>
+            <div class="col-xs-5"><pre><code class="language-markup">&lt;table class=&quot;table&quot;&gt;
+&nbsp;&nbsp;&lt;thead&gt;
+  &nbsp;&nbsp;&lt;tr&gt;
+    &nbsp;&nbsp;&lt;th&gt;...&lt;/th&gt;
+  &nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&lt;/thead&gt;
+&nbsp;&nbsp;&lt;tbody&gt;
+ &nbsp;&nbsp; &lt;tr&gt;
+   &nbsp;&nbsp; &lt;td&gt;...&lt;/td&gt;
+  &nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre></div>
+            <div class="col-xs-4">
+              <div class="alert alert-info">
+                <p><strong>Dica!</strong> O elemento <code>thead</code> é utilizado para definir o cabelçalho da tabela, e para suas células, deve se utilizar a tag <code>th</code>. </p>
+                <p>O elemento <code>tbody</code> é utilizado para definir o corpo da tabela, e para suas células, deve se utilizar a tag <code>td</code>. </p>
+                <p>Existe também a tag <code>tfoot</code>, para definir o rodapé das tabelas. Seu uso é opcional.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <h3>Tipos de tabelas</h3>
+              <p>Veja alguns exemplos abaixo.</p>
+              <div class="row">
+                <div class="col-xs-4">
+                  <h4>Tabela padrão</h4>
+                  <p>Utiliza apenas a classe <code>.table</code></p>
+                  <table class="table">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+                </div><!--/col-->
+
+                <div class="col-xs-4">
+                  <h4>Tabela com efeito ao passar o mouse</h4>
+                  <p>Utiliza as classe <code>.table</code> e <code>.table-hover</code></p>
+                  <table class="table table-hover">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+                </div><!--/col-->
+
+                <div class="col-xs-4">
+                  <h4>Tabela zebrada</h4>
+                  <p>Utiliza as classe <code>.table</code> e <code>.table-striped</code></p>
+                  <table class="table table-striped">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+                </div><!--/col-->
+
+              </div><!--/.row-->
+              <div class="row">
+
+                <div class="col-xs-4">
+                  <h4>Tabela com bordas</h4>
+                  <p>Utiliza as classe <code>.table</code> e <code>.table-bordered</code></p>
+                  <table class="table table-bordered">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+                </div><!--/col-->
+
+                <div class="col-xs-4">
+                  <h4>Tabela condensada</h4>
+                  <p>Utiliza as classe <code>.table</code> e <code>.table-condensed</code></p>
+                  <table class="table table-condensed">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+                </div><!--/col-->
+
+                <div class="col-xs-4">
+                  <h4>Tabela ultra-condensada</h4>
+                  <p>Utiliza as classe <code>.table</code> e <code>.table-ultra-condensed</code></p>
+                  <table class="table table-ultra-condensed">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+                </div><!--/col-->
+
+              </div><!--/.row-->
+              <div class="row">
+
+                <div class="col-xs-4">
+                  <h4>Tabela vertical</h4>
+                  <p>Utiliza as classe <code>.table</code> e <code>.table-vertical</code></p>
+                  <table class="table table-vertical">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+                </div><!--/col-->
+
+              </div><!--/row-->
+            </div>
+          </div><!--/row-->
+          <h3>Classes contextuais</h3>
+          <p>Use classes contextuais para colorir linhas ou células individualmente.</p>
+          <div class="row">
+            <div class="col-xs-6">
+              <table class="table">
+                <tr class=""><td>linha normal</td></tr>
+                <tr class="active"><td>linha com a classe <code>.active</code></td></tr>
+                <tr class="success"><td>linha com a classe <code>.success</code></td></tr>
+                <tr class="info"><td>linha com a classe <code>.info</code></td></tr>
+                <tr class="warning"><td>linha com a classe <code>.warning</code></td></tr>
+                <tr class="danger"><td>linha com a classe <code>.danger</code></td></tr>
+              </table>
+            </div><!--/col-->
+            <div class="col-xs-6">
+              <pre><code class="language-markup">&lt;!--&nbsp;Em&nbsp;linhas&nbsp;--&gt;
+&lt;tr&nbsp;class=&quot;active&quot;&gt;...&lt;/tr&gt;
+&lt;tr&nbsp;class=&quot;success&quot;&gt;...&lt;/tr&gt;
+&lt;tr&nbsp;class=&quot;warning&quot;&gt;...&lt;/tr&gt;
+&lt;tr&nbsp;class=&quot;danger&quot;&gt;...&lt;/tr&gt;
+&lt;tr&nbsp;class=&quot;info&quot;&gt;...&lt;/tr&gt;
+
+&lt;!--&nbsp;Em&nbsp;colunas&nbsp;(`td`&nbsp;ou&nbsp;`th`)&nbsp;--&gt;
+&lt;tr&gt;
+&nbsp;&nbsp;&lt;td&nbsp;class=&quot;active&quot;&gt;...&lt;/td&gt;
+&nbsp;&nbsp;&lt;td&nbsp;class=&quot;success&quot;&gt;...&lt;/td&gt;
+&nbsp;&nbsp;&lt;td&nbsp;class=&quot;warning&quot;&gt;...&lt;/td&gt;
+&nbsp;&nbsp;&lt;td&nbsp;class=&quot;danger&quot;&gt;...&lt;/td&gt;
+&nbsp;&nbsp;&lt;td&nbsp;class=&quot;info&quot;&gt;...&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+            </div>
+          </div><!--/row-->
+
+        </section><!--/#tabelas-->
+
 
         <section id="entidades">
           <h2>Entidades</h2>
@@ -549,6 +830,22 @@ $('.datetimepicker').datetimepicker({
         </div><!--/entity-window-header-->
         <div class="entity-body">
           <iframe src="poste.html" frameborder="0" scrolling="no"></iframe>
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->      
+    </div><!--/entity-window-->
+
+    <!--/LOADING-WINDOW-->
+    <div class="entity-window" id="loading-window">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar poste"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/entity-window-header-->
+        <div class="entity-body">
+          <iframe src="loading.html" frameborder="0" scrolling="no"></iframe>
         </div><!--/.entity-body-->
       </div><!--/entity-content-->      
     </div><!--/entity-window-->

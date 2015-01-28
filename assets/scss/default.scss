@@ -148,6 +148,7 @@
 		margin: 10px 0;
 		text-indent: 10px;
 	}
+	.checkbox label, .radio label {text-transform: none; color: $default-text; font-size: 14px}
 
 	/* bootstrap validation */
 	.has-error label {color: $error-color}
@@ -387,6 +388,11 @@
 				top: 50%;
 			}
 		}
+		.dropdown-menu {
+			width: 100%;
+			max-height: 200px;
+			overflow: auto; 
+		}
 	}
 	.dropup {
 		position: relative;
@@ -506,13 +512,58 @@
 			top: 0px;
 		}
 	}
-
+	/* nav tabs */
+	.well {
+		position: relative;
+		div[role="tabpanel"] {
+			.nav.nav-tabs {
+				&.nav-justified {
+					margin: -20px -19px 20px;
+					position: absolute;
+				}
+			}
+			.tab-content {
+				padding-top: 40px;
+			}
+		}
+		.nav-tabs {
+			& > li {
+				background: #eeeeee;
+				& > a:hover {
+					background: #e5e5e5;
+				}
+				&.active > a {
+					background: #f5f5f5;
+					border-bottom: 1px solid #f5f5f5;
+					&:hover {
+						border-bottom: 1px solid #f5f5f5;
+					}
+				}
+			}
+		}
+	}
 	/* condensed nav-tabs*/
 	.nav.nav-tabs.nav-condensed {
 		li {
 			& > a {
 				padding: 5px 10px;
 			}
+		}
+	}
+	/* form actions */
+	.form-actions {
+		height: auto;
+		overflow: auto;
+	}
+	.well {
+		.form-actions {
+			background: #eaeaea;
+			margin: 10px -19px -19px;
+			padding: 10px 20px;
+			border-radius: 0 0 5px 5px;
+			-o-border-radius: 0 0 5px 5px;
+			-moz-border-radius: 0 0 5px 5px;
+			-webkit-border-radius: 0 0 5px 5px;
 		}
 	}
 

@@ -145,7 +145,7 @@
 
 /* ACTIONS NAVBAR */
 #actions-navbar {
-	margin: 20px 0 0;
+	margin: 20px 0;
 	min-height: 40px;
 	padding: 5px 20px;
 
@@ -162,7 +162,7 @@
 	}
 	.navbar-right {margin-right: 10px;}
 	.navbar-title {
-		width: 250px;
+		width: auto;
 		float: left;
 		h1 {
 			margin: 0;
@@ -208,4 +208,27 @@
 			}
 		}
 	}
+}
+
+
+/* RESEARCH CONTAINER */
+.research-container {
+}
+/* RESEARCH TABLE */
+.research-table {
+    thead {
+    	tr {
+    		th {
+    			background: #EEEEEE;
+    			color: #666666;
+    			font-weight: 400;
+    			font-size: 14px;
+    			padding: 10px;
+    			border-bottom: none;
+    			vertical-align: middle;
+    			text-align: center;
+    		}
+    	}
+    	tr:last-child th {font-size: 10px; vertical-align: middle}
+    }
 }

@@ -216,6 +216,7 @@
 }
 /* RESEARCH TABLE */
 .research-table {
+	&>tbody>tr>td, &>thead>tr>th {vertical-align: middle;}
     thead {
     	tr {
     		th {
@@ -229,6 +230,6 @@
     			text-align: center;
     		}
     	}
-    	tr:last-child th {font-size: 10px; vertical-align: middle}
+    	tr:last-child th {font-size: 10px;}
     }
 }

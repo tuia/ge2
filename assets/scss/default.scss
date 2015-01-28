@@ -634,7 +634,7 @@
 	/* mini-table rows */
 	.row.mini-table, .mini-table > .row {
 		margin: 10px -5px 0;
-		font-size: 13px;
+		font-size: 12px;
 		color: #999999;
 		&>.col-xs-1, &>.col-xs-2, &>.col-xs-3, &>.col-xs-4, &>.col-xs-5, &>.col-xs-6, &>.col-xs-7, &>.col-xs-8, &>.col-xs-9, &>.col-xs-10, &>.col-xs-11, &>.col-xs-12 {
 			border-right: 1px solid $light-border;
@@ -740,99 +740,6 @@
 		}
 	}
 
-	/* ENTITY-SYMBOL */
-	.entity-symbol {
-		background: $default;
-		display: inline-block;
-		text-align: center;
-		color: $inverse-text;
-		padding: 2px;
-		height: 40px;
-		width: 40px;
-		position: relative;
-
-		&.large {
-			width: 58px;
-			height: 58px;
-			& > .fa {
-				margin-top: 10px;
-				font-size: 16px;
-				display: block;
-			}
-		}
-
-		&.pendente {
-			background: $pendente;
-			&:hover { background: darken($pendente, 10%) }
-		}
-		&.designado {
-			background: $designado;
-			&:hover { background: darken($designado, 10%) }
-		}
-		&.acionado {
-			background: $acionado;
-			&:hover { background: darken($acionado, 10%) }
-		}
-		&.em-execucao {
-			background: $em-execucao;
-			&:hover { background: darken($em-execucao, 10%) }
-		}
-		&.finalizado {
-			background: $finalizado;
-			&:hover { background: darken($finalizado, 10%) }
-		}
-
-		&.error {
-			background: $error-color;
-		}
-		&.success {
-			background: $success-color;
-		}
-		&.warning {
-			background: $warning-color;
-		}
-		&.info {
-			background: $info-color;
-		}
-
-		&>.fa {
-			font-size: 14px;
-			display: block;
-			margin: 4px 0 -2px;
-		}
-		p {
-			margin-bottom: -5px;
-		}
-		span {font-size: 10px;}
-		.entity-text {
-			line-height: 1.2em;
-			font-size: 11px;
-			text-transform: uppercase;
-			display: block;
-			margin-bottom: -2px;
-		}
-		.bookmark-button {
-			position: absolute;
-			top: -3px;
-			left: 3px;
-			i.fa {
-				font-size: 20px;
-			}
-		}
-		&.idless {
-			background: transparent;
-			&>img, &>.fa {
-				margin-top: 10px
-			}
-		}
-	}		
-	a.entity-symbol {
-		&:hover {
-			background: darken(#999999, 10%);
-			text-decoration: none;
-			color: $inverse-text;
-		}
-	}
 
 
 /* STYLES */
@@ -1054,22 +961,6 @@ html, body {
 						}
 					}
 				 }
-
-				 .entity-list {
-
-				 	.entity-card-data {
-				 		padding: 3px 5px;
-					 	.entity-title {
-					 		font-size: 14px;
-					 		text-transform: none;
-					 		.badge {
-					 			font-size: 12px;
-					 		}
-					 	}
-					 	.status {font-size: 12px;}
-			 		}
-
-				 }
 			}
 		}/* /user-menu */
 
@@ -1257,73 +1148,6 @@ html, body {
 		margin: 0 0 5px;
 	}
 }
-.entity-panefooter {
-	.message-textarea {
-		width: 100%;
-		resize: none;
-		border: none;
-		padding: 5px 0;
-		@include box-shadow(0,0,0);
-	}
-	.send-message-btn {
-		margin: 5px 0
-	}
-}
-
-
-/* MODAIS */
-.entity-window {
-	z-index: 1030;
-	width: 320px;
-	display: none;
-
-	&.large {
-		width: 600px !important;
-	}
-
-	.entity-card, .entity-card {
-		.entity-symbol {
-			float: left;
-			& > .fa {
-				@extend .large;
-			}
-		}
-	}
-
-	.entity-content {
-		background-clip: padding-box;
-    	background-color: #fff;
-    	border: 1px solid rgba(0, 0, 0, 0.2);
-		position: relative;
-		outline: 0 none;
-		@include border-radius(6px);
-		@include box-shadow(0,5px,15px,rgba(0, 0, 0, 0.5))
-	}
-
-	.entity-window-header {
-		background: $lightbox-color;
-		cursor: move;
-		padding: 3px;
-		position: relative;
-		height: 30px;
-		border-bottom: 1px solid #e5e5e5;		
-		position: relative;
-
-		.bookmark-button {
-			font-size: 23px;
-			position: absolute;
-			top: -8px;
-			left: 0;
-			padding: 0 5px;
-		}
-	}
-
-	.entity-body {
-		padding: 0; 
-		position: relative;
-	}
-}
-
 
 /* CLICKABLE AREA */
 .click-area {	
@@ -1386,9 +1210,74 @@ body.entity-iframe {
 }
 
 
+/*/////////////////////////// ENTITIES //////////////////////*/
+
+/* ENTITY-WINDOW */
+.entity-window {
+	z-index: 1030;
+	width: 320px;
+	display: none;
+
+	&.large {
+		width: 600px !important;
+	}
+
+	.entity-content {
+		background-clip: padding-box;
+    	background-color: #fff;
+    	border: 1px solid rgba(0, 0, 0, 0.2);
+		position: relative;
+		outline: 0 none;
+		@include border-radius(6px);
+		@include box-shadow(0,5px,15px,rgba(0, 0, 0, 0.5))
+	}
+
+	.entity-window-header {
+		background: $lightbox-color;
+		cursor: move;
+		padding: 3px;
+		position: relative;
+		height: 30px;
+		border-bottom: 1px solid #e5e5e5;		
+		position: relative;
+
+		.bookmark-button {
+			font-size: 23px;
+			position: absolute;
+			top: -8px;
+			left: 0;
+			padding: 0 5px;
+		}
+	}
+
+	.entity-body {
+		padding: 0; 
+		position: relative;
+	}
+}
+.entity-panefooter {
+	.message-textarea {
+		width: 100%;
+		resize: none;
+		border: none;
+		padding: 5px 0;
+		@include box-shadow(0,0,0);
+	}
+	.send-message-btn {
+		margin: 5px 0
+	}
+}
+
 
 /* ENTITIES */
-.entity-iframe, .entity-list, .entity-window {	
+/* retitrar .entity-window desta lista de seletores no master, que usa iframe */
+.entity-iframe, .entity-window {
+
+	.entity-card {
+		margin-bottom: -1px;
+		border-bottom: 1px solid #cccccc;
+		@extend .entity-card-large
+	}
 
 	.tab-content .tab-pane {
 		.auto {
@@ -1510,6 +1399,7 @@ body.entity-iframe {
 		border-bottom: 1px solid #dddddd;
 
 		.entity-card {
+			border-bottom: 1px solid #cccccc;
 			.entity-symbol {
 				float: left;
 				& > .fa {
@@ -1518,64 +1408,183 @@ body.entity-iframe {
 				}
 			}
 			.entity-card-data {
-				width: calc(100% - 58px);
 				padding: 5px;
 				.entity-title {
+	 				font-size: 14px;
 					display: inline;
 					height: auto;
 					margin-right: 10px;
-				}					
+	 				text-transform: none;
+			 		.badge {
+			 			font-size: 12px;
+			 		}
+				}
+	 			.status {
+	 				font-size: 12px;
+	 			}				
 			}
 		}
 	}
 }
 
-/* ENTITIES-HEADERS */
+/* ENTITIES-CARDS */
 .entity-card {
-	margin-bottom: -1px;
-	border-bottom: 1px solid #cccccc;
+
 	.entity-symbol {
 		float: left;
-		height: 58px;
-		width: 58px;
 		& > .fa {
 			display: block;
 		}
 	}
 	.entity-card-data {
+		width: calc(100% - 40px);
+		padding: 0 8px;
+		min-height: 40px;
 		float: left;
-		padding: 3px 10px;
-		min-height: 58px;
 
-		.entity-title {				
-			text-transform: uppercase;
-			font-size: 20px;
+		.entity-title {
+			font-size: 14px;
 			max-width: 220px;
 			line-height: 1.1em;
 			font-weight: 700;
-			.badge.id { font-size: 18px}
 			&.small {
 				text-transform: none;
 				font-size: 16px;
 				margin-top: 5px;
 				font-weight: normal;
-			}
-			.entity-details {
-				font-size: 12px;
-				color: $light-text;
-			}				
+			}			
 			.form-control[readonly] {
 			    cursor: default;
 			}
 		}
 		.entity-subitem {
-			margin-top: 5px 0 0;
+			font-size: 12px;
 			color: #666;
 			.title {
 				font-size: 12px;
 				text-transform: uppercase;
 			}
 		}
+	}
+}
+.entity-card-large {
+	.entity-symbol {
+		width: 58px;
+		height: 58px;
+		& > .fa {
+			margin-top: 10px;
+			font-size: 16px;
+			display: block;
+		}
+	}
+	.entity-card-data {
+		width: calc(100% - 58px);
+		padding: 3px 10px;
+		min-height: 58px;
+		.entity-title {
+			text-transform: uppercase;
+			font-size: 20px;
+			.badge.id { font-size: 18px}
+		}
+		.entity-subitem {
+			font-size: 14px;			
+			margin: 0 0 10px;
+		}
+	}
+}
+
+/* ENTITY-SYMBOL */
+
+.entity-symbol {
+	background: $default;
+	display: inline-block;
+	text-align: center;
+	color: $inverse-text;
+	padding: 2px;
+	height: 40px;
+	width: 40px;
+	position: relative;
+
+	&.large {
+		width: 58px;
+		height: 58px;
+		& > .fa {
+			margin-top: 10px;
+			font-size: 16px;
+			display: block;
+		}
+	}
+
+	&.pendente {
+		background: $pendente;
+		&:hover { background: darken($pendente, 10%) }
+	}
+	&.designado {
+		background: $designado;
+		&:hover { background: darken($designado, 10%) }
+	}
+	&.acionado {
+		background: $acionado;
+		&:hover { background: darken($acionado, 10%) }
+	}
+	&.em-execucao {
+		background: $em-execucao;
+		&:hover { background: darken($em-execucao, 10%) }
+	}
+	&.finalizado {
+		background: $finalizado;
+		&:hover { background: darken($finalizado, 10%) }
+	}
+
+	&.error {
+		background: $error-color;
+	}
+	&.success {
+		background: $success-color;
+	}
+	&.warning {
+		background: $warning-color;
+	}
+	&.info {
+		background: $info-color;
+	}
+
+	&>.fa {
+		font-size: 14px;
+		display: block;
+		margin: 4px 0 -2px;
+	}
+	p {
+		margin-bottom: -5px;
+	}
+	span {font-size: 10px;}
+	.entity-text {
+		line-height: 1.2em;
+		font-size: 11px;
+		text-transform: uppercase;
+		display: block;
+		margin-bottom: -2px;
+	}
+	.bookmark-button {
+		position: absolute;
+		top: -3px;
+		left: 3px;
+		i.fa {
+			font-size: 20px;
+		}
+	}
+	&.idless {
+		background: transparent;
+		&>img, &>.fa {
+			margin-top: 10px
+		}
+	}
+}		
+a.entity-symbol {
+	&:hover {
+		background: darken(#999999, 10%);
+		text-decoration: none;
+		color: $inverse-text;
 	}
 }
 

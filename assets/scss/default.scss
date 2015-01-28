@@ -575,6 +575,10 @@
 			display: block;
 		}
 	}
+	/*check-table-row*/
+	input[type="checkbox"].check-table-row {
+		cursor: pointer;
+	}
 
 
 	
@@ -584,6 +588,14 @@
 			margin: 10px 0 15px;
 			tr th {
 				text-transform: uppercase;
+			}
+			.btn-group {
+			  white-space: nowrap;
+			  .btn, .btn-group {
+			    float: none;
+			    display: inline-block;
+			    margin: 0 -2px;
+			  }
 			}
 		}
 		/* vertical table */
@@ -1437,6 +1449,7 @@ body.entity-iframe {
 		}
 	}
 	.entity-card-data {
+		color: #666;
 		width: calc(100% - 40px);
 		padding: 0 8px;
 		min-height: 40px;
@@ -1447,6 +1460,7 @@ body.entity-iframe {
 			max-width: 220px;
 			line-height: 1.1em;
 			font-weight: 700;
+			color: #333333;
 			&.small {
 				text-transform: none;
 				font-size: 16px;
@@ -1459,7 +1473,6 @@ body.entity-iframe {
 		}
 		.entity-subitem {
 			font-size: 12px;
-			color: #666;
 			.title {
 				font-size: 12px;
 				text-transform: uppercase;

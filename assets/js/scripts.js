@@ -285,6 +285,17 @@
 
 	////////// TABLES /////////
 
+		// TABLE CHECKBOX
+		$('.check-table-row').change( function() {
+			var tablerow = $(this).parents('tr');
+			if(this.checked) {
+		    	tablerow.addClass('active')
+		    } else {
+		        tablerow.removeClass('active')
+		    }
+
+		});
+
 		// SLIDE OPTIONS TD ON HOVER
 		$('.list-table tr').hover(
 			function() {

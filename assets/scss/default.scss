@@ -1584,19 +1584,27 @@ body {
 	  bottom: 0%;
 	  left: 0;
 	  right: 0%;
-	  background-color: rgba(255,255,255,.9);
+	  background-color: rgba(255,255,255,.75);
 	  z-index: 1099;
 	  display: none;
 	  text-align: center;
 	  width: 100%;
-	  	.fa-spin {
-	  		font-size: 5em;
-	  		line-height: 5em;
+	  	.fa-spin, .stop-btn {
 	  		position: absolute;
-	  		top: 50%;
 	  		margin: -2.5em 0;
 	  		left: 0;
 	  		width: 100%;
+	  	}
+	  	.fa-spin {	  		
+	  		font-size: 5em;
+	  		line-height: 5em;
+	  		top: 50%;
+	  		opacity: .5;
+	  	}
+	  	.stop-btn {
+	  		display: block;
+	  		font-size: .8em;
+	  		top: calc(50% + 6.5em);
 	  	}
 	}
 	&.loading {

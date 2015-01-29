@@ -118,9 +118,8 @@
 
 /* PAGINATION */
 .pagination-nav {
-	display: block;
+	display: inline-block;
 	overflow: auto;
-	margin: 20px 0;
 	float: right;
 	.nav {
 		margin: 0 30px 0 0;
@@ -145,7 +144,7 @@
 
 /* ACTIONS NAVBAR */
 #actions-navbar {
-	margin: 20px 0;
+	margin: 30px 0;
 	min-height: 40px;
 	padding: 5px 20px;
 
@@ -214,6 +213,17 @@
 /* RESEARCH CONTAINER */
 .research-container {
 }
+
+p.research-found {
+	margin: 0;
+	font-size: 18px;
+	color: #999;
+	strong {
+		color: #666;
+	}
+}
+
+
 /* RESEARCH TABLE */
 .research-table {
 	&>tbody>tr>td, &>thead>tr>th {vertical-align: middle;}

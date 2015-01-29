@@ -329,7 +329,7 @@
 
 		//DRAGGABLE MODAL
 		$( ".entity-window" ).draggable({ scroll: false , handle: ".entity-window-header", containment: "#content"});
-		$('.entity-icon').click( function() {
+		$('.show-window-btn').click( function() {
 			var target = $(this).attr('href');
 			var offset = $(this).offset();
 			var height = $(this).parents('dropdown-menu').outerHeight();

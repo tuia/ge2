@@ -843,7 +843,7 @@
                       <label>Usuário</label>
                       <div class="input-group">
                         <span class="input-group-btn">
-                          <a href="buscar-usuarios" class="btn btn-info hastooltip" type="button" title="buscar usuário"><i class="fa fa-user"></i></a>
+                          <a href="#buscar-usuarios" class="btn btn-info hastooltip" type="button" title="buscar usuário"><i class="fa fa-user"></i></a>
                         </span>
                         <input type="text" class="form-control" placeholder="">
                       </div><!-- /input-group -->
@@ -852,7 +852,7 @@
                       <label>Equipamento</label>
                       <div class="input-group">
                         <span class="input-group-btn">
-                          <a href="buscar-dispositivos" class="btn btn-info hastooltip" type="button" title="buscar equipamento"><i class="fa fa-plug"></i></a>
+                          <a href="#buscar-dispositivos" class="btn btn-info hastooltip" type="button" title="buscar equipamento"><i class="fa fa-plug"></i></a>
                         </span>
                         <input type="text" class="form-control" placeholder="">
                       </div><!-- /input-group -->
@@ -968,43 +968,49 @@
           </div>
         </div><!--/research-container-->
 
-
-        <!--/PAGINATION-->
-        <nav class="pagination-nav">
-          <ul class="nav navbar-nav">
-            <li><a href="#" class="disabled">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                ...
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">11</a></li>
-                <li><a href="#">12</a></li>
-                <li><a href="#">13</a></li>
-                <li><a href="#">14</a></li>
+        <div class="row">
+          <div class="col-xs-8">
+            <p class="research-found">Exibindo <strong>50</strong> de <strong>500</strong> resultados</p>
+          </div>
+          <div class="col-xs-4">
+            <!--/PAGINATION-->
+            <nav class="pagination-nav">
+              <ul class="nav navbar-nav">
+                <li><a href="#" class="disabled">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    ...
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">11</a></li>
+                    <li><a href="#">12</a></li>
+                    <li><a href="#">13</a></li>
+                    <li><a href="#">14</a></li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
 
-          <ul class="nav navbar-nav directional">
-            <li><a href="" class="disabled"><i class="fa fa-arrow-left"></i></a></li>
-            <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
-          </ul>
-          
-          <ul class="nav navbar-nav jump-to">
-            <li><a href="" class="disabled">primeira</a></li>
-            <li><a href="">última</a></li>
-          </ul>
-        </nav><!--/.pagination-->
+              <ul class="nav navbar-nav directional">
+                <li><a href="" class="disabled"><i class="fa fa-arrow-left"></i></a></li>
+                <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+              </ul>
+              
+              <ul class="nav navbar-nav jump-to">
+                <li><a href="" class="disabled">primeira</a></li>
+                <li><a href="">última</a></li>
+              </ul>
+            </nav><!--/.pagination-->
+          </div>
+        </div>
 
         <!--/RESEARCH-TABLE-->
         <table class="table research-table table-bordered">

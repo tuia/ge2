@@ -36,6 +36,11 @@
 
 		   //Displays selected text on dropdown-toggle button
 		   $(this).parents('.dropdown-select').find('.dropdown-toggle span:first-child').html(target);
+
+		   //Closes dropdown
+		   $(this).parents('.dropdown-select').find('.dropdown-toggle').dropdown('toggle');
+
+		   return false
 		});
 
 

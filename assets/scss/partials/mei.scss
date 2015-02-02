@@ -1,17 +1,27 @@
 /* MEI */
 #mei-navigation {
 	.navbar-nav.nav {
-		.dropdown-menu {
-		    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.70);
-		    left: 0;
-		    position: fixed;
-		    top: 50px;
-		    width: 100%;
-		    text-align: center;
-			li {
-				display: inline-block;
+		.active {
+			.dropdown-toggle {background: rgba(0,0,0,1);}
+			.dropdown-menu {
+				display: block;
+			    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.70);
+			    left: 0;
+			    position: fixed;
+			    top: 50px;
+			    width: 100%;
+			    text-align: center;
+			    padding: 0;
+			    z-index: 999;
+			}
+			.dropdown-menu {
+				li {
+					display: inline-block;
+				}
 			}
 		}
+		.dropdown:nth-child(2) .dropdown-toggle {color: #1abc9c}
+		.dropdown:nth-child(3) .dropdown-toggle {color: #9b59b6}
 	}
 }
 

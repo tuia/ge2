@@ -118,7 +118,8 @@
 
 /************** TYPOGRAPHY **************/
 
-	.unity {color: $lighter-text;}
+	.unity, .muted {color: $lighter-text;}
+	.block {display: block;}
 
 	.pendente-txt {color: $pendente}
 	.designado-txt {color: $designado}
@@ -1283,7 +1284,7 @@ body.entity-iframe {
 /* retitrar .entity-window desta lista de seletores no master, que usa iframe */
 .entity-iframe, .entity-window {
 
-	.entity-card {
+	&>.entity-card {
 		margin-bottom: -1px;
 		border-bottom: 1px solid #cccccc;
 		@extend .entity-card-large
@@ -1402,6 +1403,18 @@ body.entity-iframe {
 		}
 	}	
 }
+.entity-iframe.horizontal {
+	&>.entity-card {
+		.entity-title {
+			max-width: calc(100% - 60px);
+			padding-top: 10px
+		}
+	}
+	.form-box.auto {
+		height: 275px;
+		max-height: none;
+	}
+}
 
 /* ENTITIES-LIST */
 .entity-list {
@@ -1502,6 +1515,18 @@ body.entity-iframe {
 			margin: 0 0 10px;
 		}
 	}
+}
+.table {
+    .entity-card {
+    	margin: -8px;
+    	display: block;
+    	.entity-card-data {
+    		width: calc(100% - 58px);
+    		padding: 3px 8px;
+    		min-height: 47px;
+    		.entity-subitem { margin-bottom: 0}
+    	}
+    }
 }
 
 /* ENTITY-SYMBOL */

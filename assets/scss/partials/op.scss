@@ -247,22 +247,14 @@ p.research-found {
     			background: #EEEEEE;
     			color: #666666;
     			font-weight: 400;
-    			font-size: 14px;
+    			font-size: 13px;
     			padding: 10px;
     			border-bottom: none;
     			vertical-align: middle;
     			text-align: center;
     		}
     	}
-    	tr:last-child th {font-size: 10px;}
+    	tr:last-child th {font-size: 11px;}
     }
-    .entity-card {
-    	margin: 0 -8px;
-    	.entity-card-data {
-    		width: calc(100% - 58px);
-    		padding: 3px 8px;
-    		min-height: 47px;
-    		.entity-subitem { margin-bottom: 0}
-    	}
-    }
+    .entity-card {margin: 0 -8px}
 }

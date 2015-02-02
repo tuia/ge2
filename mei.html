@@ -19,7 +19,7 @@
     <div id="page-loader"><i class="fa fa-circle-o-notch fa-pulse fa-spin"></i><a href="#" class="stop-btn">cancelar</a></div>
 
     <!--/NAVBAR-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav id="mei-navigation" class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
 
         <a class="navbar-brand" href="#">MEI <small>1.0</small></a>
@@ -27,23 +27,31 @@
         <!--/NAVIGATION-->
         <ul class="nav navbar-nav">
           <li><a href="#introducao">introdução</a></li>
-          <li><a href="#grid">grid</a></li>
-          <li><a href="#tipografia">tipografia</a></li>
-          <li><a href="#icones">ícones</a></li>
-          <li><a href="#botoes">botões</a></li>
-          <li><a href="#dropdowns">dropdowns</a></li>
-          <li><a href="#tabelas">tabelas</a></li>
-          <li><a href="#entidades">entidades</a></li>
+
+          <!--/BASE CSS-->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Base CSS</a>
+            <ul class="dropdown-menu dropdown-inverse" role="menu">
+              <!--/BASE CSS-->
+              <li><a href="#grid">grid</a></li>
+              <li><a href="#tipografia">tipografia</a></li>
+              <li><a href="#icones">ícones</a></li>
+              <li><a href="#botoes">botões</a></li>
+              <li><a href="#dropdowns">dropdowns</a></li>
+              <li><a href="#tabelas">tabelas</a></li>
+              <li><a href="#campos-de-texto">campos de texto</a></li>
+            </ul>
+          </li>
+
+          <!--/ELEMENTOS DO SISTEMA-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elementos do sistema</a>
+            <ul class="dropdown-menu dropdown-inverse" role="menu">
+              <li><a href="#navegacao">navegação</a></li>
+              <li><a href="#pesquisa">pesquisa</a></li>
+              <li><a href="#entidades">entidades</a></li>
+              <li><a href="#janelas">janelas</a></li>
+              <li><a href="#ajuda-e-documentação">ajuda e documentação</a></li>
             </ul>
           </li>
         </ul>
@@ -57,7 +65,7 @@
         <div class="container">
           <div class="page-header">
             <i class="fa fa-book fa-3x"></i> 
-            <h1>Manual de Estilos de Interação <i>Axxiom</i> <small>versão 1.0</small></h1>
+            <h1>CRUDficador <small>versão 1.0</small></h1>
           </div><!--/page-header-->
 
           <p>Este manual tem como função auxiliar na construção de novas telas dos softwares relacionados, com base nos padrões já estabelecidos, otimizando a usabilidade do produto final.</p>
@@ -112,939 +120,998 @@
 
         </section>
 
-        <section id="grid">
-          <h2>Grid</h2>
-          <p>Um sistema de grid serve para auxiliar na diagramação do conteúdo da página, posicionando e alinhando os elementos de forma proporcinal.</p>
-          <p>Para isso, utiliza-se linhas (<code>.row</code>) e colunas (<code>.col</code>) de tamanhos variados. Algumas regras são necessárias para seu melhor funcionamento:</p>
-          <ul>
-            <li>Para as dimensões ficarem corretas, quando se utilizar o grid diretamente na página, ele deve estar dentro de uma div com a classe <code>.container</code> ou <code>.container-fluid</code>.</li>
-            <li>Utiliza-se as colunas (rows) para criar grupos horizontais de colunas.</li>
-            <li>O conteúdo deve estar dentro das colunas, e apenas estas devem ser as filhas diretas (elemento um nível abaixo no DOM) das linhas (rows).</li>
-            <li>Uma linha (row) possui até 12 colunas. A largura da coluna é definida pelo número no final da classe <code>col-xs-</code>, sendo <code>.col-xs-1</code> o menor tamanho e <code>.col-xs-12</code> o maior.</li>
-          </ul>
-          <div class="row">
-            <div class="col-xs-8">
-              <h4>Exemplos</h4>
-              <div class="well">
-                <div class="row show-grid">
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                  <div class="col-xs-1">.col-xs-1</div>
-                </div><!--/row-->
-                <div class="row show-grid">
-                  <div class="col-xs-4">.col-xs-4</div>
-                  <div class="col-xs-8">.col-xs-8</div>
-                </div><!--/row-->
-                <div class="row show-grid">
-                  <div class="col-xs-12">.col-xs-12</div>
-                </div><!--/row-->
-              </div><!--/.well-->
-            </div><!--/col-xs-6-->
-            <div class="col-xs-4">
-              <h4>Código</h4>
-              <pre>
-                <code class="language-markup">
 
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-  &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-4&quot;&gt;....&lt;/div&gt;
-  &lt;div class=&quot;col-xs-8&quot;&gt;....&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-12&quot;&gt;...&lt;/div&gt;
-&lt;/div&gt;</code>
-              </pre>
-            </div><!--/col-xs-6-->
-          </div><!--/row-->
-        </section><!--/#grid-->
-
-
-        <section id="tipografia">
-          <h2>Tipografia</h2>
-          <h3>Títulos</h3>
-          <div class="row">
-            <div class="col-xs-6">
-              <h4>Exemplos</h4>
-              <div class="well">
-                <h1>Título de peso 1 <small>subtítulo</small></h1>
-                <h2>Título de peso 2 <small>subtítulo</small></h2>
-                <h3>Título de peso 3 <small>subtítulo</small></h3>
-                <h4>Título de peso 4 <small>subtítulo</small></h4>
-              </div><!--/well-->
-            </div><!--/col-->
-            <div class="col-xs-6">
-              <h4>Código</h4>
-              <pre>
-                <code class="language-markup">
-                  
-&lt;h1&gt;Título de peso 1 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h1&gt;
-&lt;h2&gt;Título de peso 2 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h2&gt;
-&lt;h3&gt;Título de peso 3 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h3&gt;
-&lt;h4&gt;Título de peso 4 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h4&gt;
-                </code></pre><br />
-                <div class="alert alert-info" role="alert">
-                  <p><strong>Dica!</strong> Ao utilizar o título no topo de uma páginas, você pode colocá-lo dentro de uma <code>div</code> com a classe <code>.page-header</code> para ganhar mais espaçamento e uma linha abaixo o título.</p>
-                </div>
-            </div><!--/col-->
-          </div>
-
+        <!--BASE CSS-->
+        <div id="base-css">
+          <h1>Base CSS</h1>
           
-        </section><!--/#tipografia-->
+          <section id="grid">
+            <h2>Grid</h2>
+            <p>Um sistema de grid serve para auxiliar na diagramação do conteúdo da página, posicionando e alinhando os elementos de forma proporcinal.</p>
+            <p>Para isso, utiliza-se linhas (<code>.row</code>) e colunas (<code>.col</code>) de tamanhos variados. Algumas regras são necessárias para seu melhor funcionamento:</p>
+            <ul>
+              <li>Para as dimensões ficarem corretas, quando se utilizar o grid diretamente na página, ele deve estar dentro de uma div com a classe <code>.container</code> ou <code>.container-fluid</code>.</li>
+              <li>Utiliza-se as colunas (rows) para criar grupos horizontais de colunas.</li>
+              <li>O conteúdo deve estar dentro das colunas, e apenas estas devem ser as filhas diretas (elemento um nível abaixo no DOM) das linhas (rows).</li>
+              <li>Uma linha (row) possui até 12 colunas. A largura da coluna é definida pelo número no final da classe <code>col-xs-</code>, sendo <code>.col-xs-1</code> o menor tamanho e <code>.col-xs-12</code> o maior.</li>
+            </ul>
+            <div class="row">
+              <div class="col-xs-8">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="row show-grid">
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                    <div class="col-xs-1">.col-xs-1</div>
+                  </div><!--/row-->
+                  <div class="row show-grid">
+                    <div class="col-xs-4">.col-xs-4</div>
+                    <div class="col-xs-8">.col-xs-8</div>
+                  </div><!--/row-->
+                  <div class="row show-grid">
+                    <div class="col-xs-12">.col-xs-12</div>
+                  </div><!--/row-->
+                </div><!--/.well-->
+              </div><!--/col-xs-6-->
+              <div class="col-xs-4">
+                <h4>Código</h4>
+                <pre>
+                  <code class="language-markup">
 
-        <section id="icones">
-          <h2>Ícones</h2>
-          <h3>Ícone de "carregando"</h3>
-          <p>Para o ícone de carregando, existem dois casos de uso. No primeiro, uma camada branca com o ícone ao centro cobre toda a tela. No segundo, esta mesma camada com o ícone aparece dentro de um painel.</p>
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplos</h4>
-              <div class="well">
-                <a href="#" class="btn btn-primary btn-lg btn-block load-page-btn">simular página carregando</a><br />
-                <a href="#loading-window" class="btn btn-primary btn-lg btn-block show-window-btn">abrir janela carregando</a>
-              </div>
-            </div>
-            <div class="col-xs-8">
-              <h4>Código</h4>
-              <pre><code class="language-markup">&lt;!--&nbsp;A&nbsp;classe&nbsp;&apos;.loading&apos;&nbsp;aparece&nbsp;apenas&nbsp;enquanto&nbsp;o&nbsp;conte&uacute;do&nbsp;&eacute;&nbsp;carregado&nbsp;&nbsp;--&gt;
-&lt;body&nbsp;class=&quot;loading&quot;&gt;
-&nbsp;&nbsp;&lt;div&nbsp;id=&quot;page-loader&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-circle-o-notch&nbsp;fa-pulse&nbsp;fa-spin&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-&nbsp;&nbsp;...</code></pre>
-
-            </div>
-          </div>
-        </section><!--/#icones-->
-
-        <section id="botoes">
-          <h2>Botões</h2>
-        </section><!--/#botoes-->
-
-        <section id="dropdowns">
-          <h2>Dropdowns <small>ou combobox</small></h2>
-          <p>Dropdowns são menus contextuais flutuantes para exibir links.</p>
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplo</h4>
-              <div class="well">
-                <div class="dropdown">
-                  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Dropdown padrão
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a></li>
-                    <li><a href="#">link 3</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-8">
-              <h4>Código</h4>
-              <pre><code class="language-markup">&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
-&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;Dropdown&nbsp;padr&atilde;o
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;
-&nbsp;&nbsp;&lt;/a&gt;
-&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;1&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;2&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;3&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-
-          <h3>Alinhamento</h3>
-          <p>É possível alinhar os dropdowns acima, abaixo, à esquerda e à direita. O dropdown padrão é alinhado a esquerda. Os botões do exemplo possuem a classe <code>.btn-block</code> para evidenciar o alinhameto. Veja mais em <a href="#botoes">botões</a>.</p>
-
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplos</h4>
-              <div class="well">
-
-                <div class="dropdown">
-                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
-                    Dropdown padrão
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a></li>
-                    <li><a href="#">link 3</a></li>
-                  </ul>
-                </div><br />
-
-                <div class="dropdown">
-                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
-                    Dropdown alinhado à direita
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a></li>
-                    <li><a href="#">link 3</a></li>
-                  </ul>
-                </div><br />
-
-                <div class="dropup">
-                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
-                    Dropup
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a></li>
-                    <li><a href="#">link 3</a></li>
-                  </ul>
-                </div><br />
-
-                <div class="dropup">
-                  <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
-                    Dropup alinhado à direita
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a></li>
-                    <li><a href="#">link 3</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-4">
-              <h4>Código</h4>
-              <pre><code class="language-markup">&lt;!--/padr&atilde;o--&gt;
-&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
-&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;!--/&agrave;&nbsp;direita--&gt;
-&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
-&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <div class="col-xs-4">
-              <h4>&nbsp;</h4><pre><code class="language-markup">&lt;!--/acima--&gt;
-&lt;div&nbsp;class=&quot;dropup&quot;&gt;
-&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;!--/acima&nbsp;e&nbsp;&agrave;&nbsp;direita--&gt;
-&lt;div&nbsp;class=&quot;dropup&quot;&gt;
-&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div><!--/row-->
-
-          <h3>Cores</h3>
-          <p>É possível também fazer um dropdown de cor inversa, adicionando as classes <code>.btn-inverse</code> no botão e <code>.dropdown-inverse</code> no menu.</p>
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplos</h4>
-              <div class="well">
-                <div class="dropdown">
-                  <a href="#" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
-                    Dropdown de cor inversa
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-inverse">
-                    <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a></li>
-                    <li><a href="#">link 3</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-8">
-              <h4>Código</h4>
-              <pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;btn btn-inverse dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-    Dropdown de cor inversa
-    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;ul class=&quot;dropdown-menu dropdown-inverse&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-  &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-
-          <h3>Dropdown Select</h3>
-          <p>O <code>.dropdown-select</code> funciona como o elemento <code>select</code> do HTML, porém, aceita mais opções de formatação, como opções que incluem ícones, por exemplo.</p>
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplos</h4>
-              <div class="well">
-                <div class="dropdown dropdown-select">
-                  <button class="btn dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    <span>selecione</span>
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#"><i class="fa fa-car"></i> 064621 - Raimundo Silveira</a></li>
-                    <li><a href="#"><i class="fa fa-bus"></i> 064621 - Marcos Gomez</a></li>
-                    <li><a href="#"><i class="fa fa-cab"></i> 064621 - Valdira Gonzales</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-8">
-              <h4>Código</h4>
-              <pre><code class="language-markup">&lt;div&nbsp;class=&quot;dropdown&nbsp;dropdown-select&quot;&gt;
-&nbsp;&nbsp;...
-&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-car&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Raimundo&nbsp;Silveira&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-bus&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Marcos&nbsp;Gomez&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-cab&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Valdira&nbsp;Gonzales&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;&lt;/ul&gt;</code></pre>
-            </div>
-          </div>
-
-          <h3>Dropdown Select Múltiplo</h3>
-          <p>O dropdown select múltiplo substitui o elemento HTML <code>select</code>, e permite a seleção de vários itens por vez.</p>
-          <p>Este elemento não suporta outros elementos nas opções, como ícones. Utiliza o framework <a href="http://silviomoreto.github.io/bootstrap-select/" target="blank">Bootstrap Select</a>. Em sua documentação, você pode conferir outras opções para o elemento.</p>
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplos</h4>
-              <div class="well">
-                <div class="form">
-                  <div class="form-group">
-                    <label>Select múltiplo</label>
-                    <select class="selectpicker form-control" multiple data-selected-text-format="count>2">
-                      <option>carro</option>
-                      <option>moto</option>
-                      <option>van</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label>Select com busca</label>
-                    <select class="selectpicker form-control" data-live-search="true">
-                      <option>carro</option>
-                      <option>moto</option>
-                      <option>van</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-8">
-              <h4>Código</h4>
-              <pre><code class="language-markup">&lt;label&gt;Select&nbsp;m&uacute;ltiplo&lt;/label&gt;
-&lt;select&nbsp;class=&quot;selectpicker&nbsp;form-control&quot;&nbsp;multiple&nbsp;data-selected-text-format=&quot;count&gt;2&quot;&gt;
-&nbsp;&nbsp;&lt;option&gt;carro&lt;/option&gt;
-&nbsp;&nbsp;&lt;option&gt;moto&lt;/option&gt;
-&nbsp;&nbsp;&lt;option&gt;van&lt;/option&gt;
-&lt;/select&gt;
-
-&lt;label&gt;Select&nbsp;com&nbsp;busca&lt;/label&gt;
-&lt;select&nbsp;class=&quot;selectpicker&nbsp;form-control&quot;&nbsp;data-live-search=&quot;true&quot;&gt;
-&nbsp;&nbsp;&lt;option&gt;carro&lt;/option&gt;
-&nbsp;&nbsp;&lt;option&gt;moto&lt;/option&gt;
-&nbsp;&nbsp;&lt;option&gt;van&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-            </div>
-          </div>
-        </section><!--/#dropdowns-->
-
-        <section id="tabelas">
-          <h2>Tabelas</h2>
-          <div class="row">
-            <div class="col-xs-3">
-              <p>Existem vários tipos de tabelas que podem ser utilizados. Para todos os casos, a estrutura básica é a mesma, variando apenas as classes do elemento <code>table</code></p>
-            </div>
-            <div class="col-xs-5"><pre><code class="language-markup">&lt;table class=&quot;table&quot;&gt;
-&nbsp;&nbsp;&lt;thead&gt;
-  &nbsp;&nbsp;&lt;tr&gt;
-    &nbsp;&nbsp;&lt;th&gt;...&lt;/th&gt;
-  &nbsp;&nbsp;&lt;/tr&gt;
-&nbsp;&nbsp;&lt;/thead&gt;
-&nbsp;&nbsp;&lt;tbody&gt;
- &nbsp;&nbsp; &lt;tr&gt;
-   &nbsp;&nbsp; &lt;td&gt;...&lt;/td&gt;
-  &nbsp;&nbsp;&lt;/tr&gt;
-&nbsp;&nbsp;&lt;/tbody&gt;
-&lt;/table&gt;</code></pre></div>
-            <div class="col-xs-4">
-              <div class="alert alert-info">
-                <p><strong>Dica!</strong> O elemento <code>thead</code> é utilizado para definir o cabelçalho da tabela, e para suas células, deve se utilizar a tag <code>th</code>. </p>
-                <p>O elemento <code>tbody</code> é utilizado para definir o corpo da tabela, e para suas células, deve se utilizar a tag <code>td</code>. </p>
-                <p>Existe também a tag <code>tfoot</code>, para definir o rodapé das tabelas. Seu uso é opcional.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12">
-              <h3>Tipos de tabelas</h3>
-              <p>Veja alguns exemplos abaixo.</p>
-              <div class="row">
-                <div class="col-xs-4">
-                  <h4>Tabela padrão</h4>
-                  <p>Utiliza apenas a classe <code>.table</code></p>
-                  <table class="table">
-                    <tr>
-                      <th>#</th>
-                      <th>nome</th>
-                      <th>telefone</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Humberto Araújo</td>
-                      <td>3333-5684</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Joana Freitas</td>
-                      <td>8975-5574</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Fernanda Gonçalves</td>
-                      <td>5487-5981</td>
-                    </tr>
-                  </table>
-                </div><!--/col-->
-
-                <div class="col-xs-4">
-                  <h4>Tabela com efeito ao passar o mouse</h4>
-                  <p>Utiliza as classe <code>.table</code> e <code>.table-hover</code></p>
-                  <table class="table table-hover">
-                    <tr>
-                      <th>#</th>
-                      <th>nome</th>
-                      <th>telefone</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Humberto Araújo</td>
-                      <td>3333-5684</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Joana Freitas</td>
-                      <td>8975-5574</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Fernanda Gonçalves</td>
-                      <td>5487-5981</td>
-                    </tr>
-                  </table>
-                </div><!--/col-->
-
-                <div class="col-xs-4">
-                  <h4>Tabela zebrada</h4>
-                  <p>Utiliza as classe <code>.table</code> e <code>.table-striped</code></p>
-                  <table class="table table-striped">
-                    <tr>
-                      <th>#</th>
-                      <th>nome</th>
-                      <th>telefone</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Humberto Araújo</td>
-                      <td>3333-5684</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Joana Freitas</td>
-                      <td>8975-5574</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Fernanda Gonçalves</td>
-                      <td>5487-5981</td>
-                    </tr>
-                  </table>
-                </div><!--/col-->
-
-              </div><!--/.row-->
-              <div class="row">
-
-                <div class="col-xs-4">
-                  <h4>Tabela com bordas</h4>
-                  <p>Utiliza as classe <code>.table</code> e <code>.table-bordered</code></p>
-                  <table class="table table-bordered">
-                    <tr>
-                      <th>#</th>
-                      <th>nome</th>
-                      <th>telefone</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Humberto Araújo</td>
-                      <td>3333-5684</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Joana Freitas</td>
-                      <td>8975-5574</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Fernanda Gonçalves</td>
-                      <td>5487-5981</td>
-                    </tr>
-                  </table>
-                </div><!--/col-->
-
-                <div class="col-xs-4">
-                  <h4>Tabela condensada</h4>
-                  <p>Utiliza as classe <code>.table</code> e <code>.table-condensed</code></p>
-                  <table class="table table-condensed">
-                    <tr>
-                      <th>#</th>
-                      <th>nome</th>
-                      <th>telefone</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Humberto Araújo</td>
-                      <td>3333-5684</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Joana Freitas</td>
-                      <td>8975-5574</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Fernanda Gonçalves</td>
-                      <td>5487-5981</td>
-                    </tr>
-                  </table>
-                </div><!--/col-->
-
-                <div class="col-xs-4">
-                  <h4>Tabela ultra-condensada</h4>
-                  <p>Utiliza as classe <code>.table</code> e <code>.table-ultra-condensed</code></p>
-                  <table class="table table-ultra-condensed">
-                    <tr>
-                      <th>#</th>
-                      <th>nome</th>
-                      <th>telefone</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Humberto Araújo</td>
-                      <td>3333-5684</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Joana Freitas</td>
-                      <td>8975-5574</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Fernanda Gonçalves</td>
-                      <td>5487-5981</td>
-                    </tr>
-                  </table>
-                </div><!--/col-->
-
-              </div><!--/.row-->
-              <div class="row">
-
-                <div class="col-xs-4">
-                  <h4>Tabela vertical</h4>
-                  <p>Utiliza as classe <code>.table</code> e <code>.table-vertical</code></p>
-                  <table class="table table-vertical">
-                    <tr>
-                      <th>#</th>
-                      <th>nome</th>
-                      <th>telefone</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Humberto Araújo</td>
-                      <td>3333-5684</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Joana Freitas</td>
-                      <td>8975-5574</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Fernanda Gonçalves</td>
-                      <td>5487-5981</td>
-                    </tr>
-                  </table>
-                </div><!--/col-->
-
-              </div><!--/row-->
-            </div>
-          </div><!--/row-->
-          <h3>Classes contextuais</h3>
-          <p>Use classes contextuais para colorir linhas ou células individualmente.</p>
-          <div class="row">
-            <div class="col-xs-6">
-              <table class="table">
-                <tr class=""><td>linha normal</td></tr>
-                <tr class="active"><td>linha com a classe <code>.active</code></td></tr>
-                <tr class="success"><td>linha com a classe <code>.success</code></td></tr>
-                <tr class="info"><td>linha com a classe <code>.info</code></td></tr>
-                <tr class="warning"><td>linha com a classe <code>.warning</code></td></tr>
-                <tr class="danger"><td>linha com a classe <code>.danger</code></td></tr>
-              </table>
-            </div><!--/col-->
-            <div class="col-xs-6">
-              <pre><code class="language-markup">&lt;!--&nbsp;Em&nbsp;linhas&nbsp;--&gt;
-&lt;tr&nbsp;class=&quot;active&quot;&gt;...&lt;/tr&gt;
-&lt;tr&nbsp;class=&quot;success&quot;&gt;...&lt;/tr&gt;
-&lt;tr&nbsp;class=&quot;warning&quot;&gt;...&lt;/tr&gt;
-&lt;tr&nbsp;class=&quot;danger&quot;&gt;...&lt;/tr&gt;
-&lt;tr&nbsp;class=&quot;info&quot;&gt;...&lt;/tr&gt;
-
-&lt;!--&nbsp;Em&nbsp;colunas&nbsp;(`td`&nbsp;ou&nbsp;`th`)&nbsp;--&gt;
-&lt;tr&gt;
-&nbsp;&nbsp;&lt;td&nbsp;class=&quot;active&quot;&gt;...&lt;/td&gt;
-&nbsp;&nbsp;&lt;td&nbsp;class=&quot;success&quot;&gt;...&lt;/td&gt;
-&nbsp;&nbsp;&lt;td&nbsp;class=&quot;warning&quot;&gt;...&lt;/td&gt;
-&nbsp;&nbsp;&lt;td&nbsp;class=&quot;danger&quot;&gt;...&lt;/td&gt;
-&nbsp;&nbsp;&lt;td&nbsp;class=&quot;info&quot;&gt;...&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-            </div>
-          </div><!--/row-->
-
-        </section><!--/#tabelas-->
-
-
-        <section id="entidades">
-          <h2>Entidades</h2>
-          <p>Elementos da rede, como alimentadores, dispositivos e equipamentos, são chamados no módulo de <b>entidades</b>.
-
-
-          <h3>Símbolos de entidade</h3>
-          <p>Para melhorar sua identificação, elementos com a classe <code>.entity-symbol</code> possuem uma formatação diferenciada, para conter um ícone e um id ou informação relevante, bom como a possibilidade de ter esta informação copiada no clique. O símbolos de entidades podem ser utilizados em dois tamanhos: default (40px x 40px) e <code>.large</code> (58px x 58px).</p>
-
-          <div class="row">
-            <div class="col-xs-6">
-              <h4>Exemplos</h4>
-              <table class="table table-bordered text-center">
-                <tr>
-                  <td><a href="#" class="entity-symbol"><i class="fa fa-car"></i><span>3564321</span></a></td>
-                  <td><a href="#" class="entity-symbol large"><i class="fa fa-car"></i><span>3564321</span></a></td>
-                </tr>
-                <tr>
-                  <td><code>.entity-symbol</code></td>
-                  <td><code>.entity-symbol .large</code></td>
-                </tr>
-              </table>
-            </div><!--/col-xs-6-->
-            <div class="col-xs-6">
-              <h4>Código</h4>
-              <pre><code class="language-markup">
-&lt;a href=&quot;#&quot; class=&quot;entity-symbol&quot;&gt;
-  &lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;
-  &lt;span&gt;3564321&lt;/span&gt;
-&lt;/a&gt;
-
-&lt;a href=&quot;#&quot; class=&quot;entity-symbol large&quot;&gt;
-  &lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;
-  &lt;span&gt;3564321&lt;/span&gt;
-&lt;/a&gt;</code></pre>      
-            </div><!--/col-xs-6-->
-          </div><!--/row-->
-
-          <h3>Símbolos de entidade e status</h3>
-          <p>Os símbolos de entidade também se diferenciam de acordo com o estado em que a entidade se encontram, variando de cor.</p>
-          <div class="row">
-            <div class="col-xs-6">
-              <h4>Exemplos</h4>
-              <table class="table table-bordered text-center">
-                <tr>
-                  <td><a href="#" class="entity-symbol"><i class="fa fa-car"></i><span>3564321</span></a></td>
-                  <td><a href="#" class="entity-symbol pendente"><i class="fa fa-car"></i><span>3564321</span></a></td>
-                  <td><a href="#" class="entity-symbol designado"><i class="fa fa-car"></i><span>7894321</span></a></td>
-                  <td><a href="#" class="entity-symbol acionado"><i class="fa fa-car"></i><span>7894321</span></a></td>
-                  <td><a href="#" class="entity-symbol em-execucao"><i class="fa fa-car"></i><span>7894321</span></a></td>
-                  <td><a href="#" class="entity-symbol finalizado"><i class="fa fa-car"></i><span>7894321</span></a></td>
-                </tr>
-                <tr>
-                  <td><span class="pendente-txt">-</span></td>
-                  <td><span class="pendente-txt">.pendente</span></td>
-                  <td><span class="designado-txt">.designado</span></td>
-                  <td><span class="acionado-txt">.acionado</span></td>
-                  <td><span class="em-execucao-txt">.em-execução</span></td>
-                  <td><span class="finalizado-txt">.finalizado</span></td>
-                </tr>
-              </table>
-            </div><!--/col-xs-6-->
-            <div class="col-xs-6"><h4>Código</h4>
-              <pre><code class="language-markup">&lt;!--ENTITY-SYMBOL STATUS: EM EXECUÇÃO--&gt;
-&lt;a href=&quot;#&quot; class=&quot;entity-symbol em-execucao&quot;&gt;
-  &lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;
-  &lt;span&gt;3564321&lt;/span&gt;
-&lt;/a&gt;</code></pre>              
-            </div><!--/col-xs-6-->
-          </div><!--/row-->
-
-
-          <h3>Janelas de Entidades</h3>
-          <p>Janelas de entidades (<code>.entity-window</code>) são elementos flutuantes arrastáveis pela tela, utilizadas para exibir ações e detalhes da entidade. Estas janelas são utilizadas no G-DIS e tem o objetivo de exibir o conteúdo sem retirar o mapa da evicência.</p>
-          <p>O conteúdo da janela vem dentro de um <code>iframe</code>.</p>
-
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplo</h4>
-              <a href="#entity-window-example" class="btn btn-block btn-primary show-window-btn">abrir janela de entidade</a><br />
-              <h4>Código do botão</h4>
-              <p>Para o botão chamar a janela, ele deve possuir a classe <code>.show-window-btn</code> e seu atributo <code>href</code> deve apontar para a <code>id</code> da janela que será exibida, nesse caso, <code>#entity-window-example</code></p>
-              <pre>
-                <code class="language-markup">
-
-&lt;a href=&quot;#entity-window-example&quot; class=&quot;btn show-window-btn&quot;&gt;abrir janela de entidade&lt;/a&gt;</code>
-              </pre><br />
-              <div class="alert alert-info" role="alert">
-                <p><strong>Dica!</strong> Para organizar seu código, você pode deixar as janelas de entidade sempre no final, já que elas ficam escondidas. Assim, você deixa todas elas juntas e pode focar no conteúdo principal da página.</p>
-              </div>
-            </div>
-
-            <div class="col-xs-8">          
-              <h4>Código da janela</h4>
-              <pre>
-                <code class="language-markup">
-
-&lt;!--/JANELA DE ENTIDADE--&gt;
-&lt;div class=&quot;entity-window&quot; id=&quot;entity-window-example&quot;&gt;
-  &lt;div class=&quot;entity-content&quot;&gt;
-
-    &lt;!--/CABEÇALHO DA JANELA--&gt;
-    &lt;div class=&quot;entity-window-header&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;bookmark-button hastooltip&quot; title=&quot;adicionar aos favoritos&quot;&gt;&lt;i class=&quot;fa fa-bookmark-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-      &lt;div class=&quot;pull-right&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default hastooltip&quot; data-title=&quot;destacar&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default btn-close&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!--/CORPO DA JANELA--&gt;
-    &lt;div class=&quot;entity-body&quot;&gt;
-      &lt;!--/CONTEUDO--&gt;
-      &lt;iframe src=&quot;conteudo-do-iframe.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;col-xs-1&quot;&gt;...&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-                </code></pre>
+
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-4&quot;&gt;....&lt;/div&gt;
+    &lt;div class=&quot;col-xs-8&quot;&gt;....&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-12&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;</code>
+                </pre>
+              </div><!--/col-xs-6-->
+            </div><!--/row-->
+          </section><!--/#grid-->
+
+
+          <section id="tipografia">
+            <h2>Tipografia</h2>
+            <h3>Títulos</h3>
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <h1>Título de peso 1 <small>subtítulo</small></h1>
+                  <h2>Título de peso 2 <small>subtítulo</small></h2>
+                  <h3>Título de peso 3 <small>subtítulo</small></h3>
+                  <h4>Título de peso 4 <small>subtítulo</small></h4>
+                </div><!--/well-->
+              </div><!--/col-->
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre>
+                  <code class="language-markup">
+                    
+  &lt;h1&gt;Título de peso 1 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h1&gt;
+  &lt;h2&gt;Título de peso 2 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h2&gt;
+  &lt;h3&gt;Título de peso 3 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h3&gt;
+  &lt;h4&gt;Título de peso 4 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h4&gt;
+                  </code></pre><br />
+                  <div class="alert alert-info" role="alert">
+                    <p><strong>Dica!</strong> Ao utilizar o título no topo de uma páginas, você pode colocá-lo dentro de uma <code>div</code> com a classe <code>.page-header</code> para ganhar mais espaçamento e uma linha abaixo o título.</p>
+                  </div>
+              </div><!--/col-->
             </div>
-          </div><!--/row-->
 
+            
+          </section><!--/#tipografia-->
 
-
-          <h3>Cards</h3>         
-
-          <div class="entity-card">
-            <a href="#" class="entity-symbol finalizado">
-              <i class="fa fa-car"></i>
-              <span>3564321</span>
-            </a>
-            <div class="entity-card-data">
-              <div class="entity-title">Jaime Vilete <span class="badge id">3564321 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-              <p class="entity-subitem">Em operação. Previsão: 3h32min</p>
-            </div>
-            <span class="clearfix"></span>
-          </div><!--/.entity-card-->
-
-          <div class="entity-card entity-card-large">
-            <a href="#" class="entity-symbol finalizado">
-              <i class="fa fa-car"></i>
-              <span>3564321</span>
-            </a>
-            <div class="entity-card-data">
-              <div class="entity-title">Jaime Vilete <span class="badge id">3564321 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
-              <p class="entity-subitem">Em operação. Previsão: 3h32min</p>
-            </div>
-            <span class="clearfix"></span>
-          </div><!--/.entity-card-->
-
-
-        </section><!--/#entidades-->
-
-
-
-        <section id="datepicker">
-          <h2>Date Time Picker</h2>
-          <p>O <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="blank">Date Time Picker</a> permite que o usuário selecione data e hora em um mesmo campo de texto, com a ajuda de um calendário que flutua próximo ao clicar.</p>
-
-          <h3>Date Picker</h3>
-          <p>O <code>.datepicker</code> permite que você selecione uma <strong>data</strong> através de um calendário.</p>
-
-          <div class="row">
-            <div class="col-xs-3">
-              <h4>Exemplo</h4>
-              <div class="well">                
-                <div class="form-group">
-                  <label for="">data</label>
-                  <input type="text" value="" class="form-control datepicker" />
-                </div><!--/.form-group-->
-              </div>
-            </div>
-            <div class="col-xs-5">
-              <h4>Código HTML</h4>
-              <pre><code class="language-markup">
-&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label&gt;data&lt;/label&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control datepicker&quot; /&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <div class="col-xs-4">
-              <h4>Código jQuery</h4>
-              <pre><code class="language-javascript">
-$('.datepicker').datetimepicker({
-    lang: 'pt-BR',
-    timepicker: false,
-    format:'d.m.Y H:i',
-    closeOnDateSelect:true
-});</code></pre>
-            </div>
-          </div>
-
-          <h3>Date Time Picker</h3>
-          <p>O <code>.datetimepicker</code> permite que você selecione uma <strong>data e horário</strong> através de um calendário.</p>
-
-          <div class="row">
-            <div class="col-xs-3">
-              <h4>Exemplo</h4>
-              <div class="well">                
-                <div class="form-group">
-                  <label for="">previsão de início</label>
-                  <input type="text" value="" class="form-control datetimepicker" />
-                </div><!--/.form-group-->
-              </div>
-            </div>
-            <div class="col-xs-5">
-              <h4>Código HTML</h4>
-              <pre><code class="language-markup">
-&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label&gt;previsão de início&lt;/label&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control datetimepicker&quot; /&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <div class="col-xs-4">
-              <h4>Código jQuery</h4>
-              <pre><code class="language-javascript">
-$('.datetimepicker').datetimepicker({
-    lang: 'pt-BR',
-    format:'d.m.Y H:i'
-});</code></pre>
-            </div>
-          </div>
-        </section><!--/#datepicker-->
-
-
-        <section id="campos-de-texto">
-          <h2>Campos de texto com Máscaras</h2>
-          <p>Campos de texto <code>input [type="text"]</code> com máscaras são aqueles que possuem regras e formatos específicos para serem preenchidos.</p>
-
-          <h3>Campo de texto com contador de caracteres</h3>
-          <p>O exemplo a seguir limita o usuário a 30 caracteres e exibe um contador. É necessário colocar o número de caracteres máximo no atribulo <code>maxLength</code>, bem como ajustar os valores no código jQuery.</p>
-          <div class="row">
-            <div class="col-xs-6">
-              <h4>Exemplo</h4>
-              <div class="well">
-                <div class="input-counter-container">
-                  <input type="text" class="form-control" maxlength="30" placeholder="digite" >
-                  <div class="input-counter">30</div>
+          <section id="icones">
+            <h2>Ícones</h2>
+            <h3>Ícone de "carregando"</h3>
+            <p>Para o ícone de carregando, existem dois casos de uso. No primeiro, uma camada branca com o ícone ao centro cobre toda a tela. No segundo, esta mesma camada com o ícone aparece dentro de um painel.</p>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <a href="#" class="btn btn-primary btn-lg btn-block load-page-btn">simular página carregando</a><br />
+                  <a href="#loading-window" class="btn btn-primary btn-lg btn-block show-window-btn">abrir janela carregando</a>
                 </div>
               </div>
-              <h4>Código HTML</h4>
-              <pre><code class="language-markup">&lt;div&nbsp;class=&quot;input-counter-container&quot;&gt;
-&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;digite&quot;&nbsp;maxlength=&quot;30&quot;&gt;
-&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-counter&quot;&gt;30&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <div class="col-xs-6">
-              <h4>Código jQuery</h4>
-              <pre><code class="language-javascript">$('.input-counter-container .form-control').keyup( function() {
-  var len = $(this).val().length;
-    if (len >= 31) {
-      $(this).val() = $(this).val().substring(0, 30);
-    } else {
-      $('.input-counter').text(30 - len);
-      if (len > 24) { $('.input-counter').css('color', 'red'); }
-      else { $('.input-counter').css('color', 'inherit'); }
-    }
-});</code></pre>
-            </div>
-          </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;!--&nbsp;A&nbsp;classe&nbsp;&apos;.loading&apos;&nbsp;aparece&nbsp;apenas&nbsp;enquanto&nbsp;o&nbsp;conte&uacute;do&nbsp;&eacute;&nbsp;carregado&nbsp;&nbsp;--&gt;
+  &lt;body&nbsp;class=&quot;loading&quot;&gt;
+  &nbsp;&nbsp;&lt;div&nbsp;id=&quot;page-loader&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-circle-o-notch&nbsp;fa-pulse&nbsp;fa-spin&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &nbsp;&nbsp;...</code></pre>
 
-          <h3>Campo de texto sem caracteres especiais</h3>
-          <p>Para desabilitar caracteres especiais, utilizamos o plugin <a href="https://github.com/KevinSheedy/jquery.alphanum">jQuery Alphanum</a>. Você pode checar sua documentação para se aprofundar nas opções possíveis.</p>
-          <div class="row">
-            <div class="col-xs-4">
-              <h4>Exemplos</h4>
-              <div class="well">
-                <div class="input-alphanumeric-container">
-                  <label>Alfanumérico</label>              
-                  <input type="text" class="form-control" placeholder="apenas números" >
-                  <small class="help-block">apenas números</small>
+              </div>
+            </div>
+          </section><!--/#icones-->
+
+          <section id="botoes">
+            <h2>Botões</h2>
+          </section><!--/#botoes-->
+
+          <section id="dropdowns">
+            <h2>Dropdowns <small>ou combobox</small></h2>
+            <p>Dropdowns são menus contextuais flutuantes para exibir links.</p>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplo</h4>
+                <div class="well">
+                  <div class="dropdown">
+                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Dropdown padrão
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">link 1</a></li>
+                      <li><a href="#">link 2</a></li>
+                      <li><a href="#">link 3</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="input-precision-container">
-                  <label>Valor numérico preciso</label>              
-                  <input type="text" class="form-control" placeholder="valor numérico preciso" maxlength="10" >
-                  <small class="help-block">valor numérico preciso</small>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
+  &nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;Dropdown&nbsp;padr&atilde;o
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &nbsp;&nbsp;&lt;/a&gt;
+  &nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;1&lt;/a&gt;&lt;/li&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;2&lt;/a&gt;&lt;/li&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;link&nbsp;3&lt;/a&gt;&lt;/li&gt;
+  &nbsp;&nbsp;&lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+            <h3>Alinhamento</h3>
+            <p>É possível alinhar os dropdowns acima, abaixo, à esquerda e à direita. O dropdown padrão é alinhado a esquerda. Os botões do exemplo possuem a classe <code>.btn-block</code> para evidenciar o alinhameto. Veja mais em <a href="#botoes">botões</a>.</p>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+
+                  <div class="dropdown">
+                    <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                      Dropdown padrão
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">link 1</a></li>
+                      <li><a href="#">link 2</a></li>
+                      <li><a href="#">link 3</a></li>
+                    </ul>
+                  </div><br />
+
+                  <div class="dropdown">
+                    <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                      Dropdown alinhado à direita
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">link 1</a></li>
+                      <li><a href="#">link 2</a></li>
+                      <li><a href="#">link 3</a></li>
+                    </ul>
+                  </div><br />
+
+                  <div class="dropup">
+                    <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                      Dropup
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">link 1</a></li>
+                      <li><a href="#">link 2</a></li>
+                      <li><a href="#">link 3</a></li>
+                    </ul>
+                  </div><br />
+
+                  <div class="dropup">
+                    <a href="#" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                      Dropup alinhado à direita
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">link 1</a></li>
+                      <li><a href="#">link 2</a></li>
+                      <li><a href="#">link 3</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="input-latin-container">
-                  <label>Sem caracteres especiais</label>              
-                  <input type="text" class="form-control" placeholder="sem caracteres especiais" >
-                  <small class="help-block">sem caracteres especiais</small>
+              </div>
+              <div class="col-xs-4">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;!--/padr&atilde;o--&gt;
+  &lt;div&nbsp;class=&quot;dropdown&quot;&gt;
+  &nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;!--/&agrave;&nbsp;direita--&gt;
+  &lt;div&nbsp;class=&quot;dropdown&quot;&gt;
+  &nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+              <div class="col-xs-4">
+                <h4>&nbsp;</h4><pre><code class="language-markup">&lt;!--/acima--&gt;
+  &lt;div&nbsp;class=&quot;dropup&quot;&gt;
+  &nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;!--/acima&nbsp;e&nbsp;&agrave;&nbsp;direita--&gt;
+  &lt;div&nbsp;class=&quot;dropup&quot;&gt;
+  &nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+            </div><!--/row-->
+
+            <h3>Cores</h3>
+            <p>É possível também fazer um dropdown de cor inversa, adicionando as classes <code>.btn-inverse</code> no botão e <code>.dropdown-inverse</code> no menu.</p>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="dropdown">
+                    <a href="#" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+                      Dropdown de cor inversa
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-inverse">
+                      <li><a href="#">link 1</a></li>
+                      <li><a href="#">link 2</a></li>
+                      <li><a href="#">link 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-inverse dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+      Dropdown de cor inversa
+      &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-inverse&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+    &lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+            <h3>Dropdown Select</h3>
+            <p>O <code>.dropdown-select</code> funciona como o elemento <code>select</code> do HTML, porém, aceita mais opções de formatação, como opções que incluem ícones, por exemplo.</p>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="dropdown dropdown-select">
+                    <button class="btn dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                      <span>selecione</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#"><i class="fa fa-car"></i> 064621 - Raimundo Silveira</a></li>
+                      <li><a href="#"><i class="fa fa-bus"></i> 064621 - Marcos Gomez</a></li>
+                      <li><a href="#"><i class="fa fa-cab"></i> 064621 - Valdira Gonzales</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;dropdown&nbsp;dropdown-select&quot;&gt;
+  &nbsp;&nbsp;...
+  &nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-car&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Raimundo&nbsp;Silveira&lt;/a&gt;&lt;/li&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-bus&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Marcos&nbsp;Gomez&lt;/a&gt;&lt;/li&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-cab&quot;&gt;&lt;/i&gt;&nbsp;064621&nbsp;-&nbsp;Valdira&nbsp;Gonzales&lt;/a&gt;&lt;/li&gt;
+  &nbsp;&nbsp;&lt;/ul&gt;</code></pre>
+              </div>
+            </div>
+
+            <h3>Dropdown Select Múltiplo</h3>
+            <p>O dropdown select múltiplo substitui o elemento HTML <code>select</code>, e permite a seleção de vários itens por vez.</p>
+            <p>Este elemento não suporta outros elementos nas opções, como ícones. Utiliza o framework <a href="http://silviomoreto.github.io/bootstrap-select/" target="blank">Bootstrap Select</a>. Em sua documentação, você pode conferir outras opções para o elemento.</p>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="form">
+                    <div class="form-group">
+                      <label>Select múltiplo</label>
+                      <select class="selectpicker form-control" multiple data-selected-text-format="count>2">
+                        <option>carro</option>
+                        <option>moto</option>
+                        <option>van</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Select com busca</label>
+                      <select class="selectpicker form-control" data-live-search="true">
+                        <option>carro</option>
+                        <option>moto</option>
+                        <option>van</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;label&gt;Select&nbsp;m&uacute;ltiplo&lt;/label&gt;
+  &lt;select&nbsp;class=&quot;selectpicker&nbsp;form-control&quot;&nbsp;multiple&nbsp;data-selected-text-format=&quot;count&gt;2&quot;&gt;
+  &nbsp;&nbsp;&lt;option&gt;carro&lt;/option&gt;
+  &nbsp;&nbsp;&lt;option&gt;moto&lt;/option&gt;
+  &nbsp;&nbsp;&lt;option&gt;van&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;label&gt;Select&nbsp;com&nbsp;busca&lt;/label&gt;
+  &lt;select&nbsp;class=&quot;selectpicker&nbsp;form-control&quot;&nbsp;data-live-search=&quot;true&quot;&gt;
+  &nbsp;&nbsp;&lt;option&gt;carro&lt;/option&gt;
+  &nbsp;&nbsp;&lt;option&gt;moto&lt;/option&gt;
+  &nbsp;&nbsp;&lt;option&gt;van&lt;/option&gt;
+  &lt;/select&gt;</code></pre>
+              </div>
+            </div>
+          </section><!--/#dropdowns-->
+
+          <section id="tabelas">
+            <h2>Tabelas</h2>
+            <div class="row">
+              <div class="col-xs-3">
+                <p>Existem vários tipos de tabelas que podem ser utilizados. Para todos os casos, a estrutura básica é a mesma, variando apenas as classes do elemento <code>table</code></p>
+              </div>
+              <div class="col-xs-5"><pre><code class="language-markup">&lt;table class=&quot;table&quot;&gt;
+  &nbsp;&nbsp;&lt;thead&gt;
+    &nbsp;&nbsp;&lt;tr&gt;
+      &nbsp;&nbsp;&lt;th&gt;...&lt;/th&gt;
+    &nbsp;&nbsp;&lt;/tr&gt;
+  &nbsp;&nbsp;&lt;/thead&gt;
+  &nbsp;&nbsp;&lt;tbody&gt;
+   &nbsp;&nbsp; &lt;tr&gt;
+     &nbsp;&nbsp; &lt;td&gt;...&lt;/td&gt;
+    &nbsp;&nbsp;&lt;/tr&gt;
+  &nbsp;&nbsp;&lt;/tbody&gt;
+  &lt;/table&gt;</code></pre></div>
+              <div class="col-xs-4">
+                <div class="alert alert-info">
+                  <p><strong>Dica!</strong> O elemento <code>thead</code> é utilizado para definir o cabelçalho da tabela, e para suas células, deve se utilizar a tag <code>th</code>. </p>
+                  <p>O elemento <code>tbody</code> é utilizado para definir o corpo da tabela, e para suas células, deve se utilizar a tag <code>td</code>. </p>
+                  <p>Existe também a tag <code>tfoot</code>, para definir o rodapé das tabelas. Seu uso é opcional.</p>
                 </div>
               </div>
             </div>
-            <div class="col-xs-8">
-              <h4>Código</h4>
-              <pre><code class="language-markup">&lt;div&nbsp;class=&quot;input-alphanumeric-container&quot;&gt;
-&nbsp;&nbsp;&lt;label&gt;Alfanum&eacute;rico&lt;/label&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;apenas&nbsp;n&uacute;meros&quot;&nbsp;&gt;
-&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;apenas&nbsp;n&uacute;meros&lt;/small&gt;
-&lt;/div&gt;
-&lt;div&nbsp;class=&quot;input-latin-container&quot;&gt;
-&nbsp;&nbsp;&lt;label&gt;Sem&nbsp;caracteres&nbsp;especiais&lt;/label&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;sem&nbsp;caracteres&nbsp;especiais&quot;&nbsp;&gt;
-&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;sem&nbsp;caracteres&nbsp;especiais&lt;/small&gt;
-&lt;/div&gt;</code></pre>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <h3>Tipos de tabelas</h3>
+                <p>Veja alguns exemplos abaixo.</p>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <h4>Tabela padrão</h4>
+                    <p>Utiliza apenas a classe <code>.table</code></p>
+                    <table class="table">
+                      <tr>
+                        <th>#</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Humberto Araújo</td>
+                        <td>3333-5684</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Joana Freitas</td>
+                        <td>8975-5574</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Fernanda Gonçalves</td>
+                        <td>5487-5981</td>
+                      </tr>
+                    </table>
+                  </div><!--/col-->
+
+                  <div class="col-xs-4">
+                    <h4>Tabela com efeito ao passar o mouse</h4>
+                    <p>Utiliza as classe <code>.table</code> e <code>.table-hover</code></p>
+                    <table class="table table-hover">
+                      <tr>
+                        <th>#</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Humberto Araújo</td>
+                        <td>3333-5684</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Joana Freitas</td>
+                        <td>8975-5574</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Fernanda Gonçalves</td>
+                        <td>5487-5981</td>
+                      </tr>
+                    </table>
+                  </div><!--/col-->
+
+                  <div class="col-xs-4">
+                    <h4>Tabela zebrada</h4>
+                    <p>Utiliza as classe <code>.table</code> e <code>.table-striped</code></p>
+                    <table class="table table-striped">
+                      <tr>
+                        <th>#</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Humberto Araújo</td>
+                        <td>3333-5684</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Joana Freitas</td>
+                        <td>8975-5574</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Fernanda Gonçalves</td>
+                        <td>5487-5981</td>
+                      </tr>
+                    </table>
+                  </div><!--/col-->
+
+                </div><!--/.row-->
+                <div class="row">
+
+                  <div class="col-xs-4">
+                    <h4>Tabela com bordas</h4>
+                    <p>Utiliza as classe <code>.table</code> e <code>.table-bordered</code></p>
+                    <table class="table table-bordered">
+                      <tr>
+                        <th>#</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Humberto Araújo</td>
+                        <td>3333-5684</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Joana Freitas</td>
+                        <td>8975-5574</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Fernanda Gonçalves</td>
+                        <td>5487-5981</td>
+                      </tr>
+                    </table>
+                  </div><!--/col-->
+
+                  <div class="col-xs-4">
+                    <h4>Tabela condensada</h4>
+                    <p>Utiliza as classe <code>.table</code> e <code>.table-condensed</code></p>
+                    <table class="table table-condensed">
+                      <tr>
+                        <th>#</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Humberto Araújo</td>
+                        <td>3333-5684</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Joana Freitas</td>
+                        <td>8975-5574</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Fernanda Gonçalves</td>
+                        <td>5487-5981</td>
+                      </tr>
+                    </table>
+                  </div><!--/col-->
+
+                  <div class="col-xs-4">
+                    <h4>Tabela ultra-condensada</h4>
+                    <p>Utiliza as classe <code>.table</code> e <code>.table-ultra-condensed</code></p>
+                    <table class="table table-ultra-condensed">
+                      <tr>
+                        <th>#</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Humberto Araújo</td>
+                        <td>3333-5684</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Joana Freitas</td>
+                        <td>8975-5574</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Fernanda Gonçalves</td>
+                        <td>5487-5981</td>
+                      </tr>
+                    </table>
+                  </div><!--/col-->
+
+                </div><!--/.row-->
+                <div class="row">
+
+                  <div class="col-xs-4">
+                    <h4>Tabela vertical</h4>
+                    <p>Utiliza as classe <code>.table</code> e <code>.table-vertical</code></p>
+                    <table class="table table-vertical">
+                      <tr>
+                        <th>#</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Humberto Araújo</td>
+                        <td>3333-5684</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Joana Freitas</td>
+                        <td>8975-5574</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Fernanda Gonçalves</td>
+                        <td>5487-5981</td>
+                      </tr>
+                    </table>
+                  </div><!--/col-->
+
+                </div><!--/row-->
+              </div>
+            </div><!--/row-->
+            <h3>Classes contextuais</h3>
+            <p>Use classes contextuais para colorir linhas ou células individualmente.</p>
+            <div class="row">
+              <div class="col-xs-6">
+                <table class="table">
+                  <tr class=""><td>linha normal</td></tr>
+                  <tr class="active"><td>linha com a classe <code>.active</code></td></tr>
+                  <tr class="success"><td>linha com a classe <code>.success</code></td></tr>
+                  <tr class="info"><td>linha com a classe <code>.info</code></td></tr>
+                  <tr class="warning"><td>linha com a classe <code>.warning</code></td></tr>
+                  <tr class="danger"><td>linha com a classe <code>.danger</code></td></tr>
+                </table>
+              </div><!--/col-->
+              <div class="col-xs-6">
+                <pre><code class="language-markup">&lt;!--&nbsp;Em&nbsp;linhas&nbsp;--&gt;
+  &lt;tr&nbsp;class=&quot;active&quot;&gt;...&lt;/tr&gt;
+  &lt;tr&nbsp;class=&quot;success&quot;&gt;...&lt;/tr&gt;
+  &lt;tr&nbsp;class=&quot;warning&quot;&gt;...&lt;/tr&gt;
+  &lt;tr&nbsp;class=&quot;danger&quot;&gt;...&lt;/tr&gt;
+  &lt;tr&nbsp;class=&quot;info&quot;&gt;...&lt;/tr&gt;
+
+  &lt;!--&nbsp;Em&nbsp;colunas&nbsp;(`td`&nbsp;ou&nbsp;`th`)&nbsp;--&gt;
+  &lt;tr&gt;
+  &nbsp;&nbsp;&lt;td&nbsp;class=&quot;active&quot;&gt;...&lt;/td&gt;
+  &nbsp;&nbsp;&lt;td&nbsp;class=&quot;success&quot;&gt;...&lt;/td&gt;
+  &nbsp;&nbsp;&lt;td&nbsp;class=&quot;warning&quot;&gt;...&lt;/td&gt;
+  &nbsp;&nbsp;&lt;td&nbsp;class=&quot;danger&quot;&gt;...&lt;/td&gt;
+  &nbsp;&nbsp;&lt;td&nbsp;class=&quot;info&quot;&gt;...&lt;/td&gt;
+  &lt;/tr&gt;</code></pre>
+              </div>
+            </div><!--/row-->
+
+          </section><!--/#tabelas-->
+
+
+          <section id="campos-de-texto">
+            <h2>Campos de texto</h2>
+
+            <h3>Date Picker</h3>
+            <p>O <code>.datepicker</code> permite que você selecione uma <strong>data</strong> através de um calendário.</p>
+
+            <div class="row">
+              <div class="col-xs-3">
+                <h4>Exemplo</h4>
+                <div class="well">                
+                  <div class="form-group">
+                    <label for="">data</label>
+                    <input type="text" value="" class="form-control datepicker" />
+                  </div><!--/.form-group-->
+                </div>
+              </div>
+              <div class="col-xs-5">
+                <h4>Código HTML</h4>
+                <pre><code class="language-markup">
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;data&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control datepicker&quot; /&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+              <div class="col-xs-4">
+                <h4>Código jQuery</h4>
+                <pre><code class="language-javascript">
+  $('.datepicker').datetimepicker({
+      lang: 'pt-BR',
+      timepicker: false,
+      format:'d.m.Y H:i',
+      closeOnDateSelect:true
+  });</code></pre>
+              </div>
             </div>
-          </div>
-        </section><!--/#campos-de-texto-->
+
+            <h3>Date Time Picker</h3>
+            <p>O <code>.datetimepicker</code> permite que você selecione uma <strong>data e horário</strong> através de um calendário.</p>
+
+            <div class="row">
+              <div class="col-xs-3">
+                <h4>Exemplo</h4>
+                <div class="well">                
+                  <div class="form-group">
+                    <label for="">previsão de início</label>
+                    <input type="text" value="" class="form-control datetimepicker" />
+                  </div><!--/.form-group-->
+                </div>
+              </div>
+              <div class="col-xs-5">
+                <h4>Código HTML</h4>
+                <pre><code class="language-markup">
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;previsão de início&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control datetimepicker&quot; /&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+              <div class="col-xs-4">
+                <h4>Código jQuery</h4>
+                <pre><code class="language-javascript">
+  $('.datetimepicker').datetimepicker({
+      lang: 'pt-BR',
+      format:'d.m.Y H:i'
+  });</code></pre>
+              </div>
+            </div>
+
+            <h3>Campo de texto com contador de caracteres</h3>
+            <p>O exemplo a seguir limita o usuário a 30 caracteres e exibe um contador. É necessário colocar o número de caracteres máximo no atribulo <code>maxLength</code>, bem como ajustar os valores no código jQuery.</p>
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplo</h4>
+                <div class="well">
+                  <div class="input-counter-container">
+                    <input type="text" class="form-control" maxlength="30" placeholder="digite" >
+                    <div class="input-counter">30</div>
+                  </div>
+                </div>
+                <h4>Código HTML</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;input-counter-container&quot;&gt;
+  &nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;digite&quot;&nbsp;maxlength=&quot;30&quot;&gt;
+  &nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-counter&quot;&gt;30&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+              <div class="col-xs-6">
+                <h4>Código jQuery</h4>
+                <pre><code class="language-javascript">$('.input-counter-container .form-control').keyup( function() {
+    var len = $(this).val().length;
+      if (len >= 31) {
+        $(this).val() = $(this).val().substring(0, 30);
+      } else {
+        $('.input-counter').text(30 - len);
+        if (len > 24) { $('.input-counter').css('color', 'red'); }
+        else { $('.input-counter').css('color', 'inherit'); }
+      }
+  });</code></pre>
+              </div>
+            </div>
+
+            <h3>Campo de texto sem caracteres especiais</h3>
+            <p>Para desabilitar caracteres especiais, utilizamos o plugin <a href="https://github.com/KevinSheedy/jquery.alphanum">jQuery Alphanum</a>. Você pode checar sua documentação para se aprofundar nas opções possíveis.</p>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="input-alphanumeric-container">
+                    <label>Alfanumérico</label>              
+                    <input type="text" class="form-control" placeholder="apenas números" >
+                    <small class="help-block">apenas números</small>
+                  </div>
+                  <div class="input-precision-container">
+                    <label>Valor numérico preciso</label>              
+                    <input type="text" class="form-control" placeholder="valor numérico preciso" maxlength="10" >
+                    <small class="help-block">valor numérico preciso</small>
+                  </div>
+                  <div class="input-latin-container">
+                    <label>Sem caracteres especiais</label>              
+                    <input type="text" class="form-control" placeholder="sem caracteres especiais" >
+                    <small class="help-block">sem caracteres especiais</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;input-alphanumeric-container&quot;&gt;
+  &nbsp;&nbsp;&lt;label&gt;Alfanum&eacute;rico&lt;/label&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;apenas&nbsp;n&uacute;meros&quot;&nbsp;&gt;
+  &nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;apenas&nbsp;n&uacute;meros&lt;/small&gt;
+  &lt;/div&gt;
+  &lt;div&nbsp;class=&quot;input-latin-container&quot;&gt;
+  &nbsp;&nbsp;&lt;label&gt;Sem&nbsp;caracteres&nbsp;especiais&lt;/label&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;sem&nbsp;caracteres&nbsp;especiais&quot;&nbsp;&gt;
+  &nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;sem&nbsp;caracteres&nbsp;especiais&lt;/small&gt;
+  &lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+            <h3>Grupos de Campos de Texto</h3>
+            <p>Campos de texto podem ser agrupados com botões e outros elementos através da classe <code>.input-group</code>. Para mais exemplos, veja a <a href="http://getbootstrap.com/components/#input-groups" target="blank">documentação do Bootstrap</a>.</p>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="form-group">
+                    <label>Usuário</label>
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <a href="#buscar-usuario" class="btn btn-info hastooltip show-window-btn" type="button" title="buscar usuário"><i class="fa fa-user"></i></a>
+                      </span>
+                      <input type="text" class="form-control" placeholder="">
+                    </div><!-- /input-group -->
+                  </div><!--/form-group-->                
+                </div>
+                <div class="alert alert-info"><strong>Dica!</strong> É sempre importante adicionar tooltips em botões que possírem apenas ícones, explicando sua função.</div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+  &nbsp;&nbsp;&lt;label&gt;Usu&aacute;rio&lt;/label&gt;
+  &nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;input-group-btn&quot;&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#buscar-usuario&quot;&nbsp;class=&quot;btn&nbsp;btn-info&nbsp;hastooltip&nbsp;show-window-btn&quot;&nbsp;type=&quot;button&quot;&nbsp;title=&quot;buscar&nbsp;usu&aacute;rio&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-user&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;&quot;&gt;
+  &nbsp;&nbsp;&lt;/div&gt;&lt;!--&nbsp;/input-group&nbsp;--&gt;
+  &lt;/div&gt;&lt;!--/form-group--&gt;&nbsp;</code></pre>
+              </div>
+            </div>
+
+            <h3>Campo de texto com tags</h3>
+            <p>Você pode adicionar um campo de tags utilizando o atributo <code>data-role="tagsinput"</code> em um <code>input</code> de texto.
+              <div class="row">
+                <div class="col-xs-4">
+                  <h4>Exemplos</h4>
+                  <div class="well">
+                    <div class="form-group">
+                      <label>campo de texto com tags</label>
+                      <input type="text" class="form-control" data-role="tagsinput"/>
+                      <small class="help-block">Utilize vírgula ( , ) para separar as tags</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-8">
+                  <h4>Código</h4>
+                  <pre><code class="language-markup">&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+  &nbsp;&nbsp;&lt;label&gt;campo&nbsp;de&nbsp;texto&nbsp;com&nbsp;tags&lt;/label&gt;
+  &nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;data-role=&quot;tagsinput&quot;/&gt;
+  &nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;Utilize&nbsp;v&iacute;rgula&nbsp;(&nbsp;,&nbsp;)&nbsp;para&nbsp;separar&nbsp;as&nbsp;tags&lt;/small&gt;
+  &lt;/div&gt;</code></pre>
+                </div>
+              </div>
+
+          </section><!--/#campos-de-texto-->
+        </div><!--/#base-css-->
+
+
+        <!--ELEMENTOS DO SITEMA-->
+        <div id="elementos-do-sistema">
+          <h1>Elementos do sistema</h1>
+
+          <section id="entidades">
+            <h2>Entidades</h2>
+            <p>Elementos da rede, como alimentadores, dispositivos e equipamentos, são chamados no módulo de <b>entidades</b>.
+
+
+            <h3>Símbolos de entidade</h3>
+            <p>Para melhorar sua identificação, elementos com a classe <code>.entity-symbol</code> possuem uma formatação diferenciada, para conter um ícone e um id ou informação relevante, bom como a possibilidade de ter esta informação copiada no clique. O símbolos de entidades podem ser utilizados em dois tamanhos: default (40px x 40px) e <code>.large</code> (58px x 58px).</p>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <table class="table table-bordered text-center">
+                  <tr>
+                    <td><a href="#" class="entity-symbol"><i class="fa fa-car"></i><span>3564321</span></a></td>
+                    <td><a href="#" class="entity-symbol large"><i class="fa fa-car"></i><span>3564321</span></a></td>
+                  </tr>
+                  <tr>
+                    <td><code>.entity-symbol</code></td>
+                    <td><code>.entity-symbol .large</code></td>
+                  </tr>
+                </table>
+              </div><!--/col-xs-6-->
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre><code class="language-markup">
+  &lt;a href=&quot;#&quot; class=&quot;entity-symbol&quot;&gt;
+    &lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;3564321&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;a href=&quot;#&quot; class=&quot;entity-symbol large&quot;&gt;
+    &lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;3564321&lt;/span&gt;
+  &lt;/a&gt;</code></pre>      
+              </div><!--/col-xs-6-->
+            </div><!--/row-->
+
+            <h3>Símbolos de entidade e status</h3>
+            <p>Os símbolos de entidade também se diferenciam de acordo com o estado em que a entidade se encontram, variando de cor.</p>
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <table class="table table-bordered text-center">
+                  <tr>
+                    <td><a href="#" class="entity-symbol"><i class="fa fa-car"></i><span>3564321</span></a></td>
+                    <td><a href="#" class="entity-symbol pendente"><i class="fa fa-car"></i><span>3564321</span></a></td>
+                    <td><a href="#" class="entity-symbol designado"><i class="fa fa-car"></i><span>7894321</span></a></td>
+                    <td><a href="#" class="entity-symbol acionado"><i class="fa fa-car"></i><span>7894321</span></a></td>
+                    <td><a href="#" class="entity-symbol em-execucao"><i class="fa fa-car"></i><span>7894321</span></a></td>
+                    <td><a href="#" class="entity-symbol finalizado"><i class="fa fa-car"></i><span>7894321</span></a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="pendente-txt">-</span></td>
+                    <td><span class="pendente-txt">.pendente</span></td>
+                    <td><span class="designado-txt">.designado</span></td>
+                    <td><span class="acionado-txt">.acionado</span></td>
+                    <td><span class="em-execucao-txt">.em-execução</span></td>
+                    <td><span class="finalizado-txt">.finalizado</span></td>
+                  </tr>
+                </table>
+              </div><!--/col-xs-6-->
+              <div class="col-xs-6"><h4>Código</h4>
+                <pre><code class="language-markup">&lt;!--ENTITY-SYMBOL STATUS: EM EXECUÇÃO--&gt;
+  &lt;a href=&quot;#&quot; class=&quot;entity-symbol em-execucao&quot;&gt;
+    &lt;i class=&quot;fa fa-car&quot;&gt;&lt;/i&gt;
+    &lt;span&gt;3564321&lt;/span&gt;
+  &lt;/a&gt;</code></pre>              
+              </div><!--/col-xs-6-->
+            </div><!--/row-->
+
+
+            <h3>Janelas de Entidades</h3>
+            <p>Janelas de entidades (<code>.entity-window</code>) são elementos flutuantes arrastáveis pela tela, utilizadas para exibir ações e detalhes da entidade. Estas janelas são utilizadas no G-DIS e tem o objetivo de exibir o conteúdo sem retirar o mapa da evicência.</p>
+            <p>O conteúdo da janela vem dentro de um <code>iframe</code>.</p>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplo</h4>
+                <a href="#entity-window-example" class="btn btn-block btn-primary show-window-btn">abrir janela de entidade</a><br />
+                <h4>Código do botão</h4>
+                <p>Para o botão chamar a janela, ele deve possuir a classe <code>.show-window-btn</code> e seu atributo <code>href</code> deve apontar para a <code>id</code> da janela que será exibida, nesse caso, <code>#entity-window-example</code></p>
+                <pre>
+                  <code class="language-markup">
+
+  &lt;a href=&quot;#entity-window-example&quot; class=&quot;btn show-window-btn&quot;&gt;abrir janela de entidade&lt;/a&gt;</code>
+                </pre><br />
+                <div class="alert alert-info" role="alert">
+                  <p><strong>Dica!</strong> Para organizar seu código, você pode deixar as janelas de entidade sempre no final, já que elas ficam escondidas. Assim, você deixa todas elas juntas e pode focar no conteúdo principal da página.</p>
+                </div>
+              </div>
+
+              <div class="col-xs-8">          
+                <h4>Código da janela</h4>
+                <pre>
+                  <code class="language-markup">
+
+  &lt;!--/JANELA DE ENTIDADE--&gt;
+  &lt;div class=&quot;entity-window&quot; id=&quot;entity-window-example&quot;&gt;
+    &lt;div class=&quot;entity-content&quot;&gt;
+
+      &lt;!--/CABEÇALHO DA JANELA--&gt;
+      &lt;div class=&quot;entity-window-header&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;bookmark-button hastooltip&quot; title=&quot;adicionar aos favoritos&quot;&gt;&lt;i class=&quot;fa fa-bookmark-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class=&quot;pull-right&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default hastooltip&quot; data-title=&quot;destacar&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default btn-close&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!--/CORPO DA JANELA--&gt;
+      &lt;div class=&quot;entity-body&quot;&gt;
+        &lt;!--/CONTEUDO--&gt;
+        &lt;iframe src=&quot;conteudo-do-iframe.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+                  </code></pre>
+              </div>
+            </div><!--/row-->
+
+
+
+            <h3>Cards</h3>         
+
+            <div class="entity-card">
+              <a href="#" class="entity-symbol finalizado">
+                <i class="fa fa-car"></i>
+                <span>3564321</span>
+              </a>
+              <div class="entity-card-data">
+                <div class="entity-title">Jaime Vilete <span class="badge id">3564321 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                <p class="entity-subitem">Em operação. Previsão: 3h32min</p>
+              </div>
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a href="#" class="entity-symbol finalizado">
+                <i class="fa fa-car"></i>
+                <span>3564321</span>
+              </a>
+              <div class="entity-card-data">
+                <div class="entity-title">Jaime Vilete <span class="badge id">3564321 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                <p class="entity-subitem">Em operação. Previsão: 3h32min</p>
+              </div>
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+
+          </section><!--/#entidades-->
+        </div><!--/elementos do sistema-->
 
 
 
@@ -1110,7 +1177,7 @@ $('.datetimepicker').datetimepicker({
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
             $('html,body').animate({
-              scrollTop: target.offset().top - 80 //navbar size
+              scrollTop: target.offset().top - 110 //navbar size
             }, 500);
             return false;
           }

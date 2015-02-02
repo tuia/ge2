@@ -1,28 +1,57 @@
 /* MEI */
-
+#mei-navigation {
+	.navbar-nav.nav {
+		.dropdown-menu {
+		    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.70);
+		    left: 0;
+		    position: fixed;
+		    top: 50px;
+		    width: 100%;
+		    text-align: center;
+			li {
+				display: inline-block;
+			}
+		}
+	}
+}
 
 #mei-content {
-	background: url("http://subtlepatterns.com/patterns/paper_fibers.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: #bdc3c7;
 	padding-top: 50px;
 	z-index: 2;
 	position: relative;
 
 	&>.container{
-		background: rgba(255,255,255,1);
+		background: #ecf0f1;
 		padding: 20px 40px;
 	}
 
 	.intro{
 		margin: 10px 0 50px 0;
 		text-align: center;
-		p {
-			margin: 0px 120px 20px;
-			color: #666666;
-			font-size: 16px;
+
+		.page-header {
+			border: none;
 		}
+
 		h1 {
-			font-size: 36px;
+			color: #2c3e50;
+			text-shadow: -1px -1px 0 rgba(255,255,255,.5), 1px 1px 0 darken(#7f8c8d, 10%);
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			display: block;
+
+			small {
+				display: block;
+				font-size: .5em;
+				line-height: 2em;
+			}
 		}
+		p {
+			font-size: 16px;
+			color: #7f8c8d;
+		}
+		.fa-book {color: #7f8c8d}
 	}
 
 	pre[class*="language-"] {padding: 0 1em}
@@ -42,6 +71,7 @@
 		padding-bottom: 20px;
 		margin-bottom: 60px;
 		&>h2 {
+			color: #2c3e50;
 			position: relative;
 			display: block;
 			&:before, &:after {
@@ -76,6 +106,19 @@
 		border-top: 1px solid #CCCCCC;
 		padding: 20px 0;
 		text-align: right;
+	}
+
+	#base-css {
+		section > h2:after {
+			background: #1abc9c;
+		}
+		&>h1 {color: #1abc9c}
+	}
+	#elementos-do-sistema {
+		section > h2:after {
+			background: #9b59b6;
+		}
+		&>h1 {color: #9b59b6}
 	}
 }/*mei-content*/
 

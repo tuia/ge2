@@ -845,7 +845,7 @@
                       <label>Usuário</label>
                       <div class="input-group">
                         <span class="input-group-btn">
-                          <a href="#buscar-usuarios" class="btn btn-info hastooltip" type="button" title="buscar usuário"><i class="fa fa-user"></i></a>
+                          <a href="#buscar-usuario" class="btn btn-info hastooltip show-window-btn" type="button" title="buscar usuário"><i class="fa fa-user"></i></a>
                         </span>
                         <input type="text" class="form-control" placeholder="">
                       </div><!-- /input-group -->
@@ -914,7 +914,7 @@
                   </div><!--/col-xs-3-->
                   <div class="col-xs-3">
                     <div class="form-group">
-                      <label>typeahead de tags</label>
+                      <label>campo de texto com tags</label>
                       <input type="text" class="form-control" data-role="tagsinput"/>
                     </div>
                   </div><!--/col-xs-3-->
@@ -1420,6 +1420,25 @@
         </nav><!--/.pagination-->
       </div><!--/container-->
     </div><!--/container-->
+
+
+    <!--/EXAMPLE-WINDOW-->
+    <div class="entity-window horizontal" id="buscar-usuario">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar poste"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/entity-window-header-->
+        <div class="entity-body">
+          <iframe src="buscar-clientes.html" frameborder="0" scrolling="no"></iframe>
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->      
+    </div><!--/entity-window-->
+
+
 
     <!--/SCRIPTS-->
     <script src="assets/js/jquery.min.js"></script>

@@ -1228,8 +1228,8 @@ body.entity-iframe {
 	width: 320px;
 	display: none;
 
-	&.large {
-		width: 600px !important;
+	&.horizontal {
+		width: 65% !important;
 	}
 
 	.entity-content {

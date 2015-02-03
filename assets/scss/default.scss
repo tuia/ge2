@@ -121,12 +121,12 @@
 	.unity, .muted {color: $lighter-text;}
 	.block {display: block;}
 
-	.pendente-txt {color: $pendente}
-	.designado-txt {color: $designado}
-	.acionado-txt {color: $acionado}
-	.em-execucao-txt {color: $em-execucao}
-	.finalizado-txt {color: $finalizado}
-	.default-txt {color: $default}
+	.text-pendente {color: $pendente}
+	.text-designado {color: $designado}
+	.text-acionado {color: $acionado}
+	.text-em-execucao {color: $em-execucao}
+	.text-finalizado {color: $finalizado}
+	.text-default {color: $default}
 
 
 	/* labels */

@@ -198,7 +198,10 @@
 
           <section id="tipografia">
             <h2>Tipografia</h2>
+            <p>Tipografia se refere a fontes e suas propriedades, como tamanhos, cores e espaçamento.</p>
+            
             <h3>Títulos</h3>
+            <p>Os títulos utilizam as tags <code>h1</code>, <code>h2</code>, <code>h3</code> e <code>h4</code>.</p>
             <div class="row">
               <div class="col-xs-6">
                 <h4>Exemplos</h4>
@@ -212,18 +215,74 @@
               <div class="col-xs-6">
                 <h4>Código</h4>
                 <pre>
-                  <code class="language-markup">
-                    
-  &lt;h1&gt;Título de peso 1 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h1&gt;
-  &lt;h2&gt;Título de peso 2 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h2&gt;
-  &lt;h3&gt;Título de peso 3 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h3&gt;
-  &lt;h4&gt;Título de peso 4 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h4&gt;
+<code class="language-markup">&lt;h1&gt;Título de peso 1 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;Título de peso 2 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;Título de peso 3 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;Título de peso 4 &lt;small&gt;subtítulo&lt;/small&gt;&lt;/h4&gt;
                   </code></pre><br />
                   <div class="alert alert-info" role="alert">
                     <p><strong>Dica!</strong> Ao utilizar o título no topo de uma páginas, você pode colocá-lo dentro de uma <code>div</code> com a classe <code>.page-header</code> para ganhar mais espaçamento e uma linha abaixo o título.</p>
                   </div>
               </div><!--/col-->
-            </div>
+            </div><!--/row-->
+            
+            <h3>Cores contextuais</h3>
+            <p>As cores contextuais são utilizadas, principalmente, para validação de formulários.</p>
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <p class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor. </p>
+                  <p class="text-success"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor</p>
+                  <p class="text-info"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor</p>
+                  <p class="text-warning"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor</p>
+                  <p class="text-danger"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor</p>
+                </div><!--/well-->
+              </div><!--/col-->
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre>
+<code class="language-markup">&lt;p&nbsp;class=&quot;text-muted&quot;&gt;...&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-success&quot;&gt;...&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-info&quot;&gt;...&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-warning&quot;&gt;...&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-danger&quot;&gt;...&lt;/p&gt;</code></pre>
+              <div class="alert alert-info">
+                <strong>Dica!</strong> Você também pode utilizar as cores contextuais como cor de fundo ao invés de texto. Para isso, ao invés de utilizar a classe <code>.text-success</code>, por exemplo, você utiliza a classe <code>.bg-success</code>
+              </div>
+              </div><!--/col-->
+            </div><!--/row-->
+            
+            <h3>Cores de Status</h3>
+            <p>As cores de status são utilizadas, principalmente, para diferenciar status de <a href="#entidades">entidades</a></p>
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <p class="text-pendente"> pendente </p>
+                  <p class="text-designado"> designado</p>
+                  <p class="text-acionado"> acionado</p>
+                  <p class="text-em-execucao"> em execução</p>
+                  <p class="text-finalizado"> finalizado</p>
+                  <p class="text-default"> padrão </p>
+                </div><!--/well-->
+              </div><!--/col-->
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre>
+<code class="language-markup">&lt;p&nbsp;class=&quot;text-pendente&quot;&gt;&nbsp;pendente&nbsp;&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-designado&quot;&gt;&nbsp;designado&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-acionado&quot;&gt;&nbsp;acionado&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-em-execucao&quot;&gt;&nbsp;em&nbsp;execu&ccedil;&atilde;o&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-finalizado&quot;&gt;&nbsp;finalizado&lt;/p&gt;
+&lt;p&nbsp;class=&quot;text-default&quot;&gt;&nbsp;padr&atilde;o&nbsp;&lt;/p&gt;</code></pre>
+              </div><!--/col-->
+            </div><!--/row-->
 
             
           </section><!--/#tipografia-->
@@ -1257,12 +1316,12 @@
                     <td><a href="#" class="entity-symbol finalizado"><i class="fa fa-car"></i><span>7894321</span></a></td>
                   </tr>
                   <tr>
-                    <td><span class="pendente-txt">-</span></td>
-                    <td><span class="pendente-txt">.pendente</span></td>
-                    <td><span class="designado-txt">.designado</span></td>
-                    <td><span class="acionado-txt">.acionado</span></td>
-                    <td><span class="em-execucao-txt">.em-execução</span></td>
-                    <td><span class="finalizado-txt">.finalizado</span></td>
+                    <td><span class="text-pendente">-</span></td>
+                    <td><span class="text-pendente">.pendente</span></td>
+                    <td><span class="text-designado">.designado</span></td>
+                    <td><span class="text-acionado">.acionado</span></td>
+                    <td><span class="text-em-execucao">.em-execução</span></td>
+                    <td><span class="text-finalizado">.finalizado</span></td>
                   </tr>
                 </table>
               </div><!--/col-xs-6-->

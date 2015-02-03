@@ -51,7 +51,7 @@
               <li><a href="#pesquisa">pesquisa</a></li>
               <li><a href="#entidades">entidades</a></li>
               <li><a href="#janelas">janelas</a></li>
-              <li><a href="#ajuda-e-documentação">ajuda e documentação</a></li>
+              <li><a href="#ajuda-e-documentacao">ajuda e documentação</a></li>
             </ul>
           </li>
         </ul>
@@ -124,6 +124,7 @@
         <!--BASE CSS-->
         <div id="base-css">
           <h1>Base CSS</h1>
+          <p>Os elementos apresentados aqui fazem parte da estrutura básica das páginas. Você pode se aprofundar neste e em outros elementos através da <a href="http://getbootstrap.com/css">documentação do bootstrap</a>.</p>
           
           <section id="grid">
             <h2>Grid</h2>
@@ -289,6 +290,7 @@
 
           <section id="icones">
             <h2>Ícones</h2>
+            <p>As bibliotecas de ícones utilizadas atualmente são a <a href="http://fontawesome.io/icons/">fontawesome</a> e <a href="http://getbootstrap.com/components/#glyphicons">glyphicons</a>. Para manter o padrão, utilizamos mais a primeira. Em casos de ícones inexistentes em ambas, existe a pasta "icons" no diretório "assets/img" deste html. </p>
             <h3>Ícone de "carregando"</h3>
             <p>Para o ícone de carregando, existem dois casos de uso. No primeiro, uma camada branca com o ícone ao centro cobre toda a tela. No segundo, esta mesma camada com o ícone aparece dentro de um painel.</p>
             <div class="row">
@@ -312,6 +314,60 @@
 
           <section id="botoes">
             <h2>Botões</h2>
+            <p>Para se utilizar um botão, basta adicionar a classe <code>.btn</code> e as classes da cor e tamanhos desejados ao elemento <code>a</code>, <code>button</code>, <code>input [type="button"]</code> ou <code>input [type="submit"]</code>. </p>
+
+            <h3>Cores</h3>
+            <p>As cores são indicadas através das seguintes classes:</p>
+            <h4>Exemplos</h4>
+            <div class="well">
+              <!-- Standard button -->
+              <button type="button" class="btn btn-default">Default</button>
+
+              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+              <button type="button" class="btn btn-primary">Primary</button>
+
+              <!-- Indicates a successful or positive action -->
+              <button type="button" class="btn btn-success">Success</button>
+
+              <!-- Contextual button for informational alert messages -->
+              <button type="button" class="btn btn-info">Info</button>
+
+              <!-- Indicates caution should be taken with this action -->
+              <button type="button" class="btn btn-warning">Warning</button>
+
+              <!-- Indicates a dangerous or potentially negative action -->
+              <button type="button" class="btn btn-danger">Danger</button>
+
+              <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+              <button type="button" class="btn btn-link">Link</button>
+            </div>
+            <h4>Código</h4>
+            <pre><code class="language-markup">&lt;!--&nbsp;Bot&atilde;o&nbsp;padr&atilde;o&nbsp;--&gt;
+&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;Default&lt;/button&gt;
+
+&lt;!--&nbsp;Fornece&nbsp;peso&nbsp;visual&nbsp;extra&nbsp;e&nbsp;identifica&nbsp;a&nbsp;a&ccedil;&atilde;o&nbsp;principal&nbsp;em&nbsp;um&nbsp;conjunto&nbsp;de&nbsp;bot&otilde;es&nbsp;--&gt;
+&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&quot;&gt;Primary&lt;/button&gt;
+
+&lt;!--&nbsp;Indica&nbsp;uma&nbsp;a&ccedil;&atilde;o&nbsp;bem-sucedida&nbsp;ou&nbsp;positiva&nbsp;--&gt;
+&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-success&quot;&gt;Success&lt;/button&gt;
+
+&lt;!--&nbsp;Bot&atilde;o&nbsp;contextual&nbsp;para&nbsp;mensagens&nbsp;de&nbsp;alerta&nbsp;informativo&nbsp;--&gt;
+&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-info&quot;&gt;Info&lt;/button&gt;
+
+&lt;!--&nbsp;Indica&nbsp;que&nbsp;se&nbsp;deve&nbsp;tomar&nbsp;cuidado&nbsp;com&nbsp;esta&nbsp;a&ccedil;&atilde;o&nbsp;--&gt;
+&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-warning&quot;&gt;Warning&lt;/button&gt;
+
+&lt;!--&nbsp;Indica&nbsp;uma&nbsp;a&ccedil;&atilde;o&nbsp;perigosa&nbsp;ou&nbsp;potencialmente&nbsp;negativa&nbsp;--&gt;
+&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-danger&quot;&gt;Danger&lt;/button&gt;
+
+&lt;!--&nbsp;Retira&nbsp;a&nbsp;&ecirc;nfase&nbsp;do&nbsp;bot&atilde;o,&nbsp;fazendo&nbsp;com&nbsp;que&nbsp;pare&ccedil;a&nbsp;um&nbsp;link&nbsp;e&nbsp;mantendo&nbsp;seu&nbsp;comportamento&nbsp;--&gt;
+&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-link&quot;&gt;Link&lt;/button&gt;</code></pre>
+
+          <h3>Tamanhos</h3>
+          <p>São quatro os tamanhos possíveis para os botões:</p>
+
+          <h3>Grupos de botões</h3>
+          <p>São quatro os tamanhos possíveis para os botões:</p>
           </section><!--/#botoes-->
 
           <section id="dropdowns">
@@ -1047,6 +1103,7 @@
         <!--ELEMENTOS DO SITEMA-->
         <div id="elementos-do-sistema">
           <h1>Elementos do sistema</h1>
+          <p>Os elementos apresentados aqui foram desenvolvidos exclusivamente para a utilização no módulo. Recomendamos seu estudo e utilização profundamente.</p>
 
           <section id="navegacao">
             <h2>Navegação</h2>
@@ -1313,10 +1370,10 @@
 
   &lt;div&nbsp;role=&quot;tablist&quot;&gt;
     &lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&nbsp;active&quot;&nbsp;id=&quot;tab1&quot;&gt;
-      conte&uacute;do&nbsp;aba&nbsp;1
+     ...
     &lt;/div&gt;
     &lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&nbsp;active&quot;&nbsp;id=&quot;tab2&quot;&gt;
-      conte&uacute;do&nbsp;aba&nbsp;2
+      ...
     &lt;/div&gt;
     ...
   &lt;/div&gt;
@@ -1771,8 +1828,29 @@
 
           <section id="ajuda-e-documentacao">
             <h2>Ajuda e Documentação</h2>
-          </section><!--/#ajuda-e-documentacao-->
+            <p>Os elementos de ajuda e documentação devem ser utilizados sempre que possível, evitando dúvidas e auxiliando na utilização do sistema.</p>
+            <h3>Botão de Informações</h3>
 
+            <h3>Tooltips</h3>
+            <p>Tooltips ou hints são balõezinhos de ajuda que são exibidos ao se repousar o mouse sobre o elemento com a classe <code>.hastooltip</code>. O texto a ser exibido é passado através do atributo <code>title</code>. As tooltips podem ser usadas em diversos elementos, como links, botões e imagens.</p>
+
+            <div class="row">
+              <div class="col-xs-3">
+                <h4>Exemplo</h4>
+                <div class="well">
+                  <a href="#" class="btn btn-primary hastooltip" title="exemplo de tooltip">Repouse o mouse sobre mim!</a>
+                </div>
+              </div>
+              <div class="col-xs-9">
+                <h4>Código</h4>
+                <pre><code class="language-markup">
+
+&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&nbsp;hastooltip&quot;&nbsp;title=&quot;exemplo&nbsp;de&nbsp;tooltip&quot;&gt;Repouse&nbsp;o&nbsp;mouse&nbsp;sobre&nbsp;mim!&lt;/a&gt;
+
+</code></pre>
+              </div>
+            </div>
+          </section><!--/#ajuda-e-documentacao-->
 
 
         </div><!--/elementos do sistema-->
@@ -1835,7 +1913,7 @@
     <script src="assets/js/scripts.js"></script>
     <script type="text/javascript">
     $(function() {
-      $('.navbar-fixed-top a[href*=#]:not([href=#])').click(function() {
+      $('.navbar-fixed-top a[href*=#], .navbar-brand').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

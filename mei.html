@@ -1050,6 +1050,78 @@
 
           <section id="navegacao">
             <h2>Navegação</h2>
+            <p></p>
+            <h3>Barra de ações</h3>
+            <p>A barra de ações ou <code>#actions-navbar</code> é o elemento que carrega o título da página, botão de favoritar, botões de configurações, ajuda e outras ações.</p>
+
+            <h4>Exemplo</h4>
+            <!--/ACTIONS NAVBAR-->
+            <nav id="actions-navbar" class="navbar navbar-default">
+
+              <div class="navbar-title">
+                <h1><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Título da página</h1> 
+              </div>        
+
+              <ul class="nav navbar-nav">
+                <li><a href="#" class="hastooltip" title="manobra"><img src="assets/img/icons/manobra-icon.png" /></a></li>
+                <li><a href="#" class="hastooltip" title="manobra simples"><img src="assets/img/icons/manobra-simples-icon.png" /></a></li>
+                <li><a href="#" class="hastooltip" title="turma"><img src="assets/img/icons/turma-icon.png" /></a></li>
+                <li><a href="#" class="hastooltip" title="distância da base"><img src="assets/img/icons/dist-icon.png" /></a></li>
+                <li><a href="#" class="hastooltip" title="nota de serviço"><img src="assets/img/icons/note-icon.png" /></a></li>
+                <li><a href="#" class="hastooltip" title="triagem"><img src="assets/img/icons/triagem-icon.png" /></a></li>
+                <li><a href="#" class="hastooltip" title="atenção especial"><img src="assets/img/icons/atencao-icon.png" /></a></li>
+
+                <!--/ordenar-->
+                <li class="dropdown ">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <img src="assets/img/icons/ordenar-icon.png" />
+                  </a>
+                  <ul class="dropdown-menu dropdown" role="menu">
+                    <li><a href="#"><img src="assets/img/icons/ordeinit-icon.png" /></a> ordenação inicial</li>
+                    <li><a href="#"><img src="assets/img/icons/ordenar-icon.png" /></a> ordenador inicial</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <div class="summary">
+                <span class="category">novas</span> 6<br />
+                <span class="category">finalizadas</span> 6
+              </div><!--/summary-->
+
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="hastooltip config-btn" title="configurações"><i class="fa fa-cog fa-2x"></i></a></li>
+                <li><a href="#" class="hastooltip help-btn" title="sobre"><i class="fa fa-info-circle fa-2x"></i></a></li>
+              </ul>
+
+            </nav><!--/navbar-->
+
+            <h4>Código</h4>
+            <pre><code class="language-markup">&lt;nav&nbsp;id=&quot;actions-navbar&quot;&nbsp;class=&quot;navbar&nbsp;navbar-default&quot;&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;navbar-title&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;bookmark-button&nbsp;marked&quot;&nbsp;data-toggle=&quot;tooltip&quot;&nbsp;data-title=&quot;adicionar&nbsp;aos&nbsp;favoritos&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-bookmark&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&iacute;tulo&nbsp;da&nbsp;p&aacute;gina
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;
+&nbsp;&nbsp;&lt;/div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;navbar-nav&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;manobra&quot;&gt;&lt;img&nbsp;src=&quot;assets/img/icons/manobra-icon.png&quot;&nbsp;/&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;manobra&nbsp;simples&quot;&gt;&lt;img&nbsp;src=&quot;assets/img/icons/manobra-simples-icon.png&quot;&nbsp;/&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;...
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;summary&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;category&quot;&gt;novas&lt;/span&gt;&nbsp;6&lt;br&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;category&quot;&gt;finalizadas&lt;/span&gt;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;navbar-nav&nbsp;navbar-right&quot;&gt;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&nbsp;config-btn&quot;&nbsp;title=&quot;configura&ccedil;&otilde;es&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-cog&nbsp;fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&nbsp;help-btn&quot;&nbsp;title=&quot;sobre&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-info-circle&nbsp;fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&lt;/ul&gt;
+
+&lt;/nav&gt;</code></pre>
+
           </section><!--/#navegacao-->
 
 
@@ -1261,6 +1333,248 @@
 
             <h3>Tabela de resultados de pesquisa</h3>
             <p>Os resutlatados da pesquisa podem ser exibidos, então, na tabela <code>.research-table</code>.</p>
+
+            <h4>Exemplo</h4>
+
+            <!--/RESEARCH-TABLE-->
+            <table class="table research-table table-bordered">
+              <thead>
+                <tr>
+                  <th rowspan="2">#</th>
+                  <th rowspan="2">
+                    <a href="#" class="hastooltip" title="ordenar por entidade">Entidade</a>
+                    <a href="#"><i class="fa fa-filter"></i></a>
+                  </th>
+                  <th rowspan="2">
+                    <a href="#" class="hastooltip" title="ordenar por alimentador">Alimentador </a>
+                    <a href="#"><i class="fa fa-filter"></i></a>
+                  </th>
+                  <th rowspan="2">
+                    <a href="#" class="hastooltip" title="ordenar por equipamento">Equipamento </a>
+                    <a href="#"><i class="fa fa-filter"></i></a>
+                  </th>
+                  <th rowspan="2">
+                    <a href="#">Placa de advertência</a>
+                    <a href="#"><i class="fa fa-filter"></i></a>
+                  </th>
+                  <th colspan="3">Ação</th>
+                  <th rowspan="2">
+                    <a href="#" class="hastooltip" title="ordenar por matrícula">Matrícula </a>
+                  </th>
+                  <th rowspan="2">
+                    <a href="#" class="hastooltip" title="ordenar por usuário">Usuário </a>
+                    <a href="#"><i class="fa fa-filter"></i></a>
+                  </th>
+                  <th rowspan="2">opções</th>
+                </tr>
+                <tr>
+                  <th>ação</th>
+                  <th><a href="#" class="hastooltip" title="ordenar por data inicial">data inicial </a></th>
+                  <th><a href="#" class="hastooltip" title="ordenar por data final">data final </a></th>
+                </tr>
+              </thead>
+              <tbody>          
+                <tr>
+                  <td>
+                    <input type="checkbox" class="check-table-row"/>
+                  </td>
+                  <td>
+                    <div class="entity-card">
+                      <a href="#" class="entity-symbol large pendente" class="hastooltip" title="copiar id">
+                        <i class="fa fa-car"></i>
+                        <span>3564321</span>
+                      </a>
+                      <div class="entity-card-data">
+                        <div class="entity-title">Jaime Vilete </span></div>
+                        <p class="entity-subitem text-pendente">pendente</p>
+                      </div>
+                      <span class="clearfix"></span>
+                    </div><!--/.entity-card--> 
+                  </td>
+                  <td>[ABR012] LDA Xavantes</td>
+                  <td><span class="badge id">KS-89590 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></td>
+                  <td><i class="fa fa-flag"></i> aviso</td>
+                  <td>Inserção</td>
+                  <td>12/05/2014 <span class="unity">às</span> 09:30</td>
+                  <td>16/05/2014 <span class="unity">às</span> 12:38</td>
+                  <td>hmorais</td>
+                  <td>H Morais</td>
+                  <td>
+                    <div class="btn-group" role="group">
+                      <a href="" class="hastooltip btn btn-default btn-sm" title="editar">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                      <a href="" class="hastooltip btn btn-default btn-sm" title="ver detalhes">
+                        <i class="fa fa-plus"></i>
+                      </a>
+                       <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><img src="assets/img/icons/duplicate-icon.png" alt="duplicar"/> duplicar</a></li>
+                            <li><a href="#"><i class="fa fa-trash"></i> excluir</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                  </td>
+                </tr>              
+                <tr>
+                  <td>
+                    <input type="checkbox" class="check-table-row"/>
+                  </td>
+                  <td>
+                    <div class="entity-card">
+                      <a href="#" class="entity-symbol large designado" class="hastooltip" title="copiar id">
+                        <i class="fa fa-car"></i>
+                        <span>3564321</span>
+                      </a>
+                      <div class="entity-card-data">
+                        <div class="entity-title">Jaime Vilete </span></div>
+                        <p class="entity-subitem text-designado">designado</p>
+                      </div>
+                      <span class="clearfix"></span>
+                    </div><!--/.entity-card--> 
+                  </td>
+                  <td>[ABR012] LDA Xavantes</td>
+                  <td><span class="badge id">KS-89590 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></td>
+                  <td><i class="fa fa-flag"></i> aviso</td>
+                  <td>Inserção</td>
+                  <td>12/05/2014 <span class="unity">às</span> 09:30</td>
+                  <td>16/05/2014 <span class="unity">às</span> 12:38</td>
+                  <td>hmorais</td>
+                  <td>H Morais</td>
+                  <td>
+                    <div class="btn-group" role="group">
+                      <a href="" class="hastooltip btn btn-default btn-sm" title="editar">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                      <a href="" class="hastooltip btn btn-default btn-sm" title="ver detalhes">
+                        <i class="fa fa-plus"></i>
+                      </a>
+                       <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><img src="assets/img/icons/duplicate-icon.png" alt="duplicar"/> duplicar</a></li>
+                            <li><a href="#"><i class="fa fa-trash"></i> excluir</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                  </td>
+                </tr>              
+                <tr>
+                  <td>
+                    <input type="checkbox" class="check-table-row"/>
+                  </td>
+                  <td>
+                    <div class="entity-card">
+                      <a href="#" class="entity-symbol large finalizado" class="hastooltip" title="copiar id">
+                        <i class="fa fa-car"></i>
+                        <span>3564321</span>
+                      </a>
+                      <div class="entity-card-data">
+                        <div class="entity-title">Jaime Vilete </span></div>
+                        <p class="entity-subitem text-finalizado">finalizado</p>
+                      </div>
+                      <span class="clearfix"></span>
+                    </div><!--/.entity-card--> 
+                  </td>
+                  <td>[ABR012] LDA Xavantes</td>
+                  <td><span class="badge id">KS-89590 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></td>
+                  <td><i class="fa fa-flag"></i> aviso</td>
+                  <td>Inserção</td>
+                  <td>12/05/2014 <span class="unity">às</span> 09:30</td>
+                  <td>16/05/2014 <span class="unity">às</span> 12:38</td>
+                  <td>hmorais</td>
+                  <td>H Morais</td>
+                  <td>
+                    <div class="btn-group" role="group">
+                      <a href="" class="hastooltip btn btn-default btn-sm" title="editar">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                      <a href="" class="hastooltip btn btn-default btn-sm" title="ver detalhes">
+                        <i class="fa fa-plus"></i>
+                      </a>
+                       <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#"><img src="assets/img/icons/duplicate-icon.png" alt="duplicar"/> duplicar</a></li>
+                            <li><a href="#"><i class="fa fa-trash"></i> excluir</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h4>Código</h4>
+            <p>Para entender melhor o uso das tags <code>rowspan</code> e <code>colspan</code>, cheque <a href="css-tricks.com/complete-guide-table-element/">este texto</a>. </p>
+            <pre><code class="language-markup">&lt;table&nbsp;class=&quot;table&nbsp;research-table&nbsp;table-bordered&quot;&gt;
+&nbsp;&nbsp;&lt;thead&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;rowspan=&quot;2&quot;&gt;#&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;rowspan=&quot;2&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;ordenar&nbsp;por&nbsp;entidade&quot;&gt;Entidade&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-filter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;rowspan=&quot;2&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;ordenar&nbsp;por&nbsp;alimentador&quot;&gt;Alimentador&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-filter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;rowspan=&quot;2&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;ordenar&nbsp;por&nbsp;equipamento&quot;&gt;Equipamento&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-filter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;rowspan=&quot;2&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;Placa&nbsp;de&nbsp;advert&ecirc;ncia&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-filter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;colspan=&quot;3&quot;&gt;A&ccedil;&atilde;o&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;rowspan=&quot;2&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;ordenar&nbsp;por&nbsp;matr&iacute;cula&quot;&gt;Matr&iacute;cula&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;rowspan=&quot;2&quot;&gt;op&ccedil;&otilde;es&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;a&ccedil;&atilde;o&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;ordenar&nbsp;por&nbsp;data&nbsp;inicial&quot;&gt;data&nbsp;inicial&nbsp;&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&quot;&nbsp;title=&quot;ordenar&nbsp;por&nbsp;data&nbsp;final&quot;&gt;data&nbsp;final&nbsp;&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&lt;/thead&gt;
+&nbsp;&nbsp;&lt;tbody&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;check-table-row&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-card&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;[ABR012]&nbsp;LDA&nbsp;Xavantes&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;badge&nbsp;id&quot;&gt;KS-89590&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;copy-button&quot;&nbsp;data-toggle=&quot;tooltip&quot;&nbsp;data-title=&quot;copiar&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-files-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&quot;&nbsp;role=&quot;group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;&quot;&nbsp;class=&quot;hastooltip&nbsp;btn&nbsp;btn-default&nbsp;btn-sm&quot;&nbsp;title=&quot;editar&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-pencil&quot;&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;&quot;&nbsp;class=&quot;hastooltip&nbsp;btn&nbsp;btn-default&nbsp;btn-sm&quot;&nbsp;title=&quot;ver&nbsp;detalhes&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-plus&quot;&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&quot;&nbsp;role=&quot;group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-sm&nbsp;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&nbsp;role=&quot;menu&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;img&nbsp;src=&quot;assets/img/icons/duplicate-icon.png&quot;&nbsp;alt=&quot;duplicar&quot;/&gt;&nbsp;duplicar&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-trash&quot;&gt;&lt;/i&gt;&nbsp;excluir&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
           </section><!--/#pesquisa-->
 
 

@@ -474,7 +474,7 @@
 	/* search-form */
 	.search-form {
 		padding: 10px;
-		margin-bottom: 10px;
+
 		.form-group {
 			display: inline-block;
 			float: left;
@@ -1239,7 +1239,7 @@ body.entity-iframe {
     	border: 1px solid rgba(0, 0, 0, 0.2);
 		position: relative;
 		outline: 0 none;
-		@include border-radius(6px);
+		@include border-radius(0);
 		@include box-shadow(0,5px,15px,rgba(0, 0, 0, 0.5))
 	}
 
@@ -1410,8 +1410,11 @@ body.entity-iframe {
 			padding-top: 10px
 		}
 	}
+	.navbar {
+		margin: 0
+	}
 	.form-box.auto {
-		height: 275px;
+		height: 315px;
 		max-height: none;
 	}
 }

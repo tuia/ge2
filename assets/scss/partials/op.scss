@@ -153,10 +153,6 @@
 	margin: 30px 0;
 	min-height: 40px;
 	padding: 5px 20px;
-
-	h1 {
-		font-size: 26px;
-	}
 	
 	.navbar-nav > li > a {
 		padding: 10px 15px;
@@ -169,10 +165,12 @@
 	.navbar-title {
 		width: auto;
 		float: left;
+		margin-right: 20px;
 		h1 {
 			margin: 0;
 			padding: 10px 0;
-			line-height: 1			
+			line-height: 1;
+			font-size: 26px;		
 		}
 	}
 	.alarm-pda-container {

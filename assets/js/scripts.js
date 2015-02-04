@@ -238,11 +238,13 @@
 			$(this).parents('.editable-field-container').find('.editable-field-form').slideDown();
 			$(this).parents('.editable-field-container').find('.editable-value').slideUp();
 			$(this).parents('.editable-field-container').addClass('editing-field');
+			return false
 		});
 		$('.editable-field-container .cancel, .editable-field-container .save').click( function() {
 			$(this).parents('.editable-field-container').find('.editable-field-form').slideUp();
 			$(this).parents('.editable-field-container').find('.editable-value').slideDown();
 			$(this).parents('.editable-field-container').removeClass('editing-field');
+			return false
 		});
 
 		//SEARCH BOX
@@ -369,4 +371,11 @@
 				$('body').removeClass('loading');
 			}, 2000);
 			return false
+		});
+
+		//DRAG AND DROP
+	     $(function() {
+			$( "#sortable1, #sortable2" ).sortable({
+			connectWith: ".connectedSortable"
+			}).disableSelection();
 		});

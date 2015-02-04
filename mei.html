@@ -415,13 +415,149 @@
 
 &lt;!--&nbsp;Retira&nbsp;a&nbsp;&ecirc;nfase&nbsp;do&nbsp;bot&atilde;o,&nbsp;fazendo&nbsp;com&nbsp;que&nbsp;pare&ccedil;a&nbsp;um&nbsp;link&nbsp;e&nbsp;mantendo&nbsp;seu&nbsp;comportamento&nbsp;--&gt;
 &lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-link&quot;&gt;Link&lt;/button&gt;</code></pre>
+<br />
+            <div class="alert alert-info"><strong>Dica!</strong> Você também pode utilizar as classes <code>.active</code> e <code>.disabled</code> para os estados ativo e inativado.</div>
 
           <h3>Tamanhos</h3>
-          <p>São quatro os tamanhos possíveis para os botões:</p>
+          <p>São cinco os tamanhos possíveis para os botões</p>
+          <div class="row">
+            <div class="col-xs-6">
+              <h4>Exemplos</h4>
+              <div class="well">
+                <a href="#" class="btn btn-default btn-lg">Botão Largo</a>
+                <a href="#" class="btn btn-default">Botão Padrão</a>
+                <a href="#" class="btn btn-default btn-sm">Botão Pequeno</a>
+                <a href="#" class="btn btn-default btn-xs">Botão Extra-pequeno</a>
+
+                <br/ ><br/ >
+
+                <!--/Se ajusta ao tamanha do elemento pai-->
+                <a href="#" class="btn btn-default btn-block">Botão em Bloco</a>
+
+
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-lg&quot;&gt;Bot&atilde;o&nbsp;Largo&lt;/a&gt;
+&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;Bot&atilde;o&nbsp;Padr&atilde;o&lt;/a&gt;
+&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-sm&quot;&gt;Bot&atilde;o&nbsp;Pequeno&lt;/a&gt;
+&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-xs&quot;&gt;Bot&atilde;o&nbsp;Extra-pequeno&lt;/a&gt;
+
+&lt;!--/Se&nbsp;ajusta&nbsp;ao&nbsp;tamanha&nbsp;do&nbsp;elemento&nbsp;pai--&gt;
+&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-clock&quot;&gt;Bot&atilde;o&nbsp;em&nbsp;Bloco&lt;/a&gt;</code></pre>
+            </div>
+          </div>
 
           <h3>Grupos de botões</h3>
           <p>São quatro os tamanhos possíveis para os botões:</p>
-          </section><!--/#botoes-->
+          <div class="row">
+            <div class="col-xs-5">
+              <h4>Exemplos</h4>
+              <div class="well">
+
+                <div class="form-group">
+                  <label class="block">Padrão</label>
+                  <div class="btn-group">
+                    <a href="#" class="btn btn-default">esquerda</a>
+                    <a href="#" class="btn btn-default">centro</a>
+                    <a href="#" class="btn btn-default">direita</a>
+                  </div> 
+                </div>
+
+                <div class="form-group">
+                  <label>Justificado</label>
+                  <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn btn-default">esquerda</a>
+                    <a href="#" class="btn btn-default">centro</a>
+                    <a href="#" class="btn btn-default">direita</a>
+                  </div> 
+                </div>
+
+                <div class="form-group">
+                  <label>Radio (seleciona uma por ves)</label>
+                  <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Checkbox (seleção múltipla)</label>
+                  <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                      <input type="checkbox" autocomplete="off" checked> Checkbox 1
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="checkbox" autocomplete="off"> Checkbox 2
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="checkbox" autocomplete="off"> Checkbox 3
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-7">
+              <h4>Código</h4>
+              <pre><code class="language-markup">&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;block&quot;&gt;Padr&atilde;o&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;esquerda&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;centro&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;direita&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&nbsp;
+&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Justificado&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&nbsp;btn-group-justified&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;esquerda&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;centro&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;direita&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&nbsp;
+&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Radio&nbsp;(seleciona&nbsp;uma&nbsp;por&nbsp;ves)&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&nbsp;btn-group-justified&quot;&nbsp;data-toggle=&quot;buttons&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;active&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;options&quot;&nbsp;id=&quot;option1&quot;&nbsp;autocomplete=&quot;off&quot;&nbsp;checked&gt;&nbsp;Radio&nbsp;1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;options&quot;&nbsp;id=&quot;option2&quot;&nbsp;autocomplete=&quot;off&quot;&gt;&nbsp;Radio&nbsp;2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;options&quot;&nbsp;id=&quot;option3&quot;&nbsp;autocomplete=&quot;off&quot;&gt;&nbsp;Radio&nbsp;3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Checkbox&nbsp;(sele&ccedil;&atilde;o&nbsp;m&uacute;ltipla)&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&nbsp;btn-group-justified&quot;&nbsp;data-toggle=&quot;buttons&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;active&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;autocomplete=&quot;off&quot;&nbsp;checked&gt;&nbsp;Checkbox&nbsp;1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;autocomplete=&quot;off&quot;&gt;&nbsp;Checkbox&nbsp;2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;autocomplete=&quot;off&quot;&gt;&nbsp;Checkbox&nbsp;3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+
+        </section><!--/#botoes-->
 
           <section id="dropdowns">
             <h2>Dropdowns <small>ou combobox</small></h2>

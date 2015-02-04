@@ -101,6 +101,12 @@
 		  $(this).parents('.click-area').find('.click-area-icon').removeClass('active');
 		});
 
+		//HELP BUTTON
+		$('.help-container .help-btn').click( function() {
+			$(this).parents('.help-container').find('.help-content').slideToggle();
+			return false
+		});
+
 
 
 	////////// NAVBAR /////////

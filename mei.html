@@ -2144,7 +2144,68 @@
           <section id="ajuda-e-documentacao">
             <h2>Ajuda e Documentação</h2>
             <p>Os elementos de ajuda e documentação devem ser utilizados sempre que possível, evitando dúvidas e auxiliando na utilização do sistema.</p>
-            <h3>Botão de Informações</h3>
+
+            <h3>Botão de Ajuda</h3>
+            <p>O botão de ajuda <code>.help-btn</code> fica, normalmente, na <a href="#navegacao">barra de ações</a>, e ao ser clicado exibe notas sobre a utilização da página.</p>
+            <div class="row">
+              <div class="col-xs-5">
+                <h4>Exemplos</h4>
+                <div class="well">
+
+                  <div class="help-container">
+
+                    <nav id="actions-navbar" class="navbar navbar-default">
+                      <div class="navbar-title">
+                        <h1><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Título da página</h1> 
+                      </div>        
+
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" class="hastooltip help-btn" title="ajuda"><i class="fa fa-info-circle fa-2x"></i></a></li>
+                      </ul>
+                    </nav><!--/navbar-->
+
+                    <div class="alert alert-warning alert-dismissible help-content">
+                      <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                      <h4><i class="fa fa-info-circle"></i> Ajuda</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. </p>
+                    </div>                    
+                  </div>
+                  
+                </div>
+
+              </div>
+              <div class="col-xs-7">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;help-container&quot;&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&nbsp;id=&quot;actions-navbar&quot;&nbsp;class=&quot;navbar&nbsp;navbar-default&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;navbar-title&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;navbar-nav&nbsp;navbar-right&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;hastooltip&nbsp;help-btn&quot;&nbsp;title=&quot;ajuda&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-info-circle&nbsp;fa-2x&quot;&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nav&gt;&lt;!--/navbar--&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;alert&nbsp;alert-warning&nbsp;alert-dismissible&nbsp;help-content&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;close&quot;&gt;&lt;span&nbsp;aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-info-circle&quot;&gt;&lt;/i&gt;&nbsp;Ajuda&lt;/h4&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;...&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+
 
             <h3>Tooltips</h3>
             <p>Tooltips ou hints são balõezinhos de ajuda que são exibidos ao se repousar o mouse sobre o elemento com a classe <code>.hastooltip</code>. O texto a ser exibido é passado através do atributo <code>title</code>. As tooltips podem ser usadas em diversos elementos, como links, botões e imagens.</p>

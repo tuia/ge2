@@ -118,29 +118,32 @@
 
 /* PAGINATION */
 .pagination-nav {
-	display: inline-block;
-	float: right;
-	.nav {
-		margin: 0 30px 0 0;
-		&:last-child {
-			margin: 0;
+	height: auto;
+	overflow: auto;
+	.pagination-content {
+		float: right;
+		.nav {
+			margin: 0 30px 0 0;
+			&:last-child {
+				margin: 0;
+			}
 		}
-	}
-	.navbar-nav > li > a {
-		padding: 5px;
-		color: #666;
-		&:hover { background: transparent; text-decoration: underline;}
-		&.disabled {
-			color: #999999;
-			cursor: not-allowed;
+		.navbar-nav > li > a {
+			padding: 5px;
+			color: #666;
+			&:hover { background: transparent; text-decoration: underline;}
+			&.disabled {
+				color: #999999;
+				cursor: not-allowed;
+			}
 		}
-	}
-	.jump-to {
-		text-transform: uppercase;
-	}
-	.dropdown-menu {
-		max-height: 150px;
-		overflow: auto;
+		.jump-to {
+			text-transform: uppercase;
+		}
+		.dropdown-menu {
+			max-height: 150px;
+			overflow: auto;
+		}
 	}
 }
 

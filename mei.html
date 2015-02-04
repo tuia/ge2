@@ -48,9 +48,10 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elementos do sistema</a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
               <li><a href="#navegacao">navegação</a></li>
+              <li><a href="#botoes-especiais">botões especiais</a></li>
               <li><a href="#pesquisa">pesquisa</a></li>
+              <li><a href="#paginacao">paginação</a></li>
               <li><a href="#entidades">entidades</a></li>
-              <li><a href="#janelas">janelas</a></li>
               <li><a href="#ajuda-e-documentacao">ajuda e documentação</a></li>
             </ul>
           </li>
@@ -194,6 +195,58 @@
                 </pre>
               </div><!--/col-xs-6-->
             </div><!--/row-->
+
+            <h3>Grid com bordas</h3>
+            <p>Normalmente utilizado em formulários e em <a href="#entidades">janelas de entidade</a>, basta adicionar a classe <code>.bordered</code> à <code>.row</code> para se utilizar grid com bordas.</p>
+            <p>Para ajustar o espaçamento da borda até encostar nas laterias, utilize este grid dentro de um elemento com a classe <code>.form-box</code>. </p>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="form-box" style="background: white">
+                  <div class="row bordered">
+                    <div class="form-group col-xs-6">
+                      <label for="">Exemplo 1</label>
+                      <input type="text" value="" class="form-control">
+                    </div><!--/.form-group-->
+                    <div class="form-group col-xs-6">
+                      <label for="">Exemplo 2</label>
+                      <input type="text" value="" class="form-control">
+                    </div><!--/.form-group-->
+                  </div><!--/.row-->
+                  <div class="row bordered">
+                    <div class="form-group col-xs-12">
+                      <label for="">Exemplo 3</label>
+                      <input type="text" class="form-control input-sm" placeholder=""/>
+                    </div><!--/.form-group-->
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;form-box&quot;&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;bordered&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;col-xs-6&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;for=&quot;&quot;&gt;Exemplo&nbsp;1&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;value=&quot;&quot;&nbsp;class=&quot;form-control&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;col-xs-6&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;for=&quot;&quot;&gt;Exemplo&nbsp;2&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;value=&quot;&quot;&nbsp;class=&quot;form-control&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;bordered&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;col-xs-12&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;for=&quot;&quot;&gt;Exemplo&nbsp;3&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;input-sm&quot;&nbsp;placeholder=&quot;&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
           </section><!--/#grid-->
 
 
@@ -1181,6 +1234,93 @@
 
           </section><!--/#navegacao-->
 
+          <section id="botoes-especiais">
+            <h2>Botões especiais</h2>
+            <p>Os botões especiais são utilizados para copiar informações, expandir conteúdo e outros. São botões que estão invisíveis até se passar o mouse sobre o conteúdo desejado. </p>
+            <p>Eles ficam em um elemento com a classe <code>.hover-buttons</code> e são exibidos ao se repousar o mouse sobre um elemento pai com a classe <code>.hover-buttons-container</code>.</p>
+
+            <div class="row">
+              <div class="col-xs-3">
+                <h4>Exemplos</h4>
+                <div class="well">
+                
+                  <div class="row bordered">
+                    <div class="col-xs-12 hover-buttons-container">
+                      <dl>
+                        <dt>Exemplo</dt>
+                        <dd>Passe o mouse sobre mim!</dd>
+                      </dl>
+                      <div class="hover-buttons">
+                        <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar"><i class="fa fa-files-o"></i></a>
+                      </div><!--/.hover-buttons-->
+                    </div><!--/col-xs-12-->
+                  </div><!--/.row-bordered-->
+                
+                  <div class="row bordered">
+                    <div class="col-xs-12 hover-buttons-container">
+                      <dl>
+                        <dt>Exemplo com dropdown</dt>
+                        <dd>informação 1</dd>
+                        <dd>informação 2</dd>
+                      </dl>
+                      <div class="hover-buttons">
+                        <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="modal" title="expandir"><i class="fa fa-expand"></i></a>
+                        <div class="dropdown">
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="copiar..."><i class="fa fa-files-o"></i></a>
+                          <ul class="dropdown-menu dropdown-inverse">
+                            <li ><a href="#">copiar informação 1</a></li>
+                            <li ><a href="#">copiar informação 2</a></li>
+                          </ul>
+                        </div><!--/dropdown-->
+                      </div><!--/hover-buttons-->
+                    </div><!--/col-xs-12-->
+                  </div><!--/.row-bordered-->
+
+                </div>
+              </div>
+              <div class="col-xs-9">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;row&nbsp;bordered&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-xs-12&nbsp;hover-buttons-container&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;dl&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Exemplo&lt;/dt&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Passe&nbsp;o&nbsp;mouse&nbsp;sobre&nbsp;mim!&lt;/dd&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dl&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;hover-buttons&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-xs&nbsp;hastooltip&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;title=&quot;copiar&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-files-o&quot;&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;!--/.hover-buttons--&gt;
+&nbsp;&nbsp;&lt;/div&gt;&lt;!--/col-xs-12--&gt;
+&lt;/div&gt;&lt;!--/.row-bordered--&gt;
+
+&lt;div&nbsp;class=&quot;row&nbsp;bordered&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-xs-12&nbsp;hover-buttons-container&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;dl&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Exemplo&nbsp;com&nbsp;dropdown&lt;/dt&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;informa&ccedil;&atilde;o&nbsp;1&lt;/dd&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;informa&ccedil;&atilde;o&nbsp;2&lt;/dd&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dl&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;hover-buttons&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-xs&nbsp;hastooltip&quot;&nbsp;data-toggle=&quot;modal&quot;&nbsp;title=&quot;expandir&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-expand&quot;&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-xs&nbsp;hastooltip&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;title=&quot;copiar...&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-files-o&quot;&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-inverse&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;copiar&nbsp;informa&ccedil;&atilde;o&nbsp;1&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;copiar&nbsp;informa&ccedil;&atilde;o&nbsp;2&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;!--/dropdown--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;!--/hover-buttons--&gt;
+&nbsp;&nbsp;&lt;/div&gt;&lt;!--/col-xs-12--&gt;
+&lt;/div&gt;&lt;!--/.row-bordered--&gt;</code></pre>
+              </div>
+            </div>
+          </section><!--/#botoes-especiais-->
+
 
           <section id="pesquisa">
             <h2>Pesquisa</h2>
@@ -1608,7 +1748,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;[ABR012]&nbsp;LDA&nbsp;Xavantes&lt;/td&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;badge&nbsp;id&quot;&gt;KS-89590&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;copy-button&quot;&nbsp;data-toggle=&quot;tooltip&quot;&nbsp;data-title=&quot;copiar&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-files-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;badge&nbsp;id&quot;&gt;KS-89590
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;copy-button&nbsp;hastooltip&quot;&nbsp;data-title=&quot;copiar&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-files-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;
@@ -1620,7 +1762,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-plus&quot;&gt;&lt;/i&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&quot;&nbsp;role=&quot;group&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-sm&nbsp;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;btn-sm&nbsp;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&nbsp;role=&quot;menu&quot;&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;img&nbsp;src=&quot;assets/img/icons/duplicate-icon.png&quot;&nbsp;alt=&quot;duplicar&quot;/&gt;&nbsp;duplicar&lt;/a&gt;&lt;/li&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-trash&quot;&gt;&lt;/i&gt;&nbsp;excluir&lt;/a&gt;&lt;/li&gt;
@@ -1632,8 +1776,185 @@
 &nbsp;&nbsp;&nbsp;&nbsp;...
 &nbsp;&nbsp;&lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+          <div class="alert alert-warning">
+            <strong>Importante!</strong>
+            Para auxiliar a listagem de resultados, junto à <code>.research-table</code> devem ser exibidos também a quantidade de registros e a <a href="#paginação">paginação</a>.
+          </div>
+
+          <h3>Quantidade de registros</h3>
+
+          <p>A quantidade de registros <code>.research-found</code> está sempre alinhada à esquerda e possui a seguinte formatação:</p>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <h4>Exemplos</h4>
+              <div class="well">
+                <p class="research-found">Exibindo <strong>50</strong> de <strong>500</strong> resultados</p>
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <h4>Código</h4>
+              <pre><code class="language-markup">
+
+&lt;p&nbsp;class=&quot;research-found&quot;&gt;Exibindo&nbsp;&lt;strong&gt;50&lt;/strong&gt;&nbsp;de&nbsp;&lt;strong&gt;500&lt;/strong&gt;&nbsp;resultados&lt;/p&gt;
+
+</code></pre>
+            </div>
+          </div>
+
           </section><!--/#pesquisa-->
 
+
+          <section id="paginacao">
+            <h2>Paginação</h2>
+            <p>A paginação está sempre alinhada à direita e repete-se no topo e rodapé do conteúdo paginado, como no exemplo:</p>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="well">
+
+                  <!--/PAGINATION-->
+                  <nav class="pagination-nav">
+                    <div class="pagination-content">
+                      <ul class="nav navbar-nav">
+                        <li><a href="#" class="disabled">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="dropup">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            ...
+                          </a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#">11</a></li>
+                            <li><a href="#">12</a></li>
+                            <li><a href="#">13</a></li>
+                            <li><a href="#">14</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">15</a></li>
+                      </ul>
+
+                      <ul class="nav navbar-nav directional">
+                        <li><a href="" class="disabled"><i class="fa fa-arrow-left"></i></a></li>
+                        <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+                      </ul>
+                      
+                      <ul class="nav navbar-nav jump-to">
+                        <li><a href="" class="disabled">primeira</a></li>
+                        <li><a href="">última</a></li>
+                      </ul>
+                    </div><!--/pagination-content-->
+                  </nav><!--/.pagination-->
+              
+                  <table class="table table-bordered">
+                    <tr>
+                      <th>#</th>
+                      <th>nome</th>
+                      <th>telefone</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Humberto Araújo</td>
+                      <td>3333-5684</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Joana Freitas</td>
+                      <td>8975-5574</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Fernanda Gonçalves</td>
+                      <td>5487-5981</td>
+                    </tr>
+                  </table>
+
+                  <!--/PAGINATION-->
+                  <nav class="pagination-nav">
+                    <div class="pagination-content">
+                      <ul class="nav navbar-nav">
+                        <li><a href="#" class="disabled">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="dropup">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            ...
+                          </a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#">11</a></li>
+                            <li><a href="#">12</a></li>
+                            <li><a href="#">13</a></li>
+                            <li><a href="#">14</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">15</a></li>
+                      </ul>
+
+                      <ul class="nav navbar-nav directional">
+                        <li><a href="" class="disabled"><i class="fa fa-arrow-left"></i></a></li>
+                        <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+                      </ul>
+                      
+                      <ul class="nav navbar-nav jump-to">
+                        <li><a href="" class="disabled">primeira</a></li>
+                        <li><a href="">última</a></li>
+                      </ul>
+                    </div><!--/pagination-content-->
+                  </nav><!--/.pagination-->
+
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;nav&nbsp;class=&quot;pagination-nav&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;pagination-content&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;navbar-nav&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;disabled&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;dropup&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&nbsp;role=&quot;menu&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;14&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;15&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;navbar-nav&nbsp;directional&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;&quot;&nbsp;class=&quot;disabled&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-arrow-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;&quot;&gt;&lt;i&nbsp;class=&quot;fa&nbsp;fa-arrow-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;navbar-nav&nbsp;jump-to&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;&quot;&nbsp;class=&quot;disabled&quot;&gt;primeira&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;&quot;&gt;&uacute;ltima&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&lt;/div&gt;&lt;!--/pagination-content--&gt;
+&lt;/nav&gt;&lt;!--/.pagination--&gt;</code></pre>
+              </div>
+            </div>
+
+          </section><!--#paginacao-->
 
           <section id="entidades">
             <h2>Entidades</h2>
@@ -1819,12 +2140,6 @@
   
 
           </section><!--/#entidades-->
-
-
-          <section id="janelas">
-            <h2>Janelas</h2>
-          </section><!--/#janelas-->
-
 
           <section id="ajuda-e-documentacao">
             <h2>Ajuda e Documentação</h2>

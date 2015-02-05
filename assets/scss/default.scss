@@ -118,6 +118,10 @@
 
 /************** TYPOGRAPHY **************/
 
+	/*titles*/
+	h1 {font-size: 26px}
+	h2 {font-size: 20px}
+
 	.unity, .muted {color: $lighter-text;}
 	.block {display: block;}
 
@@ -737,6 +741,7 @@
 
 	/* EDITABLE FIELDS */
 	.editable-field-container {
+		h2.editable-value {margin: 5px 0 0}
 		.editable-field-form {
 			display: none;
 			margin: 10px 0 15px;

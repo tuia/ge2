@@ -375,7 +375,11 @@
 
 		//DRAG AND DROP
 	     $(function() {
-			$( "#sortable1, #sortable2" ).sortable({
-			connectWith: ".connectedSortable"
+			$( ".sortable-list" ).sortable({
+			connectWith: ".sortable-list",
+			handle: ".sortable-handler"
+			}).disableSelection();
+			$( ".sortable-columns-container" ).sortable({
+			handle: ".sortable-column-handler"
 			}).disableSelection();
 		});

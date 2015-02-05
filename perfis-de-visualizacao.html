@@ -784,15 +784,56 @@
 
           </nav><!--/navbar-->
 
-
           <div class="alert alert-warning alert-dismissible help-content">
             <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
             <h4><i class="fa fa-info-circle"></i> Ajuda</h4>
             <p>Organize os conteúdos disponíveis nas categoria à direita. Algumas podem ser removidas ou renomeadas, outras não. O mesmo ocorre com certos conteúdos.</p><p>Você pode customizar diferentes perfis e associá-los com despachantes. </p>
-          </div>       
+          </div>
+        </div><!--/.help-container-->
 
-        </div><!--/help-container-->
+        <div class="row">
+          <div class="col-xs-6">              
+            <div class="panel panel-default">
+              <div class="panel-body editable-field-container">
 
+                <div class="row">
+                  <div class="col-xs-8">
+                    <h2 class="editable-value">Perfil padrão</h2>
+                    <div class="editable-field-form">
+                      <input type="text" value="Perfil Padrão" class="form-control input-lg editable-field" />
+                      <div class="pull-right">
+                        <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                        <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-2">
+                    <a href="#" class="btn btn-block btn-default editable-field-btn hastooltip" title="editar nome do perfil"><i class="fa fa-pencil"></i></a>
+                  </div>
+                  <div class="col-xs-2">
+                    <div class="dropdown">
+                      <a href="#" class="btn btn-default btn-block dropdown-toggle hastooltip" title="alternar para..." data-toggle="dropdown">
+                        <i class="fa fa-chevron-down"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Perfil padrão</a></li>
+                        <li><a href="#">Admnistrador</a></li>
+                        <li><a href="#">Profissional</a></li>
+                      </ul>
+                    </div><!--/dropdown-->
+                  </div>
+                </div><!--/row-->
+              </div><!--/panel-body-->
+            </div><!--/panel-->
+          </div><!--/col-->
+          <div class="col-xs-6 form-box">
+            <a href="#" class="btn btn-link btn-lg hastooltip" title="Pemover perfil"><img src="assets/img/icons/cancel-icon.png" /></a>
+            <a href="#" class="btn btn-link btn-lg hastooltip" title="Salvar perfil"><img src="assets/img/icons/save-icon.png" /></a>
+          </div>
+        </div><!--/row-->
+
+<!--
                <style>
 #sortable1, #sortable2 {
   border: 1px solid #eee;
@@ -824,7 +865,263 @@
         <li class="ui-state-highlight">Item 3</li>
         <li class="ui-state-highlight">Item 4</li>
         <li class="ui-state-highlight">Item 5</li>
-      </ul>
+      </ul>-->
+
+      <div class="row">
+        <div class="col-xs-3">
+          
+          <div id="avaiable-items" class="sortable-container dragout-only">
+            <header><span class="sortable-title">Dados disponíveis</span></header>
+
+            <div class="sortable-body typeahead-container">
+
+              <div class="search-form">
+                <div class="form-group">
+                  <input class="form-control contextual-search" type="text" placeholder="O que você procura?">
+                </div>
+                <button class="btn" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div><!--/search-form-->
+
+              <div class="typeahead-content auto">
+
+                <div class="sortable-list">
+                  <span class="form-group-title" data-target="#dispositivo">Dispositivo</span>
+                  <div class="sortable-item hover-buttons-container">
+                    <span class="sortable-item-name">Nome da métrica 1</span>
+                    <div class="hover-buttons">
+                      <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                      <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                    </div><!--/.hover-buttons-->
+                  </div><!--/sortable-item-->
+                  <div class="sortable-item hover-buttons-container">
+                    <span class="sortable-item-name">Nome da métrica 2</span>
+                    <div class="hover-buttons">
+                      <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                      <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                    </div><!--/.hover-buttons-->
+                  </div><!--/sortable-item-->
+                  <div class="sortable-item hover-buttons-container">
+                    <span class="sortable-item-name">Nome da métrica 3</span>
+                    <div class="hover-buttons">
+                      <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                      <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                    </div><!--/.hover-buttons-->
+                  </div><!--/sortable-item-->
+                </div><!--/sortable-list-->
+
+                <div class="sortable-list">
+                  <span class="form-group-title" data-target="#equipe">Equipe</span>
+                  <div class="sortable-item hover-buttons-container">
+                    <span class="sortable-item-name">Nome da métrica 1</span>
+                    <div class="hover-buttons">
+                      <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                      <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                    </div><!--/.hover-buttons-->
+                  </div><!--/sortable-item-->
+                  <div class="sortable-item hover-buttons-container">
+                    <span class="sortable-item-name">Nome da métrica 2</span>
+                    <div class="hover-buttons">
+                      <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                      <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                    </div><!--/.hover-buttons-->
+                  </div><!--/sortable-item-->
+                  <div class="sortable-item hover-buttons-container">
+                    <span class="sortable-item-name">Nome da métrica 3</span>
+                    <div class="hover-buttons">
+                      <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                      <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                    </div><!--/.hover-buttons-->
+                  </div><!--/sortable-item-->
+                </div><!--/sortable-list-->
+
+              </div><!--/typeahead-content auto-->
+            </div><!--/sortable-body-->
+          </div><!--/#avaiable-items-->
+
+        </div><!--/col-->
+        <div class="col-xs-9 sortable-columns-container">
+
+          <div id="equipe" class="sortable-container">
+            <header><span class="sortable-title">Equipe</span></header>
+            <div class="sortable-column-options">
+              <a href="#" class="btn btn-xs btn-link sortable-column-handler"><i class="fa fa-arrows-alt"></i></a>
+            </div><!--/sortable-column-options-->
+            <div class="sortable-body">
+              <div class="sortable-list">
+                <div class="sortable-item disabled hover-buttons-container">
+                  <span class="sortable-item-name">Turma</span>
+                  <div class="hover-buttons">
+                    <i class="fa fa-lock"></i>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 2</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 3</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 4</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->                
+              </div><!--/.sortable-list-->
+            </div><!--/sortable-body-->
+          </div><!--/#equipe-->
+
+          <div id="ordem-de-servico" class="sortable-container">
+            <header><span class="sortable-title">Ordem de Serviço</span></header>
+            <div class="sortable-column-options">
+              <a href="#" class="btn btn-xs btn-link sortable-column-handler"><i class="fa fa-arrows-alt"></i></a>
+            </div><!--/sortable-column-options-->
+            <div class="sortable-body">
+              <div class="sortable-list">
+                <div class="sortable-item disabled hover-buttons-container">
+                  <span class="sortable-item-name">Turma</span>
+                  <div class="hover-buttons">
+                    <i class="fa fa-lock"></i>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 2</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 3</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 4</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->                
+              </div><!--/.sortable-list-->
+            </div><!--/sortable-body-->
+          </div><!--/#ordem-de-servico-->
+
+          <div id="localizacao" class="sortable-container">
+            <header class="hover-buttons-container editable-field-container">
+              <span class="sortable-title editable-value">Localização</span>
+              <div class="editable-field-form">
+                <input type="text" value="Localização" class="form-control input-sm editable-field text-uppercase" />
+                <div class="pull-right">
+                  <a href="#" class="btn btn-xs btn-default cancel">cancelar</a>
+                  <a href="#" class="btn btn-xs btn-primary save">salvar</a>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="hover-buttons">
+                <a href="#" class="btn btn-xs btn-default hastooltip editable-field-btn" title="editar título"><i class="fa fa-pencil"></i></a>
+              </div>
+            </header>
+            <div class="sortable-column-options">
+              <a href="#" class="btn btn-xs btn-link sortable-column-handler"><i class="fa fa-arrows-alt"></i></a>
+              <a href="#" class="btn btn-xs btn-link hastooltip" title="remover categoria"><i class="fa fa-remove"></i></a>
+            </div><!--/sortable-column-options-->
+            <div class="sortable-body">
+              <div class="sortable-list">
+                <div class="sortable-item disabled hover-buttons-container">
+                  <span class="sortable-item-name">Turma</span>
+                  <div class="hover-buttons">
+                    <i class="fa fa-lock"></i>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 2</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 3</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 4</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->                
+              </div><!--/.sortable-list-->
+            </div><!--/sortable-body-->
+          </div><!--/#localizacao-->
+          
+
+          <div id="dispositivo" class="sortable-container">
+            <header><span class="sortable-title">Dispositivo</span></header>
+            <div class="sortable-column-options">
+              <a href="#" class="btn btn-xs btn-link sortable-column-handler"><i class="fa fa-arrows-alt"></i></a>
+            </div><!--/sortable-column-options-->
+            <div class="sortable-body">
+              <div class="sortable-list">
+                <div class="sortable-item disabled hover-buttons-container">
+                  <span class="sortable-item-name">Turma</span>
+                  <div class="hover-buttons">
+                    <i class="fa fa-lock"></i>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 2</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 3</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->
+                <div class="sortable-item hover-buttons-container">
+                  <span class="sortable-item-name">Nome da métrica 4</span>
+                  <div class="hover-buttons">
+                    <a href="#" class="btn btn-default btn-xs sortable-handler" data-toggle="dropdown" ><i class="fa fa-arrows-alt"></i></a>
+                    <a href="#" class="btn btn-default btn-xs sortable-add" data-toggle="dropdown"><i class="fa fa-plus"></i></a>
+                  </div><!--/.hover-buttons-->
+                </div><!--/sortable-item-->                
+              </div><!--/.sortable-list-->
+            </div><!--/sortable-body-->
+          </div><!--/#dispositivo-->
+
+          <div class="sortable-container">
+            <a href="#adicionar-coluna" class="btn btn-block btn-link add-column-btn">
+              <span class="center">
+                <i class="fa fa-plus"></i>
+                <span class="text">Adicionar categoria</span>
+              </span>
+            </a>
+          </div>
+          
+
+        </div><!--/col-->
+      </div><!--/row-->
 
 
       </div><!--/container-->

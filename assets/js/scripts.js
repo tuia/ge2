@@ -225,7 +225,7 @@
 		$('.input-counter-container .form-control').keyup( function() {
 			var len = $(this).val().length;
 		    if (len >= 31) {
-		      $(this).val() = $(this).val().substring(0, 30);
+		      $(this).val($(this).val().substring(0, 30));
 		    } else {
 		      $('.input-counter').text(30 - len);
 		      if (len > 24) { $('.input-counter').css('color', 'red'); }
@@ -376,10 +376,10 @@
 		//DRAG AND DROP
 	     $(function() {
 			$( ".sortable-list" ).sortable({
-			connectWith: ".sortable-list",
-			handle: ".sortable-handler"
+				connectWith: ".sortable-list",
+				handle: ".sortable-handler"
 			}).disableSelection();
 			$( ".sortable-columns-container" ).sortable({
-			handle: ".sortable-column-handler"
+				handle: ".sortable-column-handler"
 			}).disableSelection();
 		});

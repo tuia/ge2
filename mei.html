@@ -40,6 +40,7 @@
               <li><a href="#dropdowns">dropdowns</a></li>
               <li><a href="#tabelas">tabelas</a></li>
               <li><a href="#campos-de-texto">campos de texto</a></li>
+              <li><a href="#validacao">validação</a></li>
             </ul>
           </li>
 
@@ -1286,6 +1287,106 @@
             </div>
 
           </section><!--/#campos-de-texto-->
+
+
+          <section id="validacao">
+            <h2>Validação</h2>
+            <p>Estão inclusos os estados de validação de sucesso, aviso e erro, diferenciados por cores. Para utilizar, adicione a classe <code>.has-success</code>, <code>.has-warning</code> ou <code>.has-error</code>no elemento pai. Qualquer <code>.control-label</code> (label), <code>.form-control</code> (campo de texto, checkbox, textarea e etc) ou <code>.help-block</code> (texto de ajuda) receberão os estilos.</p>
+            <p>Para mais informações sobre estilização de formulários, confira a <a href="http://getbootstrap.com/css/#forms" target="blank">documentação do Bootstrap.</a></p>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <form>
+                    <div class="form-group has-success">
+                      <label class="control-label">Campo com sucesso</label>
+                      <input type="text" class="form-control" />
+                      <small class="help-block">texto de ajuda</small>
+                    </div>
+                    <div class="form-group has-warning">
+                      <label class="control-label">Campo com aviso</label>
+                      <input type="text" class="form-control" />
+                      <small class="help-block">texto de ajuda</small>
+                    </div>
+                    <div class="form-group has-error">
+                      <label class="control-label">Campo com erro</label>
+                      <input type="text" class="form-control" />
+                      <small class="help-block">texto de ajuda</small>
+                    </div>
+                    <div class="has-success">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">
+                          Checkbox com successo
+                        </label>
+                      </div>
+                    </div>
+                    <div class="has-warning">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">
+                          Checkbox com aviso
+                        </label>
+                      </div>
+                    </div>
+                    <div class="has-error">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">
+                          Checkbox com erro
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;form&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-success&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;control-label&quot;&gt;Campo&nbsp;com&nbsp;sucesso&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;texto&nbsp;de&nbsp;ajuda&lt;/small&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-warning&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;control-label&quot;&gt;Campo&nbsp;com&nbsp;aviso&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;texto&nbsp;de&nbsp;ajuda&lt;/small&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-error&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;control-label&quot;&gt;Campo&nbsp;com&nbsp;erro&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;texto&nbsp;de&nbsp;ajuda&lt;/small&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;has-success&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checkbox&nbsp;com&nbsp;successo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;has-warning&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checkbox&nbsp;com&nbsp;aviso
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;has-error&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checkbox&nbsp;com&nbsp;erro
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+            </div>
+          </section><!--/#validation-->
         </div><!--/#base-css-->
 
 

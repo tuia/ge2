@@ -27,7 +27,7 @@
 			$(this).parents('.dropdown').find('.dropdown-toggle').removeClass('active');
 		});
 		//dropdown select
-		$('.dropdown-select').on( 'click', '.dropdown-menu li a', function() { 
+		$('.dropdown-select').not('.page-navigation').on( 'click', '.dropdown-menu li a', function() { 
 		   var target = $(this).html();
 
 		   //Adds active class to selected item
@@ -42,19 +42,42 @@
 
 		   return false
 		});
+		//dropdown page navigation
+		$('.dropdown-select.page-navigation').on( 'click', '.dropdown-menu li', function() { 
+		   var target = $(this).html();
+
+		   //Adds active class to selected item
+		   $(this).parents('.dropdown-menu').find('li').removeClass('active');
+		   $(this).addClass('active');
+
+		   //Displays selected text on dropdown-toggle button
+		   $(this).parents('.dropdown-select').find('.dropdown-toggle span:first-child').html(target);
+
+		   //Closes dropdown
+		   $(this).parents('.dropdown-select').find('.dropdown-toggle').dropdown('toggle');
+
+		   return false
+		});
 
 
 
 	////////// BUTTONS /////////
 
+		//COPY BUTTON
+		$('.copy-button').click( function() {
+			return false //for presentations
+		});
+
 		//BOOKMARK BTN
-		$('.bookmark-button').click( function() {
+		$('.bookmark-button, .dropdown-toggle > .bookmark-button').click( function() {
 			if ( $(this).hasClass('marked') ) {
 				$(this).removeClass('marked');
 				$(this).find('.fa').removeClass('fa-bookmark').addClass('fa-bookmark-o');
+				return false
 			}else {
 				$(this).addClass('marked');
 				$(this).find('.fa').removeClass('fa-bookmark-o').addClass('fa-bookmark');
+				return false
 			}
 		});
 

@@ -1406,7 +1406,20 @@
             <nav id="actions-navbar" class="navbar navbar-default">
 
               <div class="navbar-title">
-                <h1><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Título da página</h1> 
+              
+                <div class="dropdown dropdown-select page-navigation">
+                  <div class="btn dropdown-toggle btn-default btn-block" data-toggle="dropdown">
+                    <span><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 1</span>
+                    <span class="caret"></span>
+                  </div>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="active"><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 1</li>
+                    <li><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 2</li>
+                    <li><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 3</li>
+                    <li><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 4</li>
+                  </ul>
+                </div>
+
               </div>        
 
               <ul class="nav navbar-nav">
@@ -1872,7 +1885,7 @@
                   </td>
                   <td>
                     <div class="entity-card">
-                      <a href="#" class="entity-symbol large pendente" class="hastooltip" title="copiar id">
+                      <a href="#" class="entity-symbol large pendente copy-button" class="hastooltip" title="copiar id">
                         <i class="fa fa-car"></i>
                         <span>3564321</span>
                       </a>
@@ -1915,7 +1928,7 @@
                   </td>
                   <td>
                     <div class="entity-card">
-                      <a href="#" class="entity-symbol large designado" class="hastooltip" title="copiar id">
+                      <a href="#" class="entity-symbol large designado copy-button" class="hastooltip" title="copiar id">
                         <i class="fa fa-car"></i>
                         <span>3564321</span>
                       </a>
@@ -1958,7 +1971,7 @@
                   </td>
                   <td>
                     <div class="entity-card">
-                      <a href="#" class="entity-symbol large finalizado" class="hastooltip" title="copiar id">
+                      <a href="#" class="entity-symbol large finalizado copy-button" class="hastooltip" title="copiar id">
                         <i class="fa fa-car"></i>
                         <span>3564321</span>
                       </a>
@@ -2118,7 +2131,7 @@
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
-                        <li class="dropup">
+                        <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             ...
                           </a>

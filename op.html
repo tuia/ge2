@@ -219,7 +219,7 @@
                       <div class="entity-list">
                         <div class="entity-box">
                           <div class="entity-card">
-                            <div class="entity-symbol">
+                            <div class="entity-symbol copy-button">
                               <i class="fa fa-cab"></i>
                               <span>MA01 </span>
                               <a href="#" class="bookmark-button marked" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
@@ -255,7 +255,7 @@
 
                         <div class="entity-box">
                           <div class="entity-card">
-                            <div class="entity-symbol">
+                            <div class="entity-symbol copy-button">
                               <i class="fa fa-car"></i>
                               <span>MA01 </span>
                               <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
@@ -768,12 +768,21 @@
         <nav id="actions-navbar" class="navbar navbar-default">
 
           <div class="navbar-title">
-            <h1><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Despacho de Serviços</h1> 
+            <div class="dropdown dropdown-select page-navigation">
+              <div class="btn dropdown-toggle btn-default btn-block" data-toggle="dropdown">
+                <span><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Despacho de Serviços</span>
+                <span class="caret"></span>
+              </div>
+              <ul class="dropdown-menu" role="menu">
+                <li class="active"><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 1</li>
+                <li><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 2</li>
+                <li><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 3</li>
+                <li><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Página 4</li>
+              </ul>
+            </div>
           </div>        
 
           <ul class="nav navbar-nav">
-            <li><a href="#" class="hastooltip" title="manobra"><img src="assets/img/icons/manobra-icon.png" /></a></li>
-            <li><a href="#" class="hastooltip" title="manobra simples"><img src="assets/img/icons/manobra-simples-icon.png" /></a></li>
             <li><a href="#" class="hastooltip" title="turma"><img src="assets/img/icons/turma-icon.png" /></a></li>
             <li><a href="#" class="hastooltip" title="distância da base"><img src="assets/img/icons/dist-icon.png" /></a></li>
             <li><a href="#" class="hastooltip" title="nota de serviço"><img src="assets/img/icons/note-icon.png" /></a></li>
@@ -792,19 +801,10 @@
             </li>
           </ul>
 
-          <ul class="alarm-pda-container nav navbar-nav">
-            <li><a href="#" class="alarm-btn hastooltip" title="ligar alarme"></a></li>      
-            <li><a href="#" class="pda-btn hastooltip" title="ligar serviços PDA"></a></li>            
-          </ul>
-
           <div class="summary">
             <span class="category">novas</span> 6<br />
             <span class="category">finalizadas</span> 6              
           </div><!--/summary-->
-
-          <div class="refresh-btn-container">
-            <a href="#" class="refresh-btn"><i class="fa fa-clock-o"></i><i class="fa fa-refresh"></i> 2:45</a>
-          </div>
 
           <ul class="nav navbar-nav navbar-right">   
             <li><a href="#" class="hastooltip" title="configurações"><i class="fa fa-cog fa-2x"></i></a></li>

@@ -116,6 +116,7 @@
                 <li><a href="http://silviomoreto.github.io/bootstrap-select/" target="blank">Bootstrap Select</a> <small>(v2.4.1)</small></li>
                 <li><a href="https://github.com/xdan/datetimepicker" target="blank">Date Time Picker</a> <small>(v1.6.3)</small></li>
                 <li><a href="https://github.com/KevinSheedy/jquery.alphanum" target="blank">jQuery Alphanum</a> <small>(v2.4.1)</small></li>
+                <li><a href="http://twitter.github.io/typeahead.js/" target="blank">Typeahead.js</a> <small>(v2.4.1)</small></li>
               </ul>
             </div>
           </div>
@@ -1283,6 +1284,30 @@
   &nbsp;&nbsp;&lt;i&nbsp;class=&quot;fa&nbsp;fa-search&quot;&gt;&lt;/i&gt;
   &lt;/button&gt;
 &lt;/form&gt;</code></pre>
+              </div>
+            </div>
+
+            <h3>Typeahead</h3>
+            <p>O Typeahead permite que o campo complete automaticamente a opção selecionada enquanto você está digitando. Você pode consultar a documentação do plugin <a href="http://twitter.github.io/typeahead.js/">typeahead.js</a> para mais opções. </p>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <form>
+                    <div class="form-group">
+                      <label class="block">Estados norte-americanos</label>
+                      <input type="text" id="exemplo" class="form-control typeahead" placeholder="Estados norte-americanos" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">
+
+&lt;input&nbsp;type=&quot;text&quot;&nbsp;id=&quot;exemplo&quot;&nbsp;class=&quot;form-control&nbsp;typeahead&quot;&nbsp;placeholder=&quot;Estados&nbsp;americanos&quot;&nbsp;/&gt;
+                </code></pre>
               </div>
             </div>
 
@@ -2594,7 +2619,9 @@
     <script src="assets/js/jquery-alphanum.js"></script>
     <script src="assets/js/jquery-maskmoney.js"></script>
     <script src="assets/js/prism.js"></script>
+    <script src="assets/js/typeahead.js"></script>
     <script src="assets/js/scripts.js"></script>
+
     <script type="text/javascript">
     $(function() {
       $('.navbar-fixed-top a[href*=#], .navbar-brand').click(function() {

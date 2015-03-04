@@ -130,6 +130,13 @@
 			return false
 		});
 
+		//FILTER BUTTON
+		$('.filter-container .filter-btn').click( function() {
+			$(this).parents('.filter-container').find('.filter-content').slideToggle();
+			$(this).toggleClass('active');
+			return false
+		});
+
 
 
 	////////// NAVBAR /////////

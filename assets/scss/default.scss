@@ -86,7 +86,7 @@
 /************** HELPERS **************/
 	.text-center {text-align: center;}
 
-	.expandable-container .hidden-item, .nav > li.hidden-item, .hidden-item, .help-content {display: none;}
+	.expandable-container .hidden-item, .nav > li.hidden-item, .hidden-item, .help-content, .filter-content {display: none;}
 
 	.auto {overflow: auto;}
 
@@ -133,6 +133,7 @@
 	.text-em-execucao {color: $em-execucao}
 	.text-finalizado {color: $finalizado}
 	.text-default {color: $default}
+	.text-inverse {color: $inverse-text}
 
 
 	/* labels */
@@ -154,6 +155,13 @@
 		text-indent: 10px;
 	}
 	.checkbox label, .radio label {text-transform: none; color: $default-text; font-size: 14px}
+	.label .close-label {
+		color: #ccc;
+		font-weight: bold;
+		margin-left: 5px;
+		font-size: 1.2em;
+		&:hover { color: #FFFFFF;}
+	}
 
 	/* bootstrap validation */
 	.has-error label {color: $error-color}

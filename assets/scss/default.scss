@@ -295,6 +295,7 @@
 
 
 	/* NAV-TABS */
+	.research-container.well div[role="tabpanel"] .tab-content {padding-top: 40px;}
 	.well {
 		position: relative;
 		div[role="tabpanel"] {
@@ -304,9 +305,7 @@
 					position: absolute;
 				}
 			}
-			.tab-content {
-				padding-top: 40px;
-			}
+			.tab-content {padding-top: 15px;}
 		}
 		.nav-tabs {
 			& > li {
@@ -581,6 +580,7 @@
 		}
 	}
 	/* form actions */
+	.entity-iframe .entity-footer.form-actions {padding: 10px 15px}
 	.form-actions {
 		height: auto;
 		overflow: auto;
@@ -1445,7 +1445,7 @@ body.entity-iframe {
 		margin: 0
 	}
 	.form-box.auto {
-		height: 315px;
+		height: 245px;
 		max-height: none;
 	}
 }

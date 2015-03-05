@@ -38,6 +38,7 @@
               <li><a href="#icones">ícones</a></li>
               <li><a href="#botoes">botões</a></li>
               <li><a href="#dropdowns">dropdowns</a></li>
+              <li><a href="#abas">abas</a></li>
               <li><a href="#tabelas">tabelas</a></li>
               <li><a href="#campos-de-texto">campos de texto</a></li>
               <li><a href="#validacao">validação</a></li>
@@ -49,6 +50,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elementos do sistema</a>
             <ul class="dropdown-menu dropdown-inverse" role="menu">
               <li><a href="#navegacao">navegação</a></li>
+              <li><a href="#janelas-flutuantes">janelas flutuantes</a></li>
               <li><a href="#botoes-especiais">botões especiais</a></li>
               <li><a href="#pesquisa">pesquisa</a></li>
               <li><a href="#paginacao">paginação</a></li>
@@ -128,13 +130,33 @@
         <div id="base-css">
           <h1>Base CSS</h1>
           <p>Os elementos apresentados aqui fazem parte da estrutura básica das páginas. Você pode se aprofundar neste e em outros elementos através da <a href="http://getbootstrap.com/css">documentação do bootstrap</a>.</p>
+          <h3>Estrutura básica</h3>
+          <div class="row">
+            <div class="col-xs-6">
+                <pre><code class="language-markup">&lt;!DOCTYPE&nbsp;html&gt;
+&lt;html&gt;
+&nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;
+&nbsp;&nbsp;&lt;body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;container&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--/CONTE&Uacute;DO&nbsp;DA&nbsp;P&Aacute;GINA--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <div class="col-xs-6">
+              <p>Para começar, utilize uma <code>div</code> com a classe <code>.container</code> ou <code>.container-fluid</code> (para vários tamanhos de tela) logo após a tag <code>body</code>. Assim, você cria uma margem que deixa a tela mais limpa e funcional.</p>
+              <div class="alert alert-info" role="alert">
+                <strong>Atenção!</strong> Não utilize o <code>.container</code> caso esteja desenvolvendo uma página a ser exibida dentro de uma <a href="#janelas-flutuantes">janela flutuante</a>
+              </div>
+            </div>
+          </div>
           
           <section id="grid">
             <h2>Grid</h2>
             <p>Um sistema de grid serve para auxiliar na diagramação do conteúdo da página, posicionando e alinhando os elementos de forma proporcinal.</p>
             <p>Para isso, utiliza-se linhas (<code>.row</code>) e colunas (<code>.col</code>) de tamanhos variados. Algumas regras são necessárias para seu melhor funcionamento:</p>
             <ul>
-              <li>Para as dimensões ficarem corretas, quando se utilizar o grid diretamente na página, ele deve estar dentro de uma div com a classe <code>.container</code> ou <code>.container-fluid</code>.</li>
+              <li>Para as dimensões ficarem corretas, quando se utilizar o grid diretamente na página, ele <strong>deve estar dentro de uma div com a classe <code>.container</code> ou <code>.container-fluid</code></strong>.</li>
               <li>Utiliza-se as colunas (rows) para criar grupos horizontais de colunas.</li>
               <li>O conteúdo deve estar dentro das colunas, e apenas estas devem ser as filhas diretas (elemento um nível abaixo no DOM) das linhas (rows).</li>
               <li>Uma linha (row) possui até 12 colunas. A largura da coluna é definida pelo número no final da classe <code>col-xs-</code>, sendo <code>.col-xs-1</code> o menor tamanho e <code>.col-xs-12</code> o maior.</li>
@@ -801,6 +823,68 @@
             </div>
           </section><!--/#dropdowns-->
 
+          <section id="abas">
+            <h2>Abas</h2>
+            <p>Abas devem ser utilizadas para diagramar conteúdos similiares em uma mesma página.</p>
+            <ul>
+              <li>Não utilize muitas abas em uma mesma linha. Tente utilizar até no máximo 6.</li>
+              <li>Não utilize abas com conteúdos muito diferentes. Se tiver muito conteúdo, tente agrupar de forma diferente. Por exemplo, separe parte em uma janela de entidade e a outra parte em abas.</li>
+              <li>Agrupe conteúdos por assunto e que utilizar sua tela irá encontrar o que precisa muito mais fácil.</li>
+            </ul>
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplo</h4>
+                <div class="well">
+                  <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. </div>
+                      <div role="tabpanel" class="tab-pane" id="profile">Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                      <div role="tabpanel" class="tab-pane" id="messages">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                      <div role="tabpanel" class="tab-pane" id="settings">Laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;role=&quot;tabpanel&quot;&gt;
+
+&nbsp;&nbsp;&lt;!--&nbsp;Nav&nbsp;tabs&nbsp;--&gt;
+&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&quot;&nbsp;role=&quot;tablist&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;active&quot;&gt;&lt;a&nbsp;href=&quot;#home&quot;&nbsp;aria-controls=&quot;home&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#profile&quot;&nbsp;aria-controls=&quot;profile&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#messages&quot;&nbsp;aria-controls=&quot;messages&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#settings&quot;&nbsp;aria-controls=&quot;settings&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&lt;/ul&gt;
+
+&nbsp;&nbsp;&lt;!--&nbsp;Tab&nbsp;panes&nbsp;--&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;tab-content&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&nbsp;active&quot;&nbsp;id=&quot;home&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&quot;&nbsp;id=&quot;profile&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&quot;&nbsp;id=&quot;messages&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&quot;&nbsp;id=&quot;settings&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </section><!--/#abas-->
+
           <section id="tabelas">
             <h2>Tabelas</h2>
             <div class="row">
@@ -1316,6 +1400,45 @@
 
           <section id="validacao">
             <h2>Validação</h2>
+            <p>O módulo apresenta as seguintes possibilidades para validação de formulários:</p>
+
+            <h3>Alertas</h3>
+            <p>Alestas são pequenas janelas com o inuito de chamar a atenção do usuário com mesnagens de erro, alerta, sucesso ou dicas. Na validação de formulários, o alerta deve vir no início do formulário, logo abaixo do título e instruções, com um conteúdo que auxilie o usuário. Os <code>alerts</code> não possuem uma cor padrão, precisando de classes adicionais de acordo com seu objetivo.</p>
+
+            <p>Ao utilizar o alerta de <strong>erro</strong> ou <strong>sucesso</strong>, é importante sempre oferecer uma alternativa ao usuário, como tentar novamente fazer a ação com erro ou desfazer a ação concluída.</p>
+
+            <p>Alertas de <strong>informações ou dicas</strong> podem ser fechados para não poluir a tela.</p>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="alert alert-success" role="alert"><strong>Sucesso!</strong> O item foi adicionado com sucesso. <a href="#">desfazer</a></div>
+                  <div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Dica!</strong> Você pode clicar e arrastar o elemento para a janela desejada.</div>
+                  <div class="alert alert-warning" role="alert"><strong>Cuidado!</strong> As informações aqui podem estar divergentes, é melhor checar.</div>
+                  <div class="alert alert-danger" role="alert"><strong>Erro!</strong> Não foi possível salvar as alterações. <a href="#">tentar novamente</a></div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;!--/Sucesso--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-success&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
+
+&lt;!--/Dica--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-info&nbsp;alert-dismissible&quot;&nbsp;role=&quot;alert&quot;&gt;
+&nbsp;&nbsp;&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;close&quot;&nbsp;data-dismiss=&quot;alert&quot;&nbsp;aria-label=&quot;Close&quot;&gt;&lt;span&nbsp;aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+&nbsp;...
+&lt;/div&gt;
+
+&lt;!--/Alerta--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-warning&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
+
+&lt;!--/Erro--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-danger&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+            <h3>Formulários</h3>
             <p>Estão inclusos os estados de validação de sucesso, aviso e erro, diferenciados por cores. Para utilizar, adicione a classe <code>.has-success</code>, <code>.has-warning</code> ou <code>.has-error</code>no elemento pai. Qualquer <code>.control-label</code> (label), <code>.form-control</code> (campo de texto, checkbox, textarea e etc) ou <code>.help-block</code> (texto de ajuda) receberão os estilos.</p>
             <p>Para mais informações sobre estilização de formulários, confira a <a href="http://getbootstrap.com/css/#forms" target="blank">documentação do Bootstrap.</a></p>
 
@@ -1324,6 +1447,7 @@
                 <h4>Exemplos</h4>
                 <div class="well">
                   <form>
+                    <div class="alert alert-danger" role="alert"><strong>Erro!</strong> Favor preencher corretamente os seguintes campos:</div>
                     <div class="form-group has-success">
                       <label class="control-label">Campo com sucesso</label>
                       <input type="text" class="form-control" />
@@ -1369,6 +1493,7 @@
               <div class="col-xs-6">
                 <h4>Código</h4>
                 <pre><code class="language-markup">&lt;form&gt;
+&nbsp;&lt;div&nbsp;class=&quot;alert&nbsp;alert-danger&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
 &nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-success&quot;&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;control-label&quot;&gt;Campo&nbsp;com&nbsp;sucesso&lt;/label&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;/&gt;
@@ -1508,6 +1633,66 @@
 &lt;/nav&gt;</code></pre>
 
           </section><!--/#navegacao-->
+
+
+          <section id="janelas-flutuantes">
+            <h2>Janelas Flutuantes</h2>
+              <p>Janelas flutuantes ou janelas de entidades (<code>.entity-window</code>) são elementos arrastáveis pela tela.</p>
+              <p>Utilize as janelas flutuantes:</p>
+
+              <ul>
+                <li>Quando o conteúdo principal da tela for muito importante (assim o conteúdo secundário não esconde o primário e pode ser fechado quando não for mais necessário)</li>
+                <li>Em um formulário longo, quando o usuário precisar buscar uma informação rapidamente e depois voltar.</li>
+                <li>Para se detalhar uma <a href="#entidades">entidade</a>. As janelas possuem formatação própria para elas - com cabeçalho, informações rápidas e rodapé de ações.</li>
+              </ul>
+
+              <p>A janela apresenta o conteúdo de uma página externa dentro de um <code>iframe</code>. Ao se desenvolver a página externa, não utilize a classe <code>.container</code> após a tag <code>body</code> para que o conteúdo se adapte à largura da janela.</p>
+
+              <div class="row">
+                <div class="col-xs-4">
+                  <h4>Exemplo</h4>
+                  <a href="#entity-window-example" class="btn btn-block btn-primary show-window-btn">abrir janela flutuante</a><br />
+                  <h4>Código do botão</h4>
+                  <p>Para o botão chamar a janela, ele deve possuir a classe <code>.show-window-btn</code> e seu atributo <code>href</code> deve apontar para a <code>id</code> da janela que será exibida, nesse caso, <code>#entity-window-example</code></p>
+                  <pre>
+                    <code class="language-markup">
+
+    &lt;a href=&quot;#entity-window-example&quot; class=&quot;btn show-window-btn&quot;&gt;abrir janela flutuante&lt;/a&gt;</code>
+                  </pre><br />
+                  <div class="alert alert-info" role="alert">
+                    <p><strong>Dica!</strong> Para organizar seu código, você pode deixar as janelas de entidade sempre no final, já que elas ficam escondidas. Assim, você deixa todas elas juntas e pode focar no conteúdo principal da página.</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-8">          
+                  <h4>Código da janela</h4>
+                  <pre>
+  <code class="language-markup">&lt;!--/JANELA FLUTUANTE--&gt;
+  &lt;div class=&quot;entity-window&quot; id=&quot;entity-window-example&quot;&gt;
+    &lt;div class=&quot;entity-content&quot;&gt;
+
+      &lt;!--/CABEÇALHO DA JANELA--&gt;
+      &lt;div class=&quot;entity-window-header&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;bookmark-button hastooltip&quot; title=&quot;adicionar aos favoritos&quot;&gt;&lt;i class=&quot;fa fa-bookmark-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class=&quot;pull-right&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default hastooltip&quot; data-title=&quot;destacar&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default btn-close&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!--/CORPO DA JANELA--&gt;
+      &lt;div class=&quot;entity-body&quot;&gt;
+        &lt;!--/CONTEUDO--&gt;
+        &lt;iframe src=&quot;conteudo-do-iframe.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+                </div>
+              </div><!--/row-->
+          </section><!--/#janelas-flutuantes-->
+
+
 
           <section id="botoes-especiais">
             <h2>Botões especiais</h2>
@@ -1832,33 +2017,56 @@
             </div><!--/research-container-->
 
             <h4>Código</h4>
-            <pre><code class="language-markup">&lt;div&nbsp;class=&quot;well&nbsp;form&nbsp;research-container&quot;&gt;
-  &lt;div&nbsp;role=&quot;tabpanel&quot;&gt;
-    &lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;nav-justified&quot;&nbsp;role=&quot;tablist&quot;&gt;
-      &lt;li&nbsp;class=&quot;active&quot;&gt;&lt;a&nbsp;href=&quot;#tab1&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Aba&nbsp;1&lt;/a&gt;&lt;/li&gt;
-      &lt;li&nbsp;class=&quot;active&quot;&gt;&lt;a&nbsp;href=&quot;#tab2&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Aba&nbsp;2&lt;/a&gt;&lt;/li&gt;
-      ...
-    &lt;/ul&gt;
-  &lt;/div&gt;
+            <pre><code class="language-markup">&lt;!--/RESEARCH--&gt;
+&lt;div&nbsp;class=&quot;well&nbsp;form&nbsp;research-container&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&gt;
 
-  &lt;div&nbsp;role=&quot;tablist&quot;&gt;
-    &lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&nbsp;active&quot;&nbsp;id=&quot;tab1&quot;&gt;
-     ...
-    &lt;/div&gt;
-    &lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&nbsp;active&quot;&nbsp;id=&quot;tab2&quot;&gt;
-      ...
-    &lt;/div&gt;
-    ...
-  &lt;/div&gt;
-  &lt;div&nbsp;class=&quot;form-actions&quot;&gt;
-  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&nbsp;pull-left&quot;&gt;
-      &lt;label&gt;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;&nbsp;exemplo&nbsp;de&nbsp;op&ccedil;&atilde;o&nbsp;checkbox&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&nbsp;class=&quot;pull-right&quot;&gt;
-      &lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;limpar&lt;/a&gt;
-      &lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&quot;&gt;pesquisar&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Nav&nbsp;tabs&nbsp;--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;nav-justified&quot;&nbsp;role=&quot;tablist&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;active&quot;&gt;&lt;a&nbsp;href=&quot;#tab1&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Aba&nbsp;1&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#tab2&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Aba&nbsp;2&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#tab3&quot;&nbsp;role=&quot;tab&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;Aba&nbsp;3&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Tab&nbsp;panes&nbsp;--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;tab-content&quot;&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;#Tab1&nbsp;--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&nbsp;active&quot;&nbsp;id=&quot;tab1&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;bordered&nbsp;vertical&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-xs-4&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Equipamento&lt;/h4&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;subesta&ccedil;&atilde;o&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&nbsp;class=&quot;form-control&nbsp;selectpicker&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;ABC&lt;/option&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;ABD&lt;/option&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;ABE&lt;/option&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-xs-4&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-xs-4&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&quot;&nbsp;id=&quot;tab2&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;role=&quot;tabpanel&quot;&nbsp;class=&quot;tab-pane&quot;&nbsp;id=&quot;tab3&quot;&gt;...&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-actions&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&nbsp;pull-left&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;&nbsp;exemplo&nbsp;de&nbsp;op&ccedil;&atilde;o&nbsp;checkbox
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;pull-right&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;limpar&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&quot;&gt;pesquisar&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
             <h3>Tabela de resultados de pesquisa</h3>
@@ -2360,54 +2568,6 @@
             </div><!--/row-->
 
 
-            <h3>Janelas de Entidades</h3>
-            <p>Janelas de entidades (<code>.entity-window</code>) são elementos flutuantes arrastáveis pela tela, utilizadas para exibir ações e detalhes da entidade. Estas janelas são utilizadas no G-DIS e tem o objetivo de exibir o conteúdo sem retirar o mapa da evicência.</p>
-            <p>O conteúdo da janela vem dentro de um <code>iframe</code>.</p>
-
-            <div class="row">
-              <div class="col-xs-4">
-                <h4>Exemplo</h4>
-                <a href="#entity-window-example" class="btn btn-block btn-primary show-window-btn">abrir janela de entidade</a><br />
-                <h4>Código do botão</h4>
-                <p>Para o botão chamar a janela, ele deve possuir a classe <code>.show-window-btn</code> e seu atributo <code>href</code> deve apontar para a <code>id</code> da janela que será exibida, nesse caso, <code>#entity-window-example</code></p>
-                <pre>
-                  <code class="language-markup">
-
-  &lt;a href=&quot;#entity-window-example&quot; class=&quot;btn show-window-btn&quot;&gt;abrir janela de entidade&lt;/a&gt;</code>
-                </pre><br />
-                <div class="alert alert-info" role="alert">
-                  <p><strong>Dica!</strong> Para organizar seu código, você pode deixar as janelas de entidade sempre no final, já que elas ficam escondidas. Assim, você deixa todas elas juntas e pode focar no conteúdo principal da página.</p>
-                </div>
-              </div>
-
-              <div class="col-xs-8">          
-                <h4>Código da janela</h4>
-                <pre>
-<code class="language-markup">&lt;!--/JANELA DE ENTIDADE--&gt;
-&lt;div class=&quot;entity-window&quot; id=&quot;entity-window-example&quot;&gt;
-  &lt;div class=&quot;entity-content&quot;&gt;
-
-    &lt;!--/CABEÇALHO DA JANELA--&gt;
-    &lt;div class=&quot;entity-window-header&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;bookmark-button hastooltip&quot; title=&quot;adicionar aos favoritos&quot;&gt;&lt;i class=&quot;fa fa-bookmark-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-      &lt;div class=&quot;pull-right&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default hastooltip&quot; data-title=&quot;destacar&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;a href=&quot;#&quot; class=&quot;btn btn-xs btn-default btn-close&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!--/CORPO DA JANELA--&gt;
-    &lt;div class=&quot;entity-body&quot;&gt;
-      &lt;!--/CONTEUDO--&gt;
-      &lt;iframe src=&quot;conteudo-do-iframe.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-              </div>
-            </div><!--/row-->
-
-
 
             <h3>Cards</h3>       
 
@@ -2605,6 +2765,23 @@
         </div><!--/.entity-body-->
       </div><!--/entity-content-->      
     </div><!--/entity-window-->
+
+     <!--/BUSCAR-USUARIO-->
+    <div class="entity-window horizontal" id="buscar-usuario">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/entity-window-header-->
+        <div class="entity-body">
+          <iframe src="buscar-clientes.html" frameborder="0" scrolling="no"></iframe>
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->      
+    </div><!--/entity-window-->
+
 
     
 

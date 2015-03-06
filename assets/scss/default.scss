@@ -1649,6 +1649,11 @@ body.entity-iframe {
 			margin-top: 10px
 		}
 	}
+	&.iconless > span {
+		font-size: 14px;
+		padding-top: 15px;
+		display: block;
+	}
 }		
 a.entity-symbol {
 	&:hover {

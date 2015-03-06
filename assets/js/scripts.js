@@ -386,11 +386,20 @@
 		});
 
 		// SLIDE OPTIONS TD ON HOVER
-		$('.list-table tr').hover(
+		/*$('.list-table tr').hover(
 			function() {
 				 $(this).find('.options').stop(true).slideDown(200);
 			}, function() {
 				 $(this).find('.options').stop(true).slideUp(200);
+			}
+		);*/
+		$('.list-table tbody tr').hover( function() {
+				var index = $(this).index() + 2;
+				if ( $(this).hasClass('options') ) {
+					return false
+				} else {
+					$(this).parent().find('tr:nth-child(' + index + ')').stop(true).toggleClass('open');
+				}
 			}
 		);
 

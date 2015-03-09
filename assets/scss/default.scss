@@ -602,6 +602,16 @@
 			width: 100%;
 			display: block;
 		}
+		.input-group {
+
+				.bootstrap-tagsinput {
+					@include border-radius(4px 0px 0 4px);
+				}
+				.input-group-btn > button{
+					top: -5px;
+					padding: 5px 10px;
+				}
+		}
 	}
 	/*check-table-row*/
 	input[type="checkbox"].check-table-row {

@@ -1466,6 +1466,7 @@ body.entity-iframe {
 			}
 			.entity-card-data {
 				padding: 5px;
+				text-align: left;
 				.entity-title {
 	 				font-size: 14px;
 					display: inline;
@@ -1552,7 +1553,7 @@ body.entity-iframe {
 }
 .table {
     .entity-card {
-    	margin: -8px;
+    	margin: 0;
     	display: block;
     	.entity-card-data {
     		width: calc(100% - 58px);
@@ -1566,10 +1567,10 @@ body.entity-iframe {
 /* ENTITY-SYMBOL */
 
 .entity-symbol {
-	background: $default;
+	background: #EEEEEE;
 	display: inline-block;
 	text-align: center;
-	color: $inverse-text;
+	color: $default-text;
 	padding: 2px;
 	height: 40px;
 	width: 40px;
@@ -1643,6 +1644,8 @@ body.entity-iframe {
 			font-size: 20px;
 		}
 	}
+
+	/* ENTITY-SYMBOLS VARIATIONS */
 	&.idless {
 		background: transparent;
 		&>img, &>.fa {
@@ -1653,6 +1656,35 @@ body.entity-iframe {
 		font-size: 14px;
 		padding-top: 15px;
 		display: block;
+	}
+	&.priotity {
+		position: relative;
+		padding: 0 !important;
+		display: table;
+
+		&>span {
+			display: block;
+			font-size: 14px;
+		}
+
+		.priority-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			max-height: 48px;
+			width: 100%;
+			height: auto;
+			left: 0;
+			bottom: 0;
+			position: absolute;
+			li {
+				display: inline-block;
+				margin: 0;
+				width: 20px;
+				height: 20px;
+				img { vertical-align: top}
+			}
+		}
 	}
 }		
 a.entity-symbol {

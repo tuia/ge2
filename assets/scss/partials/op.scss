@@ -24,6 +24,9 @@
 */
 	tbody > tr > td {
 
+		padding: 0;
+		text-align: center;
+
 		&:nth-child(1) {width: 1%;}
 		&:nth-child(2) {width: 17%;}
 		&:nth-child(3) {width: 3%;}
@@ -36,6 +39,16 @@
 		&:nth-child(10) {width: 17%;}
 		&:nth-child(11) {width: 1%;}
 		&:nth-child(12) {width: 19%;}
+
+		.table-comment {
+			padding: 8px;
+			margin: 0;
+			line-height: 1.2;
+			font-style: italic;
+			color: #999;
+			font-weight: bold;
+			text-align: left;
+		}
 	}
 
 	.entity-card {
@@ -48,7 +61,7 @@
 	    	float: left;
 	    	p {margin: 0; line-height: 1}
 	    }
-	    .entity-card-data { width: calc(100% - 70px) }
+	    .entity-card-data { width: calc(100% - 70px); text-align: left; }
 	}
     thead {
     	tr:first-child {
@@ -66,7 +79,7 @@
     tbody tr {
     	transition: all .2s ease-in-out;
     	&:hover {
-    		background: #eeeeee;
+    		background: #EFFFBF;
     	}
     	/*td:last-child {
     		text-align: center;
@@ -75,10 +88,14 @@
     		background: #e5e5e5;
     		display: none;
     		text-align: right;
-    		padding: 2px 5px;
 
     		&.open, &:hover {
     			display: table-row;
+    		}
+
+    		td {
+    			padding: 2px 5px;
+    			text-align: right;
     		}
 
     		a {

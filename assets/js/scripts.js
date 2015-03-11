@@ -403,6 +403,43 @@
 			}
 		);
 
+		//TABLE OPTIONS
+		$('.check-table-row').change( function() {
+			var buttons = $('.table-options').find('.btn').not('.dropdown-toggle');
+			var checkbox = $('.table-options').find('.checkbox input');
+			var checklength = $('.list-table').find('.check-table-row:checked').length;
+			var number = $('.table-options').find('.checklength');
+			var dropdown = $('.table-options .dropdown-toggle');
+
+			if ( checklength >= 2 ) {
+				dropdown.removeClass('disabled');
+				checkbox.prop("indeterminate", true);
+				number.text(checklength);
+				buttons.removeClass('disabled');
+
+			} if ( checklength === 1 ) {
+				dropdown.removeClass('disabled');
+				checkbox.prop("indeterminate", true);
+				number.text(checklength);	
+				buttons.removeClass('disabled');
+				$('.table-options .onlygroup .btn').addClass('disabled');
+
+			} if ( checklength < 1 ) {
+				dropdown.addClass('disabled');
+				checkbox.prop("indeterminate", false);
+				number.text("0");
+				buttons.addClass('disabled');
+			}
+		});
+		$('.list-table-clear-btn').click( function() {
+			$('.list-table .check-table-row').parents('tr').removeClass('active');
+			$('.list-table .check-table-row, .table-options .checkbox input').attr('checked', false);
+			$('.table-options .checkbox input').prop("indeterminate", false);
+			$('.table-options .checklength').text('0');
+			$('.table-options').find('.btn').addClass('disabled');
+			return false
+		});
+
 		//ABSOLUTE BUTTONS INSIDE TABLES
 		$.fn.InsideTableBtns = function() {
 		    var $el;

@@ -212,6 +212,7 @@
 	}
 
 	/* BUTTONS */
+		.btn.disabled:hover { cursor: not-allowed !important}
 		.bookmark-button {
 			color: $dark-text;
 			&:hover {color: darken($dark-text, 10%)}
@@ -1606,6 +1607,7 @@ body.entity-iframe {
 		background: $finalizado;
 		&:hover { background: darken($finalizado, 10%) }
 	}
+	&.pendente, &.designado, &.acionado, &.em-execucao, &.finalizado {color: $inverse-text; color: rgba(255,255,255,.9);}
 
 	&.error {
 		background: $error-color;

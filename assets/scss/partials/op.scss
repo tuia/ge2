@@ -1,6 +1,15 @@
 /* OP - NATHALIA TUIA XAVIER */
 
 
+/* LIST TABLE OPTIONS */
+.table-options {
+	margin-bottom: 20px;
+	.btn {
+		@include transition (all, .3s, ease-in-out);
+		&.disabled {opacity: .5}
+	}
+	.btn-group .dropdown-toggle > .checkbox {margin: 0}
+}
 
 /* LIST TABLE */
 .list-table {

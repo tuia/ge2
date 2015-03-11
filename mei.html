@@ -38,10 +38,11 @@
               <li><a href="#icones">ícones</a></li>
               <li><a href="#botoes">botões</a></li>
               <li><a href="#dropdowns">dropdowns</a></li>
+              <li><a href="#alertas">alertas</a></li>
               <li><a href="#abas">abas</a></li>
               <li><a href="#tabelas">tabelas</a></li>
               <li><a href="#campos-de-texto">campos de texto</a></li>
-              <li><a href="#validacao">validação</a></li>
+              <li><a href="#formularios">formulários</a></li>
             </ul>
           </li>
 
@@ -82,6 +83,8 @@
 
         <section id="introducao">
           <h2>Introdução</h2>
+
+          <p>O sistema foi projetado, preferencialmente, para resoluções maiores do que 1280px de largura.</p>
 
           <p>Os módulos foram desenvolvido utilizando o framework <a href="http://getbootstrap.com" target="blank">Twitter Bootstrap <small>3.3.2</small></a>. Seus principais componentes e estilos  estão descritos neste manual, mas você pode checar sua <a href="http://getbootstrap.com/" target="blank">documentação</a> para se aprofundar ou retirar dúvidas.</p>
 
@@ -221,7 +224,7 @@
             </div><!--/row-->
 
             <h3>Grid com bordas</h3>
-            <p>Normalmente utilizado em formulários e em <a href="#entidades">janelas de entidade</a>, basta adicionar a classe <code>.bordered</code> à <code>.row</code> para se utilizar grid com bordas.</p>
+            <p>Normalmente utilizado em formulários e em <a href="#janelas-flutuantes">janelas flutuantes</a>, basta adicionar a classe <code>.bordered</code> à <code>.row</code> para se utilizar grid com bordas.</p>
             <p>Para ajustar o espaçamento da borda até encostar nas laterias, utilize este grid dentro de um elemento com a classe <code>.form-box</code>. </p>
 
             <div class="row">
@@ -823,6 +826,45 @@
             </div>
           </section><!--/#dropdowns-->
 
+          <section id="alertas">
+            
+            <h3>Alertas</h3>
+            <p>Alertas são pequenas janelas com o inuito de chamar a atenção do usuário com mesnagens de erro, alerta, sucesso ou dicas. Na validação de formulários, o alerta deve vir no início do formulário, logo abaixo do título e instruções, com um conteúdo que auxilie o usuário. Os <code>alerts</code> não possuem uma cor padrão, precisando de classes adicionais de acordo com seu objetivo.</p>
+
+            <p>Ao utilizar o alerta de <strong>erro</strong> ou <strong>sucesso</strong>, é importante sempre oferecer uma alternativa ao usuário, como tentar novamente fazer a ação com erro ou desfazer a ação concluída.</p>
+
+            <p>Alertas de <strong>informações ou dicas</strong> podem ser fechados para não poluir a tela.</p>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Exemplos</h4>
+                <div class="well">
+                  <div class="alert alert-success" role="alert"><strong>Sucesso!</strong> O item foi adicionado com sucesso. <a href="#">desfazer</a></div>
+                  <div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Dica!</strong> Você pode clicar e arrastar o elemento para a janela desejada.</div>
+                  <div class="alert alert-warning" role="alert"><strong>Cuidado!</strong> As informações aqui podem estar divergentes, é melhor checar.</div>
+                  <div class="alert alert-danger" role="alert"><strong>Erro!</strong> Não foi possível salvar as alterações. <a href="#">tentar novamente</a></div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;!--/Sucesso--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-success&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
+
+&lt;!--/Dica--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-info&nbsp;alert-dismissible&quot;&nbsp;role=&quot;alert&quot;&gt;
+&nbsp;&nbsp;&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;close&quot;&nbsp;data-dismiss=&quot;alert&quot;&nbsp;aria-label=&quot;Close&quot;&gt;&lt;span&nbsp;aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+&nbsp;...
+&lt;/div&gt;
+
+&lt;!--/Alerta--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-warning&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
+
+&lt;!--/Erro--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-danger&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </section><!--/#alertas-->
+
           <section id="abas">
             <h2>Abas</h2>
             <p>Abas devem ser utilizadas para diagramar conteúdos similiares em uma mesma página.</p>
@@ -1398,145 +1440,199 @@
           </section><!--/#campos-de-texto-->
 
 
-          <section id="validacao">
-            <h2>Validação</h2>
-            <p>O módulo apresenta as seguintes possibilidades para validação de formulários:</p>
+          <section id="formularios">
+            <h2>Formulários</h2>
+            <p>Para criação e validação de formulários, é necessário seguir alguns padrões. Veja os exemplos. </p>
 
-            <h3>Alertas</h3>
-            <p>Alestas são pequenas janelas com o inuito de chamar a atenção do usuário com mesnagens de erro, alerta, sucesso ou dicas. Na validação de formulários, o alerta deve vir no início do formulário, logo abaixo do título e instruções, com um conteúdo que auxilie o usuário. Os <code>alerts</code> não possuem uma cor padrão, precisando de classes adicionais de acordo com seu objetivo.</p>
+            <p>Para mais informações sobre estilização de formulários, confira a <a href="http://getbootstrap.com/css/#forms" target="blank">documentação do Bootstrap.</a></p><br />
 
-            <p>Ao utilizar o alerta de <strong>erro</strong> ou <strong>sucesso</strong>, é importante sempre oferecer uma alternativa ao usuário, como tentar novamente fazer a ação com erro ou desfazer a ação concluída.</p>
 
-            <p>Alertas de <strong>informações ou dicas</strong> podem ser fechados para não poluir a tela.</p>
-
+            <h3>Formulário padrão</h3>
             <div class="row">
-              <div class="col-xs-6">
-                <h4>Exemplos</h4>
-                <div class="well">
-                  <div class="alert alert-success" role="alert"><strong>Sucesso!</strong> O item foi adicionado com sucesso. <a href="#">desfazer</a></div>
-                  <div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Dica!</strong> Você pode clicar e arrastar o elemento para a janela desejada.</div>
-                  <div class="alert alert-warning" role="alert"><strong>Cuidado!</strong> As informações aqui podem estar divergentes, é melhor checar.</div>
-                  <div class="alert alert-danger" role="alert"><strong>Erro!</strong> Não foi possível salvar as alterações. <a href="#">tentar novamente</a></div>
-                </div>
+              <div class="col-xs-4">
+                <form class="well">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" placeholder="seu email">
+                  </div>
+                  <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" placeholder="senha">
+                  </div>
+                  <div class="form-group">
+                    <label>Foto</label>
+                    <input type="file">
+                    <p class="help-block">A foto deve ter até 2mb</p>
+                  </div>
+                  <div class="form-actions">
+                    <div class="checkbox pull-left">
+                      <label>
+                        <input type="checkbox"> lembrar senha
+                      </label>
+                    </div>
+                    <div class="pull-right">
+                      <button class="btn btn-default">cancelar</button>
+                      <button type="submit" class="btn btn-primary">entrar</button>
+                    </div>
+                  </div>
+                </form>                
+              </div><!--/col-->
+              <div class="col-xs-4">
+                <ul class="dos-and-donts">
+                  <li class="do"><strong>Agrupe.</strong> Os grupos de formulários (<code>.form-group</code>) auxiliam na validação, mudando de formatação de acordo com o status (erro ou sucesso).</li>
+
+                  <li class="do"><strong>Coloque etiquetas.</strong> Quando possível, utilize tanto o <code>label</code> e o atributo <code>placeholder</code> para informar como preencher o campo. Quando o espaço for pouco, utilize apenas o placeholder.</li>
+
+                  <li class="do"><strong>Dê dicas.</strong> Um pequeno texto (<code>.help-block</code>) embaixo do campo de texto pode evitar muitos erros.</li>
+
+                  <li class="do"><strong>Padronize.</strong> Mantenha os botões conclusivos do formulário sempre à direita, sendo a ação princial sempre a mais à direita.</li>
+
+                  <li class="do"><strong>Evidencie o mais importante.</strong> Destaque o botão principal (<code>.btn-primary</code>) do secundário (<code>.btn-default</code>) com suas cores.</li>
+
+                </ul>
               </div>
-              <div class="col-xs-6">
-                <h4>Código</h4>
-                <pre><code class="language-markup">&lt;!--/Sucesso--&gt;
-&lt;div&nbsp;class=&quot;alert&nbsp;alert-success&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
-
-&lt;!--/Dica--&gt;
-&lt;div&nbsp;class=&quot;alert&nbsp;alert-info&nbsp;alert-dismissible&quot;&nbsp;role=&quot;alert&quot;&gt;
-&nbsp;&nbsp;&lt;button&nbsp;type=&quot;button&quot;&nbsp;class=&quot;close&quot;&nbsp;data-dismiss=&quot;alert&quot;&nbsp;aria-label=&quot;Close&quot;&gt;&lt;span&nbsp;aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-&nbsp;...
-&lt;/div&gt;
-
-&lt;!--/Alerta--&gt;
-&lt;div&nbsp;class=&quot;alert&nbsp;alert-warning&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
-
-&lt;!--/Erro--&gt;
-&lt;div&nbsp;class=&quot;alert&nbsp;alert-danger&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;</code></pre>
-              </div>
-            </div>
-
-            <h3>Formulários</h3>
-            <p>Estão inclusos os estados de validação de sucesso, aviso e erro, diferenciados por cores. Para utilizar, adicione a classe <code>.has-success</code>, <code>.has-warning</code> ou <code>.has-error</code>no elemento pai. Qualquer <code>.control-label</code> (label), <code>.form-control</code> (campo de texto, checkbox, textarea e etc) ou <code>.help-block</code> (texto de ajuda) receberão os estilos.</p>
-            <p>Para mais informações sobre estilização de formulários, confira a <a href="http://getbootstrap.com/css/#forms" target="blank">documentação do Bootstrap.</a></p>
-
-            <div class="row">
-              <div class="col-xs-6">
-                <h4>Exemplos</h4>
-                <div class="well">
-                  <form>
-                    <div class="alert alert-danger" role="alert"><strong>Erro!</strong> Favor preencher corretamente os seguintes campos:</div>
-                    <div class="form-group has-success">
-                      <label class="control-label">Campo com sucesso</label>
-                      <input type="text" class="form-control" />
-                      <small class="help-block">texto de ajuda</small>
-                    </div>
-                    <div class="form-group has-warning">
-                      <label class="control-label">Campo com aviso</label>
-                      <input type="text" class="form-control" />
-                      <small class="help-block">texto de ajuda</small>
-                    </div>
-                    <div class="form-group has-error">
-                      <label class="control-label">Campo com erro</label>
-                      <input type="text" class="form-control" />
-                      <small class="help-block">texto de ajuda</small>
-                    </div>
-                    <div class="has-success">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox">
-                          Checkbox com successo
-                        </label>
-                      </div>
-                    </div>
-                    <div class="has-warning">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox">
-                          Checkbox com aviso
-                        </label>
-                      </div>
-                    </div>
-                    <div class="has-error">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox">
-                          Checkbox com erro
-                        </label>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="col-xs-6">
-                <h4>Código</h4>
-                <pre><code class="language-markup">&lt;form&gt;
-&nbsp;&lt;div&nbsp;class=&quot;alert&nbsp;alert-danger&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;
-&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-success&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;control-label&quot;&gt;Campo&nbsp;com&nbsp;sucesso&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;/&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;texto&nbsp;de&nbsp;ajuda&lt;/small&gt;
+              <div class="col-xs-4"><pre><code class="language-markup">&lt;form&nbsp;class=&quot;well&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Email&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;email&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;seu&nbsp;email&quot;&nbsp;/&gt;
 &nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-warning&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;control-label&quot;&gt;Campo&nbsp;com&nbsp;aviso&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;/&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;texto&nbsp;de&nbsp;ajuda&lt;/small&gt;
+&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Foto&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;help-block&quot;&gt;A&nbsp;foto&nbsp;deve&nbsp;ter&nbsp;at&eacute;&nbsp;2mb&lt;/p&gt;
 &nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-error&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;control-label&quot;&gt;Campo&nbsp;com&nbsp;erro&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;/&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;help-block&quot;&gt;texto&nbsp;de&nbsp;ajuda&lt;/small&gt;
-&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&lt;div&nbsp;class=&quot;has-success&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checkbox&nbsp;com&nbsp;successo
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-actions&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&nbsp;pull-left&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;&nbsp;lembrar&nbsp;senha&lt;/label&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&lt;div&nbsp;class=&quot;has-warning&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checkbox&nbsp;com&nbsp;aviso
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&lt;div&nbsp;class=&quot;has-error&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;checkbox&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checkbox&nbsp;com&nbsp;erro
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;pull-right&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;class=&quot;btn&nbsp;btn-default&quot;&gt;cancelar&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;type=&quot;submit&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&quot;&gt;entrar&lt;/button&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
 &nbsp;&nbsp;&lt;/div&gt;
 &lt;/form&gt;</code></pre>
               </div>
-            </div>
-          </section><!--/#validation-->
+            </div><!--/.row-->
+
+            <h3>Formulário com erro</h3>
+            <div class="row">
+              <div class="col-xs-4">
+                <form class="well">
+                  <div class="alert alert-warning" role="alert"><strong>Ops!</strong> Impossível prosseguir. Favor preencher corretamente os seguintes campos:</div>
+                  <div class="form-group has-error">
+                    <label>Email</label>
+                    <input type="email" class="form-control" placeholder="seu email">
+                    <p class="help-block">campo obrigatório</p>
+                  </div>
+                  <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" placeholder="senha">
+                  </div>
+                  <div class="form-group">
+                    <label>Foto</label>
+                    <input type="file">
+                    <p class="help-block">A foto deve ter até 2mb</p>
+                  </div>
+                  <div class="form-actions">
+                    <div class="checkbox pull-left">
+                      <label>
+                        <input type="checkbox"> lembrar senha
+                      </label>
+                    </div>
+                    <div class="pull-right">
+                      <button class="btn btn-default">cancelar</button>
+                      <button type="submit" class="btn btn-primary">entrar</button>
+                    </div>
+                  </div>
+                </form>                
+              </div><!--/col-->
+              <div class="col-xs-4">
+                <ul class="dos-and-donts">
+                  <li class="dont"><strong>Não mude o alerta de lugar.</strong> O alerta funciona como introdução deve vir sempre no topo, logo após o título do formulário.</li>
+
+                  <li class="do"><strong>Explique o errro.</strong> Um breve texto (<code>.help-block</code>) embaixo do campo com erro é o suficiente para não deixar ninguém perdido.</li>
+
+                  <li class="dont"><strong>Não seja técnico, e sim pessoal.</strong> Mensagens como "erro 505" não significam nada para o usuário final. Explique os erros educadamente de forma que um leigo entenderia.</li>
+
+                </ul>
+              </div>
+              <div class="col-xs-4"><pre><code class="language-markup">&lt;form&nbsp;class=&quot;well&quot;&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;alert&nbsp;alert-warning&quot;&nbsp;role=&quot;alert&quot;&gt;&lt;strong&gt;Ops!&lt;/strong&gt;&nbsp;Imposs&iacute;vel&nbsp;prosseguir.&nbsp;Favor&nbsp;preencher&nbsp;corretamente&nbsp;os&nbsp;seguintes&nbsp;campos:&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;form-group&nbsp;has-error&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Email&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;email&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;seu&nbsp;email&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;help-block&quot;&gt;campo&nbsp;obrigat&oacute;rio&lt;/p&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;...
+&nbsp;&nbsp;
+&lt;/form&gt;&nbsp;</code></pre>
+              </div>
+            </div><!--/.row-->
+
+
+            <div class="row">
+
+              <div class="col-xs-4">
+                <h3>Formulário com sucesso</h3>
+                <form class="well">
+                  <div class="form-group has-success has-feedback">
+                    <label>Email</label>
+                    <input type="email" class="form-control" placeholder="seu email">
+                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                  </div>
+                  <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" placeholder="senha">
+                  </div>
+                  <div class="form-group">
+                    <label>Foto</label>
+                    <input type="file">
+                    <p class="help-block">A foto deve ter até 2mb</p>
+                  </div>
+                  <div class="form-actions">
+                    <div class="checkbox pull-left">
+                      <label>
+                        <input type="checkbox"> lembrar senha
+                      </label>
+                    </div>
+                    <div class="pull-right">
+                      <button class="btn btn-default">cancelar</button>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                  </div>
+                </form>     
+                
+              </div><!--/col-->
+              <div class="col-xs-4">
+                <h4>Feedback de sucesso <small>(na página sequente)</small></h4>
+                  <div class="alert alert-success" role="alert"><strong>Sucesso!</strong> Seus dados foram alterados corretamente. <a href="#">desfazer</a></div>
+
+                <ul class="dos-and-donts">
+                  <li class="dont"><strong>Não use janelas de confirmação.</strong> O usuário sabe o que faz. Perguntar "você tem certeza que deseja fazer isso?" pode ser incômodo e reduzir a produtividade.</li>
+                  <li class="do"><strong>Ofereça opção de desfazer.</strong> Se o usuário fizer algo sem querer, ele saberá exatamente como voltar atrás.</li>
+                  <li class="dont"><strong>Não incomode o usuário.</strong> Faça o alerta de sucesso sumir após alguns segundos.</li>
+                  <li class="do"><strong>Em casos especiais, peça a senha.</strong> Se a ação do usuário for tão impactante que precise de confirmação, utilize um modal que peça a senha de administrador. Assim você evita erros de forma mais segura.</li>
+                </ul>
+
+              </div><!--/col-->
+
+              <div class="col-xs-4"><pre><code class="language-markup">&lt;!--&nbsp;FORMUL&Aacute;RIO&nbsp;COM&nbsp;SUCESSO&nbsp;--&gt;
+&lt;div&nbsp;class=&quot;form-group&nbsp;has-success&nbsp;has-feedback&quot;&gt;
+&nbsp;&nbsp;&lt;label&gt;Email&lt;/label&gt;
+&nbsp;&nbsp;&lt;input&nbsp;type=&quot;email&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;seu&nbsp;email&quot;&gt;
+&nbsp;&nbsp;&lt;span&nbsp;class=&quot;glyphicon&nbsp;glyphicon-ok&nbsp;form-control-feedback&quot;&nbsp;aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!--&nbsp;ALERTA&nbsp;DE&nbsp;SUCESSO&nbsp;--&gt;
+&lt;div&nbsp;class=&quot;alert&nbsp;alert-success&quot;&nbsp;role=&quot;alert&quot;&gt;&lt;strong&gt;Sucesso!&lt;/strong&gt;&nbsp;Seus&nbsp;dados&nbsp;foram&nbsp;alterados&nbsp;corretamente.&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;desfazer&lt;/a&gt;&lt;/div&gt;
+</code></pre>
+              </div>
+            </div><!--/.row-->
+
+          </section><!--/#formularios-->
         </div><!--/#base-css-->
 
 

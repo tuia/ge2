@@ -1607,6 +1607,7 @@ body.entity-iframe {
 		background: $finalizado;
 		&:hover { background: darken($finalizado, 10%) }
 	}
+
 	&.pendente, &.designado, &.acionado, &.em-execucao, &.finalizado {color: $inverse-text; color: rgba(255,255,255,.9);}
 
 	&.error {
@@ -1690,6 +1691,7 @@ body.entity-iframe {
 	}
 }		
 a.entity-symbol {
+	&.pendente, &.designado, &.acionado, &.em-execucao, &.finalizado {color: $inverse-text; color: rgba(255,255,255,.9);}
 	&:hover {
 		background: darken(#999999, 10%);
 		text-decoration: none;

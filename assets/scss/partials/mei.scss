@@ -25,6 +25,37 @@
 	}
 }
 
+.dos-and-donts {
+   padding-left:20px;
+   text-indent: 2px;
+   list-style: none;
+   list-style-position:outside;
+
+	li {
+		margin-bottom: 20px;
+		&.do {
+			color: $success-color;
+			&:before {
+		    	content: '✔ ';  
+				color: $success-color				
+			}
+		}
+		&.dont {
+			color: $error-color;
+			&:before {
+		    	content: 'X ';
+				color: $error-color				
+			}
+		}
+		&:before { 
+    		margin-left: -20px;
+    		width: 20px;
+    		font-weight: bold;
+    		display: inline-block;
+		}
+	}
+}
+
 #mei-content {
 	background: #bdc3c7;
 	padding-top: 50px;

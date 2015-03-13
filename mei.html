@@ -1733,27 +1733,24 @@
 
           <section id="janelas-flutuantes">
             <h2>Janelas Flutuantes</h2>
-              <p>Janelas flutuantes ou janelas de entidades (<code>.entity-window</code>) são elementos arrastáveis pela tela.</p>
-              <p>Utilize as janelas flutuantes:</p>
+              <p>Janelas flutuantes ou janelas de entidades (<code>.entity-window</code>) são elementos arrastáveis pela tela. Utilize as janelas flutuantes:</p>
 
-              <ul>
-                <li>Quando o conteúdo principal da tela for muito importante (assim o conteúdo secundário não esconde o primário e pode ser fechado quando não for mais necessário)</li>
-                <li>Em um formulário longo, quando o usuário precisar buscar uma informação rapidamente e depois voltar.</li>
-                <li>Para se detalhar uma <a href="#entidades">entidade</a>. As janelas possuem formatação própria para elas - com cabeçalho, informações rápidas e rodapé de ações.</li>
+              <ul class="dos-and-donts">
+                <li class="do">Quando o conteúdo principal da tela for muito importante (assim o conteúdo secundário não esconde o primário e pode ser fechado quando não for mais necessário)</li>
+                <li class="do">Em um formulário longo, quando o usuário precisar buscar uma informação rapidamente e depois voltar.</li>
+                <li class="do">Para se detalhar uma <a href="#entidades">entidade</a>. As janelas possuem formatação própria para elas - com cabeçalho, informações rápidas e rodapé de ações.</li>
               </ul>
-
-              <p>A janela apresenta o conteúdo de uma página externa dentro de um <code>iframe</code>. Ao se desenvolver a página externa, não utilize a classe <code>.container</code> após a tag <code>body</code> para que o conteúdo se adapte à largura da janela.</p>
 
               <div class="row">
                 <div class="col-xs-4">
                   <h4>Exemplo</h4>
                   <a href="#entity-window-example" class="btn btn-block btn-primary show-window-btn">abrir janela flutuante</a><br />
-                  <h4>Código do botão</h4>
+                  <h4>Botão</h4>
                   <p>Para o botão chamar a janela, ele deve possuir a classe <code>.show-window-btn</code> e seu atributo <code>href</code> deve apontar para a <code>id</code> da janela que será exibida, nesse caso, <code>#entity-window-example</code></p>
                   <pre>
-                    <code class="language-markup">
+<code class="language-markup">
 
-    &lt;a href=&quot;#entity-window-example&quot; class=&quot;btn show-window-btn&quot;&gt;abrir janela flutuante&lt;/a&gt;</code>
+&lt;a href=&quot;#entity-window-example&quot; class=&quot;btn show-window-btn&quot;&gt;abrir janela flutuante&lt;/a&gt;</code>
                   </pre><br />
                   <div class="alert alert-info" role="alert">
                     <p><strong>Dica!</strong> Para organizar seu código, você pode deixar as janelas de entidade sempre no final, já que elas ficam escondidas. Assim, você deixa todas elas juntas e pode focar no conteúdo principal da página.</p>
@@ -1761,7 +1758,7 @@
                 </div>
 
                 <div class="col-xs-8">          
-                  <h4>Código da janela</h4>
+                  <h4>HTML original</h4>
                   <pre>
   <code class="language-markup">&lt;!--/JANELA FLUTUANTE--&gt;
   &lt;div class=&quot;entity-window&quot; id=&quot;entity-window-example&quot;&gt;
@@ -1786,6 +1783,121 @@
   &lt;/div&gt;</code></pre>
                 </div>
               </div><!--/row-->
+              <div class="row">
+                <div class="col-xs-12">
+                  <h3>Página destino</h3>
+                  <p>Como o conteúdo das janelas flutuantes vêm dentro de um <code>iframe</code>, a página padrão deve possuir a seguinte formatação:</p>
+<pre><code class="language-markup">&lt;body&nbsp;class=&quot;entity-iframe&quot;&gt;
+
+&nbsp;&nbsp;&lt;!--CABE&Ccedil;ALHO--&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-card&quot;&gt;...&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;!--CONTE&Uacute;DO--&gt;
+&nbsp;&nbsp;...
+
+&nbsp;&nbsp;&lt;!--RODAP&Eacute;&nbsp;(exemplo)--&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-footer&nbsp;form-actions&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;pull-right&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-lg&nbsp;btn-default&quot;&gt;cancelar&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-lg&nbsp;btn-primary&quot;&gt;OK&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;</code></pre>
+                </div>
+              </div><!--/row-->
+              <div class="row">
+                <h3>Tamanhos</h3>
+                <p>Existe 3 variações de tamanho das janelas flutuantes: <code>.small</code>, padrão e <code>.large</code>. Cada uma possui largura diferente, mas a altura de todas é ajustada de acordo com o conteúdo.Veja os exemplos e quando usar cada uma:</p>
+
+
+                <h3>Pequena</h3>
+                <div class="col-xs-4">
+                  <p>A janela flutuante pequena é ideal para <a href="#entidades">entidades</a> e para o módulo GE curtíssimos. Basta adicionar a classe <code>.small</code> à div <code>.entity-window</code> no HTML original.<br /></p>
+                  <ul class="dos-and-donts">
+                    <li class="do">Entidades.</li>
+                    <li class="do">Módulo GE (para não cobrir o mapa com janelas grandes)</li>
+                    <li class="dont">Conteúdos e formulários longos.</li>
+                  </ul>
+                  <h4>Exemplo</h4>
+                  <a href="#entity-window-example" class="btn btn-block btn-primary show-window-btn">abrir janela flutuante</a>
+                </div>
+                <div class="col-xs-8">
+<pre><code class="language-markup">&lt;!--JANELA&nbsp;FLUTUANTE--&gt;
+&lt;div&nbsp;class=&quot;entity-window&nbsp;small&quot;&nbsp;id=&quot;entity-window-example&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-content&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-window-header&quot;&gt;...&lt;/div&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CORPO&nbsp;DA&nbsp;JANELA--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-body&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CONTEUDO--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe&nbsp;src=&quot;conteudo-do-iframe.html&quot;&nbsp;frameborder=&quot;0&quot;&nbsp;scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div><!--/.row-->
+
+              <div class="row">
+                <h3>Padrão</h3>
+                <div class="col-xs-4">
+                  <p>A janela flutuante padrão possui largura de 480px, e é ideal para a maioria dos conteúdos. Não é necessário adicionar classes à janela neste caso.<br /></p>
+                  <ul class="dos-and-donts">
+                    <li class="do">Formulários e conteúdos tabulares simples.</li>
+                    <li class="dont">Conteúdos muito longos, que não cabem.</li>
+                    <li class="dont">Conteúdos muito curtos, que deixam espaço sobrando.</li>
+                    <li class="dont">Entidades.</li>
+                  </ul>
+                  <h4>Exemplo</h4>
+                  <a href="#regular-window-example" class="btn btn-block btn-primary show-window-btn">abrir janela flutuante</a>
+                </div>
+                <div class="col-xs-8">
+<pre><code class="language-markup">&lt;!--JANELA&nbsp;FLUTUANTE--&gt;
+&lt;div&nbsp;class=&quot;entity-window&quot;&nbsp;id=&quot;entity-window-example&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-content&quot;&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CABE&Ccedil;ALHO&nbsp;DA&nbsp;JANELA--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-window-header&quot;&gt;...&lt;/div&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CORPO&nbsp;DA&nbsp;JANELA--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-body&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CONTEUDO--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe&nbsp;src=&quot;conteudo-do-iframe.html&quot;&nbsp;frameborder=&quot;0&quot;&nbsp;scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div><!--/.row-->
+
+              <div class="row">
+                <h3>Larga</h3>
+                <div class="col-xs-4">
+                  <p>A janela flutuante larga possui largura de 65% da tela, ideal para conteúdos extensos.  Basta adicionar a classe <code>.large</code> à div <code>.entity-body</code> no HTML original.<br /><br /></p>
+                  <ul class="dos-and-donts">
+                    <li class="do">Conteúdos extensos e tabelas longas.</li>
+                    <li class="dont">Entidades.</li>
+                  </ul>
+                  <h4>Exemplo</h4>
+                  <a href="#buscar-usuario" class="btn btn-block btn-primary show-window-btn">abrir janela flutuante</a>
+                </div>
+                <div class="col-xs-8">
+<pre><code class="language-markup">&lt;!--JANELA&nbsp;FLUTUANTE--&gt;
+&lt;div&nbsp;class=&quot;entity-window&nbsp;large&quot;&nbsp;id=&quot;entity-window-example&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-content&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-window-header&quot;&gt;...&lt;/div&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CORPO&nbsp;DA&nbsp;JANELA--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;entity-body&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CONTEUDO--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe&nbsp;src=&quot;conteudo-do-iframe.html&quot;&nbsp;frameborder=&quot;0&quot;&nbsp;scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+              </div><!--/.row-->
+
+
           </section><!--/#janelas-flutuantes-->
 
 
@@ -2830,8 +2942,8 @@
     </div><!--/mei-content-->
 
 
-    <!--/EXAMPLE-WINDOW-->
-    <div class="entity-window" id="entity-window-example">
+    <!--/SMALL EXAMPLE-WINDOW-->
+    <div class="entity-window small" id="entity-window-example">
       <div class="entity-content">
         <div class="entity-window-header">
           <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
@@ -2842,6 +2954,22 @@
         </div><!--/entity-window-header-->
         <div class="entity-body">
           <iframe src="poste.html" frameborder="0" scrolling="no"></iframe>
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->      
+    </div><!--/entity-window-->
+
+    <!--/REGULAR EXAMPLE-WINDOW-->
+    <div class="entity-window" id="regular-window-example">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar poste"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/entity-window-header-->
+        <div class="entity-body">
+          <iframe src="despacho-servico.html" frameborder="0" scrolling="no"></iframe>
         </div><!--/.entity-body-->
       </div><!--/entity-content-->      
     </div><!--/entity-window-->
@@ -2863,7 +2991,7 @@
     </div><!--/entity-window-->
 
      <!--/BUSCAR-USUARIO-->
-    <div class="entity-window horizontal" id="buscar-usuario">
+    <div class="entity-window large" id="buscar-usuario">
       <div class="entity-content">
         <div class="entity-window-header">
           <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>

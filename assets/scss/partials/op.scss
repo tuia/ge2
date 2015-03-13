@@ -391,3 +391,21 @@ p.research-found {
 	}
 }
 
+
+
+/* PÁG. CONSULTAR CLIENTE */
+#consultar-cliente {
+	&>.entity-card {
+		.entity-title {
+			max-width: calc(100% - 60px);
+			padding-top: 10px
+		}
+	}
+	.navbar {
+		margin: 0
+	}
+	.form-box.auto {
+		height: 245px;
+		max-height: none;
+	}
+}

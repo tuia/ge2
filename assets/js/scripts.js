@@ -372,6 +372,12 @@
 		}); 
 
 
+		//TAGS COM AUTOCOMPLETE
+        $(".autocomplete-tags").tagit({
+        	 availableTags: ["c++", "java", "php", "javascript", "ruby", "python", "c"]
+        });
+
+
 	////////// TABLES /////////
 
 		// TABLE CHECKBOX

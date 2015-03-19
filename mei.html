@@ -1437,6 +1437,42 @@
               </div>
             </div>
 
+            <h3>Autocomplete tags <small> campo de texto com tags e typeahead</small></h3>
+            <p>O Autocomplete tags é como o campo de texto com tags, mas exibe as tags existentes de acordo com o que o usuário busca. Você pode consultar a documentação do plugin <a href="https://github.com/aehlke/tag-it">tag-it.js</a> para mais opções. </p>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <h4>Exemplos</h4>
+                <div class="well"><!--
+                  <form>
+                    <div class="form-group">
+                      <label class="block">Estados norte-americanos</label>
+                      <input type="text" id="exemplo" class="form-control typeahead" placeholder="Estados norte-americanos" />
+                    </div>
+                  </form>-->
+                  <form>
+                    <div class="form-group">
+                      <label class="block">Digite "c"</label>
+                      <ul class="autocomplete-tags">
+                          <!-- Existing list items will be pre-added to the tags -->
+                          <li>Tag1</li>
+                          <li>Tag2</li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;ul&nbsp;class=&quot;autocomplete-tags&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Existing&nbsp;list&nbsp;items&nbsp;will&nbsp;be&nbsp;pre-added&nbsp;to&nbsp;the&nbsp;tags&nbsp;--&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Tag1&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Tag2&lt;/li&gt;
+&lt;/ul&gt;
+                </code></pre>
+              </div>
+            </div>
+
           </section><!--/#campos-de-texto-->
 
 
@@ -3068,6 +3104,7 @@
     <script src="assets/js/jquery-maskmoney.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/typeahead.js"></script>
+    <script src="assets/js/tag-it.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/scripts.js"></script>
 
     <script type="text/javascript">

@@ -1360,17 +1360,6 @@ body.entity-iframe {
 			margin: 0 -5px;
 		}
 		.tooltip {position: fixed;}
-		.dropdown {
-			position: relative;
-			.dropdown-menu {
-				position: fixed;
-				top: auto;
-				left: auto;
-			}
-			.entity-symbol{
-				@include box-shadow(-2px,2px,0,#333); 
-			}
-		}
 		table tr:first-child th { border-top: none;}
 	}
 	.show-more.btn-default {
@@ -1457,6 +1446,8 @@ body.entity-iframe {
 		}
 	}	
 }
+
+
 
 /* ENTITIES-LIST */
 .entity-list {
@@ -1712,9 +1703,14 @@ body.entity-iframe {
 a.entity-symbol {
 	&.pendente, &.designado, &.acionado, &.em-execucao, &.finalizado {color: $inverse-text; color: rgba(255,255,255,.9);}
 	&:hover {
-		background: darken(#999999, 10%);
+		background: darken(#EEEEEE, 10%);
 		text-decoration: none;
-		color: $inverse-text;
+		color: #666;
+	}
+}
+.dropdown {
+	.entity-symbol.dropdown-toggle{
+		@include box-shadow(-2px,2px,0,#333);
 	}
 }
 

@@ -69,6 +69,13 @@
 	    	margin: 0;
 	    	float: left;
 	    	p {margin: 0; line-height: 1}
+	    	&.dropdown-toggle {
+	    		width: 58px;
+	    		height: 58px;
+	    		position: relative;
+	    		top: -1px;
+	    		right: -2px;
+	    	}
 	    }
 	    .entity-card-data { width: calc(100% - 70px); text-align: left; }
 	}

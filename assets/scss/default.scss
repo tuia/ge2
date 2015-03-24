@@ -4,6 +4,9 @@
 
 	/* THEME COLORS */
 	$background-color: #FFFFFF;
+	$brand-yellow: #ECC200;
+	$brand-green: #689179;
+	
 	$lightbox-color: #F8f8f8;
 	$light-border: #f0f0f0;
 	
@@ -404,7 +407,6 @@
 		}
 	}
 	.auto {max-height: 200px;}
-	.nav.dropdown-inverse > li > a {padding: 3px 20px}
 
 
 	/* dropdown submenu */
@@ -863,12 +865,13 @@ html, body {
 			position: fixed;
 			.nav > li.active a {
 				position: relative;
+				background: #e5e5e5;
 				&:after {			
 					content: "";
 					position: absolute;
 					top: 100%;
 					left: calc(50% - 10px);
-					border-top: 10px solid #d4d4d4;
+					border-top: 10px solid #e5e5e5;
 					border-bottom: 10px solid transparent;
 					border-left: 10px solid transparent;
 					border-right: 10px solid transparent;
@@ -877,19 +880,29 @@ html, body {
 		}
 	}
 	#navigation {
-		background-color: #222222;
-		background-color: rgba(45,45,45,.8);
+		background-color: #FFFFFF;
+		background-color: rgba(255,255,255,.95);
+		border-bottom: #BFC6CC;
 		height: 70px;
+		box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.15), 0 2px 0 #e8edf2;
+		-moz-box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.15), 0 2px 0 #e8edf2;
+		-webkit-box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.15), 0 2px 0 #e8edf2;
 
 		ul.navbar-right {
 			padding-right: 20px;
 		}
+		.navbar-brand {
+			padding: 5px 10px;
+			margin: 5px 0 0 5px;
+		}
 
 		.notifications, .messages {
 			&>.dropdown-toggle {
-				padding: 24px 0 24px 10px;
+				padding: 22px 0 15px 10px;
+				border: none;
 				& > .fa {
 					font-size: 20px;
+					color: $brand-yellow;
 				}
 				& > .badge {
 					background-color: $error-color;
@@ -901,7 +914,8 @@ html, body {
 		}
 		.map-items {
 			&>.dropdown-toggle {
-				padding: 24px 20px;
+				border: none;
+				padding: 22px 15px 15px 15px;
 				& > .fa {
 					font-size: 20px;
 				}
@@ -909,12 +923,15 @@ html, body {
 		}
 
 		.dropdown-toggle {
-			padding: 8px 25px 8px 15px;
+			color: #A2A2A2;
+			padding: 5px 20px 5px 10px;
+			margin: 5px 0 0 5px;
+			border: 1px solid #DDDDDD;
 			strong {
 				display: block;
 				font-weight: 300;
-				font-size: 32px;
-				line-height: 1;
+				font-size: 22px;
+				line-height: 25px;
 			}
 			small {
 				text-transform: uppercase;
@@ -926,19 +943,22 @@ html, body {
 				right: 7px;
 			}
 			&.toggle-menu {
-				padding: 20px;			
+				padding: 15px;
+				border: none;		
 			}
 		}
 		.divider-vertical {
 			padding: 12px 8px;
+			color: #DDDDDD;
 		}
 
 		.op-list {
 			li:nth-child(odd) .op-badge{
-				background: #3a3a3a	;
+				background: #c2c2c2	;
 			}
 			.op-badge {
-				background: #6F6F6F;
+				background: #d8d8d8;
+				color: $inverse-text;
 				display: inline-block;
 				margin: -3px 5px -3px -20px;
 				padding: 3px 5px;
@@ -950,6 +970,10 @@ html, body {
 		/* user menu */
 		.user-menu {
 			position: relative;
+			&>.dropdown-toggle {
+				background-color: $brand-green;
+				color: $inverse-text;
+			}
 			&>.dropdown-menu {
 				width: 180px;
 				height: 245px;
@@ -968,7 +992,7 @@ html, body {
 				}
 			}
 			.user-menu-content, &>.dropdown-menu {
-				@include box-shadow(0,5px,15px,rgba(0, 0, 0, 0.5))
+				@include box-shadow(0,2px,5px,rgba(0, 0, 0, 0.15))
 			}
 			.user-menu-content {
 				background: white;
@@ -1048,39 +1072,20 @@ html, body {
 					transition: width .5s ease-in-out;
 				}
 				.search-options {
+					background: #FFFFFF;
+					border: 1px solid rgba(0, 0, 0, 0.15);
 					display: none;
 					position: absolute;
 					right: 15px;
 					height: auto;
 					width: auto;
-					background: rgba(45,45,45,.8);
 					top: 100%;
-					.nav-tabs {
-						border-bottom: #000000;
-					}
 					.nav-tabs > li {
 						 a {
-							color: #9d9d9d;
 							margin-right: 0;
 							padding: 10px 5px;
 							border: 1px solid transparent;
 							@include border-radius(0);
-
-							&:hover{
-								color: #fff;
-								background-color: #000;
-							}
-							&:active, &:focus{
-								color: #fff;
-								background-color: #000;
-							}
-							&>.divider {
-								background-color: #000;
-							}
-						}
-						&.active a{
-							background: #333;
-							color: #FFFFFF
 						}
 					}
 					.tab-pane {
@@ -1088,7 +1093,6 @@ html, body {
 							margin: 20px 30px;
 						}
 						.scale-label {
-							color: #666666;
 							padding: 12px 0;
 							display: inline-block;
 							text-align: right;
@@ -1102,7 +1106,6 @@ html, body {
 
 	/*SUBNAV*/
 	#subnav {
-		background-color: rgba(204,204,204,.8);
 		top: 70px;
 		.navbar-nav > li > a {
 			color: #666666;

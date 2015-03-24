@@ -21,7 +21,7 @@
     <div class="menus-container">
 
       <!--/NAVIGATION-->
-      <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav id="navigation" class="navbar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
 
           <ul class="nav navbar-nav">
@@ -29,27 +29,21 @@
               <a href="#" class="dropdown-toggle toggle-menu" data-toggle="dropdown" role="button" aria-expanded="false">
                 <i class="fa fa-bars fa-2x"></i>
               </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#" class="toggle-menu-btn">Exibir menu</a></li>
                 <li><a href="#" class="automatic-menu-btn">Exibir menu automaricamente</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <strong>G-DIS</strong>
-                <small>versão web</small>
-                <span class="caret"></span>
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" src="assets/img/gdis-logo.png" />
               </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
+            </div><!--
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" src="assets/img/gdis-logo.png" />
+              </a>
+            </div>-->
           </ul>
 
           <span class="divider-vertical"> / </span>
@@ -61,7 +55,7 @@
                 <small>operação</small>
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu dropdown-inverse op-list" role="menu">
+              <ul class="dropdown-menu op-list" role="menu">
                 <li class="active"><a href="#"><span class="op-badge">OP</span> Operação</a></li>
                 <li><a href="#"><span class="op-badge">CP</span> Cadastro e Projeto</a></li>
                 <li><a href="#"><span class="op-badge">GE</span> Georeferenciado</a></li>
@@ -80,7 +74,7 @@
                 <small>área 1, área 2, área 3, área 4...</small>
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Perfil A - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
                 <li><a href="#">Perfil B - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
                 <li><a href="#">Perfil C - <small>Área A, Área B, Área C, Área D, Área E</small></a></li>
@@ -105,7 +99,7 @@
                 <small>Operação e manutenção</small>
                 <span class="caret"></span>
               </a>
-              <div class="dropdown-menu dropdown-inverse" role="tabpanel" style="width:250px">
+              <div class="dropdown-menu" role="tabpanel" style="width:250px">
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-pills nav-justified" role="tablist">
@@ -117,7 +111,7 @@
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane active" id="links-favoritos">
                     <div class="auto">
-                      <ul class="nav dropdown-inverse" role="menu">
+                      <ul class="nav" role="menu">
                         <li><a href="#"><i class="fa fa-bookmark"></i> Action</a></li>
                         <li><a href="#"><i class="fa fa-bookmark"></i> Another action</a></li>
                         <li><a href="#"><i class="fa fa-bookmark"></i> Something else here</a></li>
@@ -152,7 +146,7 @@
                 <i class="fa fa-bell"></i>
                 <span class="badge">99</span>
               </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Notificação A</a></li>
                 <li><a href="#">Notificação B</a></li>
                 <li><a href="#">Notificação C</a></li>
@@ -167,7 +161,7 @@
                 <i class="fa fa-comment"></i>
                 <span class="badge">99</span>
               </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Mensagem A</a></li>
                 <li><a href="#">Mensagem B</a></li>
                 <li><a href="#">Mensagem C</a></li>
@@ -183,7 +177,7 @@
                 <small>Axxiom</small>
                 <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="#"><i class="fa fa-user"></i> Paulo Henrique</a></li>
                 <li class="divider"></li>
                 <li><a href="#user-menu-dispositivos" class="user-menu-link">Dispositivos e SE <span class="badge bookmark">12</span></a> </li>
@@ -217,7 +211,7 @@
                       <!--/LISTAGEM DE DISPOSITIVOS-->
                       <div class="entity-list">
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-cab"></i>
                               <span>MA01 </span>
@@ -253,7 +247,7 @@
                         </div><!--/.entity-box-->
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
                               <span>MA01 </span>
@@ -322,7 +316,7 @@
                       <div class="entity-list">
 
                         <div class="entity-box available">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
                               <span>064621</span>
@@ -358,7 +352,7 @@
                         </div><!--/.entity-box-->
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-bus"></i>
                               <span>064621</span>
@@ -394,7 +388,7 @@
                         </div><!--/.entity-box-->
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
                               <span>064621</span>
@@ -431,7 +425,7 @@
                         
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-cab"></i>
                               <span>064621</span>
@@ -467,7 +461,7 @@
                         </div><!--/.entity-box-->
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
                               <span>064621</span>
@@ -510,7 +504,7 @@
                       <div class="entity-list">
 
                         <div class="entity-box available">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
                               <span>064621</span>
@@ -546,7 +540,7 @@
                         </div><!--/.entity-box-->
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-bus"></i>
                               <span>123<strong> 546 </strong>8</span>
@@ -582,7 +576,7 @@
                         </div><!--/.entity-box-->
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
                               <span>594268</span>
@@ -619,7 +613,7 @@
                         
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-cab"></i>
                               <span>064621</span>
@@ -655,7 +649,7 @@
                         </div><!--/.entity-box-->
 
                         <div class="entity-box">
-                          <div class="entity-card">
+                          <div class="entity-card entity-card-large">
                             <div class="entity-symbol">
                               <i class="fa fa-car"></i>
                               <span>064621</span>
@@ -799,11 +793,8 @@
                   <li><a href="#"><img src="assets/img/icons/ordenar-icon.png" /></a> ordenador inicial</li>
                 </ul>
               </li>
-            </ul>
-
-            <div class="nav navbar-nav">
               <!-- filtrar -->
-              <div class="btn-group">
+              <li class="btn-group filter-group">
                 <button type="button" class="btn btn-default hastooltip filter-btn" title="filtrar"><i class="fa fa-filter"></i></button>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                   <span class="caret"></span>
@@ -812,12 +803,12 @@
                   <li><a href="#">filtro salvo 1</a></li>
                   <li><a href="#">filtro salvo 2</a></li>
                 </ul>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" class="hastooltip" title="configurações"><i class="fa fa-cog fa-2x"></i></a></li>
-              <li><a href="#" class="hastooltip help-btn" title="ajuda"><i class="fa fa-info-circle fa-2x"></i></a></li>
+              <li><a href="#" class="hastooltip" title="configurações"><i class="fa fa-cog"></i></a></li>
+              <li><a href="#" class="hastooltip help-btn" title="ajuda"><i class="fa fa-info-circle"></i></a></li>
             </ul>
 
             <div class="nav navbar-nav navbar-right summary">

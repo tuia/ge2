@@ -921,11 +921,17 @@ html, body {
 				}
 			}
 		}
+		.dropdown {
+			.nav > li > a {
+				color: #333; padding: 3px 15px;
+			}
+			.nav > li.active > a {color: $inverse-text}
+		}
 
 		.dropdown-toggle {
 			color: #A2A2A2;
 			padding: 5px 20px 5px 10px;
-			margin: 5px 0 0 5px;
+			margin: 5px 5px 0 0;
 			border: 1px solid #DDDDDD;
 			strong {
 				display: block;

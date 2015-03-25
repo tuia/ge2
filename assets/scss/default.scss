@@ -911,11 +911,19 @@ html, body {
 					left: -15px;
 				}
 			}
+			.auto {
+				overflow-y: auto;
+				overflow-x: hidden; 
+				border-bottom: 1px solid #cccccc;
+				width: 350px;
+			}
 		}
 		.map-items {
-			&>.dropdown-toggle {
+			&>a {
 				border: none;
 				padding: 22px 15px 15px 15px;
+				margin: 5px 5px 0;
+				color: #666666;
 				& > .fa {
 					font-size: 20px;
 				}
@@ -1762,6 +1770,80 @@ body {
 		}
 	}
 }
+
+
+
+/* NOTIFICATIONS AND MESSAGES */
+.notification-list {
+	min-width: 350px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	.notification {
+		display: block;
+		position: relative;
+		padding: 8px 5px;
+		cursor: pointer;
+
+
+		&.important, &.important.unseen {
+			animation: anim-redblink .7s infinite alternate ease-out;
+			.notification-text {
+				color: #666666;
+			}
+		}
+		&.unseen {background: #EEEEEE;}
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+
+		.bookmark-button {
+			position: absolute;
+			top: -6px;
+			left: 5px;
+			padding: 0;
+			&:hover, &:active {background:transparent;}
+		}
+		.entity-symbol {
+			margin: 0 0 0 5px;
+			padding: 2px;
+			@include border-radius(20px);			
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.notification-text {
+			font-size: 13px;
+			color: #999999;
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 225px;
+			padding: 0 5px;
+			margin: 0;
+			strong {display: block;}
+			.copy-button {color: #666666}
+		}
+
+		.notification-options {
+			display: inline-block;
+			vertical-align: middle;
+			width: 40px;
+			text-align: center;
+			a {
+				padding: 2px;
+				color: #999999;
+			}
+			.date {
+				font-size: 11px;
+				color: #999999;
+			}
+		}
+	}
+
+}/*notifications and messages*/
 
 
 /* REPOSNSIVE */

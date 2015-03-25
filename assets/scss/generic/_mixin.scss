@@ -249,3 +249,13 @@ ANIMATIONS
     transform: rotate(360deg);
   }
 } /* example: animation: anim-rotate 2s infinite linear; */
+
+/* RED BLINK */
+@keyframes anim-redblink {
+  0% {
+    background: #F7CCCC;
+  }
+  100% {
+    background: #F4B1B1;
+  }
+} /* example: animation: anim-redblink 2s infinite linear; */

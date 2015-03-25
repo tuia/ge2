@@ -332,11 +332,11 @@ p.research-found {
 /* SORTABLE */
 .sortable-container {
 	background: rgba(255,255,255,.9);
-	width: calc(20% - 5px);
 	margin-right: 5px;
 	float: left;
 	border: 1px solid #CCC;
 	height: 302px;
+	width: 100%;
 
 	header {
 		padding: 10px;
@@ -368,7 +368,7 @@ p.research-found {
 	}/*sortable-body*/
 }/*sortable-container*/
 
-#avaiable-items {
+.avaiable-items {
 	width: 100%;
 	float: none;
 	.sortable-body {
@@ -378,10 +378,21 @@ p.research-found {
 	}		
 }
 
+#associar-perfis {
+	padding: 0 10px;
+	.sortable-container {
+		height: 170px;
+	}
+	.avaiable-items {
+		.sortable-body .typeahead-content {height: 108px;}
+	}
+}
+
 .sortable-columns-container {
 	position: relative;
 
 	.sortable-container {
+		width: calc(20% - 5px);
 		.sortable-column-options {
 			text-align: right;
 			padding: 5px;

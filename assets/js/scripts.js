@@ -439,11 +439,15 @@
 		});
 		$('.list-table-clear-btn').click( function() {
 			$('.list-table .check-table-row').parents('tr').removeClass('active');
-			$('.list-table .check-table-row, .table-options .checkbox input').attr('checked', false);
+			$('.list-table .check-table-row, .table-options .checkbox input').prop('checked', false);
 			$('.table-options .checkbox input').prop("indeterminate", false);
 			$('.table-options .checklength').text('0');
-			$('.table-options').find('.btn').addClass('disabled');
-			return false
+		});
+		$('.list-table-all-btn').click( function() {
+			$('.list-table .check-table-row').parents('tr').addClass('active');
+			$('.table-options .checkbox input').prop("indeterminate", false);
+			$('.table-options .checklength').text('5');
+			$('.list-table .check-table-row, .table-options .checkbox input').prop('checked', true);
 		});
 
 		//ABSOLUTE BUTTONS INSIDE TABLES

@@ -108,20 +108,21 @@
                 <li><a href="http://jquery.com/" target="blank">jQuery</a> <small>(v2.1.3)</small></li>
                 <li><a href="http://jqueryui.com/" target="blank">jQuery UI</a> <small>(v1.11.2)</small><p>Inclui core.js, widget.js, mouse.js, position.js, draggable.js, droppable.js, sortable.js</p></li>
               </ul>
-            </div>
-
-            <div class="col-xs-4">
               <h3>Ícones</h3>
               <ul>
                 <li><a href="http://getbootstrap.com/components/#glyphicons" target="blank">Glyphicons</a></li>
                 <li><a href="http://fontawesome.io/" target="blank">Font Awesome</a> <small>(v4.3.0)</small></li>
               </ul>
+            </div>
+
+            <div class="col-xs-4">
               <h3>Plugins</h3>
               <ul>
                 <li><a href="http://silviomoreto.github.io/bootstrap-select/" target="blank">Bootstrap Select</a> <small>(v2.4.1)</small></li>
                 <li><a href="https://github.com/xdan/datetimepicker" target="blank">Date Time Picker</a> <small>(v1.6.3)</small></li>
                 <li><a href="https://github.com/KevinSheedy/jquery.alphanum" target="blank">jQuery Alphanum</a> <small>(v2.4.1)</small></li>
                 <li><a href="http://twitter.github.io/typeahead.js/" target="blank">Typeahead.js</a> <small>(v2.4.1)</small></li>
+                <li><a href="http://bootboxjs.com/#" target="blank">Bootbox.js</a> <small>(v4.4.0)</small></li>
               </ul>
             </div>
           </div>
@@ -828,7 +829,7 @@
 
           <section id="alertas">
             
-            <h3>Alertas</h3>
+            <h2>Alertas</h2>
             <p>Alertas são pequenas janelas com o inuito de chamar a atenção do usuário com mesnagens de erro, alerta, sucesso ou dicas. Na validação de formulários, o alerta deve vir no início do formulário, logo abaixo do título e instruções, com um conteúdo que auxilie o usuário. Os <code>alerts</code> não possuem uma cor padrão, precisando de classes adicionais de acordo com seu objetivo.</p>
 
             <p>Ao utilizar o alerta de <strong>erro</strong> ou <strong>sucesso</strong>, é importante sempre oferecer uma alternativa ao usuário, como tentar novamente fazer a ação com erro ou desfazer a ação concluída.</p>
@@ -863,6 +864,34 @@
 &lt;div&nbsp;class=&quot;alert&nbsp;alert-danger&quot;&nbsp;role=&quot;alert&quot;&gt;...&lt;/div&gt;</code></pre>
               </div>
             </div>
+            
+            <h4>Snackbars</h4>
+            <p>Snackbars fornecem um feedback claro e leve sobre a ação, bem como uma opção de desfazer esta mesma ação ou performar outra. Exibem uma mensagem breve no rodapé à esquerda da página. Utilize toasts para:</p>
+            <ul class="dos-and-donts">
+              <li class="do">Exibir feedback de sucesso, após realizar ação em janela flutuante (que se fecha automaticamente).</li>
+              <li class="do">Exibir feedback de qualquer ação no mapa (GE).</li>
+              <li class="dont">Exibir informações do sistema que não têm importância ou são puramente técnicas</li>
+            </ul>
+            <p>Para consultar o script, leia a <a href="http://bootboxjs.com">documentação do Bootbox</a>.</p>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <h3>Exemplo</h3>
+                <a href="#" class="btn btn-block btn-primary show-toast">Exibir Toast</a>
+
+                <div class="bb-alert alert alert-success">
+                  <strong>Sucesso!</strong> O item foi adicionado com sucesso. <a href="#">desfazer</a>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h4>Código</h4>
+                <pre><code class="language-markup">&lt;div&nbsp;class=&quot;bb-alert&nbsp;alert&nbsp;alert-success&quot;&gt;
+&nbsp;&nbsp;&lt;strong&gt;Sucesso!&lt;/strong&gt;&nbsp;O&nbsp;item&nbsp;foi&nbsp;adicionado&nbsp;com&nbsp;sucesso.&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;desfazer&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+
+
           </section><!--/#alertas-->
 
           <section id="abas">
@@ -3143,6 +3172,7 @@
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/typeahead.js"></script>
     <script src="assets/js/tag-it.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/bootbox.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 
     <script type="text/javascript">
@@ -3159,6 +3189,10 @@
           }
         }
       });
+    });
+    $('.show-toast').click( function() {
+      $('.bb-alert').fadeIn(300).delay(3500).fadeOut("slow");
+      return false
     });
     </script>
   </body>

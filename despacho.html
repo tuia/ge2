@@ -906,7 +906,7 @@
                 </ul>
               </li>
               <li><a href="#" class="hastooltip" title="turma"><img src="img/icons/turma-icon.png" /></a></li>
-              <li><a href="#" class="hastooltip" title="distância da base"><img src="img/icons/dist-icon.png" /></a></li>
+              <li><a href="#" class="hastooltip" title="distância da base"><img src="img/icons/dist-icon.png" height="13px" /></a></li>
               <li><a href="#" class="hastooltip" title="nota de serviço"><img src="img/icons/note-icon.png" /></a></li>
               <li><a href="#" class="hastooltip" title="triagem"><img src="img/icons/triagem-icon.png" /></a></li>
               <li><a href="#" class="hastooltip" title="atenção especial"><img src="img/icons/atencao-icon.png" /></a></li>
@@ -960,41 +960,46 @@
 
             <div class="row bordered vertical">
 
-              <div class="col-xs-4">
+              <div class="col-xs-8">
                 <h4>Ordem de serviço</h4>
                 <small class="help-block">Utilize <strong>vígula ( , )</strong> para separar os itens selecionados e <strong>asterisco ( * )</strong> para selecionar vários itens. Ex: RC* = todos que começam com RC</small>
-                <div class="form-group">
-                  <label>tipo de serviço</label>
-                  <input type="text" class="form-control" data-role="tagsinput"/>
-                </div><!--/.form-group-->
-                <div class="form-group">
-                  <label>Prioridades</label>
-                  <input type="text" class="form-control" data-role="tagsinput"/>
-                </div><!--/.form-group-->
-                <div class="form-group">
-                  <label>Abrangência</label>
-                  <input type="text" class="form-control" data-role="tagsinput"/>
-                </div><!--/.form-group-->
-              </div><!--/col-xs-4-->
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label>tipo de serviço</label>
+                    <input type="text" class="form-control" data-role="tagsinput"/>
+                  </div><!--/.form-group-->
+                  <div class="form-group">
+                    <label>Prioridades</label>
+                    <input type="text" class="form-control" data-role="tagsinput"/>
+                  </div><!--/.form-group-->
+                  
+                </div><!--/.col-xs-4-->
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label>Abrangência</label>
+                    <input type="text" class="form-control" data-role="tagsinput"/>
+                  </div><!--/.form-group-->
+                  <div class="form-group">
+                    <label>Condições especiais</label>
+                    <div class="btn-group btn-group-justified" data-toggle="buttons">
+                      <label class="btn btn-default active hastooltip" data-title="prioridade">
+                        <input type="checkbox" autocomplete="off" checked> <img src="img/icons/priority-icon.png" alt="prioridade"/>
+                      </label>
+                      <label class="btn btn-default hastooltip" data-title="cliente especial">
+                        <input type="checkbox" autocomplete="off"> <img src="img/icons/special-client-icon.png" alt="cliente especial"/>
+                      </label>
+                      <label class="btn btn-default hastooltip" data-title="suporte à vida">
+                        <input type="checkbox" autocomplete="off"> <img src="img/icons/life-support-icon.png" alt="suporte à vida"/>
+                      </label>
+                      <label class="btn btn-default hastooltip" data-title="situação especial">
+                        <input type="checkbox" autocomplete="off"> <img src="img/icons/situacao-especial-icon.png" alt="situação especial"/>
+                      </label>
+                    </div>
+                  </div><!--/.form-group-->
+                </div>
+              </div><!--/col-xs-8-->
 
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label>Condições especiais</label>
-                  <div class="btn-group btn-group-justified" data-toggle="buttons">
-                    <label class="btn btn-default active hastooltip" data-title="prioridade">
-                      <input type="checkbox" autocomplete="off" checked> <img src="img/icons/priority-icon.png" alt="prioridade"/>
-                    </label>
-                    <label class="btn btn-default hastooltip" data-title="cliente especial">
-                      <input type="checkbox" autocomplete="off"> <img src="img/icons/special-client-icon.png" alt="cliente especial"/>
-                    </label>
-                    <label class="btn btn-default hastooltip" data-title="suporte à vida">
-                      <input type="checkbox" autocomplete="off"> <img src="img/icons/life-support-icon.png" alt="suporte à vida"/>
-                    </label>
-                    <label class="btn btn-default hastooltip" data-title="situação especial">
-                      <input type="checkbox" autocomplete="off"> <img src="img/icons/situacao-especial-icon.png" alt="situação especial"/>
-                    </label>
-                  </div><br />
-                </div><!--/.form-group-->
+              <div class="col-xs-4">                
                 <h4>Dispositivo</h4>
                 <small class="help-block">Utilize vígula (,) para separar os equipamentos selecionados</small>
                 <div class="form-group">
@@ -1029,7 +1034,38 @@
                   </div><!--/.row-->
                 </div>
               </div><!--/col-xs-4-->
-
+              <div class="col-xs-8">
+                <h4>Equipe</h4>
+                <small class="help-block">Utilize vígula (,) para separar as equipes selecionados</small>
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label>Equipes</label>
+                    <input type="text" class="form-control" data-role="tagsinput"/>
+                  </div><!--/.form-group-->
+                </div>
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label>buton group (radio)</label>
+                    <div class="btn-group btn-group-justified" data-toggle="buttons">
+                      <label class="btn btn-default btn-sm text-pendente">
+                        <input type="checkbox" name="options" id="option1" autocomplete="off" checked > pendente
+                      </label>
+                      <label class="btn btn-default btn-sm text-designado">
+                        <input type="checkbox" name="options" id="option2" autocomplete="off"> designado
+                      </label>
+                      <label class="btn btn-default btn-sm text-acionado">
+                        <input type="checkbox" name="options" id="option3" autocomplete="off"> acionado
+                      </label>
+                      <label class="btn btn-default btn-sm text-em-execucao">
+                        <input type="checkbox" name="options" id="option3" autocomplete="off"> em execução
+                      </label>
+                      <label class="btn btn-default btn-sm text-finalizado">
+                        <input type="checkbox" name="options" id="option3" autocomplete="off"> finalizado
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="col-xs-4">
                 <h4>Localização</h4> 
                 <div class="form-group">
@@ -1046,32 +1082,6 @@
                     </div>
                   </div><!--/.form-group-->
                 </div><!--/form-group-->
-                <h4>Equipe</h4>
-                <small class="help-block">Utilize vígula (,) para separar as equipes selecionados</small>
-                <div class="form-group">
-                  <label>Equipes</label>
-                  <input type="text" class="form-control" data-role="tagsinput"/>
-                </div><!--/.form-group-->
-                <div class="form-group">
-                  <label>buton group (radio)</label>
-                  <div class="btn-group btn-group-justified" data-toggle="buttons">
-                    <label class="btn btn-default btn-sm text-pendente">
-                      <input type="checkbox" name="options" id="option1" autocomplete="off" checked > pendente
-                    </label>
-                    <label class="btn btn-default btn-sm text-designado">
-                      <input type="checkbox" name="options" id="option2" autocomplete="off"> designado
-                    </label>
-                    <label class="btn btn-default btn-sm text-acionado">
-                      <input type="checkbox" name="options" id="option3" autocomplete="off"> acionado
-                    </label>
-                    <label class="btn btn-default btn-sm text-em-execucao">
-                      <input type="checkbox" name="options" id="option3" autocomplete="off"> em execução
-                    </label>
-                    <label class="btn btn-default btn-sm text-finalizado">
-                      <input type="checkbox" name="options" id="option3" autocomplete="off"> finalizado
-                    </label>
-                  </div>
-                </div>
               </div><!--/col-xs-4-->
 
             </div><!--/row-->

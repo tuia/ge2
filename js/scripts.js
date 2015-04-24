@@ -1,6 +1,5 @@
 //SCRIPTS
 
-	
 
 	////////// BOOTSTRAP  /////////
 
@@ -131,10 +130,26 @@
 		});
 
 		//FILTER BUTTON
+		// show filter options
 		$('.filter-container .filter-btn').click( function() {
 			$(this).parents('.filter-container').find('.filter-content').slideToggle();
 			$(this).toggleClass('active');
 			return false
+		});
+
+		// FILTER TRIGGER BUTTON
+		// animate the selected filter options being applied
+		$('.filter-trigger').click( function() {
+			$(this).parents('.filter-content').slideUp('fast', function() {
+				$('.filter-alert').slideDown('slow');
+			});
+			return false;
+		});
+
+		//REMOVE FILTER-BUTTON
+		//animate the filter-altert removal
+		$('.remove-filter-btn').click( function() {
+			$(this).parents('.alert').slideUp();
 		});
 
 

@@ -444,3 +444,70 @@ p.research-found {
 		max-height: none;
 	}
 }
+
+/* MODAL DE DESPACHO DE SERVIÇOS */
+#despacho-modal-form {
+	& > .form-box.well {
+		margin-bottom: 0;
+	}
+
+	.team-item-container {
+		.auto {
+			max-height: 130px;
+			height: auto;
+		}
+
+		.form-arrows {
+			.form-group {
+				margin-bottom: 0;
+				label {
+					display: block;
+					position: relative;
+					font-size: 10px;
+					.fa {
+						position: absolute;
+						top: 3px;
+						right: -5px;
+					}
+				}
+				.form-control {padding-left: 3px; padding-right: 3px;}
+			}
+		}
+
+		.team-form {
+			background: #FFEFBF;
+			.form-inline{
+				padding: 10px;
+				margin-bottom: 0;
+				.dropdown {
+					width: 140px;
+				}
+			}
+		}
+
+		.team-item{
+			padding-left: 64px;
+			width: calc(100% - 10px);
+			.entity-symbol {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			label {font-size: 9px}
+			dl {
+				margin: 5px 0;
+				text-align: center;
+				dt {font-size: 10px}
+				dd {font-size: 12px;}
+			}
+			.editable-field-form { 
+				margin: 5px 0;
+				.form-actions {
+					background: #f0f0f0;
+					padding: 3px;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+}

@@ -1282,9 +1282,9 @@
                       <span>064621</span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                      <li class="active"><a href="#"><i class="fa fa-car"></i> 064621 <small>designado</small></a></li>
-                      <li><a href="#"><i class="fa fa-cab"></i> 467298 <small class="text-em-execucao">em execução</small></a></li>
-                      <li><a href="#"><i class="fa fa-bus"></i> 064621 <small class="text-acionado">acionado</small></a></li>
+                      <li class="active"><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-car"></i> 064621 <small>designado</small></a></li>
+                      <li><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-cab"></i> 467298 <small class="text-em-execucao">em execução</small></a></li>
+                      <li><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-bus"></i> 064621 <small class="text-acionado">acionado</small></a></li>
                     </ul>
                   </div>
                   <div class="entity-card-data">
@@ -1406,8 +1406,8 @@
               <td><strong>324</strong></td>
               <td>4</td>
               <td>1</td>
-              <td>                
-                <div class="entity-card">
+              <td>        
+                <a href="#abrir-equipamento" class="entity-card show-window-btn">
                   <div class="entity-symbol em-execucao">
                     <i class="fa fa-cab"></i>
                     <span>MA01 </span>
@@ -1417,7 +1417,7 @@
                     <span class="text-em-execucao">Em execução</span>
                   </div><!--/.entity-card-data-->
                   <span class="clearfix"></span>
-                </div><!--/.entity-card-->
+                </a><!--/.entity-card-->
               </td>
               <td><strong>04:00</strong><br />2:30</td>
               <td>                
@@ -1539,11 +1539,11 @@
                     <a href="#" class="entity-symbol em-execucao dropdown-toggle" data-toggle="dropdown">
                       <i class="fa fa-car"></i>
                       <span>064621</span>
-                    </a>
+                    </a>                    
                     <ul class="dropdown-menu" role="menu">
-                      <li class="active"><a href="#"><i class="fa fa-car"></i> 064621 <small>em execução</small></a></li>
-                      <li><a href="#"><i class="fa fa-cab"></i> 467298 <small class="text-em-execucao">em execução</small></a></li>
-                      <li><a href="#"><i class="fa fa-bus"></i> 064621 <small class="text-acionado">acionado</small></a></li>
+                      <li class="active"><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-car"></i> 064621 <small>designado</small></a></li>
+                      <li><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-cab"></i> 467298 <small class="text-em-execucao">em execução</small></a></li>
+                      <li><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-bus"></i> 064621 <small class="text-acionado">acionado</small></a></li>
                     </ul>
                   </div>
                   <div class="entity-card-data">
@@ -1668,11 +1668,11 @@
                     <a href="#" class="entity-symbol designado dropdown-toggle" data-toggle="dropdown">
                       <i class="fa fa-car"></i>
                       <span>064621</span>
-                    </a>
+                    </a>                    
                     <ul class="dropdown-menu" role="menu">
-                      <li class="active"><a href="#"><i class="fa fa-car"></i> 064621 <small>designado</small></a></li>
-                      <li><a href="#"><i class="fa fa-cab"></i> 467298 <small class="text-em-execucao">em execução</small></a></li>
-                      <li><a href="#"><i class="fa fa-bus"></i> 064621 <small class="text-acionado">acionado</small></a></li>
+                      <li class="active"><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-car"></i> 064621 <small>designado</small></a></li>
+                      <li><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-cab"></i> 467298 <small class="text-em-execucao">em execução</small></a></li>
+                      <li><a href="#abrir-equipamento" class="show-window-btn"><i class="fa fa-bus"></i> 064621 <small class="text-acionado">acionado</small></a></li>
                     </ul>
                   </div>
                   <div class="entity-card-data">
@@ -1791,8 +1791,8 @@
               <td><strong>324</strong></td>
               <td>4</td>
               <td>1</td>
-              <td>                
-                <div class="entity-card">
+              <td>                        
+                <a href="#abrir-equipamento" class="entity-card show-window-btn">
                   <div class="entity-symbol acionado">
                     <i class="fa fa-cab"></i>
                     <span>MA01 </span>
@@ -1802,7 +1802,7 @@
                     <span class="text-acionado">acionado</span>
                   </div><!--/.entity-card-data-->
                   <span class="clearfix"></span>
-                </div><!--/.entity-card-->
+                </a><!--/.entity-card-->
               </td>
               <td><strong>04:00</strong><br />2:30</td>
               <td>                
@@ -1941,6 +1941,24 @@
         </div><!--/entity-window-header-->
         <div class="entity-body">
           <iframe src="buscar-clientes.html" frameborder="0" scrolling="no"></iframe>
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->      
+    </div><!--/entity-window-->
+
+
+
+    <!--/Abrir Equipamento-->
+    <div class="entity-window" id="abrir-equipamento">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar poste"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/entity-window-header-->
+        <div class="entity-body">
+          <iframe src="despacho-servico.html" frameborder="0" scrolling="no"></iframe>
         </div><!--/.entity-body-->
       </div><!--/entity-content-->      
     </div><!--/entity-window-->

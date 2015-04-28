@@ -332,7 +332,7 @@
 	.research-container.well div[role="tabpanel"] .tab-content {padding-top: 40px;}
 	.well {
 		position: relative;
-		div[role="tabpanel"] {
+		div[role="tabpanel"], &[role="tabpanel"] {
 			.nav.nav-tabs {
 				&.nav-justified {
 					margin: -20px -19px 20px;
@@ -341,6 +341,7 @@
 			}
 			.tab-content {padding-top: 15px;}
 		}
+		&[role="tabpanel"] { .tab-content{ padding-top: 40px; } }
 		.nav-tabs {
 			& > li {
 				background: #eeeeee;

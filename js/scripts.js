@@ -267,15 +267,18 @@
 		}
 
 		//CHARACTERES COUNTER
-		$('.input-counter-container .form-control').keyup( function() {
-			var len = $(this).val().length;
-		    if (len >= 31) {
-		      $(this).val($(this).val().substring(0, 30));
-		    } else {
-		      $('.input-counter').text(30 - len);
-		      if (len > 24) { $('.input-counter').css('color', 'red'); }
-		      else { $('.input-counter').css('color', 'inherit'); }
-		    }
+		 $('.input-counter-container .form-control').keyup( function() {
+				var len = $(this).val().length;
+				var inputMaxLenght = $(this).attr("maxLength");
+
+			if (len >= inputMaxLenght+1) {
+				$(this).val($(this).val().substring(0, inputMaxLenght));
+			} else {
+			 $('.input-counter').text(inputMaxLenght - len);
+
+			 if (len > inputMaxLenght-5) { $('.input-counter').css('color', 'red'); }
+			 else { $('.input-counter').css('color', 'inherit'); }
+		   }
 		});
 
 		//EDITABLE FIELDS

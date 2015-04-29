@@ -983,8 +983,8 @@
             <div class="well" role="tabpanel">
 
               <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li class="active"><a href="#geral" aria-controls="geral" role="tab" data-toggle="tab">Geral</a></li>
-                <li><a href="#toi" aria-controls="toi" role="tab" data-toggle="tab">TOI</a></li>
+                <li><a href="#geral" aria-controls="geral" role="tab" data-toggle="tab">Geral</a></li>
+                <li class="active"><a href="#toi" aria-controls="toi" role="tab" data-toggle="tab">TOI</a></li>
                 <li><a href="#outro" aria-controls="outro" role="tab" data-toggle="tab">Outro</a></li>
               </ul>
 
@@ -992,7 +992,7 @@
               <div class="tab-content">
 
                 <!--/GERAL-->
-                <div role="tabpanel" class="tab-pane active" id="geral">
+                <div role="tabpanel" class="tab-pane " id="geral">
                   <div class="row bordered">
                     <div class="col-xs-6">
                       <div class="row">
@@ -1052,10 +1052,10 @@
                 </div><!--/tab-pane-->
 
                 <!--/TOI-->
-                <div role="tabpanel" class="tab-pane" id="toi">
+                <div role="tabpanel" class="tab-pane active" id="toi">
                   <p>Instalação <a href="#" class="hastooltip" title="copiar">4564321 <i class="fa fa-files"></i></a>, Seropedica, Rua FF Moura nº168 A</p>
 
-                  <div class="row bordered">
+                  <div class="form-group row bordered">
                     <div class="col-xs-3">
                       <span class="form-group-title">TOI</span>
                       <div class="form-group">
@@ -1080,6 +1080,341 @@
                       </div><!--/row-->                      
                     </div><!--/col-->
                   </div><!--/row bordered-->
+
+
+                  <!--/TOI TABPANE-->
+                  <div role="tabpanel">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills nav-justified" role="tablist">
+                      <li class="active"><a href="#identificacao" aria-controls="identificacao" role="tab" data-toggle="tab">Identificação</a></li>
+                      <li><a href="#inspecao" aria-controls="inspecao" role="tab" data-toggle="tab">Inspeção</a></li>
+                      <li><a href="#ligacao" aria-controls="ligacao" role="tab" data-toggle="tab">Ligação</a></li>
+                      <li><a href="#transformacao" aria-controls="transformacao" role="tab" data-toggle="tab">Transformação</a></li>
+                      <li><a href="#medicao" aria-controls="medicao" role="tab" data-toggle="tab">Medição</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+
+                      <!--/Identificacao-->
+                      <div role="tabpanel" class="tab-pane active" id="identificacao">
+
+                        <div class="row bordered vertical">
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Titular da unidade</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div><!--/col-xs-4-->
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Identificação</label>
+                              <select class="form-control">
+                                <option>CPF</option>
+                                <option>RG</option>
+                              </select>
+                            </div>
+                          </div><!--/col-xs-4-->
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Usuário encontrado</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div><!--/col-xs-4-->
+                        </div><!--/.row-->
+
+                        <div class="row bordered vertical">
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Declarante</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div><!--/col-xs-4-->
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Documento</label>
+                              <select class="form-control">
+                                <option>CPF</option>
+                                <option>RG</option>
+                              </select>
+                            </div>
+                          </div><!--/col-xs-4-->
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Parentesco/Afinidade</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div><!--/col-xs-4-->
+                        </div><!--/.row-->
+
+                        <div class="row bordered vertical">
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Tipo de ocupação</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div><!--/col-xs-4-->
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Tempo de ocupação</label>
+                              <div class="input-group">
+                                <input type="text" class="form-control">
+                                <div class="input-group-btn">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">anos <span class="caret"></span></button>
+                                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="#">anos</a></li>
+                                    <li><a href="#">meses</a></li>
+                                  </ul>
+                                </div><!-- /btn-group -->
+                              </div><!-- /input-group -->
+                            </div>
+                          </div><!--/col-xs-4-->
+                          <div class="col-xs-4">
+                            <div class="form-group">
+                              <label>Testemunha</label>
+                              <input type="text" class="form-control">
+                            </div>
+                          </div><!--/col-xs-4-->
+                        </div><!--/.row-->
+
+
+                      </div><!--/.tabpanel-->
+
+                      <!--/Inspecao-->
+                      <div role="tabpanel" class="tab-pane" id="inspecao">
+                        <div class="row bordered vertical">
+                          <div class="col-xs-4">
+
+                            <div class="checkbox">
+                              <label> <input type="checkbox"> Autorizou levantamento de carga
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label> <input type="checkbox"> Solicitou perícia técnica
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label> <input type="checkbox"> Fotografou ocorrência
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label> <input type="checkbox"> Recusou a assinar TOI
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label> <input type="checkbox"> UC normalizada no ato da inspeção
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label> <input type="checkbox"> Suspenso fornecimento da UC
+                              </label>
+                            </div>
+                          </div><!--/.col-->
+                          <div class="col-xs-8">
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>Invólucro</label>
+                                  <input type="text" class="form-control" placeholder="nº" />
+                                </div>
+                              </div><!--/.col-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>Quantidade de fotos</label>
+                                  <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                  </select>
+                                </div>
+                              </div><!--/.col-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>Data de envio</label>
+                                  <input type="text" class="form-control datepicker"/>
+                                </div>
+                              </div><!--/.col-->
+                            </div><!--/.row-->
+                            
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>Invólucro nº2</label>
+                                  <input type="text" class="form-control" placeholder="nº" />
+                                </div>
+                              </div><!--/.col-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>Número AR</label>
+                                  <input type="text" class="form-control"/>
+                                </div>
+                              </div><!--/.col-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>Data de recebimento</label>
+                                  <input type="text" class="form-control datepicker"/>
+                                </div>
+                              </div><!--/.col-->
+                            </div><!--/.row-->
+
+                          </div><!--/.col-->
+                        </div><!--/row bordered vertical-->
+                      </div><!--/.tabpanel-->
+
+                      <!--/Ligação-->
+                      <div role="tabpanel" class="tab-pane" id="ligacao">...</div><!--/.tabpanel-->
+
+                      <!--/Transformação-->
+                      <div role="tabpanel" class="tab-pane" id="transformacao">
+                        <div class="row bordered vertical">                     
+                          <div class="col-xs-2"><h4>TC</h4></div>
+                          <div class="col-xs-10">
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>1º</label>
+                                  <input type="text" class="form-control input-sm" />
+                                </div>
+                              </div><!--/col4-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>2º</label>
+                                  <input type="text" class="form-control input-sm" />
+                                </div>
+                              </div><!--/col4-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>3º</label>
+                                  <input type="text" class="form-control input-sm" />
+                                </div>
+                              </div><!--/col4-->
+                            </div><!--/.row-->
+                          </div><!--/col10-->
+                        </div><!--/row-->
+                        <div class="row bordered">                     
+                          <div class="col-xs-2"><h4>RTC</h4></div>
+                          <div class="col-xs-10">
+                            <div class="form-group">
+                              <input type="text" class="form-control input-sm" />
+                            </div>
+                          </div><!--/col10-->
+                        </div><!--/row-->
+
+
+                        <div class="row bordered vertical">                     
+                          <div class="col-xs-2"><h4>TP</h4></div>
+                          <div class="col-xs-10">
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>1º</label>
+                                  <input type="text" class="form-control input-sm" />
+                                </div>
+                              </div><!--/col4-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>2º</label>
+                                  <input type="text" class="form-control input-sm" />
+                                </div>
+                              </div><!--/col4-->
+                              <div class="col-xs-4">
+                                <div class="form-group">
+                                  <label>3º</label>
+                                  <input type="text" class="form-control input-sm" />
+                                </div>
+                              </div><!--/col4-->
+                            </div><!--/.row-->
+                          </div><!--/col10-->
+                        </div><!--/row-->
+                        <div class="row bordered">                     
+                          <div class="col-xs-2"><h4>RTP</h4></div>
+                          <div class="col-xs-10">
+                            <div class="form-group">
+                              <input type="text" class="form-control input-sm" />
+                            </div>
+                          </div><!--/col10-->
+                        </div><!--/row-->
+                      </div><!--/.tabpanel-->
+
+                      <!--/Medição-->
+                      <div role="tabpanel" class="tab-pane" id="medicao">
+                        <div class="row bordered">
+                          <div class="col-xs-6">
+                            <div class="row">
+                              <div class="form-group col-xs-8">
+                                <label>Fabricante</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                              <div class="form-group col-xs-4">
+                                <label>Ano</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                          </div><!--/col-6-->
+                          <div class="form-group col-xs-3">
+                            <label>Nº de série</label>
+                            <input type="text" placeholder="nº" class="form-control" />
+                          </div>
+                          <div class="form-group col-xs-3">
+                            <label>Nº patrimônio</label>
+                            <input type="text" placeholder="nº" class="form-control" />
+                          </div>
+                        </div><!--/row bordered-->
+
+
+                        <div class="row bordered vertical">
+                          <div class="form-group col-xs-3">
+                            <label>Tensão</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" aria-label="V/KV" />
+                              <span class="input-group-addon">V/KV</span>
+                            </div>
+                          </div>
+                          <div class="form-group col-xs-3">
+                            <label>Corrente nominal</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" aria-label="V/KV" />
+                              <span class="input-group-addon">V/KV</span>
+                            </div>
+                          </div>
+                          <div class="form-group col-xs-3">
+                            <label>Corrente máxima</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" aria-label="V/KV" />
+                              <span class="input-group-addon">V/KV</span>
+                            </div>
+                          </div>
+                          <div class="form-group col-xs-3">
+                            <label>Constante</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" aria-label="V/KV" />
+                              <span class="input-group-addon">V/KV</span>
+                            </div>
+                          </div>
+                        </div><!--/row bordered-->
+                        <div class="row bordered vertical">
+                          <div class="form-group col-xs-4">
+                            <label>Tipo de medidor</label>
+                            <select class="form-control">
+                              <option>trifásico</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-xs-4">
+                            <label>Localização</label>
+                            <select class="form-control">
+                              <option>outro</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-xs-4">
+                            <label>Descrição da localização</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div><!--/row bordered-->
+                      </div><!--/.tabpanel-->
+                    </div><!--/.tab-content-->
+
+                  </div><!--/tabpanel-->
                   
                 </div><!--/tab-pane-->
                 <div role="tabpanel" class="tab-pane" id="outro">...</div><!--/tab-pane-->

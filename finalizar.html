@@ -950,14 +950,13 @@
 
               <!-- Nav tabs -->
               <ul class="nav nav-pills nav-justified" role="tablist">
-                <li class="active"><a href="#todos" aria-controls="todos" role="tab" data-toggle="tab">Todos</a></li>
-                <li><a href="#ultimos" aria-controls="ultimos" role="tab" data-toggle="tab">Últimos acessados</a></li>
-                <li><a href="#mais-acessados" aria-controls="mais-acessados" role="tab" data-toggle="tab">Mais acessados</a></li>
+                <li class="active"><a href="#cods-fechamento" aria-controls="cods-fechamento" role="tab" data-toggle="tab">Códs. de fechamento</a></li>
+                <li><a href="#cods-reprova" aria-controls="cods-reprova" role="tab" data-toggle="tab">Códs. de reprova</a></li>
               </ul>
 
               <!-- Tab panes -->
               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="todos">
+                <div role="tabpanel" class="tab-pane active" id="cods-fechamento">
                   
                   <!--/SEARCH-->
                   <div class="search-form">
@@ -967,9 +966,64 @@
                     <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                   </div><!--/search-form-->
 
+                  <div class="droppable-list">
+                    <ol>
+
+                      <li class="">
+                        <span class="before">cod</span>
+                        <a href="#" class="droppable-item">
+                          <span>Substituído vão de rede secundária</span>
+                          <i class="fa fa-plus"></i>
+                        </a>
+                      </li>
+
+                      <li class="active">
+                        <span class="before">cod</span>
+                        <a href="#" class="droppable-item">
+                          <span>Interligar circuito transformador</span>
+                          <i class="fa fa-remove"></i>
+                        </a>
+                      </li>
+
+                      <li class="active">
+                        <span class="before">cod</span>
+                        <a href="#" class="droppable-item">
+                          <span>Substituido transformador</span>
+                          <i class="fa fa-remove"></i>
+                        </a>
+                      </li>
+
+                      <li class="two-level">
+                        <ol>
+                          <li class="active">
+                            <span class="before">cod</span>
+                            <a href="#" class="droppable-item">
+                              <span>Fechado dispositivo de proteção (ch. de fusível)</span>
+                              <i class="fa fa-remove"></i>
+                            </a>
+                          </li>
+                          <li class="">
+                            <span class="before">cod</span>
+                            <a href="#" class="droppable-item">
+                              <span>Retirado vespeiro MT/BT</span>
+                          <i class="fa fa-plus"></i>
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+
+                      <li class="">
+                        <span class="before">cod</span>
+                        <a href="#" class="droppable-item">
+                          <span>Substituído vão de rede secundária</span>
+                          <i class="fa fa-plus"></i>
+                        </a>
+                      </li>
+                    </ol>
+                  </div><!--/droppable-list-->
+
                 </div><!--/tab-pane-->
-                <div role="tabpanel" class="tab-pane" id="ultimos">...</div><!--/tab-pane-->
-                <div role="tabpanel" class="tab-pane" id="mais-acessados">...</div><!--/tab-pane-->
+                <div role="tabpanel" class="tab-pane" id="cods-reprova">...</div><!--/tab-pane-->
               </div><!--/.tab-content-->
 
             </div><!--/tabpanel-->
@@ -980,28 +1034,72 @@
 
 
           <div class="col-xs-8">
-            <div class="well" role="tabpanel">
+            <div class="well multiple-tabs">
 
-              <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li><a href="#geral" aria-controls="geral" role="tab" data-toggle="tab">Geral</a></li>
-                <li class="active"><a href="#toi" aria-controls="toi" role="tab" data-toggle="tab">TOI</a></li>
-                <li><a href="#outro" aria-controls="outro" role="tab" data-toggle="tab">Outro</a></li>
+              <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#cods" class="toggle-tab">Códs. de fechamento</a></li>
+                <li><a href="#acoes" class="toggle-tab">Ações</a></li>
+                <li><a href="#toi" class="toggle-tab">TOI</a></li>
+                <li class="dropdown-menu" role="menu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">... <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#outro" class="toggle-tab">outro</a></li>
+                  </ul>
+                </li>
               </ul>
 
               <!-- Tab panes -->
               <div class="tab-content">
 
-                <!--/GERAL-->
-                <div role="tabpanel" class="tab-pane " id="geral">
+                <!--/CODS-->
+                <div class="tab-pane active" id="cods">
+
+                  <div class="droppable-list">
+                    <ol>
+
+                      <li class="active">
+                        <span class="before">cod</span>
+                        <a href="#" class="droppable-item">
+                          <span>Interligar circuito transformador</span>
+                          <i class="fa fa-remove"></i>
+                        </a>
+                      </li>
+
+                      <li class="active">
+                        <span class="before">cod</span>
+                        <a href="#" class="droppable-item">
+                          <span>Substituido transformador</span>
+                          <i class="fa fa-remove"></i>
+                        </a>
+                      </li>
+
+                      <li class="two-level">
+                        <ol>
+                          <li class="active">
+                            <span class="before">cod</span>
+                            <a href="#" class="droppable-item">
+                              <span>Fechado dispositivo de proteção (ch. de fusível)</span>
+                              <i class="fa fa-remove"></i>
+                            </a>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </div><!--/droppable-list-->
+                  
+                </div><!--/.tab-pane-->
+
+                <!--/AÇÕES-->
+                <div class="tab-pane" id="acoes">
                   <div class="row bordered">
                     <div class="col-xs-6">
                       <div class="row">
                         <div class="form-group col-xs-6">
-                          <label>Disjuntor</label>
+                          <label class="control-label">Disjuntor</label>
                           <input type="text" class="form-control" placeholder="nº"/>
                         </div><!--/form-group-->
                         <div class="form-group col-xs-6">
-                          <label>Fase ligada</label>
+                          <label class="control-label">Fase ligada</label>
                           <select class="form-control">
                             <option>a</option>
                             <option>b</option>
@@ -1012,7 +1110,7 @@
 
                     <div class="col-xs-6">
                       <div class="form-group">
-                        <label>Observações</label>
+                        <label class="control-label">Observações</label>
                         <input type="text" class="form-control" placeholder=""/>
                       </div><!--/form-group-->
                     </div><!--/col-->
@@ -1049,10 +1147,32 @@
                     </div><!--/col-->
                   </div><!--/row-->
 
+                  <div class="form-horizontal">
+                    <h5>2. Interligar circuito transformador</h5>
+                    <div class="form-group">
+                      <label class="control-label col-xs-2">legenda 1</label>
+                      <div class="col-xs-10">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-xs-2">legenda 2</label>
+                      <div class="col-xs-10">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-xs-2">legenda 3</label>
+                      <div class="col-xs-10">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                  </div><!--/.form-horizontal-->
+
                 </div><!--/tab-pane-->
 
                 <!--/TOI-->
-                <div role="tabpanel" class="tab-pane active" id="toi">
+                <div role="tabpanel" class="tab-pane" id="toi">
                   <p>Instalação <a href="#" class="hastooltip" title="copiar">4564321 <i class="fa fa-files"></i></a>, Seropedica, Rua FF Moura nº168 A</p>
 
                   <div class="form-group row bordered">
@@ -1103,13 +1223,13 @@
                         <div class="row bordered vertical">
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Titular da unidade</label>
+                              <label class="control-label">Titular da unidade</label>
                               <input type="text" class="form-control">
                             </div>
                           </div><!--/col-xs-4-->
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Identificação</label>
+                              <label class="control-label">Identificação</label>
                               <select class="form-control">
                                 <option>CPF</option>
                                 <option>RG</option>
@@ -1118,7 +1238,7 @@
                           </div><!--/col-xs-4-->
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Usuário encontrado</label>
+                              <label class="control-label">Usuário encontrado</label>
                               <input type="text" class="form-control">
                             </div>
                           </div><!--/col-xs-4-->
@@ -1127,13 +1247,13 @@
                         <div class="row bordered vertical">
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Declarante</label>
+                              <label class="control-label">Declarante</label>
                               <input type="text" class="form-control">
                             </div>
                           </div><!--/col-xs-4-->
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Documento</label>
+                              <label class="control-label">Documento</label>
                               <select class="form-control">
                                 <option>CPF</option>
                                 <option>RG</option>
@@ -1142,7 +1262,7 @@
                           </div><!--/col-xs-4-->
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Parentesco/Afinidade</label>
+                              <label class="control-label">Parentesco/Afinidade</label>
                               <input type="text" class="form-control">
                             </div>
                           </div><!--/col-xs-4-->
@@ -1151,13 +1271,13 @@
                         <div class="row bordered vertical">
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Tipo de ocupação</label>
+                              <label class="control-label">Tipo de ocupação</label>
                               <input type="text" class="form-control">
                             </div>
                           </div><!--/col-xs-4-->
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Tempo de ocupação</label>
+                              <label class="control-label">Tempo de ocupação</label>
                               <div class="input-group">
                                 <input type="text" class="form-control">
                                 <div class="input-group-btn">
@@ -1172,7 +1292,7 @@
                           </div><!--/col-xs-4-->
                           <div class="col-xs-4">
                             <div class="form-group">
-                              <label>Testemunha</label>
+                              <label class="control-label">Testemunha</label>
                               <input type="text" class="form-control">
                             </div>
                           </div><!--/col-xs-4-->
@@ -1187,27 +1307,27 @@
                           <div class="col-xs-4">
 
                             <div class="checkbox">
-                              <label> <input type="checkbox"> Autorizou levantamento de carga
+                              <label class="control-label"> <input type="checkbox"> Autorizou levantamento de carga
                               </label>
                             </div>
                             <div class="checkbox">
-                              <label> <input type="checkbox"> Solicitou perícia técnica
+                              <label class="control-label"> <input type="checkbox"> Solicitou perícia técnica
                               </label>
                             </div>
                             <div class="checkbox">
-                              <label> <input type="checkbox"> Fotografou ocorrência
+                              <label class="control-label"> <input type="checkbox"> Fotografou ocorrência
                               </label>
                             </div>
                             <div class="checkbox">
-                              <label> <input type="checkbox"> Recusou a assinar TOI
+                              <label class="control-label"> <input type="checkbox"> Recusou a assinar TOI
                               </label>
                             </div>
                             <div class="checkbox">
-                              <label> <input type="checkbox"> UC normalizada no ato da inspeção
+                              <label class="control-label"> <input type="checkbox"> UC normalizada no ato da inspeção
                               </label>
                             </div>
                             <div class="checkbox">
-                              <label> <input type="checkbox"> Suspenso fornecimento da UC
+                              <label class="control-label"> <input type="checkbox"> Suspenso fornecimento da UC
                               </label>
                             </div>
                           </div><!--/.col-->
@@ -1215,13 +1335,13 @@
                             <div class="row">
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>Invólucro</label>
+                                  <label class="control-label">Invólucro</label>
                                   <input type="text" class="form-control" placeholder="nº" />
                                 </div>
                               </div><!--/.col-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>Quantidade de fotos</label>
+                                  <label class="control-label">Quantidade de fotos</label>
                                   <select class="form-control">
                                     <option>1</option>
                                     <option>2</option>
@@ -1231,7 +1351,7 @@
                               </div><!--/.col-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>Data de envio</label>
+                                  <label class="control-label">Data de envio</label>
                                   <input type="text" class="form-control datepicker"/>
                                 </div>
                               </div><!--/.col-->
@@ -1240,19 +1360,19 @@
                             <div class="row">
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>Invólucro nº2</label>
+                                  <label class="control-label">Invólucro nº2</label>
                                   <input type="text" class="form-control" placeholder="nº" />
                                 </div>
                               </div><!--/.col-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>Número AR</label>
+                                  <label class="control-label">Número AR</label>
                                   <input type="text" class="form-control"/>
                                 </div>
                               </div><!--/.col-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>Data de recebimento</label>
+                                  <label class="control-label">Data de recebimento</label>
                                   <input type="text" class="form-control datepicker"/>
                                 </div>
                               </div><!--/.col-->
@@ -1273,19 +1393,19 @@
                             <div class="row">
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>1º</label>
+                                  <label class="control-label">1º</label>
                                   <input type="text" class="form-control input-sm" />
                                 </div>
                               </div><!--/col4-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>2º</label>
+                                  <label class="control-label">2º</label>
                                   <input type="text" class="form-control input-sm" />
                                 </div>
                               </div><!--/col4-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>3º</label>
+                                  <label class="control-label">3º</label>
                                   <input type="text" class="form-control input-sm" />
                                 </div>
                               </div><!--/col4-->
@@ -1308,19 +1428,19 @@
                             <div class="row">
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>1º</label>
+                                  <label class="control-label">1º</label>
                                   <input type="text" class="form-control input-sm" />
                                 </div>
                               </div><!--/col4-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>2º</label>
+                                  <label class="control-label">2º</label>
                                   <input type="text" class="form-control input-sm" />
                                 </div>
                               </div><!--/col4-->
                               <div class="col-xs-4">
                                 <div class="form-group">
-                                  <label>3º</label>
+                                  <label class="control-label">3º</label>
                                   <input type="text" class="form-control input-sm" />
                                 </div>
                               </div><!--/col4-->
@@ -1343,21 +1463,21 @@
                           <div class="col-xs-6">
                             <div class="row">
                               <div class="form-group col-xs-8">
-                                <label>Fabricante</label>
+                                <label class="control-label">Fabricante</label>
                                 <input type="text" class="form-control" />
                               </div>
                               <div class="form-group col-xs-4">
-                                <label>Ano</label>
+                                <label class="control-label">Ano</label>
                                 <input type="text" class="form-control" />
                               </div>
                             </div>
                           </div><!--/col-6-->
                           <div class="form-group col-xs-3">
-                            <label>Nº de série</label>
+                            <label class="control-label">Nº de série</label>
                             <input type="text" placeholder="nº" class="form-control" />
                           </div>
                           <div class="form-group col-xs-3">
-                            <label>Nº patrimônio</label>
+                            <label class="control-label">Nº patrimônio</label>
                             <input type="text" placeholder="nº" class="form-control" />
                           </div>
                         </div><!--/row bordered-->
@@ -1365,28 +1485,28 @@
 
                         <div class="row bordered vertical">
                           <div class="form-group col-xs-3">
-                            <label>Tensão</label>
+                            <label class="control-label">Tensão</label>
                             <div class="input-group">
                               <input type="text" class="form-control" aria-label="V/KV" />
                               <span class="input-group-addon">V/KV</span>
                             </div>
                           </div>
                           <div class="form-group col-xs-3">
-                            <label>Corrente nominal</label>
+                            <label class="control-label">Corrente nominal</label>
                             <div class="input-group">
                               <input type="text" class="form-control" aria-label="V/KV" />
                               <span class="input-group-addon">V/KV</span>
                             </div>
                           </div>
                           <div class="form-group col-xs-3">
-                            <label>Corrente máxima</label>
+                            <label class="control-label">Corrente máxima</label>
                             <div class="input-group">
                               <input type="text" class="form-control" aria-label="V/KV" />
                               <span class="input-group-addon">V/KV</span>
                             </div>
                           </div>
                           <div class="form-group col-xs-3">
-                            <label>Constante</label>
+                            <label class="control-label">Constante</label>
                             <div class="input-group">
                               <input type="text" class="form-control" aria-label="V/KV" />
                               <span class="input-group-addon">V/KV</span>
@@ -1395,19 +1515,19 @@
                         </div><!--/row bordered-->
                         <div class="row bordered vertical">
                           <div class="form-group col-xs-4">
-                            <label>Tipo de medidor</label>
+                            <label class="control-label">Tipo de medidor</label>
                             <select class="form-control">
                               <option>trifásico</option>
                             </select>
                           </div>
                           <div class="form-group col-xs-4">
-                            <label>Localização</label>
+                            <label class="control-label">Localização</label>
                             <select class="form-control">
                               <option>outro</option>
                             </select>
                           </div>
                           <div class="form-group col-xs-4">
-                            <label>Descrição da localização</label>
+                            <label class="control-label">Descrição da localização</label>
                             <input type="text" class="form-control" />
                           </div>
                         </div><!--/row bordered-->

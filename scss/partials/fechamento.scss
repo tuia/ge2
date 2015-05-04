@@ -1,0 +1,81 @@
+/* FECHAMENTO DE SERVICOS */
+	
+.droppable-list {
+
+	ol {
+		list-style: none;
+		counter-reset: section;
+    padding: 0;
+
+		li {
+			background: #E7E7E7;
+			margin: 12px 0;
+			padding: 10px 10px 10px 50px;
+			position: relative;
+      line-height: 1em;
+      min-height: 38px;
+      @include border-radius(30px);
+
+			&:before {
+				counter-increment: section;
+				content: counters(section,".") " ";
+				background: #596D7B;
+				color: #FFFFFF;
+				font-weight: bold;
+				width: 40px;
+				height: 40px;
+				padding: 12px;
+				display: inline-block;
+				text-align: center;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin: -20px 0;
+				@include border-radius(25px);
+			}
+
+      &.two-level {
+        background: transparent;
+        padding: 0;
+        margin: 0 0 0 20px;
+        &:before {display: none;}
+      }
+
+      &.active {
+        background: lighten(#596D7B, 10%);
+        a {color: #fff; &:hover {color:#e6e6e6}}
+        &:before {
+          background: darken(#596D7B, 20%);
+        }
+        a .fa {display: none;}
+        a:hover .fa {display: block; color: #FFFFFF}
+      }
+
+      .before {display: none;}
+
+      a {
+        color: #666666;
+        font-weight: 400;
+        display: block;
+        position: relative;
+        padding-right: 26px;
+
+        .fa {
+          position: absolute;
+          right: 2px;
+          top: 50%;
+          font-size: 24px;
+          color: #596D7B;
+          margin: -11px 0;
+        }
+
+        &:hover {
+          color: #333333;
+          text-decoration: none;
+          & .fa {color: darken(#596D7B, 20%);}
+        }
+      }
+		}
+	}
+
+}/*droppable-list*/

@@ -226,7 +226,6 @@
 	}
 
 
-
 /************** COMPONENTS **************/
 
 	/* ALERTS */
@@ -332,7 +331,7 @@
 	.research-container.well div[role="tabpanel"] .tab-content {padding-top: 40px;}
 	.well {
 		position: relative;
-		div[role="tabpanel"], &[role="tabpanel"] {
+		div[role="tabpanel"], &[role="tabpanel"], &.multiple-tabs {
 			.nav.nav-tabs {
 				&.nav-justified {
 					margin: -20px -19px 20px;
@@ -341,7 +340,7 @@
 			}
 			.tab-content {padding-top: 15px;}
 		}
-		&[role="tabpanel"] { .tab-content{ padding-top: 40px; } }
+		&[role="tabpanel"], &.multiple-tabs { .tab-content{ padding-top: 40px; } }
 		.nav-tabs {
 			& > li {
 				background: #eeeeee;
@@ -374,6 +373,15 @@
 			li > a {
 				text-indent: 20px;
 			}
+		}
+	}
+	.nav-tabs > .dropdown-menu {
+		border: none;
+		padding: 0;
+		min-width: 0;
+		@include box-shadow(0,0,0);
+		&.open > a {
+			border: none;
 		}
 	}
 	.dropdown-header {

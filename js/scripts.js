@@ -533,3 +533,17 @@
 				handle: ".sortable-column-handler"
 			}).disableSelection();
 		});
+
+	     //MULTIPLE TABS
+	     $('.multiple-tabs .toggle-tab').click( function() {
+	     	var target = $(this).attr('href');
+	     	if ( $(this).parent().is('[role="tabpanel"]') ) {
+	     		return false
+	     	} else {	
+		     	$(this).parents('.multiple-tabs').children('.tab-content').children('.tab-pane').hide().css('visibility', 'hidden');
+		     	$(this).parents('.multiple-tabs').children('.nav').find('li').removeClass('active');
+		     	$(this).parents('li').not('.dropdown-toggle').addClass('active');
+		     	$(this).parents('.multiple-tabs').find(target).show().css('visibility', 'visible');
+		     	return false;
+		     }
+	     });

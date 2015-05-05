@@ -1,0 +1,84 @@
+/* CENTRAL DE MENSAGENS */
+/*
+  client: axxiom
+  author: Nathalia de Azevedo Xavier
+  by: latitude14.com.br
+  started: 05/05/15
+*/
+
+#central-de-mensagens {
+
+	#navigation {
+		display: none;
+	}
+
+	/*tipografia*/
+	h3 {
+		font-size: 14px;
+		color: #999999;
+		text-transform: uppercase;
+		margin: 0 0 5px;
+		line-height: 1.1em;
+	}
+	p.tip {
+		font-size: 12px;
+		color: #999999;
+		font-style: italic;
+		line-height: 1.2em;
+	}
+
+	/* componentes */
+	.cell {
+		width: 100%;
+		border-bottom: 1px solid #DDDDDD;
+	}
+
+	#msg-cemig-dropdown {
+		padding: 10px 0;
+		.dropdown-toggle {
+			color: #cccccc;
+			font-size: 20px;
+			text-transform: uppercase;
+			.highlight {color: #FFDC72}
+			&:after {
+				position: absolute;
+				content: " ";
+				bottom: -5px;
+				left: 10px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 10px 0 0;
+				border-color: #000 transparent transparent transparent;
+			}
+		}
+	}
+
+	#areas-list{
+		padding: 10px 0 0;
+		.area-item {
+			color: #999999;
+			a {
+				font-weight: bold;
+				color: #999999;
+			}
+			span {
+				font-size: 10px;
+				line-height: 1.2em;
+				display: block;
+				&.hidden-item {display: none;}
+			}
+			&.active {
+				color: #666666;
+				a {color: #666666;}
+			}
+		}
+		.btn.show-more {
+			font-size: 32px;
+			color: #999999;
+			line-height: 12px;  
+    		height: 40px;
+		}
+	}
+
+}

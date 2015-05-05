@@ -152,6 +152,11 @@
 			$(this).parents('.alert').slideUp();
 		});
 
+		//TOGGLE-ICON-BUTTON
+		$('.toggle-icon-btn').click( function() {
+			$(this).find('.fa').toggle();
+		});
+
 
 
 	////////// NAVBAR /////////

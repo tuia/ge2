@@ -325,6 +325,13 @@
 			line-height: 1.1em;
 		}
 	}
+	/*toggle icon-buttons*/
+	.toggle-icon-btn {
+		.fa {
+			&:first-child {display: block;}
+			&:last-child {display: none;}
+		}
+	}
 
 
 	/* NAV-TABS */
@@ -1177,35 +1184,31 @@ body.entity-iframe {
 
 /* ENTITIES-LIST */
 .entity-list {
-	.entity-box {
-		border-bottom: 1px solid #dddddd;
-
-		.entity-card {
-			border-bottom: 1px solid #cccccc;
-			.entity-symbol {
-				float: left;
-				& > .fa {
-					font-size: 16px;
-					margin-top: 10px; 
-				}
+	.entity-card {
+		border-bottom: 1px solid #cccccc;
+		.entity-symbol {
+			float: left;
+			& > .fa {
+				font-size: 16px;
+				margin-top: 10px; 
 			}
-			.entity-card-data {
-				padding: 5px;
-				text-align: left;
-				.entity-title {
-	 				font-size: 14px;
-					display: inline;
-					height: auto;
-					margin-right: 10px;
-	 				text-transform: none;
-			 		.badge {
-			 			font-size: 12px;
-			 		}
-				}
-	 			.status {
-	 				font-size: 12px;
-	 			}				
+		}
+		.entity-card-data {
+			padding: 5px;
+			text-align: left;
+			.entity-title {
+ 				font-size: 14px;
+				display: inline;
+				height: auto;
+				margin-right: 10px;
+ 				text-transform: none;
+		 		.badge {
+		 			font-size: 12px;
+		 		}
 			}
+ 			.status {
+ 				font-size: 12px;
+ 			}				
 		}
 	}
 }

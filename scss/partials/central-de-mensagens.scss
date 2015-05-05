@@ -7,6 +7,8 @@
 */
 
 #central-de-mensagens {
+	position: relative;
+	padding-left: 300px;
 
 	#navigation {
 		display: none;
@@ -33,52 +35,135 @@
 		border-bottom: 1px solid #DDDDDD;
 	}
 
-	#msg-cemig-dropdown {
-		padding: 10px 0;
-		.dropdown-toggle {
-			color: #cccccc;
-			font-size: 20px;
-			text-transform: uppercase;
-			.highlight {color: #FFDC72}
-			&:after {
-				position: absolute;
-				content: " ";
-				bottom: -5px;
-				left: 10px;
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 10px 10px 0 0;
-				border-color: #000 transparent transparent transparent;
-			}
-		}
-	}
+	#aside-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 300px;
+		z-index: 1000;
+		border-right: 1px solid #DDDDDD;
 
-	#areas-list{
-		padding: 10px 0 0;
-		.area-item {
-			color: #999999;
-			a {
-				font-weight: bold;
+		#msg-cemig-dropdown {
+			padding: 10px;
+			.dropdown-toggle {
+				color: #cccccc;
+				font-size: 20px;
+				text-transform: uppercase;
+				.highlight {color: #FFDC72}
+				&:after {
+					position: absolute;
+					content: " ";
+					bottom: -5px;
+					left: 10px;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 10px 10px 0 0;
+					border-color: #000 transparent transparent transparent;
+				}
+			}
+		}
+
+		#areas-list{
+			padding: 10px 10px 0;
+			.area-item {
 				color: #999999;
+				a {
+					font-weight: bold;
+					color: #999999;
+				}
+				span {
+					font-size: 10px;
+					line-height: 1.2em;
+					display: block;
+					&.hidden-item {display: none;}
+				}
+				&.active {
+					color: #666666;
+					a {color: #666666;}
+				}
 			}
-			span {
-				font-size: 10px;
-				line-height: 1.2em;
-				display: block;
-				&.hidden-item {display: none;}
-			}
-			&.active {
-				color: #666666;
-				a {color: #666666;}
+			.btn.show-more {
+				font-size: 32px;
+				color: #999999;
+				line-height: 12px;  
+	    		height: 40px;
 			}
 		}
-		.btn.show-more {
-			font-size: 32px;
-			color: #999999;
-			line-height: 12px;  
-    		height: 40px;
+
+		#search-contacts {
+			padding: 5px 0;
+			.search-form {
+				padding: 0;
+				.form-control {	border: none;}
+			}			
 		}
-	}
+
+		#contacts {
+
+			#filter {
+				padding: 10px;
+				color: #CCC;			
+				.msg-filter-btn {
+					text-transform: uppercase;
+					font-size: 12px;
+					color: #999999;
+					&.active {
+						font-weight: bold;
+						color: #666666;
+					}
+					small {
+						font-size: 10px;
+					}
+				}
+			}
+
+			.cell.auto {
+				height: calc(100% - 240px) !important;
+				max-height: none;
+				position: fixed;
+				bottom: 0;
+				width: 300px;
+				left: 0;
+			}
+		}
+
+		.entity-list {
+			.entity-card {
+				.entity-card-data {
+					position: relative;
+					.entity-title {
+						margin-right: 3px;
+						.badge.id {font-size: 14px;}
+					}
+					.entity-subitem {
+						font-size: 11px;
+						margin: 5px 0 0;
+					}
+					.right-details {
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 45px;
+						text-align: right;
+						padding: 5px 0;
+						.toggle-icon-btn {
+							.fa {
+								font-size: 20px;
+								&:first-child{color: #777777;}
+								&:last-child{color: #cccccc;}
+							}
+						}
+						.last-seen {
+							display: block;
+							color: #999999;
+							font-size: 11px;
+						}
+					}
+				}
+			}
+		}
+	} /*aside menu*/
 
 }

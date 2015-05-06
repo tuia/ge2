@@ -328,7 +328,7 @@
 	/*toggle icon-buttons*/
 	.toggle-icon-btn {
 		.fa {
-			&:first-child {display: block;}
+			&:first-child {display: inline;}
 			&:last-child {display: none;}
 		}
 	}

@@ -10,10 +10,6 @@
 	position: relative;
 	padding-left: 300px;
 
-	#navigation {
-		display: none;
-	}
-
 	/*tipografia*/
 	h3 {
 		font-size: 14px;
@@ -29,10 +25,166 @@
 		line-height: 1.2em;
 	}
 
-	/* componentes */
+	/* 3D */
+	#aside-menu {
+		z-index: 3;
+		@include box-shadow(1px,0,2px,rgba(0, 0, 0, 0.15));
+
+		.top-item {
+			z-index: 5;
+			background: #FFFFFF;
+			position: relative;
+			border-bottom: 1px solid #DDDDDD;
+			@include box-shadow(0,1px,2px,rgba(0, 0, 0, 0.05));
+		}
+		.bottom-item {z-index: 4;}
+	}
+	#navigation {z-index: 2;}
+	#content {padding-top: 64px;}
+
+
+	/* COMPONENTS */
 	.cell {
 		width: 100%;
 		border-bottom: 1px solid #DDDDDD;
+	}
+	.filter {
+		padding: 10px;
+		color: #CCC;			
+		.msg-filter-btn {
+			text-transform: uppercase;
+			font-size: 14px;
+			color: #999999;
+			font-weight: 300;
+			&.active {
+				font-weight: bold;
+				color: #666666;
+			}
+			&:first-child {
+				display: block;
+			}
+			small {
+				font-size: 10px;
+			}
+		}
+	}
+	.entity-list {
+		.entity-card {
+			background: #fcfcfc;
+			.entity-card-data {
+				position: relative;
+				.entity-title {
+					margin-right: 3px;
+					.badge.id {font-size: 14px;}
+				}
+				.entity-subitem {
+					font-size: 11px;
+					margin: 5px 0 0;
+				}
+				.right-details {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 55px;
+					text-align: right;
+					padding: 10px 5px;
+					.toggle-icon-btn {
+						.fa {
+							font-size: 20px;
+							&:first-child{color: #777777;}
+							&:last-child{color: #cccccc;}
+						}
+						&:hover {
+							text-decoration: none;
+							.fa {
+								text-shadow: 0px 0px 2px $brand-yellow;
+							}
+						}
+					}
+					.last-seen {
+						display: block;
+						color: #999999;
+						font-size: 11px;
+					}
+				}
+			}
+		}
+	}
+
+
+	/* PAGE ITEMS */
+	#navigation {
+		height: 63px;
+		border-bottom: 1px solid #DDDDDD;
+		padding-left: 295px; 
+		margin:0;
+		@include box-shadow(1px,0,2px,rgba(0, 0, 0, 0.15));	
+
+		.filter {
+			width: 720px;
+			padding: 10px 0 0;
+			margin-right: -190px;
+			.msg-filter-btn {
+				&.only {
+					border: none;
+					display: block;
+					padding: 10px 5px;
+					margin: 0;
+				}
+				&.title {
+					font-size: 20px;
+					&.active {font-weight: 400;}
+				}
+			}
+			.bookmark.badge {
+				margin: 12px 2px 10px 0;
+				display: inline-block;
+				font-size: 13px;
+				line-height: 10px;
+			}
+		}
+	    .navbar-icon {
+	      &>a {
+	        border: none;
+	        height: 62px;
+	        padding: 25px 10px;
+	        color: #666666;
+	        .fa {
+	          font-size: 24px;
+	          line-height: 10px;
+	        }
+	      }
+	      .new-message-btn {
+	      	background: #EB615B;
+	      	@include border-radius(25px);
+	      	height: 50px;
+	      	width: 50px;
+	      	padding: 16px;
+	      	text-align: center;
+	      	margin: 7px;
+	      	position: relative;
+			@include box-shadow(0,1px,2px,rgba(0, 0, 0, 0.25));
+	      	&>.fa {
+	      		color: #FFFFFF;
+	      	}
+	      	&:hover {
+				@include box-shadow(1px,2px,2px,rgba(0, 0, 0, 0.15));
+	      		top: -1px;
+	      	}
+	      }
+	    }
+	    .search-form {
+	    	margin: 0;
+		    .form-control {
+		    	width: 100px;
+		    	border-bottom: 1px solid #DDDDDD;
+		    }
+		    button {
+		    	left: -35px;
+		    	margin-right: -35px;
+		    	padding: 6px 10px;
+		    }
+		}
 	}
 
 	#aside-menu {
@@ -41,11 +193,11 @@
 		left: 0;
 		height: 100%;
 		width: 300px;
-		z-index: 1000;
 		border-right: 1px solid #DDDDDD;
 
 		#msg-cemig-dropdown {
 			padding: 10px;
+			height: 63px;
 			.dropdown-toggle {
 				color: #cccccc;
 				font-size: 20px;
@@ -100,70 +252,70 @@
 			}			
 		}
 
-		#contacts {
-
-			#filter {
-				padding: 10px;
-				color: #CCC;			
-				.msg-filter-btn {
-					text-transform: uppercase;
-					font-size: 12px;
-					color: #999999;
-					&.active {
-						font-weight: bold;
-						color: #666666;
-					}
-					small {
-						font-size: 10px;
-					}
-				}
-			}
-
-			.cell.auto {
-				height: calc(100% - 240px) !important;
-				max-height: none;
-				position: fixed;
-				bottom: 0;
-				width: 300px;
-				left: 0;
-			}
+		.cell.auto {
+			height: calc(100% - 240px) !important;
+			max-height: none;
+			position: fixed;
+			bottom: 0;
+			width: 300px;
+			left: 0;
 		}
 
+	} /*aside menu*/
+
+	/* messages-list */
+	#messages-list {
+		overflow: hidden;
+		margin: 0 -15px;
 		.entity-list {
 			.entity-card {
-				.entity-card-data {
-					position: relative;
-					.entity-title {
-						margin-right: 3px;
-						.badge.id {font-size: 14px;}
-					}
-					.entity-subitem {
-						font-size: 11px;
-						margin: 5px 0 0;
-					}
-					.right-details {
-						position: absolute;
-						top: 0;
-						right: 0;
-						width: 45px;
-						text-align: right;
-						padding: 5px 0;
-						.toggle-icon-btn {
-							.fa {
-								font-size: 20px;
-								&:first-child{color: #777777;}
-								&:last-child{color: #cccccc;}
-							}
-						}
-						.last-seen {
-							display: block;
-							color: #999999;
-							font-size: 11px;
-						}
+				background: #f8f8f8;
+				padding: 5px 10px 0 25px;
+				height: 60px;
+				position: relative;
+				.entity-symbol {
+	      			@include border-radius(25px);
+	      			width: 50px;
+	      			height: 50px;
+	      			&>.fa {
+	      				margin-top: 7px;
+	      			}
+				}
+      			.bookmark-button {
+      				left: 12px;
+      				top: -8px;
+      				position: absolute;
+      			}
+			}
+			.entity-card-data {
+				padding: 3px 5px 3px 10px;
+				.entity-title {
+					color: #999;
+					font-size: 15px;
+				}
+				.entity-subitem {
+					margin: 0px;
+					font-size: 14px;
+					font-weight: 300;
+					.copy-button {
+						color: #999;
 					}
 				}
 			}
+			.right-details {
+				padding: 0 5px;
+				&>a .fa{
+					font-size: 14px;
+				}
+				.reply-btn {
+					color: #999999;
+					display: inline-block;
+					margin-right: 5px;
+					&:hover .fa{text-shadow: 0px 0px 2px $brand-yellow;}
+				}
+			}
 		}
-	} /*aside menu*/
+
+	}/* messages-list */
 
 }

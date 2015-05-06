@@ -22,114 +22,78 @@
       <!--/NAVIGATION-->
       <nav id="navigation" class="navbar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-        
-          <ul class="nav navbar-nav">
-            <div class="navbar-header">
 
-            <div class="dropdown">
-              <a href="#" class="btn btn-inverse dropdown-toggle" type="button" data-toggle="dropdown">
-                MSG CEMIG <span class="highlight">12</span>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-              </ul>
-            </div>
+          <div class="nav navbar-nav navbar-left">
+            <!--/FILTROS-->
+            <div class="filter">
+              <div class="row bordered vertical compact">
+                <div class="col-xs-2">
+                  <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><span class="badge bookmark">3</i></a>
+                  <a href="#" class="msg-filter-btn title active">Todas <strong>12</strong></a>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="msg-filter-btn">Sistema</a>
+                  <a href="#" class="msg-filter-btn"><small>serviços</small></a>  |  <a href="#" class="msg-filter-btn"><small>manobras</small></a>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="msg-filter-btn">Equipes</a>
+                  <a href="#" class="msg-filter-btn"><small>disponíveis</small></a>  |  <a href="#" class="msg-filter-btn"><small>ocupadas</small></a>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="msg-filter-btn only">Contratadas</a>
+                </div>
+                <div class="col-xs-1">
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-toggle msg-filter-btn only" data-toggle="dropdown">
+                      mais <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Split</a></li>
+                      <li><a href="#">Triagem</a></li>
+                      <li><a href="#">Designado serviço dericação contratada</a></li>
+                      <li><a href="#">Transferência de turma</a></li>
+                    </ul>
+                  </div><!--/dropdown-->
+                </div>
+              </div><!--/row bordered-->
+            </div><!--/.cell-->
+          </div><!--/.nav-->
 
-            </div>
-          </ul>
 
-
+          
+          <!--/NAVIGATION ICON OPTIONS-->
           <ul class="nav navbar-nav navbar-right">
 
-            <!--/LIGA / DESLIGA-->
-            <li class="map-items">
-              <a href="#" class="hastooltip" data-placement="bottom" title="Exibir ou esconder elementos do mapa">
+            <!--/VOLUME ICON-->
+            <li class="navbar-icon">
+              <a href="#" class="hastooltip toggle-icon-btn" data-placement="bottom" title="som da mensagem">
+                <i class="fa fa-volume-up"></i>
+                <i class="fa fa-volume-off"></i>
+              </a>
+            </li>
+            <!--/EYE ICON-->
+            <li class="navbar-icon">
+              <a href="#" class="hastooltip toggle-icon-btn" data-placement="bottom" title="esconder lidas">
                 <i class="fa fa-eye"></i>
+                <i class="fa fa-eye-slash"></i>
               </a>
             </li>
-
-            <!--/NOTIFICATIONS-->
-            <li class="dropdown notifications">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <i class="fa fa-bell"></i>
-                <span class="badge">99</span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Notificação A</a></li>
-                <li><a href="#">Notificação B</a></li>
-                <li><a href="#">Notificação C</a></li>
-                <li class="divider"></li>
-                <li><a href="#" class="text-center">limpar notificações</a></li>
-              </ul>
+            <!--/SEARCH FORM-->
+            <li>
+              <form class="navbar-form search-form" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+              </form>
             </li>
-
-            <!--/MESSAGES-->
-            <li class="dropdown messages">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <i class="fa fa-comment"></i>
-                <span class="badge">99</span>
+            <!--/NEW MESSAGE-->
+            <li class="navbar-icon">
+              <a href="#" class="new-message-btn hastooltip" data-placement="bottom" title="nova mensagem...">
+                <i class="fa fa-pencil"></i>
               </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Mensagem A</a></li>
-                <li><a href="#">Mensagem B</a></li>
-                <li><a href="#">Mensagem C</a></li>
-                <li class="divider"></li>
-                <li><a href="#" class="text-center">ver todas mensagens</a></li>
-              </ul>
             </li>
           </ul><!--/navbar-right-->
-
-
-          <div class="navbar-nav nav navbar-right search-form-container">
-            <form class="navbar-form search-form" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control contextual-search" placeholder="buscar no mapa">
-              </div>
-              <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-
-              <div class="search-options" role="tabpanel">
-
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#dispositivo" aria-controls="dispositivo" role="tab" data-toggle="tab">Dispositivo</a></li>
-                    <li><a href="#trafo" aria-controls="trafo" role="tab" data-toggle="tab">Trafo</a></li>
-                    <li><a href="#se" aria-controls="se" role="tab" data-toggle="tab">SE</a></li>
-                    <li><a href="#veiculo" aria-controls="veiculo" role="tab" data-toggle="tab">Veículo</a></li>
-                    <li><a href="#" class="expand-menu">...</a></li>
-                    <li class="hidden-item"><a href="#endereco" aria-controls="veiculo" role="tab" data-toggle="tab">Endereço</a></li>
-                    <li class="hidden-item"><a href="#coordenada" aria-controls="veiculo" role="tab" data-toggle="tab">Coordenada</a></li>
-                    <li class="hidden-item"><a href="#gerador-movel" aria-controls="veiculo" role="tab" data-toggle="tab">Gerador móvel</a></li>
-                    <li class="hidden-item"><a href="#ponto-subterraneo" aria-controls="veiculo" role="tab" data-toggle="tab">Ponto subterrâneo</a></li>
-
-                  </ul>
-
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="dispositivo">
-                      <div class="row">
-                        <div class="col-xs-2"><span class="scale-label">Escala</span></div>
-                        <div class="col-xs-10">
-                          <img src="img/range.png" alt="tarefas"/>
-                           <!--/<div class="scale-container">
-                            <input type="text" class="input-scale">
-                          </div>-->
-                        </div>
-                      </div><!--/.row-->
-                    </div><!--/.tabpanel-->
-                    <div role="tabpanel" class="tab-pane" id="trafo">
-                      ...
-                    </div><!--/.tabpanel-->
-                    <div role="tabpanel" class="tab-pane" id="SE">...</div><!--/.tabpanel-->
-                    <div role="tabpanel" class="tab-pane" id="Veículo">...</div><!--/.tabpanel-->
-                  </div>
-
-              </div><!--/.search-options-->
-            </form>
-          </div>
 
         </div>
       </nav>
@@ -145,71 +109,71 @@
         <!--MENU LATERAL ESQUERDO-->
         <div id="aside-menu">
 
-          <!--/DROPDOWN MSGS CEMIG-->
-          <div id="msg-cemig-dropdown" class="cell">  
-            <div class="dropdown">
-              <a href="#" class="btn btn-inverse dropdown-toggle" type="button" data-toggle="dropdown">
-                MSG CEMIG <span class="highlight">12</span>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu dropdown-inverse" role="menu">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-              </ul>
-            </div>
-          </div><!--/.cell-->
+          <div class="top-item">
 
-          <!--/ÁREAS-->
-          <div id="areas-list" class="cell expandable-container">
-            <div class="row">
-              <div class="col-xs-4">
-                <h3>Áreas</h3>
-                <p class="tip hidden-item">Clique uma vez para ativar mensagens de uma área ou local, e outra para reativar.</p>
-              </div><!--/col-->
+            <!--/DROPDOWN MSGS CEMIG-->
+            <div id="msg-cemig-dropdown" class="cell">  
+              <div class="dropdown">
+                <a href="#" class="btn btn-inverse dropdown-toggle" type="button" data-toggle="dropdown">
+                  MSG CEMIG <span class="highlight">12</span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-inverse" role="menu">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div><!--/.cell-->
 
-              <div class="col-xs-1 area-item active">
-                <a href="#">DC</a>
-                <span class="hidden-item">AR BT IT SL SG XX</span>
-              </div><!--/col-->
-              <div class="col-xs-1 area-item active">
-                <a href="#">DL</a>
-                <span class="hidden-item">AL CR GV IP IR JM RA TO</span>
-              </div><!--/col-->
-              <div class="col-xs-1 area-item">
-                <a href="#">DM</a>
-                <span class="hidden-item">BC JF LF OP PN SJ</span>
-              </div><!--/col-->
-              <div class="col-xs-1 area-item">
-                <a href="#">DM</a>
-                <span class="hidden-item">BC JF LF OP PN SJ</span>
-              </div><!--/col-->
-              <div class="col-xs-1 area-item">
-                <a href="#">DM</a>
-                <span class="hidden-item">BC JF LF OP PN SJ</span>
-              </div><!--/col-->
-              <div class="col-xs-1 area-item active">
-                <a href="#">DC</a>
-                <span class="hidden-item">AR BT IT SL SG XX</span>
-              </div><!--/col-->
+            <!--/ÁREAS-->
+            <div id="areas-list" class="cell expandable-container">
+              <div class="row">
+                <div class="col-xs-4">
+                  <h3>Áreas</h3>
+                  <p class="tip hidden-item">Clique uma vez para ativar mensagens de uma área ou local, e outra para reativar.</p>
+                </div><!--/col-->
 
-            </div><!--/.row-->
-            <a href="#" class="btn btn-link btn-block show-more">...</a>
-          </div><!--/.cell-->
+                <div class="col-xs-1 area-item active">
+                  <a href="#">DC</a>
+                  <span class="hidden-item">AR BT IT SL SG XX</span>
+                </div><!--/col-->
+                <div class="col-xs-1 area-item active">
+                  <a href="#">DL</a>
+                  <span class="hidden-item">AL CR GV IP IR JM RA TO</span>
+                </div><!--/col-->
+                <div class="col-xs-1 area-item">
+                  <a href="#">DM</a>
+                  <span class="hidden-item">BC JF LF OP PN SJ</span>
+                </div><!--/col-->
+                <div class="col-xs-1 area-item">
+                  <a href="#">DM</a>
+                  <span class="hidden-item">BC JF LF OP PN SJ</span>
+                </div><!--/col-->
+                <div class="col-xs-1 area-item">
+                  <a href="#">DM</a>
+                  <span class="hidden-item">BC JF LF OP PN SJ</span>
+                </div><!--/col-->
+                <div class="col-xs-1 area-item active">
+                  <a href="#">DC</a>
+                  <span class="hidden-item">AR BT IT SL SG XX</span>
+                </div><!--/col-->
 
-          <!--/CONTATOS-->
-          <div id="contacts">
+              </div><!--/.row-->
+              <a href="#" class="btn btn-link btn-block show-more">...</a>
+            </div><!--/.cell-->
+
             
             <!--/FILTROS-->
-            <div id="filter" class="cell">
+            <div class="filter cell">
               <div class="row bordered vertical compact">
                 <div class="col-xs-6">
-                  <a href="#" class="msg-filter-btn active">Equipes</a><br>
+                  <a href="#" class="msg-filter-btn active">Equipes</a>
                   <a href="#" class="msg-filter-btn"><small>disponíveis</small></a>  |  <a href="#" class="msg-filter-btn"><small>ocupadas</small></a>
                 </div>
                 <div class="col-xs-6">
-                  <a href="#" class="msg-filter-btn">Contratadas</a><br>
+                  <a href="#" class="msg-filter-btn">Contratadas</a>
                   <a href="#" class="msg-filter-btn"><small>bases operativas</small></a>  |  <a href="#" class="msg-filter-btn"><small>recursos</small></a>
                 </div>
               </div><!--/row bordered-->
@@ -227,6 +191,9 @@
               </div><!--/search-form-->
             </div><!--/.cell-->
 
+          </div><!--/top-item-->
+
+          <div class="bottom-item">
 
             <!--/LISTAGEM-->
             <div class="cell auto">
@@ -369,20 +336,305 @@
                   </div><!--/.entity-card-data-->
                   <span class="clearfix"></span>
                 </div><!--/.entity-card-->
+
+                <div class="entity-card entity-card-large">
+                  <div class="entity-symbol pendente">
+                    <i class="fa fa-car"></i>
+                    <span>064621</span>
+                  </div>
+                  <div class="entity-card-data">
+                    <div class="entity-title"><span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                    <span class="status text-pendente">pendente</span>
+                    <p class="entity-subitem"><i class="fa fa-check"></i>Trecho da mensagem com limitaçã...</p>
+                    <div class="right-details">
+                      <a href="#" class="toggle-icon-btn"><i class="fa fa-eye"></i><i class="fa fa-eye-slash"></i></a>
+                      <span class="last-seen">11:50 PM</span>
+                    </div>
+                  </div><!--/.entity-card-data-->
+                  <span class="clearfix"></span>
+                </div><!--/.entity-card-->
+
+                <div class="entity-card entity-card-large">
+                  <div class="entity-symbol pendente">
+                    <i class="fa fa-car"></i>
+                    <span>064621</span>
+                  </div>
+                  <div class="entity-card-data">
+                    <div class="entity-title"><span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                    <span class="status text-pendente">pendente</span>
+                    <p class="entity-subitem"><i class="fa fa-check"></i>Trecho da mensagem com limitaçã...</p>
+                    <div class="right-details">
+                      <a href="#" class="toggle-icon-btn"><i class="fa fa-eye"></i><i class="fa fa-eye-slash"></i></a>
+                      <span class="last-seen">11:50 PM</span>
+                    </div>
+                  </div><!--/.entity-card-data-->
+                  <span class="clearfix"></span>
+                </div><!--/.entity-card-->
+
+                <div class="entity-card entity-card-large">
+                  <div class="entity-symbol em-execucao">
+                    <i class="fa fa-car"></i>
+                    <span>064621</span>
+                  </div>
+                  <div class="entity-card-data">
+                    <div class="entity-title"><span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                    <span class="status text-em-execucao">em execução</span>
+                    <p class="entity-subitem"><i class="fa fa-check"></i>Trecho da mensagem com limitaçã...</p>
+                    <div class="right-details">
+                      <a href="#" class="toggle-icon-btn"><i class="fa fa-eye"></i><i class="fa fa-eye-slash"></i></a>
+                      <span class="last-seen">11:50 PM</span>
+                    </div>
+                  </div><!--/.entity-card-data-->
+                  <span class="clearfix"></span>
+                </div><!--/.entity-card-->
+
+                <div class="entity-card entity-card-large">
+                  <div class="entity-symbol designado">
+                    <i class="fa fa-car"></i>
+                    <span>064621</span>
+                  </div>
+                  <div class="entity-card-data">
+                    <div class="entity-title"><span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                    <span class="status text-designado">designado</span>
+                    <p class="entity-subitem"><i class="fa fa-check"></i>Trecho da mensagem com limitaçã...</p>
+                    <div class="right-details">
+                      <a href="#" class="toggle-icon-btn"><i class="fa fa-eye"></i><i class="fa fa-eye-slash"></i></a>
+                      <span class="last-seen">11:50 PM</span>
+                    </div>
+                  </div><!--/.entity-card-data-->
+                  <span class="clearfix"></span>
+                </div><!--/.entity-card-->
+
+                <div class="entity-card entity-card-large">
+                  <div class="entity-symbol acionado">
+                    <i class="fa fa-car"></i>
+                    <span>064621</span>
+                  </div>
+                  <div class="entity-card-data">
+                    <div class="entity-title"><span class="badge id">064621 <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span></div>
+                    <span class="status text-acionado">acionado</span>
+                    <p class="entity-subitem"><i class="fa fa-check"></i>Trecho da mensagem com limitaçã...</p>
+                    <div class="right-details">
+                      <a href="#" class="toggle-icon-btn"><i class="fa fa-eye"></i><i class="fa fa-eye-slash"></i></a>
+                      <span class="last-seen">11:50 PM</span>
+                    </div>
+                  </div><!--/.entity-card-data-->
+                  <span class="clearfix"></span>
+                </div><!--/.entity-card-->
                 
               </div><!--/.entity-list-->
               
             </div><!--/.cell-->
 
-          </div><!--/#contacts-->
-
-
-
-          <!--/COMPONTENTE-->
-          <div class="cell"></div><!--/.cell-->
-
+          </div><!--/.bottom-items-->
 
         </div><!--/#aside-menu-->
+
+        <!--/MESSAGES-LIST-->
+        <div id="messages-list">
+          <div class="entity-list">
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol finalizado">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol em-execucao">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol em-execucao">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol em-execucao">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol designado">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol designado">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol designado">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol acionado">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol acionado">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol pendente">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+            <div class="entity-card entity-card-large">
+              <a class="entity-symbol epndente">
+                <i class="fa fa-car"></i>
+                <span>064621</span>
+              </a>
+              <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a>
+              <div class="entity-card-data">
+                <div class="entity-title">Triagem elétrica - agrupamento genérico</div>
+                <p class="entity-subitem"><i class="fa fa-check"></i> Falha ao enviar serviço para o veículo <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span>. Serviço <span><a href="#">345356</a> <a href="#" class="copy-button" data-toggle="tooltip" data-title="copiar"><i class="fa fa-files-o"></i></a></span> não enviado.</p>
+                <div class="right-details">
+                  <a href="#" class="reply-btn"><i class="fa fa-reply"></i></a>
+                  <a href="#" class="toggle-icon-btn"><i class="fa fa-circle-o"></i><i class="fa fa-circle"></i></a>
+                  <span class="last-seen">11:50 PM</span>
+                </div>
+              </div><!--/.entity-card-data-->
+              <span class="clearfix"></span>
+            </div><!--/.entity-card-->
+
+
+          </div><!--/.entity-list-->
+        </div><!--/.messages-list-->
 
 
       </div><!--/container-->

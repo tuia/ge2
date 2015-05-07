@@ -89,7 +89,7 @@
             </li>
             <!--/NEW MESSAGE-->
             <li class="navbar-icon">
-              <a href="#" class="new-message-btn hastooltip" data-placement="bottom" title="nova mensagem...">
+              <a href="#escrever-mensagem-modal" data-toggle="modal" class="new-message-btn hastooltip" data-placement="bottom" title="nova mensagem...">
                 <i class="fa fa-pencil"></i>
               </a>
             </li>
@@ -642,10 +642,135 @@
 
 
 
+
+    <!-- MODAIS -->
+
+    <!--/SALVAR FILTRO-->
+    <div class="modal fade" id="escrever-mensagem-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div role="tabpanel">
+
+            <div class="modal-header">
+              <div class="row">
+                <div class="col-xs-1">
+                  <span class="form-group-title">para</span>
+                </div>
+                <div class="col-xs-9">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-pills nav-justified" role="tablist">
+                    <li class="active"><a href="#msg-equipe" aria-controls="msg-equipe" role="tab" data-toggle="tab">Equipe</a></li>
+                    <li><a href="#msg-contratada" aria-controls="msg-contratada" role="tab" data-toggle="tab">Contratada</a></li>
+                    <li><a href="#msg-area" aria-controls="msg-area" role="tab" data-toggle="tab">Área</a></li>
+                    <li><a href="#msg-local" aria-controls="msg-local" role="tab" data-toggle="tab">Local</a></li>
+                    <li><a href="#msg-servico" aria-controls="msg-servico" role="tab" data-toggle="tab">Serviço</a></li>
+                    <li><a href="#msg-manobra" aria-controls="msg-manobra" role="tab" data-toggle="tab">Manobra</a></li>
+                  </ul>
+                </div><!--/col-->
+                <div class="col-xs-2 modal-options">
+                  <a href="#" class="btn btn-xs btn-default hastooltip pull-right" data-title="fechar" data-original-title="" /><i class="fa fa-remove"></i></a>
+                  <a href="#" class="btn btn-xs btn-default hastooltip pull-right" data-title="destacar poste" data-original-title="" /><i class="fa fa-external-link"></i></a>
+                </div><!--/col-->
+              </div><!--/.row-->
+            </div><!--/.modal-header-->
+
+            <div class="modal-body">
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+
+                <!--/equipe-->
+                <div role="tabpanel" class="tab-pane active" id="msg-equipe">
+                  <div class="last-results-container">
+                    <div class="form-group">
+                      <input type="text" class="form-control contextual-search" data-role="tagsinput"/>
+                    </div>
+                    <ul class="last-results">
+                      <li class="dropdown-header">Últimos buscados</li>
+                      <li><a href="#">localidade</a></li>
+                      <li><a href="#">identificador</a></li>
+                      <li><a href="#">tensão</a></li>
+                      <li><a href="#">projetada</a></li>
+                      <li><a href="#">operada</a></li>
+                    </ul><!--/last-results-->
+                  </div><!--/search-form-->
+                </div><!--/.tab-pane-->
+
+                <!--/contratada-->
+                <div role="tabpanel" class="tab-pane" id="msg-contratada">.b..</div><!--/.tab-pane-->
+
+                <!--/area-->
+                <div role="tabpanel" class="tab-pane" id="msg-area">
+                  <div class="form-group">
+                    <select class="selectpicker form-control" data-live-search="true">
+                      <option>DC</option>
+                      <option>DL</option>
+                      <option>DM</option>
+                      <option>DN</option>
+                      <option>D0</option>
+                      <option>DS</option>
+                    </select>
+                  </div>
+                </div><!--/.tab-pane-->
+
+                <!--/local-->
+                <div role="tabpanel" class="tab-pane" id="msg-local">..d.</div><!--/.tab-pane-->
+
+                <!--/serviço-->
+                <div role="tabpanel" class="tab-pane" id="msg-servico">..e.</div><!--/.tab-pane-->
+
+                <!--/manobra-->
+                <div role="tabpanel" class="tab-pane" id="msg-manobra">..f.</div><!--/.tab-pane-->
+
+              </div><!--/tab-content-->
+
+              <div class="message-field">
+                <label>Mensagem</label>
+                <div class="input-counter-container">
+                  <textarea class="form-control message-textarea" placeholder="" maxlength="30"></textarea>
+                  <div class="input-counter">30</div>
+                </div>
+              </div><!--/-->
+            </div><!--/.modal-body-->
+
+          </div><!--/tabpanel-->
+          <div class="modal-footer">
+            <div class="pull-left">            
+              <div class="dropdown dropdown-select">
+                <button class="btn dropdown-toggle btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  <span>Mensagens salvas</span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <!--/LIMITAR NÚMERO DE CARACTERES-->
+                  <li><a href="#">A previsão de chuva em sua região está em 85%</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet, aquis sdjkh conjequocu sdom co...</a></li>
+                  <li><a href="#">A previsão de tempestade sazonal próxima à sua região aume...</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet, aquis sdjkh conjequocu sdom co...</a></li>
+                  <li><a href="#">A previsão de tempestade sazonal próxima à sua região aume...</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet, aquis sdjkh conjequocu sdom co...</a></li>
+                  <li><a href="#">A previsão de tempestade sazonal próxima à sua região aume...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="pull-right">
+              <button type="button" class="btn btn-default" data-dismiss="modal">salvar</button>
+              <button type="button" class="btn btn-danger">Enviar</button>
+            </div>
+          </div><!--/modal-footer-->
+        </div>
+      </div>
+    </div><!--/modal-->
+
+
+
+
     <!--/SCRIPTS-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-tagsinput.js"></script>
+    <script src="js/bootstrap-select.js"></script>
     <script src="js/datetimepicker.js" charset="UTF-8"></script>
     <script src="js/jquery-alphanum.js"></script>
     <script src="js/jquery-maskmoney.js"></script>

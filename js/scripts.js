@@ -1,6 +1,11 @@
 //SCRIPTS
 
 
+	//deletar
+
+      $('#escrever-mensagem-modal').modal('show');	
+
+
 	////////// BOOTSTRAP  /////////
 
 		$('[data-toggle="dropdown"]').dropdown();

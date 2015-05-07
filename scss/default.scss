@@ -658,6 +658,17 @@
 	input[type="checkbox"].check-table-row {
 		cursor: pointer;
 	}
+	/* message textarea */
+	.message-textarea {
+		width: 100%;
+		resize: none;
+		border: none;
+		padding: 5px 0;
+		@include box-shadow(0,0,0);
+	}
+	.send-message-btn {
+		margin: 5px 0;
+	}
 
 
 	
@@ -1058,18 +1069,6 @@ body.entity-iframe {
 	.entity-body {
 		padding: 0; 
 		position: relative;
-	}
-}
-.entity-panefooter {
-	.message-textarea {
-		width: 100%;
-		resize: none;
-		border: none;
-		padding: 5px 0;
-		@include box-shadow(0,0,0);
-	}
-	.send-message-btn {
-		margin: 5px 0
 	}
 }
 

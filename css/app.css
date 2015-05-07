@@ -823,6 +823,21 @@ input[type="checkbox"].check-table-row {
   cursor: pointer;
 }
 
+/* message textarea */
+.message-textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  padding: 5px 0;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+}
+
+.send-message-btn {
+  margin: 5px 0;
+}
+
 /************** TABLES **************/
 .table {
   margin: 10px 0 15px;
@@ -1227,19 +1242,6 @@ body.entity-iframe {
 .entity-window .entity-body {
   padding: 0;
   position: relative;
-}
-
-.entity-panefooter .message-textarea {
-  width: 100%;
-  resize: none;
-  border: none;
-  padding: 5px 0;
-  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-}
-.entity-panefooter .send-message-btn {
-  margin: 5px 0;
 }
 
 /* ENTITIES */
@@ -6371,6 +6373,7 @@ p.research-found strong {
   /*aside menu*/
   /* messages-list */
   /* messages-list */
+  /* MODAL */
 }
 #central-de-mensagens h3 {
   font-size: 14px;
@@ -6686,4 +6689,69 @@ p.research-found strong {
 }
 #central-de-mensagens #messages-list .entity-list .right-details .reply-btn:hover .fa {
   text-shadow: 0px 0px 2px #ecc200;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-content {
+  border: 5px solid #CF6C54;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-header .nav-pills li.active a {
+  background: transparent;
+  color: #666666;
+  font-weight: bold;
+  text-shadow: none;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-header .nav-pills li a {
+  text-transform: uppercase;
+  color: #999;
+  font-size: 12px;
+  padding: 5px 8px;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-header .modal-options .btn-default {
+  border: none;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body {
+  padding: 0;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .tab-pane {
+  padding: 10px;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .tab-pane .last-results-container .form-group {
+  margin-bottom: 0;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .tab-pane .last-results-container .form-group .bootstrap-tagsinput {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .tab-pane .last-results-container .form-group .bootstrap-tagsinput .tag.label {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.2em;
+  padding: 0.3em 0.5em;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .tab-pane .last-results-container .form-group .bootstrap-tagsinput .tag.label span {
+  font-weight: bold;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .message-field {
+  padding: 15px;
+  border-top: 1px solid #e5e5e5;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .message-field label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-transform: none;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-body .message-field .input-counter {
+  bottom: initial;
+  top: -33px;
+  right: 0;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-footer .dropdown-select .dropdown-menu {
+  width: 380px;
+  height: 300px;
+}
+#central-de-mensagens #escrever-mensagem-modal .modal-footer .dropdown-select .dropdown-menu li a {
+  color: #666;
+  padding: 8px 15px;
+  border-bottom: 1px solid #D5D5D5;
 }

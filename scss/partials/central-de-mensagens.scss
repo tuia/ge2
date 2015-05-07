@@ -178,6 +178,7 @@
 		    .form-control {
 		    	width: 100px;
 		    	border-bottom: 1px solid #DDDDDD;
+		    	padding: 6px 32px 6px 5px;
 		    }
 		    button {
 		    	left: -35px;
@@ -360,19 +361,11 @@
 						}
 					}
 				}
-			}
-			.message-field {
-				padding: 15px;
-				border-top: 1px solid #e5e5e5;
-				label {
-					font-size: 14px;
-					margin-bottom: 5px;
-					text-transform: none;
-				}
-				.input-counter {
-					bottom: initial;
-					top: -33px;
-					right: 0;
+				.alert {
+					margin: 0 -10px -10px;
+					padding: 8px 10px;
+					border: none;
+					font-style: italic;
 				}
 			}
 		}
@@ -388,6 +381,40 @@
 					}
 				}
 			}
+		}
+	}
+	#user-messages {
+		height: 100%;
+		#messages-list {
+			.entity-card {
+				padding-left: 10px;
+			}
+		}
+		.message-form {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: calc(100% - 300px);
+			.message-field {
+				padding: 10px 20px;
+			}
+			.form-actions {
+				padding: 10px 20px 20px;
+			}
+		}
+	}
+	.message-field {
+		padding: 10px;
+		border-top: 1px solid #e5e5e5;
+		label {
+			font-size: 14px;
+			margin-bottom: 5px;
+			text-transform: none;
+		}
+		.input-counter {
+			bottom: initial;
+			top: -33px;
+			right: 0;
 		}
 	}
 

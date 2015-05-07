@@ -3,7 +3,7 @@
 
 	//deletar
 
-      $('#escrever-mensagem-modal').modal('show');	
+//      $('#escrever-mensagem-modal').modal('show');	
 
 
 	////////// BOOTSTRAP  /////////

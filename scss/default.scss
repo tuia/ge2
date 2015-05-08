@@ -155,6 +155,14 @@
 	.text-default {color: $default}
 	.text-inverse {color: $inverse-text}
 
+	.text-criado {color: $pendente}
+	.text-executado {color: $designado}
+	.text-executado-pda {color: $acionado}
+	.text-aguardando-execucao {color: $em-execucao}
+	.text-aguardando-processamento {color: $em-execucao}
+	.text-erro {color: $finalizado}
+	.text-cancelado {color: $default}
+
 	*, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
 		&.bg-pendente {color:#FFFFFF;color: rgba(255,255,255,.9);background: $pendente}
 		&.bg-designado {color:#FFFFFF;color: rgba(255,255,255,.9);background: $designado}

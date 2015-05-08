@@ -541,16 +541,18 @@ p.research-found {
 	ol {
 		list-style: none;
 		counter-reset: section;
-    padding: 0;
+		padding: 0;
 
 		li {
 			background: #E7E7E7;
 			margin: 12px 0;
 			padding: 10px 10px 10px 50px;
 			position: relative;
-      line-height: 1em;
-      min-height: 38px;
-      @include border-radius(30px);
+			line-height: 1em;
+			min-height: 38px;
+			height: auto;
+			overflow: auto;
+			@include border-radius(20px);
 
 			&:before {
 				counter-increment: section;
@@ -558,8 +560,8 @@ p.research-found {
 				background: #596D7B;
 				color: #FFFFFF;
 				font-weight: bold;
-				width: 40px;
-				height: 40px;
+				width: 38px;
+				height: 38px;
 				padding: 12px;
 				display: inline-block;
 				text-align: center;
@@ -570,48 +572,66 @@ p.research-found {
 				@include border-radius(25px);
 			}
 
-      &.two-level {
-        background: transparent;
-        padding: 0;
-        margin: 0 0 0 20px;
-        &:before {display: none;}
-      }
+			&.two-level {
+				background: transparent;
+				padding: 0;
+				margin: 0 0 0 20px;
+				&:before {display: none;}
+				ol li:first-child {
+					margin-top: 0;
+				}
+			}
 
-      &.active {
-        background: lighten(#596D7B, 10%);
-        a {color: #fff; &:hover {color:#e6e6e6}}
-        &:before {
-          background: darken(#596D7B, 20%);
-        }
-        a .fa {display: none;}
-        a:hover .fa {display: block; color: #FFFFFF}
-      }
+			&.active {
+				background: lighten(#596D7B, 10%);
+				a {
+					color: #fff;
+					&:hover {color:#e6e6e6}
+				}
+			}
+			&:before {
+				background: darken(#596D7B, 20%);
+			}
 
-      .before {display: none;}
+			.before {display: none;}
 
-      a {
-        color: #666666;
-        font-weight: 400;
-        display: block;
-        position: relative;
-        padding-right: 26px;
+			.fa {
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				font-size: 24px;
+				color: #596D7B;
+				margin: -11px 0;
+				cursor: pointer;
+				&.fa-remove {display: none;}
+				&:hover {color: darken(#596D7B, 20%)}
+			}
+			&:hover .fa-remove {
+				display: inline-block;
+				color: lighten(#596D7B, 40%);
+				&:hover {color: lighten(#596D7B, 60%);}
+			}
 
-        .fa {
-          position: absolute;
-          right: 2px;
-          top: 50%;
-          font-size: 24px;
-          color: #596D7B;
-          margin: -11px 0;
-        }
+			.qtdade {
+				float: right;
+				margin-right: 85px;
+				.form-control {
+					margin: -5px 0;
+				}
+			}
 
-        &:hover {
-          color: #333333;
-          text-decoration: none;
-          & .fa {color: darken(#596D7B, 20%);}
-        }
-      }
+			a {
+				color: #666666;
+				font-weight: 400;
+				display: inline-block;
+				padding-right: 26px;
+				float: left;
+
+				&:hover {
+					color: #333333;
+					text-decoration: none;
+				}
+			}
 		}
-	}
-
-}/*droppable-list*/
+	}/*droppable-list*/
+}

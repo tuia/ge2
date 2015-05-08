@@ -72,11 +72,11 @@ ANIMATIONS
 /* RED BLINK */
 @keyframes anim-redblink {
   0% {
-    background: #F7CCCC;
+    background: #ECC200;
   }
 
   100% {
-    background: #F4B1B1;
+    background: #ffd720;
   }
 }
 /* example: animation: anim-redblink 2s infinite linear; */
@@ -97,6 +97,33 @@ ANIMATIONS
     width: 970px;
   }
 }
+/* BRAND COLOR */
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background: #689179;
+}
+
+a, .btn-link {
+  color: #689179;
+}
+
+a:hover, a:focus {
+  color: #3d5647;
+}
+
+.btn-primary {
+  background: #689179;
+  border-color: #537360;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #5d826d;
+  border-color: #537360;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background: #689179;
+}
+
 /************** FONTS **************/
 @font-face {
   font-family: 'Roboto Condensed';
@@ -1679,6 +1706,7 @@ body.loading #page-loader {
 }
 .notification-list .notification.unseen {
   background: #EEEEEE;
+  border-bottom: 1px solid #ddd;
 }
 .notification-list .notification:before {
   content: '';

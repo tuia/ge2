@@ -43,6 +43,23 @@
 	    .container, .container-fluid {width: 970px;}
 	}
 
+	/* BRAND COLOR */
+	.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+		background: $brand-green;
+	}
+	a, .btn-link { color: $brand-green; }
+	a:hover, a:focus {color: darken($brand-green, 20%);}
+	.btn-primary { 
+		background: $brand-green;
+		border-color: darken($brand-green, 10%);
+	}
+	.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+		background: darken($brand-green, 5%);
+		border-color: darken($brand-green, 10%);
+	}
+	.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+		background: $brand-green;		
+	}
 
 
 /************** FONTS **************/
@@ -1503,7 +1520,7 @@ body {
 				color: #666666;
 			}
 		}
-		&.unseen {background: #EEEEEE;}
+		&.unseen {background: #EEEEEE;border-bottom: 1px solid #ddd}
 		&:before {
 			content: '';
 			display: inline-block;

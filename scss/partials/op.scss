@@ -87,7 +87,8 @@
     			border-bottom: none;
     		}
     	}
-    	tr:last-child th {font-size: 10px; vertical-align: middle}
+    	tr:last-child th {font-size: 10px; vertical-align: middle;
+    			.active {font-weight: bold;}}
     }
     tbody tr {
     	transition: all .2s ease-in-out;
@@ -634,4 +635,23 @@ p.research-found {
 			}
 		}
 	}/*droppable-list*/
+}
+
+/* ORDENADOR */
+.ordenador {
+	.dropdown-menu {
+		padding: 10px;
+		min-width: 290px;
+		.form-inline {
+			padding: 3px 0;
+			margin-bottom: 1px solid #DDD;
+		} 
+	}
+	.form-actions{
+		background: #f0f0f0;
+		margin: 10px -10px -10px;
+		padding: 10px;
+		text-align: right;
+		margin-top: 1px solid #ccc;
+	}
 }

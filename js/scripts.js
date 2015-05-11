@@ -420,14 +420,14 @@
 		});
 
 		// SLIDE OPTIONS TD ON HOVER
-		/*$('.list-table tr').hover(
+		/*$('.check-table tr').hover(
 			function() {
 				 $(this).find('.options').stop(true).slideDown(200);
 			}, function() {
 				 $(this).find('.options').stop(true).slideUp(200);
 			}
 		);*/
-		$('.list-table tbody tr').hover( function() {
+		$('.check-table tbody tr').hover( function() {
 				var index = $(this).index() + 2;
 				if ( $(this).hasClass('options') ) {
 					return false
@@ -441,7 +441,7 @@
 		$('.check-table-row').change( function() {
 			var buttons = $('.table-options').find('.btn').not('.dropdown-toggle');
 			var checkbox = $('.table-options').find('.checkbox input');
-			var checklength = $('.list-table').find('.check-table-row:checked').length;
+			var checklength = $('.check-table').find('.check-table-row:checked').length;
 			var number = $('.table-options').find('.checklength');
 			var dropdown = $('.table-options .dropdown-toggle');
 
@@ -465,17 +465,17 @@
 				buttons.addClass('disabled');
 			}
 		});
-		$('.list-table-clear-btn').click( function() {
-			$('.list-table .check-table-row').parents('tr').removeClass('active');
-			$('.list-table .check-table-row, .table-options .checkbox input').prop('checked', false);
+		$('.check-table-clear-btn').click( function() {
+			$('.check-table .check-table-row').parents('tr').removeClass('active');
+			$('.check-table .check-table-row, .table-options .checkbox input').prop('checked', false);
 			$('.table-options .checkbox input').prop("indeterminate", false);
 			$('.table-options .checklength').text('0');
 		});
-		$('.list-table-all-btn').click( function() {
-			$('.list-table .check-table-row').parents('tr').addClass('active');
+		$('.check-table-all-btn').click( function() {
+			$('.check-table .check-table-row').parents('tr').addClass('active');
 			$('.table-options .checkbox input').prop("indeterminate", false);
 			$('.table-options .checklength').text('5');
-			$('.list-table .check-table-row, .table-options .checkbox input').prop('checked', true);
+			$('.check-table .check-table-row, .table-options .checkbox input').prop('checked', true);
 		});
 
 		//ABSOLUTE BUTTONS INSIDE TABLES

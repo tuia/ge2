@@ -1213,6 +1213,111 @@
                 </div><!--/row-->
               </div>
             </div><!--/row-->
+            
+            <h3>Tabelas com checkbox</h3>
+            <p>Tabelas podem possuir checkbox para seleção de linhas. Estas tabelas trazem consigo uma barra de opções (<code>.table-options</code>) para executar ações com as linhas selecionadas.</p>
+            <div class="row">
+              <div class="col-xs-4">
+
+                <div class="table-options btn-toolbar disabled" role="toolbar">
+
+                  <!--/checkbox-->
+                  <div class="dropdown btn-group">
+                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+                      <span class="checkbox">
+                        <label><input type="checkbox" id="checkboxExample"> <span class="checklength">0</span> <small class="unity">selecionados</small> <span class="caret"></span></label>
+                      </span><!--/.checkbox-->
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#" class="check-table-all-btn">selecionar todos</a></li>
+                      <li><a href="#" class="check-table-clear-btn">limpar seleção</a></li>
+                    </ul>
+                  </div><!--/btn-group-->
+
+                  <div class="btn-group" role="group">
+                    <a href="#" class="btn btn-default pull-left disabled">
+                      <img src="img/icons/cancel-icon.png" alt="adicionar ao lote"/> cancelar
+                    </a>
+                    <a href="#" class="btn btn-default pull-left disabled">
+                      <img src="img/icons/transf-icon.png" alt="adicionar ao lote"/> transferir
+                    </a>
+                  </div>
+                </div>
+
+                <table class="table check-table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Descrição</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="check-table-row"/></td>
+                      <td>Conteúdo da linha</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-table-row"/></td>
+                      <td>Conteúdo da linha</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-table-row"/></td>
+                      <td>Conteúdo da linha</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-table-row"/></td>
+                      <td>Conteúdo da linha</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--/col-->
+              <div class="col-xs-8">
+                <pre><code class="language-markup">&lt;!--TABLE&nbsp;OPTIONS--&gt;
+&lt;div&nbsp;class=&quot;table-options&nbsp;btn-toolbar&nbsp;disabled&quot;&nbsp;role=&quot;toolbar&quot;&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&nbsp;btn-group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;dropdown-toggle&quot;&nbsp;data-toggle=&quot;dropdown&quot;&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;checkbox&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;id=&quot;checkboxExample&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;checklength&quot;&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;unity&quot;&gt;selecionados&lt;/small&gt;&nbsp;&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&nbsp;role=&quot;menu&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;check-table-all-btn&quot;&gt;selecionar&nbsp;todos&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;check-table-clear-btn&quot;&gt;limpar&nbsp;sele&ccedil;&atilde;o&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div&nbsp;class=&quot;btn-group&quot;&nbsp;role=&quot;group&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;pull-left&nbsp;disabled&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;img/icons/cancel-icon.png&quot;&nbsp;alt=&quot;adicionar&nbsp;ao&nbsp;lote&quot;/&gt;&nbsp;cancelar
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-default&nbsp;pull-left&nbsp;disabled&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;img/icons/transf-icon.png&quot;&nbsp;alt=&quot;adicionar&nbsp;ao&nbsp;lote&quot;/&gt;&nbsp;transferir
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--CHECK&nbsp;TABLE--&gt;
+&lt;table&nbsp;class=&quot;table&nbsp;check-table&nbsp;table-bordered&quot;&gt;
+&nbsp;&nbsp;&lt;thead&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;#&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Descri&ccedil;&atilde;o&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&lt;/thead&gt;
+&nbsp;&nbsp;&lt;tbody&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;check-table-row&quot;/&gt;&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Conte&uacute;do&nbsp;da&nbsp;linha&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+              </div>
+            </div><!--/row-->
+            
             <h3>Classes contextuais</h3>
             <p>Use classes contextuais para colorir linhas ou células individualmente.</p>
             <div class="row">

@@ -79,6 +79,12 @@
     -moz-box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.15), 0 2px 0 #e8edf2;
     -webkit-box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.15), 0 2px 0 #e8edf2;
 
+    .divider-vertical {
+      font-size: 32px;
+      display: block;
+      float: left;
+    }
+
     ul.navbar-right {
       padding-right: 20px;
     }

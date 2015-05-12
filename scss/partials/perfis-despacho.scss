@@ -1,0 +1,142 @@
+/* CENTRAL DE MENSAGENS */
+/*
+  client: axxiom
+  author: Nathalia de Azevedo Xavier
+  by: latitude14.com.br
+  started: 12/05/15
+*/
+
+#perfis-de-despacho {
+	/* TIPOGRAFIA */
+	.item-type {
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	/* PAINÉIS */
+	.panel {
+		height: 425px;
+	}
+	#tipos-de-servicos-panel {
+		.auto {
+			max-height: 250px;
+			height: 250px;
+		}
+	}
+	.perfil-despacho-panel {
+		.panel-title {text-align: center;}
+		.panel-body {
+			.filters {
+				margin: 0 -15px;
+				padding: 0 15px 15px;
+				border-bottom: 1px solid #ddd;
+				.filter-list.nav {
+					a {
+						padding: 3px 2px;
+					}
+					.divider-vertical {
+						margin-right: 5px;
+						border-right: 1px solid #ddd;
+						color: transparent;
+					}
+				}
+			}
+			.search-form {
+				.form-group {margin: 0}
+			}
+			.auto {
+				height: 275px;
+				margin: 0 -15px;
+				padding: 10px;
+			}
+		}
+		.panel-footer.legend {
+			& > span {
+				text-transform: uppercase;
+				font-size: 11px;
+				color: #666;
+				display: inline-block;
+				margin-right: 8px;
+				&:last-child {margin-right: none;}
+				.item-type {
+					font-size: 14px;
+					color: #444;
+				}
+				&.public, &.public .item-type {color: #0085B2}
+			}
+		}
+	}
+
+	/* LISTAGEM DE PERFIS */
+	.perfis-despacho-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		& > li {
+			display: block;
+			padding: 3px 5px;
+			border-bottom: 1px solid #ddd;
+
+			&:hover { background:#FFEFBF; }
+			&.public {
+				&>a, .item-type { color: #0085B2 }
+			}
+			&.selected {
+				background: #FFFFBF;
+				&>a {font-weight: bold;}
+			}
+			.hover-buttons {top: 2px}
+			.item-type {
+				float: right;
+			}
+			a {color: #666;}
+		}
+	}
+
+
+	#perfil-depacho-novo {
+		.panel-heading {
+			.editable-field-container {
+				background: #ffffff;
+				border: 1px solid #ddd;
+				padding: 8px 12px;
+				&>.pull-right {
+					width: 80px;
+					.btn {float: left;}
+				}
+			}
+			.panel-title-options {
+				padding: 5px;
+				.btn {
+					color: #666;
+					padding: 6px;
+				}
+			}
+		}
+		.panel-body {
+			.form-group-title {
+				display: block;
+				text-align: center;
+				font-size: 12px;
+				margin-top: 0;
+			}
+			.search-form {
+				padding: 5px 0 0 0;
+				.form-group {margin-bottom: 5px;}
+			}
+			.perfis-despacho-list {
+				padding: 15px 0 0;
+				li {background: #f6f6f6;}
+			}
+		}
+		.panel-footer {
+			.filters {
+				float: left;
+				.filter-list.nav li a {
+					font-size: 14px;
+					padding: 10px 5px;
+				}
+			}
+		}
+	}
+}

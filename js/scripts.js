@@ -511,7 +511,7 @@
 			var right = offset.left + width + "px";
 
 			$(target).css( {
-				'position': 'absolute',
+				'position': 'fixed',
 			    'left': right,
 			    'top': top
 			});

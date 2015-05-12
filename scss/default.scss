@@ -145,7 +145,6 @@
 	h4 {font-size: 20px}
 
 	.unity, .muted {color: $lighter-text;}
-	.block {display: block;}
 
 	.text-pendente {color: $pendente}
 	.text-designado {color: $designado}
@@ -249,6 +248,11 @@
 			}
 		}
 	}
+
+	/******HELPERS******/
+
+	.block {display: block;}
+	.auto {max-height: 200px;}
 
 
 /************** COMPONENTS **************/
@@ -407,6 +411,15 @@
 			}
 		}
 	}
+	.dropdown-menu {
+		.nav.nav-pills {
+			margin-bottom: 10px;
+			&> li > a {
+				padding: 3px 10px;
+				height: 30px;
+			}
+		}
+	}
 	.nav-tabs > .dropdown-menu {
 		border: none;
 		padding: 0;
@@ -419,6 +432,17 @@
 	.dropdown-header {
 		text-transform: uppercase;
 	}
+
+	/* multilink */
+	.dropdown-menu.multilink {
+		&>li {
+			border-bottom: 1px solid #ddd;
+			&:last-child {border-bottom: none;}
+			&>a {display: inline-block;}
+			.hover-buttons {top: 0px}
+		}
+	}
+
 	/* dropdown-inverse */
 	.dropdown-inverse, .dropdown-inverse .nav-pills {
 		background-color: #222;
@@ -447,16 +471,6 @@
 			}
 		}
 	}
-	.dropdown-menu {
-		.nav.nav-pills {
-			margin-bottom: 10px;
-			&> li > a {
-				padding: 3px 10px;
-				height: 30px;
-			}
-		}
-	}
-	.auto {max-height: 200px;}
 
 
 	/* dropdown submenu */
@@ -658,6 +672,9 @@
 	.form-actions {
 		height: auto;
 		overflow: auto;
+		&.noclear {
+			overflow: visible;
+		}
 	}
 	.well {
 		.form-actions {

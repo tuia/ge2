@@ -927,9 +927,19 @@
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">filtro salvo 1</a></li>
-                  <li><a href="#">filtro salvo 2</a></li>
+                <ul class="dropdown-menu multilink">
+                  <li class="hover-buttons-container">
+                    <a href="#">filtro salvo 1</a>
+                    <span class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-trash"></i></a></span>
+                  </li>
+                  <li class="hover-buttons-container">
+                    <a href="#">filtro salvo 2</a>
+                    <span class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-trash"></i></a></span>
+                  </li>
+                  <li class="hover-buttons-container">
+                    <a href="#">filtro salvo 3</a>
+                    <span class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-trash"></i></a></span>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -1086,23 +1096,36 @@
 
             </div><!--/row-->
             
-            <div class="form-actions">
+            <div class="form-actions noclear">
               <div class="form-inline pull-left">
-                <label>filtros salvos</label>
-                <select class="form-control">
-                  <option>nome do filtro 1</option>
-                  <option>nome do filtro 2</option>
-                  <option>nome do filtro 3</option>
-                  <option>nome do filtro 4</option>
-                  <option>nome do filtro 5</option>
-                </select>
+                <div class="dropdown">
+                  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    filtros salvos
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu multilink">
+                    <li class="hover-buttons-container">
+                      <a href="#">filtro 1</a>
+                      <span class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-trash"></i></a></span>
+                    </li>
+                    <li class="hover-buttons-container">
+                      <a href="#">filtro 2</a>
+                      <span class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-trash"></i></a></span>
+                    </li>
+                    <li class="hover-buttons-container">
+                      <a href="#">filtro 3</a>
+                      <span class="hover-buttons"><a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-trash"></i></a></span>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="pull-right">
                 <a href="#" class="btn btn-link">cancelar</a>
                 <a href="#" class="btn btn-link">limpar</a>
-                <a href="#salvar-filtro-modal" data-toggle="modal" class="btn btn-default">salvar filtro</a>
+                <a href="#salvar-filtro-modal" data-toggle="modal" class="btn btn-default">salvar filtro...</a>
                 <a href="#" class="filter-trigger btn btn-primary">filtrar</a>
               </div>
+              <span class="clearfix"></span>
             </div>
           </div><!--/research-container-->
 

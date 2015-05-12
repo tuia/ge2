@@ -601,6 +601,17 @@ p.research-found {
 				}
 			}
 
+			&.disabled {
+				background-color: #eee !important;
+				&:before {
+					background: #ddd;
+				}
+				a, .fa {
+					color: #ccc; cursor: not-allowed;
+					&:hover {color: #ccc;}
+				}
+			}
+
 			&.active {
 				background: lighten(#596D7B, 10%);
 				a {

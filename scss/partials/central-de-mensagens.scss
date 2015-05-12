@@ -395,10 +395,9 @@
 				.dropdown-menu {
 					width: 380px;
 					height: 300px;
-					li a {
+					&>li > a {
 						color: #666;
 						padding: 8px 15px;
-						border-bottom: 1px solid #D5D5D5;
 					}
 				}
 			}

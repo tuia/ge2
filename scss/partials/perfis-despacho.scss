@@ -89,7 +89,7 @@
 			.item-type {
 				float: right;
 			}
-			a {color: #666;}
+			& >a {color: #666;}
 		}
 	}
 
@@ -138,5 +138,28 @@
 				}
 			}
 		}
+	}
+
+	#listar-perfis-modal {
+		.modal-header {padding: 5px; text-align: right;}
+		.modal-body {
+			.search-form {
+				padding: 10px 0;
+			}
+			h2 {margin: 0 0 0 10px}
+			.modal-title {margin-bottom: 10px}
+		}
+		.auto {
+			margin: 0 -15px;
+			.perfis-despacho-list > li {padding-left: 15px;}
+			.perfis-despacho-list > li > .description {
+				display: inline-block;
+				float: right;
+				margin-right: 25px;
+				color: #999;
+			}
+			.item-type {float: right; display: inline-block;}
+		}
+		.form-inline input {margin: 0}
 	}
 }

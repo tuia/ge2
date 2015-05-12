@@ -773,7 +773,7 @@
             </div>        
 
             <ul class="nav navbar-nav">
-              <li><a href="#associar-perfis" class="hastooltip show-window-btn" title="Associar perfis com usuários"><i class="fa fa-list"></i></a></li>
+              <li><a href="#listar-perfis-modal" class="hastooltip" title="listar perfis" data-toggle="modal"><i class="fa fa-list"></i></a></li>
               <li><a href="#" class="hastooltip" title="Novo perfil"><img src="img/icons/plus-icon.png" /></a></li>
               <li><a href="#" class="hastooltip" title="Duplicar este perfil"><img src="img/icons/duplicate-icon.png" /></a></li>
             </ul>
@@ -1272,6 +1272,202 @@
       </div><!--/container-->
     </div><!--/content-->
 
+
+    <!-- MODAIS -->
+    <div id="listar-perfis-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar poste" data-original-title="" /><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="fechar" data-original-title="" data-dismiss="modal"/><i class="fa fa-remove"></i></a>
+          </div>
+          <div class="modal-body">
+            <div class="row bordered">
+              <div class="col-xs-12 help-container">
+                <div class="modal-title">
+                  <img alt="nova manobra/serviço" src="img/icons/contacts-icon.png" class="pull-left">
+                  <h2 class="pull-left">Perfis de despacho</h2>
+                  <a href="#" class="hastooltip help-btn pull-right" title="ajuda"><i class="fa fa-info-circle fa-2x"></i></a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="alert alert-warning alert-dismissible help-content">
+                  <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                  <h4><i class="fa fa-info-circle"></i> Ajuda</h4>
+                  <p>Organize os conteúdos disponíveis nas categoria à direita. Algumas podem ser removidas ou renomeadas, outras não. O mesmo ocorre com certos conteúdos.</p><p>Você pode customizar diferentes perfis e associá-los com despachantes. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row bordered">
+              <div class="col-xs-12">
+                  <div class="search-form">
+                    <div class="form-group">
+                      <input class="form-control contextual-search" type="text" placeholder="buscar...">
+                    </div>
+                    <button class="btn" type="submit">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div><!--/search-form-->
+                </div>
+              </div>
+              <div class="row bordered">
+                <div class="col-xs-12">
+                  
+                  <div class="auto">
+                    <ul class="perfis-despacho-list">
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                      <li class="hover-buttons-container public editable-field-container">
+                        <a href="#" class="editable-value">Selenium Experimento</a>
+                        <span class="item-type editable-value">P</span>
+                        <span class="description editable-value">Baixada, Baixada 2, Perfil comercial RC07, DX, DL, DT, BC...</span>
+                        <span class="hover-buttons">
+                          <a href="#" class="btn btn-default btn-xs hastooltip toggle-icon-btn" data-toggle="dropdown" title="tornar público"><i class="fa fa-globe"></i><i class="fa fa-globe text-acionado"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip editable-field-btn" data-toggle="dropdown" title="editar"><i class="fa fa-pencil"></i></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="duplicar"><img src="img/icons/duplicate-icon.png"></a>
+                          <a href="#" class="btn btn-default btn-xs hastooltip" data-toggle="dropdown" title="remover"><i class="fa fa-remove"></i></a>
+                        </span>
+                        <span class="editable-field-form form-inline">
+                          <input type="text" value="Selenium Experimento" class="form-control input-sm editable-field" />
+                          <a href="#" class="btn btn-sm btn-default cancel">cancelar</a>
+                          <a href="#" class="btn btn-sm btn-primary save">salvar</a>
+                        </span>
+                      </li>
+                    </ul><!--/.perfis-despacho-list-->
+                  </div><!--/.auto-->
+                </div><!--/col-->
+              </div><!--/.row-->
+            </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+                  
 
     <!--/SCRIPTS-->
     <script src="js/jquery.min.js"></script>

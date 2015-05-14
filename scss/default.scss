@@ -112,11 +112,11 @@
 
 	.disabled {
 		background: inherit !important;
-		color: inherit !important;
+		color: #ccc !important;
 		cursor: not-allowed !important;
 		&:hover {
 			background: inherit !important;
-			color: inherit !important;
+			color: #ccc !important;
 		}
 	}
 	.panel {

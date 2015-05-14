@@ -238,6 +238,7 @@
 	////////// FORMS /////////	
 
 		//DATE PICKER
+		($('.datepicker').length) &&
 		$('.datepicker').datetimepicker({
 		    lang: 'pt-BR',
 		    timepicker: false,
@@ -246,22 +247,28 @@
 		});
 
 		//DATE TIME PICKER
+		($('.datetimepicker').length) &&
 		$('.datetimepicker').datetimepicker({
 		    lang: 'pt-BR',
 		    format:'d/m/Y H:i',
 		});
 
 		//ALPHANUMERIC
+		($(".input-alphanumeric-container > input[type='text']").length) &&
 		$(".input-alphanumeric-container > input[type='text']").numeric({
 			allowMinus: false,
 			allowThouSep: false,
 			allowDecSep: false
 		});
+		
 		// NO SPECIAL CHAR
+		($(".input-latin-container > input[type='text'], .input-latin-container > textarea").length) &&
 		$(".input-latin-container > input[type='text'], .input-latin-container > textarea").alphanum({
 			allow: '!?@":.,*-+/()[]=$#'
 		});
+		
 		//MONEY INPUT
+		($(".input-precision-container > input[type='text']").length) &&
 		$(".input-precision-container > input[type='text']").maskMoney({
 			thousands:'.',
 			decimal:',',
@@ -388,6 +395,7 @@
 		'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
 		];
 		 
+		($('#exemplo.typeahead').length) &&
 		$('#exemplo.typeahead').typeahead({
 			hint: true,
 			highlight: true,
@@ -401,6 +409,7 @@
 
 
 		//TAGS COM AUTOCOMPLETE
+		($(".autocomplete-tags").length) &&
         $(".autocomplete-tags").tagit({
         	 availableTags: ["c++", "java", "php", "javascript", "ruby", "python", "c"]
         });

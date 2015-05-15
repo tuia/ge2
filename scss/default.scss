@@ -1067,8 +1067,8 @@ iframe {
 
 	http://css-tricks.com/snippets/jquery/fit-iframe-to-content/
 	http://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using
-	*/
-	min-height: 470px;
+	
+	min-height: 470px; */
 
 }
 body.entity-iframe {
@@ -1376,28 +1376,31 @@ body.entity-iframe {
 		}
 	}
 
-	&.pendente {
+	&.pendente, &.criado {
 		background: $pendente;
 		&:hover { background: darken($pendente, 10%) }
 	}
-	&.designado {
+	&.designado, &.executado {
 		background: $designado;
 		&:hover { background: darken($designado, 10%) }
 	}
-	&.acionado {
+	&.acionado, &.executado-pda {
 		background: $acionado;
 		&:hover { background: darken($acionado, 10%) }
 	}
-	&.em-execucao {
+	&.em-execucao, &.aguardando-execucao, &.aguardando-processamento {
 		background: $em-execucao;
 		&:hover { background: darken($em-execucao, 10%) }
 	}
-	&.finalizado {
+	&.finalizado, &.erro {
 		background: $finalizado;
 		&:hover { background: darken($finalizado, 10%) }
 	}
 
-	&.pendente, &.designado, &.acionado, &.em-execucao, &.finalizado {color: $inverse-text; color: rgba(255,255,255,.9);}
+	&.pendente, &.criado, &.designado, &.executando, &.acionado, &.executado-pda, &.em-execucao, &.aguardando-execucao, &.aguardando-processamento, &.finalizado, &.erro {
+		color: $inverse-text;
+		color: rgba(255,255,255,.9);
+	}
 
 	&.error {
 		background: $error-color;

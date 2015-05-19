@@ -520,7 +520,7 @@
 			var right = offset.left + width + "px";
 
 			$(target).css( {
-				'position': 'fixed',
+				'position': 'absolute',
 			    'left': right,
 			    'top': top
 			});

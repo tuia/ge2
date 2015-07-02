@@ -20,8 +20,8 @@
 	$dark-red: #781E1D;
 
 	$green: #929C3B;
-	$light-green: #A6C442;
-	$dark-green: #69781D;
+	$light-green: #96AE52;
+	$dark-green: #7E961E;
 
 
 
@@ -81,6 +81,7 @@
 			visibility: none;
 			opacity: 0;
 			transition: opacity .1s linear;
+			transition-delay: .3s;
 
 			background: $light-blue;
 			width: 100%;

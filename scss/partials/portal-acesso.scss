@@ -1,0 +1,87 @@
+/* CENTRAL DE MENSAGENS */
+/*
+  client: axxiom
+  author: Nathalia de Azevedo Xavier
+  by: latitude14.com.br
+  started: 07/15
+*/
+
+#portal-metro {
+	margin: 10px 0;
+	list-style: none;
+	color: #FFFFFF;
+
+	/* TIPOGRAFIA */
+	.item-title {
+		text-align: center;
+		text-transform: uppercase;
+		h2 {
+			font-size: 120px;
+			margin: 0;
+			line-height: 1;
+			padding-top: 45px;
+		}
+		small {font-size: 12px;}
+	}
+
+
+	.item {
+		background: #5D6B7B;
+		width: 250px;
+		height: 250px;
+		margin: 5px;
+	    float: left;
+	    clear: none;
+	    position: relative;
+	    overflow: hidden;
+
+
+	    /* DIMENSÕES */
+		&:nth-child(n+4) {
+			width: 120px;
+			height: 120px;
+			.item-title {
+				h2 {font-size: 60px; padding-top: 18px;}
+			}
+		}
+		&:nth-child(n+8) {
+			width: 55px;
+			height: 55px;
+			.item-title {
+				h2 {font-size: 24px; padding-top: 15px;}
+				small { display: none;}
+			}
+		}
+
+
+		/* HOVER */
+		&:hover {
+			.hidden-content {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			&.ui-sortable-helper {
+				.hidden-content {
+					visibility: none;
+					opacity: 0;
+				}
+			}
+		}
+
+
+		/* CONTEÚDO ESCONDIDO */
+		.hidden-content {
+			visibility: none;
+			opacity: 0;
+			transition: opacity .1s linear;
+
+			background: #6379A4;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}

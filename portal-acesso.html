@@ -18,561 +18,646 @@
 
   </head>
 
-  <body style="overflow-x: hidden">
+  <body id="portal">
+
+    <div class="menus-container">
+
+      <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Aplicações</a></li>
+              <li><a href="#">Notícias</a></li>
+            </ul>
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" src="img/gdis-logo.png" />
+              </a>
+            </div>
+
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <!--/NOTIFICATIONS-->
+                <li class="dropdown notifications">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge">99</span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Notificação A</a></li>
+                    <li><a href="#">Notificação B</a></li>
+                    <li><a href="#">Notificação C</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="text-center">limpar notificações</a></li>
+                  </ul>
+                </li>
+
+                <!--/MESSAGES-->
+                <li class="dropdown messages">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <i class="fa fa-comment"></i>
+                    <span class="badge">99</span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Mensagem A</a></li>
+                    <li><a href="#">Mensagem B</a></li>
+                    <li><a href="#">Mensagem C</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="text-center">ver todas mensagens</a></li>
+                  </ul>
+                </li>
+
+
+              <!--/USER MENU-->
+                <li class="dropdown user-menu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <strong>PH</strong>
+                    <small>Axxiom</small>
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#"><i class="fa fa-user"></i> Paulo Henrique</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#user-menu-dispositivos" class="user-menu-link">Dispositivos e SE <span class="badge bookmark">12</span></a> </li>
+                    <li><a href="#user-menu-equipes" class="user-menu-link">Equipes <span class="badge bookmark">6</span></a></li>
+                    <li><a href="#user-menu-servicos" class="user-menu-link">Serviços <span class="badge bookmark">8</span></a></li>
+                    <li><a href="#user-menu-manobras" class="user-menu-link">Manobras <span class="badge bookmark">6</span></a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i> Sair do sistema</a></li>
+                  </ul>
+                  <div>
+                </li>
+                
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
 
     <div class="container-fluid">
-      <div id="portal-metro">
-
-
-      <!--/ITEM-->
-        <div class="item red">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item green">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-
-
-
-
-
-      <!--/ITEM-->
-        <div class="item red">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
 
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
+      <section id="aplicacoes">
+        <p>
+          <h1>Aplicações</h1>
+          Clique e arraste para personalizar a interface.
+        </p>
+        <div id="portal-metro">
+
+        <!--/ITEM-->
+          <div class="item red">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item green">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+
+
+
+
+
+        <!--/ITEM-->
+          <div class="item red">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
 
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
 
-          </div><!--/hidden-content-->
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
 
+            </div><!--/hidden-content-->
 
-        </div><!--/item-->
 
-      <!--/ITEM-->
-        <div class="item green">
+          </div><!--/item-->
 
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
+        <!--/ITEM-->
+          <div class="item green">
 
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
 
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
 
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-
-
-
-
-
-      <!--/ITEM-->
-        <div class="item red">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
 
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+
+
+
+
+
+        <!--/ITEM-->
+          <div class="item red">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
 
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
 
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item green">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item green">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
 
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-
-
-
-
-
-      <!--/ITEM-->
-        <div class="item red">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+
+
+
+
+
+        <!--/ITEM-->
+          <div class="item red">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
 
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item green">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-
-
-
-
-
-      <!--/ITEM-->
-        <div class="item red">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item green">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-      <!--/ITEM-->
-        <div class="item">
-
-          <div class="item-title">
-            <h2>OP</h2>
-            <small>operação</small>
-          </div>
-          
-          <div class="hidden-content">
-            <header>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-              <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
-            </header>
-
-            <a href="op.html" class="call-to-action">
-              <h3>OP</h3>
-              <span>
-                <small>Programação de manobras</small>
-                <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
-              </span>
-            </a>
-
-            <ul class="features-list">
-              <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-              <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-            </ul>
-
-          </div><!--/hidden-content-->
-
-
-        </div><!--/item-->
-
-
-
-        <div class="clearfix"></div>
-      </div><!--/#portal-metro-->
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item green">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+
+
+
+
+
+        <!--/ITEM-->
+          <div class="item red">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item green">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+        <!--/ITEM-->
+          <div class="item">
+
+            <div class="item-title">
+              <h2>OP</h2>
+              <small>operação</small>
+            </div>
+            
+            <div class="hidden-content">
+              <header>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
+                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+              </header>
+
+              <a href="op.html" class="call-to-action">
+                <h3>OP</h3>
+                <span>
+                  <small>Programação de manobras</small>
+                  <i class="fa fa-lock hastooltip" title="   ?PROTEGIDO?  "></i>
+                </span>
+              </a>
+
+              <ul class="features-list">
+                <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+              </ul>
+
+            </div><!--/hidden-content-->
+
+
+          </div><!--/item-->
+
+          <div class="clearfix"></div>
+        </div><!--/#portal-metro-->
+      </section>
+
+      <section id="indicadores">
+        <h1>Indicadores</h1>
+      </section>
 
     </div><!--/container-fluid-->
 

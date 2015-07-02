@@ -23,7 +23,46 @@
 	$light-green: #96AE52;
 	$dark-green: #7E961E;
 
+	$default-text: #5F6A7B;
 
+
+body#portal {
+	overflow-x: hidden;
+	padding-top: 40px;
+	color: $default-text;
+
+	h1 {
+		font-size: 32;
+		color: $default-text;
+		text-transform: uppercase;
+	}
+
+	#navigation {
+		.navbar-header {
+			float: none;
+			left: 50%;
+			display: inline-block;
+			position: absolute;
+			margin: 0 -47px;
+		}
+		.navbar-nav.nav:first-child > li > a {
+			padding: 26px;
+			text-transform: uppercase;
+			font-weight: 200;
+		}
+	}
+	section {
+		padding: 20px;
+		margin: 0;
+		/* SECOES */
+		&#aplicacoes {
+			padding: 60px 20px;
+		}
+		&#indicadores {
+			background: #DFE1E5;
+		}
+	}
+}
 
 
 #portal-metro {
@@ -54,6 +93,7 @@
 	    float: left;
 	    clear: none;
 	    position: relative;
+		z-index: 9;
 
 	    a {
 	    	color: #FFFFFF;
@@ -62,6 +102,7 @@
 
 		/* HOVER */
 		&:hover {
+			z-index: 10;
 			.hidden-content {
 				visibility: visible;
 				opacity: 1;

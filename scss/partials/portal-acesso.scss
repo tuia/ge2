@@ -80,6 +80,41 @@ body#portal {
 				&.intro {font-size: 22px; padding: 10px 0 20px}
 			}
 		}
+		&#noticias {
+			.carousel {
+				.carousel-caption {
+					text-align: left;
+					h3 {
+						font-size: 32px;
+					}
+				}
+				.carousel-control.left { left: 15px }
+				.carousel-control.right { right: 15px; }
+				.carousel-topics {
+					list-style: none;
+					padding: 0;
+					li a {
+						display: block;
+						padding: 15px;
+						color: $blue;
+						&:hover {
+							background: darken(#FFFFFF, 10%);
+						}
+						&.active {
+							background: $blue;
+							color: #FFFFFF;
+						}
+						.new-title {
+							font-size: 20px;
+							line-height: 1.15;
+							display: block;
+							margin-bottom: 5px;
+						}
+						em {display: block; color: $light-blue}
+					}
+				}
+			}
+		}
 	}
 
 

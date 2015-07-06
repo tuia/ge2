@@ -36,10 +36,13 @@ body#portal {
 		color: $default-text;
 		text-transform: uppercase;
 	}
+	h2 {
+		font-size: 24px;
+		font-weight: 400;
+	}
 	h3 {
 		font-size: 16px;
 		font-weight: 100;
-		text-transform: uppercase;
 	}
 
 
@@ -61,7 +64,6 @@ body#portal {
 
 	section {
 		padding: 20px;
-		margin: 20px 0;
 		/* SECOES */
 		&#aplicacoes {
 			padding: 60px 20px;
@@ -111,6 +113,26 @@ body#portal {
 							margin-bottom: 5px;
 						}
 						em {display: block; color: $light-blue}
+					}
+				}
+			}
+		}
+		&#mapa-de-aplicacoes {
+			background: $blue;
+			color: #FFFFFF;
+			h1 {color: #FFFFFF}
+			h2 {font-weight: 100}
+			.aplication-list {
+				font-weight: 100;
+				list-style-type: none;
+				padding-left: 15px;
+				li {
+					font-size: 20px;
+					.show-more {
+						color: #FFFFFF;
+						text-align: right;
+						display: block;
+						padding: 10px 20px;
 					}
 				}
 			}

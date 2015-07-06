@@ -38,6 +38,15 @@
   .list-table .endereco small {
     color: #999;
   }
+  .filter-alert {
+    padding-right: 50px;
+    position: relative;
+  }
+  .remove-filter-btn {
+    top: 8px;
+    right: 15px;
+    position: absolute;
+  }
 
 
 
@@ -929,9 +938,10 @@
                   <li><a href="#">Perfil 2</a></li>
                 </ul>
               </li>
-              <li><a href="#" class="hastooltip" title="distância da base"><img src="img/icons/dist-icon.png" height="13px" /></a></li>
-              <li><a href="#" class="hastooltip" title="triagem"><img src="img/icons/triagem-icon.png" /></a></li>
-              <li><a href="#" class="hastooltip" title="atenção especial"><img src="img/icons/atencao-icon.png" /></a></li>
+              <li><a href="#" class="hastooltip" title="consultar equipes"><img src="img/icons/turma-icon.png" /></a></li>
+              <li><a href="#" class="hastooltip" title="cadastrar manobra simplificada"><img src="img/icons/manobra-simples-icon.png" /></a></li>
+              <li><a href="#" class="hastooltip" title="consultar manobra"><img src="img/icons/manobra-icon.png" /></a></li>
+              <li><a href="#" class="hastooltip" title="consultar triagem"><img src="img/icons/triagem-icon.png" /></a></li>
 
               <!-- filtrar -->
               <li class="btn-group filter-group">
@@ -957,8 +967,7 @@
             </ul>
             
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" class="hastooltip" title="configurações"><i class="fa fa-cog"></i></a></li>
-              <li><a href="#" class="hastooltip help-btn" title="ajuda"><i class="fa fa-info-circle"></i></a></li>
+              <li><a href="#" class="hastooltip help-btn" title="informação"><i class="fa fa-info-circle"></i></a></li>
             </ul>
 
             <div class="nav navbar-nav navbar-right summary">
@@ -984,6 +993,10 @@
 
               <div class="col-xs-8">
                 <h4>Ordem de serviço</h4>
+                <div class="form-group col-xs-12">
+                    <label>Número da Ordem de Serviço</label>
+                    <input type="text" class="form-control"/>
+                </div>
                 <div class="col-xs-6">
                   <div class="form-group">
                     <label>tipo de serviço</label>
@@ -1026,31 +1039,19 @@
                   <label>Equipamentos</label>
                   <div class="input-group">
                     <span class="input-group-btn">
-                      <a href="#buscar-dispositivos" class="btn btn-info hastooltip" type="button" title="buscar equipamentos"><i class="fa fa-plug"></i></a>
+                      <a href="#buscar-dispositivos" class="btn btn-info hastooltip" type="button" title="buscar equipamentos"><i class="fa fa-search"></i></a>
                     </span>
                     <input type="text" class="form-control" placeholder="Utilize vígula (,) para separar os equipamentos selecionados">
                   </div><!-- /input-group -->
-                </div><!--/form-group-->
-                <div class="form-group">                  
+                </div><!--/form-group-->                  
                   <div class="row">
-                    <div class="col-xs-7">
-                      <label>Alimentador</label>
-                      <div class="input-group">
-                        <span class="input-group-btn">
-                          <a href="#buscar-dispositivos" class="btn btn-info hastooltip" type="button" title="buscar alimentador"><i class="fa fa-plug"></i></a>
-                        </span>
-                        <input type="text" class="form-control" placeholder="">
-                      </div><!-- /input-group -->
-                    </div><!--/form-group-->
-                    <div class="col-xs-5">
+                    <div class="form-group col-xs-5">
                       <label>Subestação</label>
-                      <div class="input-group">
-                        <span class="input-group-btn">
-                          <a href="#buscar-dispositivos" class="btn btn-info hastooltip" type="button" title="buscar subestação"><i class="fa fa-plug"></i></a>
-                        </span>
-                        <input type="text" class="form-control" placeholder="">
-                      </div><!-- /input-group -->
+                      <select class="form-control selectpicker" data-selected-text-format="count>2"><option>1</option><option>2</option></select>
                     </div><!--/form-group-->
+                    <div class="form-group col-xs-7">
+                      <label>Alimentador</label>
+                      <select class="form-control selectpicker" data-selected-text-format="count>2"><option>1</option><option>2</option></select>
                   </div><!--/.row-->
                 </div>
               </div><!--/col-xs-4-->
@@ -1102,16 +1103,20 @@
             
             <div class="form-actions noclear">
               <div class="pull-right">
-                <a href="#" class="btn btn-link">cancelar</a>
-                <a href="#" class="btn btn-link">limpar</a>
-                <a href="#salvar-filtro-modal" data-toggle="modal" class="btn btn-default">salvar filtro...</a>
-                <a href="#" class="filter-trigger btn btn-primary">filtrar</a>
+                <a href="#" class="btn btn-link">Limpar</a>
+                <a href="#salvar-filtro-modal" data-toggle="modal" class="btn btn-default">Salvar Filtro</a>
+                <a href="#" class="filter-trigger btn btn-primary">Filtrar</a>
               </div>
               <span class="clearfix"></span>
             </div>
           </div><!--/research-container-->
 
         </div><!--/help-container filter-container-->
+        
+        <div class="alert alert-info filter-alert">
+          <i class="fa fa-filter fa-2x pull-left"></i>
+          <p>Resultados filtrados por tipo de serviço <span class="label label-info">Abrir equipamento</span> e <span class="label label-info">Trocar dispositivo </span> e localização <span class="label label-info">São Bento - Belo Horizonte.</span> <a href="#" class="btn btn-default remove-filter-btn">Limpar Filtros</a> </p>
+        </div>
 
         <div class="table-options btn-toolbar disabled" role="toolbar">
 
@@ -1230,11 +1235,6 @@
             </div>
           </div>
 
-        </div>
-        
-        <div class="alert alert-info filter-alert">
-          <i class="fa fa-filter fa-2x pull-left"></i>
-          <p>Resultados filtrados por tipo de serviço <span class="label label-info">Abrir equipamento <a href="#" class="close-label">x</a></span> e <span class="label label-info">Trocar dispositivo <a href="#" class="close-label">x</a></span> e localização <span class="label label-info">São Bento - Belo Horizonte <a href="#" class="close-label">x</a></span>. [ <a href="#" class="remove-filter-btn">remover filtros</a> ]</p>
         </div>
 
         <div class="row">

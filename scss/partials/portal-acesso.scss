@@ -28,13 +28,14 @@
 
 body#portal {
 	overflow-x: hidden;
-	padding-top: 40px;
+	padding-top: 75px;
 	color: $default-text;
 
 	h1 {
-		font-size: 32;
+		font-size: 32px;
 		color: $default-text;
 		text-transform: uppercase;
+		margin-top: 0;
 	}
 	h2 {
 		font-size: 24px;
@@ -63,23 +64,19 @@ body#portal {
 	}
 
 	section {
-		padding: 20px;
+		padding: 50px 20px;
 		/* SECOES */
 		&#aplicacoes {
-			padding: 60px 20px;
 		}
 		&#indicadores, &#sobre {
 			background: #DFE1E5;
-			padding-bottom: 50px;
 		}
 		&#sobre {
-			text-align: center;
-			padding: 20px 60px 40px;
 			p {
-				font-size: 18px;
+				font-size: 16px;
 				line-height: 1.45em;
 				font-weight: 300;
-				&.intro {font-size: 22px; padding: 10px 0 20px}
+				&.intro {font-size: 22px; padding: 10px 0 0}
 			}
 		}
 		&#noticias {
@@ -92,10 +89,18 @@ body#portal {
 				}
 				.carousel-control.left { left: 15px }
 				.carousel-control.right { right: 15px; }
-				.carousel-topics {
-					list-style: none;
+				.carousel-topics.carousel-indicators {
+					position: static;
+					margin: 0;
 					padding: 0;
-					li a {
+					width: 100%;
+					li {
+						display: block;
+						width: 100%;
+						border: none;
+						height: auto;
+						text-align: left;
+						text-indent: 0;
 						display: block;
 						padding: 15px;
 						color: $blue;
@@ -104,7 +109,8 @@ body#portal {
 						}
 						&.active {
 							background: $blue;
-							color: #FFFFFF;
+							color: lighten($light-blue, 50%);
+							em {color: lighten($light-blue, 30%)}
 						}
 						.new-title {
 							font-size: 20px;
@@ -196,6 +202,43 @@ body#portal {
 
 
 
+/* APP VERSION LIST */ 
+.apps-version {
+	padding: 0;
+	list-style-type: none;
+	margin: 30px 0 20px;
+	overflow: auto;
+	height: auto;
+	li {
+		display: inline-block;
+		float: left;
+		a {
+			background: $blue;
+			width: 55px;
+			height: 55px;
+			color: #FFF;
+			position: relative;
+			display: block;
+			margin: 0 10px 10px 0;
+			padding: 10px 5px;
+			span {
+				font-size: 24px;
+				text-align: center;
+				display: block;
+				line-height: 1.1em;
+			}
+			small {
+				text-align: right;
+				display: block;
+			}
+			&:hover {
+				text-decoration: none;
+				background: $light-blue;
+			}
+		}
+	}
+}
+
 
 /****************************************************************************************************/
 
@@ -243,6 +286,7 @@ body#portal {
 		&:hover {
 			z-index: 100;
 			.hidden-content {
+				display: block;
 				visibility: visible;
 				opacity: 1;
 			}
@@ -259,9 +303,10 @@ body#portal {
 		/* CONTEÚDO ESCONDIDO */
 		.hidden-content {
 			visibility: none;
+			display: none;
 			opacity: 0;
 			transition: opacity .1s linear;
-			transition-delay: .3s;
+			transition-delay: .5s;
 
 			background: $light-blue;
 			width: 100%;
@@ -476,6 +521,22 @@ body#portal {
 					font-size: 9px;
 					text-align: center;
 				}
+			}
+		}
+
+		/* POSIÇÃO */
+		&:nth-child(6) {
+			&>.hidden-content .features-list {
+				left: initial !important;
+				right: 100% !important;
+				transition-delay: .2s;
+			}
+		}
+		&:nth-child(10), &:nth-child(11), &:nth-child(14), &:nth-child(15) {
+			&>.hidden-content {
+				left: initial !important;
+				right: 100% !important;
+				transition-delay: .2s;
 			}
 		}
 	}

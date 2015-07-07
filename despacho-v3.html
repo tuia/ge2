@@ -47,9 +47,14 @@
     right: 15px;
     position: absolute;
   }
-
-
-
+  .input-group > .bootstrap-tagsinput {
+    float: left;
+    display: table-cell;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
 
   </style>
 
@@ -1043,7 +1048,7 @@
                     <span class="input-group-btn">
                       <a href="#buscar-dispositivos" class="btn btn-info hastooltip" type="button" title="buscar equipamentos"><i class="fa fa-search"></i></a>
                     </span>
-                    <input type="text" class="form-control" placeholder="Utilize vígula (,) para separar os equipamentos selecionados" data-role="tagsinput" >
+                    <input type="text" class="form-control">
                   </div><!-- /input-group -->
                 </div><!--/form-group-->                  
                   <div class="row">
@@ -1432,6 +1437,9 @@
               <td colspan="2">
                 <a href="" class="hastooltip" title="detalhar solicitação">
                   <i class="fa fa-file-text-o"></i>
+                </a>
+                <a href="" class="hastooltip" title="duplicar solicitação">
+                  <img src="img/icons/duplicate-small-icon.png" alt="designação automática"/>
                 </a>
                 <a href="" class="hastooltip" title="consultar localização elétrica">
                   <i class="fa fa-bolt"></i>

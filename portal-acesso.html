@@ -18,81 +18,87 @@
 
   </head>
 
-  <body id="portal">
+  <body id="portal" data-spy="scroll" data-target="#navbar-scrollspy">
 
     <div class="menus-container">
 
       <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+
+        <div class="software-info">
+          <div class="container-fluid">
+            <span class="version">Versão desenvolvimento</span>
+            <span class="code">SRV_INFRA03</span>
+          </div>
+        </div>
         <div class="container-fluid">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="#">Aplicações</a></li>
-              <li><a href="#">Notícias</a></li>
-            </ul>
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">
-                <img alt="Brand" src="img/gdis-logo.png" />
+          <ul id="navbar-scrollspy" class="nav navbar-nav">
+            <li class="active"><a href="#aplicacoes">Aplicações</a></li>
+            <li><a href="#indicadores">Indicadores</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+          </ul>
+          
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="img/portal-acesso/gdis-logo-portal.png" />
+            </a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <!--/NOTIFICATIONS-->
+            <li class="dropdown notifications">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-bell"></i>
+                <span class="badge">99</span>
               </a>
-            </div>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Notificação A</a></li>
+                <li><a href="#">Notificação B</a></li>
+                <li><a href="#">Notificação C</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="text-center">limpar notificações</a></li>
+              </ul>
+            </li>
+
+            <!--/MESSAGES-->
+            <li class="dropdown messages">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-comment"></i>
+                <span class="badge">99</span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Mensagem A</a></li>
+                <li><a href="#">Mensagem B</a></li>
+                <li><a href="#">Mensagem C</a></li>
+                <li class="divider"></li>
+                <li><a href="#" class="text-center">ver todas mensagens</a></li>
+              </ul>
+            </li>
 
 
-            <ul class="nav navbar-nav navbar-right">
-
-                <!--/NOTIFICATIONS-->
-                <li class="dropdown notifications">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="fa fa-bell"></i>
-                    <span class="badge">99</span>
-                  </a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Notificação A</a></li>
-                    <li><a href="#">Notificação B</a></li>
-                    <li><a href="#">Notificação C</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#" class="text-center">limpar notificações</a></li>
-                  </ul>
-                </li>
-
-                <!--/MESSAGES-->
-                <li class="dropdown messages">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="fa fa-comment"></i>
-                    <span class="badge">99</span>
-                  </a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Mensagem A</a></li>
-                    <li><a href="#">Mensagem B</a></li>
-                    <li><a href="#">Mensagem C</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#" class="text-center">ver todas mensagens</a></li>
-                  </ul>
-                </li>
-
-
-              <!--/USER MENU-->
-                <li class="dropdown user-menu">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <strong>PH</strong>
-                    <small>Axxiom</small>
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><i class="fa fa-user"></i> Paulo Henrique</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#user-menu-dispositivos" class="user-menu-link">Dispositivos e SE <span class="badge bookmark">12</span></a> </li>
-                    <li><a href="#user-menu-equipes" class="user-menu-link">Equipes <span class="badge bookmark">6</span></a></li>
-                    <li><a href="#user-menu-servicos" class="user-menu-link">Serviços <span class="badge bookmark">8</span></a></li>
-                    <li><a href="#user-menu-manobras" class="user-menu-link">Manobras <span class="badge bookmark">6</span></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i> Sair do sistema</a></li>
-                  </ul>
-                  <div>
-                </li>
-                
-            </ul>
-          </div><!-- /.navbar-collapse -->
+          <!--/USER MENU-->
+            <li class="dropdown user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <strong>PH</strong>
+                <small>Axxiom</small>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#"><i class="fa fa-user"></i> Paulo Henrique</a></li>
+                <li class="divider"></li>
+                <li><a href="#user-menu-dispositivos" class="user-menu-link">Dispositivos e SE <span class="badge bookmark">12</span></a> </li>
+                <li><a href="#user-menu-equipes" class="user-menu-link">Equipes <span class="badge bookmark">6</span></a></li>
+                <li><a href="#user-menu-servicos" class="user-menu-link">Serviços <span class="badge bookmark">8</span></a></li>
+                <li><a href="#user-menu-manobras" class="user-menu-link">Manobras <span class="badge bookmark">6</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i> Sair do sistema</a></li>
+              </ul>
+              <div>
+            </li>
+            
+        </ul>
         </div><!-- /.container-fluid -->
       </nav>
     </div>
@@ -100,14 +106,30 @@
     <div class="container-fluid">
 
       <section id="aplicacoes">
+        <div class="section-title">
+          <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
+          <div class="edit-section-menu">
+            <ul class="section-actions">
+              <li><a href="#" class="hastooltip" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
+              <li><a href="#" class="hastooltip" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
+              <li class="pull-right"><a href="#" class="hastooltip" title="adicionar aplicação"><i class="fa fa-plus"></i></a></li>
+            </ul>
+            <ul class="section-profiles">
+              <li><a href="#">Perfil Despachante</a></li>
+              <li><a href="#">Perfil Supervisor</a></li>
+              <li><a href="#">Perfil Atendimento</a></li>
+            </ul>
+          </div><!--/edit-section-menu-->
           <h1>Aplicações</h1>
-          <div class="alert alert-info alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Dica!</strong> Clique e arraste as aplicações para personalizar sua tela inicial.
-          </div>
+        </div><!--/section-title-->
+
+        <div class="alert alert-info alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Dica!</strong> Clique e arraste as aplicações para personalizar sua tela inicial.
+        </div>
         <div id="portal-metro">
 
         <!--/ITEM-->
-          <div class="item red">
+          <div class="app-item red">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -142,7 +164,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item green">
+          <div class="app-item green">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -177,7 +199,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item">
+          <div class="app-item">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -213,11 +235,8 @@
 
 
 
-
-
-
         <!--/ITEM-->
-          <div class="item red">
+          <div class="app-item red">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -252,7 +271,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item green">
+          <div class="app-item green">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -287,7 +306,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item">
+          <div class="app-item">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -322,12 +341,8 @@
           </div><!--/item-->
 
 
-
-
-
-
         <!--/ITEM-->
-          <div class="item red">
+          <div class="app-item red">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -362,7 +377,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item green">
+          <div class="app-item green">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -397,7 +412,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item">
+          <div class="app-item">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -432,12 +447,8 @@
           </div><!--/item-->
 
 
-
-
-
-
         <!--/ITEM-->
-          <div class="item red">
+          <div class="app-item red">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -472,7 +483,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item green">
+          <div class="app-item green">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -507,7 +518,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item">
+          <div class="app-item">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -542,12 +553,8 @@
           </div><!--/item-->
 
 
-
-
-
-
         <!--/ITEM-->
-          <div class="item red">
+          <div class="app-item red">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -582,7 +589,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item green">
+          <div class="app-item green">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -617,7 +624,7 @@
           </div><!--/item-->
 
         <!--/ITEM-->
-          <div class="item">
+          <div class="app-item">
 
             <div class="item-title">
               <h2>OP</h2>
@@ -651,15 +658,32 @@
 
           </div><!--/item-->
 
-          <div class="clearfix"></div>
         </div><!--/#portal-metro-->
+
+        <div class="clearfix"></div>
       </section>
 
     </div><!--/container-fluid-->
 
     <section id="indicadores">
       <div class="container-fluid">
-        <h1>Indicadores</h1>
+          <div class="section-title">
+            <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
+            <div class="edit-section-menu">
+              <ul class="section-actions">
+                <li><a href="#" class="hastooltip" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
+                <li><a href="#" class="hastooltip" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
+                <li class="pull-right"><a href="#" class="hastooltip" title="adicionar aplicação"><i class="fa fa-plus"></i></a></li>
+              </ul>
+              <ul class="section-profiles">
+                <li><a href="#">Perfil Despachante</a></li>
+                <li><a href="#">Perfil Supervisor</a></li>
+                <li><a href="#">Perfil Atendimento</a></li>
+              </ul>
+            </div><!--/edit-section-menu-->
+            <h1>Indicadores</h1>
+          </div><!--/section-title-->
+
         <div class="row">
 
           <div class="col-xs-4">
@@ -782,15 +806,24 @@
 
     <section id="noticias">
       <div class="container-fluid">
-        <h1>Notícias</h1>
+        <div class="section-title">
+          <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
+          <div class="edit-section-menu">
+            <ul class="section-actions">
+              <li><a href="#" class="hastooltip" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
+              <li><a href="#" class="hastooltip" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
+              <li class="pull-right"><a href="#" class="hastooltip" title="adicionar aplicação"><i class="fa fa-plus"></i></a></li>
+            </ul>
+          </div><!--/edit-section-menu-->
+          <h1>Notícias</h1>
+        </div><!--/section-title-->
 
         <nav class="navbar">
           <ul class="nav nav-pills pull-left">
-            <li role="presentation" class="active"><a href="#">Todas</a></li>
-            <li role="presentation"><a href="#">Cemig</a></li>
-            <li role="presentation"><a href="#">Light</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Todas</a></li>
+            <li><a href="#">Cemig</a></li>
+            <li><a href="#">Light</a></li>
+            <li role="separator" class="divider">&nbsp;</li>
             <li><a href="">Clipping</a></li>
           </ul>
         </nav>
@@ -804,25 +837,31 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="img/news01.png" alt="...">
-                  <div class="carousel-caption">
-                    <h3>Axxiom oferece treinamento para equipe de requisitos de software</h3>
-                    Quinta feira, 02 de Julho de 2015
-                  </div>
+                  <a href="#">
+                    <img src="https://votepierre06.files.wordpress.com/2014/09/2014-09-23-16-28-39.jpg" alt="...">
+                    <div class="carousel-caption">
+                      <h3>Axxiom oferece treinamento para equipe de requisitos de software</h3>
+                      Quinta feira, 02 de Julho de 2015
+                    </div>
+                  </a>
                 </div>
                 <div class="item">
-                  <img src="img/news01.png" alt="...">
-                  <div class="carousel-caption">
-                    <h3>Atenção para novas regras de atendimento</h3>
-                    Quinta feira, 02 de Julho de 2015
-                  </div>
+                  <a href="#">
+                    <img src="http://www.fecomerciomg.org.br/wp-content/uploads/2014/09/atendimento1.jpg" alt="...">
+                    <div class="carousel-caption">
+                      <h3>Atenção para novas regras de atendimento</h3>
+                      Quinta feira, 02 de Julho de 2015
+                    </div>
+                  </a>
                 </div>
                 <div class="item">
-                  <img src="img/news01.png" alt="...">
-                  <div class="carousel-caption">
-                    <h3>Perdas de hidrelétricas devem crescer no 2º semestre, diz governo após questionamento de setor industrial</h3>
-                    Quinta feira, 02 de Julho de 2015 - via <a href="#" target="blank">G1</a> 
-                  </div>
+                  <a href="#">
+                    <img src="http://s2.glbimg.com/-lpfNkYOIc8KPOwCv47EdT4lZVI=/620x465/s.glbimg.com/jo/g1/f/original/2015/02/19/img-20150219-wa0009.jpg" alt="...">
+                    <div class="carousel-caption">
+                      <h3>Perdas de hidrelétricas devem crescer no 2º semestre, diz governo após questionamento de setor industrial</h3>
+                      Quinta feira, 02 de Julho de 2015
+                    </div>
+                  </a>
                 </div>
               </div>
 
@@ -857,6 +896,9 @@
                     <em>Quinta feira, 02 de Julho de 2015 - via <a href="#" target="blank">G1</a> </em>
                   
                 </li>
+                <li>
+                  <a href="#">mais notícias &raquo;</a>
+                </li>
               </ul>
             </div><!--/col4-->
 
@@ -866,110 +908,114 @@
     </section>
 
     <section id="sobre">
-      <h1><strong>GDIS</strong> GESTÃO DE DISTRIBUIÇÃO DE ENERGIA</h1>
-      <p class="intro">A Axxiom é uma empresa de Tecnologia e Informação (TI), formada pelas empresas Light (51%) e Cemig (49%), e atua na prestação de serviços e soluções tecnológicas para os setores de energia, água e saneamento, gás e telecomunicações desde 2008.</p>
+      <div class="container-fluid">
+        <h1><strong>GDIS</strong> GESTÃO DE DISTRIBUIÇÃO DE ENERGIA</h1>
 
-      <ul class="apps-version">
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>OP</span>
-            <small>v2.0</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>SC</span>
-            <small>v2.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>BT</span>
-            <small>v0.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>OP</span>
-            <small>v2.0</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>SC</span>
-            <small>v2.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>BT</span>
-            <small>v0.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>OP</span>
-            <small>v2.0</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>SC</span>
-            <small>v2.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>BT</span>
-            <small>v0.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>OP</span>
-            <small>v2.0</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>SC</span>
-            <small>v2.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>BT</span>
-            <small>v0.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>OP</span>
-            <small>v2.0</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>SC</span>
-            <small>v2.1</small>
-          </a>
-        </li>
-        <li>
-          <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
-            <span>BT</span>
-            <small>v0.1</small>
-          </a>
-        </li>
-      </ul>
+        <p class="intro">A Axxiom é uma empresa de Tecnologia e Informação (TI), formada pelas empresas Light (51%) e Cemig (49%), e atua na prestação de serviços e soluções tecnológicas para os setores de energia, água e saneamento, gás e telecomunicações desde 2008.</p>
+
+        <ul class="apps-version">
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>OP</span>
+              <small>v2.0</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>SC</span>
+              <small>v2.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>BT</span>
+              <small>v0.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>OP</span>
+              <small>v2.0</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>SC</span>
+              <small>v2.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>BT</span>
+              <small>v0.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>OP</span>
+              <small>v2.0</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>SC</span>
+              <small>v2.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>BT</span>
+              <small>v0.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>OP</span>
+              <small>v2.0</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>SC</span>
+              <small>v2.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>BT</span>
+              <small>v0.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>OP</span>
+              <small>v2.0</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>SC</span>
+              <small>v2.1</small>
+            </a>
+          </li>
+          <li>
+            <a href="#app-modal" data-toggle="modal" class="hastooltip" title="detalhar">
+              <span>BT</span>
+              <small>v0.1</small>
+            </a>
+          </li>
+        </ul>
 
 
-      <p>Atualmente, a Axxiom é responsável pela manutenção dos sistemas técnicos de distribuição em que são desenvolvidas melhorias e implementados sistemas que se adaptem às exigências do setor de distribuição de energia elétrica, além de acompanharem as evoluções tecnológicas.</p>
-      <p>Com a Cemig, a Empresa desenvolveu um novo produto, o G-DIS, que agrupa diversos módulos da gestão da distribuição da Cemig como o envio de equipes de campo, medição dos indicadores de qualidade da energia, gestão das equipes de manutenção, dentre outras ações.</p>
+        <p>Atualmente, a Axxiom é responsável pela manutenção dos sistemas técnicos de distribuição em que são desenvolvidas melhorias e implementados sistemas que se adaptem às exigências do setor de distribuição de energia elétrica, além de acompanharem as evoluções tecnológicas.</p>
+        <p>Com a Cemig, a Empresa desenvolveu um novo produto, o G-DIS, que agrupa diversos módulos da gestão da distribuição da Cemig como o envio de equipes de campo, medição dos indicadores de qualidade da energia, gestão das equipes de manutenção, dentre outras ações.</p>
+      </div>
     </section>
 
     <section id="mapa-de-aplicacoes">
-      <h1>Mapa de aplicações</h1>
       <div class="container-fluid">
+        <h1>Mapa de aplicações</h1>
+
         <div class="row">
           <div class="col-xs-3">
             <h2><strong>GE</strong> | Operação</h2>
@@ -1082,6 +1128,69 @@
     </section>
 
 
+    <!--/  APP MODAL -->
+    <div id="app-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="modal-body">
+
+            <div class="modal-intro">
+
+              <div class="app-item">
+                <div class="item-title">
+                  <h2>OP</h2>
+                  <small>operação</small>
+                </div>
+              </div><!--/app-item-->
+
+              <div class="app-item-description">
+                <h2><strong>OP</strong> - OPERAÇÃO V2.0 <a href="#" target="blank"><i class="fa fa-external-link"></i></a></h2>
+                <p>Módulo de operação e despacho das equipes para atendimento das ocorrências na rede elétrica em campo através de integração com G-DIS SC. Permite a realização de manobras, as quais serão refletidas no G-DIS GE.</p>
+              </div>
+
+            </div><!--/modal-intro-->
+
+            <div class="modal-details">
+              <div class="row">
+                <div class="col-xs-4">
+                  <h3>Screenshots</h3>
+                  <a href="#" target="blank" class="thumbnail">
+                    <img src="img/portal-acesso/screenshot01.png" alt="screenshot"/>
+                  </a>
+                  <a href="#" target="blank" class="thumbnail">
+                    <img src="img/portal-acesso/screenshot02.png" alt="screenshot"/>
+                  </a>
+                </div><!--/col-->
+                <div class="col-xs-8">
+                  <h3>Mapa de aplicação e permissões</h3>
+                  <ul>
+                    <li>Despacho de serviços</li>
+                    <li class="muted">Controle de manobras <i class="fa fa-lock"></i></li>
+                    <li class="muted">Manobras simples <i class="fa fa-lock"></i></li>
+                    <li>Despacho de serviços</li>
+                    <li>Gerenciamento de serviços</li>
+                    <li>Despacho de serviços</li>
+                    <li class="muted">Controle de manobras <i class="fa fa-lock"></i></li>
+                    <li class="muted">Manobras simples <i class="fa fa-lock"></i></li>
+                    <li>Despacho de serviços</li>
+                    <li>Gerenciamento de serviços</li>
+                    <li>Despacho de serviços</li>
+                    <li class="muted">Controle de manobras <i class="fa fa-lock"></i></li>
+                    <li class="muted">Manobras simples <i class="fa fa-lock"></i></li>
+                    <li>Despacho de serviços</li>
+                    <li>Gerenciamento de serviços</li>
+                  </ul>
+                </div><!--/col-->
+              </div>
+            </div><!--/modal-details-->
+
+          </div><!--/modal-body-->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
   </body>
 
 
@@ -1100,8 +1209,28 @@
     <script src="js/scripts.js"></script>
 
     <script type="text/javascript">
+
+    $('.edit-section-btn').click( function(e) {
+      $(this).parent().find('.edit-section-menu').slideToggle();
+      return false;
+    })
+    $(document).click(function(){
+      $('.edit-section-menu').slideUp();
+    });
+
       $(function() {
-        $( "#portal-metro" ).sortable();
+        $( "#portal-metro" ).sortable({
+          revert: true,
+          opacity: .5,
+          placeholder: {
+              element: function(currentItem) {
+                  return $("<div class='app-item' style='background: #CCCCCC; border: 3px dashed #aaa'>&nbsp;</div>")[0];
+              },
+              update: function(container, p) {
+                  return;
+              }
+          }
+        });
         $( "#portal-metro" ).disableSelection();
       });
     </script>

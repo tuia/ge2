@@ -569,7 +569,7 @@ body#portal {
 		    float: left;
 		    display: block;
 		    position: relative;
-			z-index: 1;
+			z-index: 1 !important;
 
 		    a {
 		    	color: #FFFFFF;
@@ -578,12 +578,12 @@ body#portal {
 
 			/* HOVER */
 			&:hover {
-				z-index: 100 !important;
+				z-index: 1000 !important;
 				.hidden-content {
 					display: block;
 					visibility: visible;
 					opacity: 1;
-					z-index: 100 !important;
+					z-index: 1000 !important;
 				}
 
 				&.ui-sortable-helper {
@@ -730,6 +730,7 @@ body#portal {
 			/* pequeno */
 			&.small {
 				.hidden-content header .expand-app-btn {display: inline-block;}
+				.hidden-content header .compress-app-btn {display: none;}
 				&>.fa-lock {
 					padding: 5px;
 					font-size: 14px;

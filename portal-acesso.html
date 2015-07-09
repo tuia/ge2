@@ -835,7 +835,6 @@
               <ul class="section-actions">
                 <li><a href="#" class="hastooltip rise-section" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
                 <li><a href="#" class="hastooltip lower-section" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
-                <li class="pull-right"><a href="#" class="hastooltip" title="adicionar aplicação"><i class="fa fa-plus"></i></a></li>
               </ul>
             </div><!--/edit-section-menu-->
             <h1>Notícias</h1>
@@ -932,16 +931,7 @@
 
       <section id="sobre">
         <div class="container-fluid">
-          <div class="section-title">
-            <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
-            <div class="edit-section-menu">
-              <ul class="section-actions">
-                <li><a href="#" class="hastooltip rise-section" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
-                <li><a href="#" class="hastooltip lower-section" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
-              </ul>
-            </div><!--/edit-section-menu-->
-            <h1><strong>GDIS</strong> GESTÃO DE DISTRIBUIÇÃO DE ENERGIA</h1>
-          </div><!--/section-title-->
+          <h1><strong>GDIS</strong> GESTÃO DE DISTRIBUIÇÃO DE ENERGIA</h1>
 
           <p class="intro">A Axxiom é uma empresa de Tecnologia e Informação (TI), formada pelas empresas Light (51%) e Cemig (49%), e atua na prestação de serviços e soluções tecnológicas para os setores de energia, água e saneamento, gás e telecomunicações desde 2008.</p>
 
@@ -1046,16 +1036,7 @@
 
       <section id="mapa-de-aplicacoes">
         <div class="container-fluid">
-          <div class="section-title">
-            <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
-            <div class="edit-section-menu">
-              <ul class="section-actions">
-                <li><a href="#" class="hastooltip rise-section" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
-                <li><a href="#" class="hastooltip lower-section" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
-              </ul>
-            </div><!--/edit-section-menu-->
-            <h1>Mapa de aplicações</h1>
-          </div><!--/section-title-->
+          <h1>Mapa de aplicações</h1>
 
           <div class="row">
             <div class="col-xs-3">
@@ -1571,31 +1552,41 @@
     });
 
 
-
-
     /*  EDIT SECTION MENU */
 
       /* ARRANGE SECTIONS */
       $('.rise-section').click( function() {
         var secao = $(this).parents('section');
+        var position = secao.index();
+        var item = $('#navbar-scrollspy li').eq(position - 1);
+
         secao.prev().insertAfter(secao).slideDown();
         $('.edit-section-menu').slideUp();
         $('html,body').animate({
           scrollTop: secao.offset().top - 100
         }, 500);
+
+        item.prev().insertAfter(item);
+
         return false
       });
+
+
       $('.lower-section').click( function() {
         var secao = $(this).parents('section');
+        var position = secao.index();
+        var item = $('#navbar-scrollspy li').eq(position - 1);
+
         secao.next().insertBefore(secao).slideDown();
         $('.edit-section-menu').slideUp();
         $('html,body').animate({
           scrollTop: secao.offset().top - 100
         }, 500);
+
+        item.next().insertBefore(item);
+
         return false
       });
-
-
 
     /*  METRO INTERFACE  */
 
@@ -1604,17 +1595,18 @@
         $( "#portal-metro" ).sortable({
           revert: true,
           opacity: .5,
-          placeholder: {
+          /*placeholder: {
               element: function(currentItem) {
                   return $("<div class='app-item' style='background: #CCCCCC; border: 3px dashed #aaa'>&nbsp;</div>")[0];
               },
               update: function(container, p) {
                   return;
               }
-          }
+          }*/
         });
         $( "#portal-metro" ).disableSelection();
       });
+
 
       /* REMOVE APP SHORTCUT */
       $('.remove-app-item-btn').click(function() {
@@ -1633,6 +1625,18 @@
           app.addClass('medium');
         } else {
           app.removeClass('medium');
+        }
+        return false
+      });
+      /* COMPRESS APP */
+      $('.compress-app-btn').click( function() {
+        var app = $(this).parents('.app-item');
+
+        if ( app.hasClass('medium') ) {
+          app.removeClass('medium');
+          app.addClass('small');
+        } else {
+          app.addClass('medium');
         }
         return false
       });

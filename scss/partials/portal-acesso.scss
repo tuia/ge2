@@ -86,7 +86,7 @@ body#portal {
 	}
 
 	section {
-		padding: 75px 20px;
+		padding: 50px 20px;
 
 		.section-title {
 			position: relative;
@@ -377,11 +377,6 @@ body#portal {
 			.form-control {
 				color: #FFFFFF;
 			}
-			.btn {
-				color: #FFFFFF;
-				opacity: .5;
-				&:hover { opacity: 1;}
-			}
 		}
 
 	}
@@ -517,20 +512,6 @@ body#portal {
 		height: 250px;
 		margin: 5px;
 		color: #FFFFFF;
-		
-
-		/* mini */
-		&.mini {
-			width: 40px;
-			height: 40px;
-			text-align: center;
-			padding: 5px; 
-			.item-title {
-				margin: 3px;
-				font-size: 16px;
-				display: block;
-			}
-		}
 
 		/* TIPOGRAFIA */
 		.item-title {
@@ -549,9 +530,8 @@ body#portal {
 			position: absolute;
 			bottom: 0;
 			right: 0;
-			padding: 15px;
+			padding: 10px;
 			opacity: .5;
-			font-size: 22px;
 			&:hover {opacity: 1;}
 		}
 
@@ -569,7 +549,7 @@ body#portal {
 		    float: left;
 		    display: block;
 		    position: relative;
-			z-index: 1 !important;
+			z-index: 1;
 
 		    a {
 		    	color: #FFFFFF;
@@ -578,12 +558,12 @@ body#portal {
 
 			/* HOVER */
 			&:hover {
-				z-index: 1000 !important;
+				z-index: 100 !important;
 				.hidden-content {
 					display: block;
 					visibility: visible;
 					opacity: 1;
-					z-index: 1000 !important;
+					z-index: 100 !important;
 				}
 
 				&.ui-sortable-helper {
@@ -624,7 +604,6 @@ body#portal {
 						padding: 2px 5px;
 						display: inline-block;
 					}
-					.expand-app-btn {display: none;}
 				}
 
 				.call-to-action {
@@ -685,7 +664,7 @@ body#portal {
 
 		.app-item {
 
-			/* POSIÇÃO 
+			/* POSIÇÃO */
 			&:nth-child(6) {
 				&>.hidden-content .features-list {
 					left: initial !important;
@@ -699,16 +678,11 @@ body#portal {
 					right: 100% !important;
 					transition-delay: .2s;
 				}
-			}*/
+			}
 
 			/* DIMENSÕES */
 			/*  médio */
-			&.medium {
-				.hidden-content header .expand-app-btn {display: inline-block;}
-				&>.fa-lock {
-					padding: 10px;
-					font-size: 18px;
-				}
+			&:nth-child(n+4) {
 				width: 120px;
 				height: 120px;
 				.item-title {
@@ -727,14 +701,20 @@ body#portal {
 					}
 				}
 			}
-			/* pequeno */
-			&.small {
-				.hidden-content header .expand-app-btn {display: inline-block;}
-				.hidden-content header .compress-app-btn {display: none;}
-				&>.fa-lock {
-					padding: 5px;
-					font-size: 14px;
+			/* mini */
+			&.mini {
+				width: 40px;
+				height: 40px;
+				text-align: center;
+				padding: 5px; 
+				.item-title {
+					margin: 3px;
+					font-size: 16px;
+					display: block;
 				}
+			}
+			/* pequeno */
+			&:nth-child(n+8), &.small {
 				width: 55px;
 				height: 55px;
 				.item-title {
@@ -760,7 +740,7 @@ body#portal {
 				}
 			}
 			/* ambos */
-			&.medium, &.small {
+			&:nth-child(n+4), &:nth-child(n+8) {
 				&:hover {background: $light-blue;}
 				.hidden-content {
 					padding: 0;
@@ -813,14 +793,14 @@ body#portal {
 					h3 {border-right-color: $light-red;}	
 				}
 
-				&.medium {
+				&:nth-child(n+4) {
 					&>.hidden-content .features-list {
 						background: $light-red;
 					}
 				}
-				&.small>.hidden-content header { background: lighten($red, 5%)}
+				&:nth-child(n+8)>.hidden-content header { background: lighten($red, 5%)}
 
-				&:hover, &.medium:hover {
+				&:hover, &:nth-child(n+4):hover {
 					background: $red;
 				}
 			}
@@ -838,14 +818,14 @@ body#portal {
 					h3 {border-right-color: $light-green;}	
 				}
 
-				&.medium {
+				&:nth-child(n+4) {
 					&>.hidden-content .features-list {
 						background: $light-green;
 					}
 				}
-				&.small>.hidden-content header { background: lighten($green, 5%)}
+				&:nth-child(n+8)>.hidden-content header { background: lighten($green, 5%)}
 
-				&:hover, &.medium:hover {
+				&:hover, &:nth-child(n+4):hover {
 					background: $green;
 				}
 			}

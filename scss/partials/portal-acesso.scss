@@ -86,7 +86,7 @@ body#portal {
 	}
 
 	section {
-		padding: 50px 20px;
+		padding: 75px 20px;
 
 		.section-title {
 			position: relative;
@@ -377,6 +377,11 @@ body#portal {
 			.form-control {
 				color: #FFFFFF;
 			}
+			.btn {
+				color: #FFFFFF;
+				opacity: .5;
+				&:hover { opacity: 1;}
+			}
 		}
 
 	}
@@ -513,6 +518,19 @@ body#portal {
 		margin: 5px;
 		color: #FFFFFF;
 
+		/* mini */
+		&.mini {
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			padding: 5px; 
+			.item-title {
+				margin: 3px;
+				font-size: 16px;
+				display: block;
+			}
+		}
+
 		/* TIPOGRAFIA */
 		.item-title {
 			text-align: center;
@@ -530,8 +548,9 @@ body#portal {
 			position: absolute;
 			bottom: 0;
 			right: 0;
-			padding: 10px;
+			padding: 15px;
 			opacity: .5;
+			font-size: 22px;
 			&:hover {opacity: 1;}
 		}
 
@@ -682,7 +701,11 @@ body#portal {
 
 			/* DIMENSÕES */
 			/*  médio */
-			&:nth-child(n+4) {
+			&.medium {
+				&>.fa-lock {
+					padding: 10px;
+					font-size: 18px;
+				}
 				width: 120px;
 				height: 120px;
 				.item-title {
@@ -701,20 +724,12 @@ body#portal {
 					}
 				}
 			}
-			/* mini */
-			&.mini {
-				width: 40px;
-				height: 40px;
-				text-align: center;
-				padding: 5px; 
-				.item-title {
-					margin: 3px;
-					font-size: 16px;
-					display: block;
-				}
-			}
 			/* pequeno */
-			&:nth-child(n+8), &.small {
+			&.small {
+				&>.fa-lock {
+					padding: 5px;
+					font-size: 14px;
+				}
 				width: 55px;
 				height: 55px;
 				.item-title {
@@ -740,7 +755,7 @@ body#portal {
 				}
 			}
 			/* ambos */
-			&:nth-child(n+4), &:nth-child(n+8) {
+			&.medium, &.small {
 				&:hover {background: $light-blue;}
 				.hidden-content {
 					padding: 0;
@@ -793,14 +808,14 @@ body#portal {
 					h3 {border-right-color: $light-red;}	
 				}
 
-				&:nth-child(n+4) {
+				&.medium {
 					&>.hidden-content .features-list {
 						background: $light-red;
 					}
 				}
-				&:nth-child(n+8)>.hidden-content header { background: lighten($red, 5%)}
+				&.small>.hidden-content header { background: lighten($red, 5%)}
 
-				&:hover, &:nth-child(n+4):hover {
+				&:hover, &.medium:hover {
 					background: $red;
 				}
 			}
@@ -818,14 +833,14 @@ body#portal {
 					h3 {border-right-color: $light-green;}	
 				}
 
-				&:nth-child(n+4) {
+				&.medium {
 					&>.hidden-content .features-list {
 						background: $light-green;
 					}
 				}
-				&:nth-child(n+8)>.hidden-content header { background: lighten($green, 5%)}
+				&.small>.hidden-content header { background: lighten($green, 5%)}
 
-				&:hover, &:nth-child(n+4):hover {
+				&:hover, &.medium:hover {
 					background: $green;
 				}
 			}

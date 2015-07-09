@@ -30,10 +30,11 @@
             <span class="code">SRV_INFRA03</span>
           </div>
         </div>
+
         <div class="container-fluid">
 
           <ul id="navbar-scrollspy" class="nav navbar-nav">
-            <li class="active"><a href="#aplicacoes">Aplicações</a></li>
+            <li><a href="#aplicacoes">Aplicações</a></li>
             <li><a href="#indicadores">Indicadores</a></li>
             <li><a href="#noticias">Notícias</a></li>
             <li><a href="#sobre">Sobre</a></li>
@@ -103,16 +104,15 @@
       </nav>
     </div>
 
-    <div class="container-fluid">
-
-      <section id="aplicacoes">
+    <section id="aplicacoes">
+      <div class="container-fluid">
         <div class="section-title">
           <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
           <div class="edit-section-menu">
             <ul class="section-actions">
-              <li><a href="#" class="hastooltip" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
-              <li><a href="#" class="hastooltip" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
-              <li class="pull-right"><a href="#" class="hastooltip" title="adicionar aplicação"><i class="fa fa-plus"></i></a></li>
+              <li><a href="#" class="hastooltip rise-section" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
+              <li><a href="#" class="hastooltip lower-section" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
+              <li class="pull-right"><a href="#add-app-modal" class="hastooltip" data-toggle="modal" title="adicionar atalho de aplicação"><i class="fa fa-plus"></i></a></li>
             </ul>
             <ul class="section-profiles">
               <li><a href="#">Perfil Despachante</a></li>
@@ -121,6 +121,14 @@
             </ul>
           </div><!--/edit-section-menu-->
           <h1>Aplicações</h1>
+
+          <nav class="navbar">
+            <ul class="nav nav-pills navbar-right">
+              <li><a href="#">sem suporte ao Chrome</a></li>
+              <li><a href="#">sem acesso</a></li>
+            </ul>
+          </nav>
+
         </div><!--/section-title-->
 
         <div class="alert alert-info alert-dismissible" role="alert">
@@ -131,6 +139,8 @@
         <!--/ITEM-->
           <div class="app-item red">
 
+            <i class="fa fa-lock"></i>
+
             <div class="item-title">
               <h2>OP</h2>
               <small>operação</small>
@@ -141,7 +151,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -176,7 +186,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -211,7 +221,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -248,7 +258,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -283,7 +293,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -308,6 +318,8 @@
         <!--/ITEM-->
           <div class="app-item">
 
+            <i class="fa fa-lock"></i>
+
             <div class="item-title">
               <h2>OP</h2>
               <small>operação</small>
@@ -318,7 +330,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -354,7 +366,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -389,7 +401,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -424,7 +436,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -460,7 +472,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -495,7 +507,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -530,7 +542,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -556,6 +568,8 @@
         <!--/ITEM-->
           <div class="app-item red">
 
+            <i class="fa fa-lock"></i>
+
             <div class="item-title">
               <h2>OP</h2>
               <small>operação</small>
@@ -566,7 +580,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -601,7 +615,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -636,7 +650,7 @@
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-search-plus"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-compress"></i></a>
                 <a href="#" class="hastooltip" title=" "><i class="fa fa-external-link"></i></a>
-                <a href="#" class="hastooltip" title=" "><i class="fa fa-remove"></i></a>
+                <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
               </header>
 
               <a href="op.html" class="call-to-action">
@@ -661,9 +675,8 @@
         </div><!--/#portal-metro-->
 
         <div class="clearfix"></div>
-      </section>
-
-    </div><!--/container-fluid-->
+      </div><!--/container-fluid-->
+    </section>
 
     <section id="indicadores">
       <div class="container-fluid">
@@ -671,9 +684,9 @@
             <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
             <div class="edit-section-menu">
               <ul class="section-actions">
-                <li><a href="#" class="hastooltip" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
-                <li><a href="#" class="hastooltip" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
-                <li class="pull-right"><a href="#" class="hastooltip" title="adicionar aplicação"><i class="fa fa-plus"></i></a></li>
+                <li><a href="#" class="hastooltip rise-section" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
+                <li><a href="#" class="hastooltip lower-section" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
+                <li class="pull-right"><a href="#add-indice-modal" data-toggle="modal" class="hastooltip" title="adicionar indicador"><i class="fa fa-plus"></i></a></li>
               </ul>
               <ul class="section-profiles">
                 <li><a href="#">Perfil Despachante</a></li>
@@ -810,8 +823,8 @@
           <a href="#" class="edit-section-btn hastooltip" title="editar seção"><i class="fa fa-pencil"></i></a>
           <div class="edit-section-menu">
             <ul class="section-actions">
-              <li><a href="#" class="hastooltip" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
-              <li><a href="#" class="hastooltip" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
+              <li><a href="#" class="hastooltip rise-section" title="subir seção"><i class="fa fa-arrow-up"></i></a></li>
+              <li><a href="#" class="hastooltip lower-section" title="descer seção"><i class="fa fa-arrow-down"></i></a></li>
               <li class="pull-right"><a href="#" class="hastooltip" title="adicionar aplicação"><i class="fa fa-plus"></i></a></li>
             </ul>
           </div><!--/edit-section-menu-->
@@ -1128,8 +1141,11 @@
     </section>
 
 
+    <!--MODAIS-->
+
+
     <!--/  APP MODAL -->
-    <div id="app-modal" class="modal fade">
+    <div id="app-modal" class="modal fade add-modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -1191,6 +1207,320 @@
     </div><!-- /.modal -->
 
 
+
+
+    <!--ADD APP MODAL-->
+    <div id="add-app-modal" class="modal fade">
+      <div class="modal-dialog modal-inverse">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Adicionar atalho de aplicação</h4>
+          </div>
+          <div class="modal-body">
+
+            <form class="search-form">
+              <div class="form-group">
+                <input class="form-control contextual-search" type="text" placeholder="buscar aplicação">
+              </div>
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form><!--/search-form-->
+
+            <span class="clearfix"></span>
+
+
+            <div class="auto">
+              <!--/RESEARCH-TABLE-->
+              <table class="table table-striped table-inverse add-shortcut-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Aplicação</th>
+                    <th>Suoprtado pelo chrome?</th>
+                    <th>Possuo acesso?</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">OP</span>
+                      </span>
+                      <p>Operação</p>
+                    </td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">GE</span>
+                      </span>
+                      <p>Georeferenciado</p>
+                    </td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">SC</span>
+                      </span>
+                      <p>Serviço de Campo</p>
+                    </td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">OP</span>
+                      </span>
+                      <p>Operação</p>
+                    </td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">GE</span>
+                      </span>
+                      <p>Georeferenciado</p>
+                    </td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">SC</span>
+                      </span>
+                      <p>Serviço de Campo</p>
+                    </td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">OP</span>
+                      </span>
+                      <p>Operação</p>
+                    </td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">GE</span>
+                      </span>
+                      <p>Georeferenciado</p>
+                    </td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="app-item mini app-item-inverse">
+                        <span class="item-title">SC</span>
+                      </span>
+                      <p>Serviço de Campo</p>
+                    </td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Adicionar Atalhos</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <!--ADD APP MODAL-->
+    <div id="add-indice-modal" class="modal fade add-modal">
+      <div class="modal-dialog modal-inverse">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Adicionar indicador</h4>
+          </div>
+          <div class="modal-body">
+
+            <form class="search-form">
+              <div class="form-group">
+                <input class="form-control contextual-search" type="text" placeholder="buscar indicador">
+              </div>
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form><!--/search-form-->
+
+            <span class="clearfix"></span>
+
+
+            <div class="auto">
+              <!--/RESEARCH-TABLE-->
+              <table class="table table-striped table-inverse add-shortcut-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Indicador</th>
+                    <th>coluna 1</th>
+                    <th>coluna 2</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td><p>Métrica 1</p></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td><p>Métrica 2</p></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td><p>Métrica 1</p></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td><p>Métrica 2</p></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td><p>Métrica 1</p></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label><input type="checkbox" class="check-table-row"/></label>
+                      </div>
+                    </td>
+                    <td><p>Métrica 2</p></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+
+
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Adicionar Indicadores</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
   </body>
 
 
@@ -1210,6 +1540,7 @@
 
     <script type="text/javascript">
 
+    /* EDIT SECTION DROPDOW */
     $('.edit-section-btn').click( function(e) {
       $(this).parent().find('.edit-section-menu').slideToggle();
       return false;
@@ -1218,6 +1549,30 @@
       $('.edit-section-menu').slideUp();
     });
 
+
+
+
+    /*  EDIT SECTION MENU */
+
+      /* ARRANGE SECTIONS */
+      $('.rise-section').click( function() {
+        var secao = $(this).parents('section');
+        secao.prev().insertAfter(secao);
+        $('.edit-section-menu').slideUp();
+        return false
+      });
+      $('.lower-section').click( function() {
+        var secao = $(this).parents('section');
+        secao.next().insertAfter(secao);
+        $('.edit-section-menu').slideUp();
+        return false
+      });
+
+
+
+    /*  METRO INTERFACE  */
+
+      /* SORTABLE */
       $(function() {
         $( "#portal-metro" ).sortable({
           revert: true,
@@ -1233,6 +1588,31 @@
         });
         $( "#portal-metro" ).disableSelection();
       });
+
+
+        /* REMOVE APP SHORTCUT */
+        $('.remove-app-item-btn').click(function() {
+          $(this).parents('.app-item').fadeOut();
+          return false
+        });
+
+
+      /*  SMOOTH SCROLLING */
+      $(function() {
+        $('#navigation a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top - 100
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+
     </script>
   </body>
 </html>

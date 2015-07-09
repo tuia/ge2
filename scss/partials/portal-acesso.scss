@@ -517,6 +517,7 @@ body#portal {
 		height: 250px;
 		margin: 5px;
 		color: #FFFFFF;
+		
 
 		/* mini */
 		&.mini {
@@ -623,6 +624,7 @@ body#portal {
 						padding: 2px 5px;
 						display: inline-block;
 					}
+					.expand-app-btn {display: none;}
 				}
 
 				.call-to-action {
@@ -702,6 +704,7 @@ body#portal {
 			/* DIMENSÕES */
 			/*  médio */
 			&.medium {
+				.hidden-content header .expand-app-btn {display: inline-block;}
 				&>.fa-lock {
 					padding: 10px;
 					font-size: 18px;
@@ -726,6 +729,7 @@ body#portal {
 			}
 			/* pequeno */
 			&.small {
+				.hidden-content header .expand-app-btn {display: inline-block;}
 				&>.fa-lock {
 					padding: 5px;
 					font-size: 14px;

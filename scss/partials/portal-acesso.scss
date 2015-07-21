@@ -116,6 +116,8 @@ body#portal {
 	}
 
 
+
+	/* NAVEGACAO */
 	#navigation {
 		height: 100px;
 		.software-info {
@@ -149,6 +151,7 @@ body#portal {
 			font-weight: 200;
 		}
 	}
+
 
 	section {
 		padding: 75px 20px;
@@ -285,36 +288,51 @@ body#portal {
 						text-align: left;
 						text-indent: 0;
 						display: block;
-						padding: 15px;
-						a {
-							color: $blue;
+						padding: 0;
+
+						&.active {
+							&>a {
+								background: $blue;
+								&:hover {
+									background: $blue;
+								}
+							}
+							.new-title {
+							 color: lighten($light-blue, 50%);
+							}
+							 em {color: lighten($light-blue, 15%)}
+						}
+
+						&>a {
+							display: block;
+							padding: 15px;
+
 							&:hover, &:active, &:visited {
 								text-decoration: none;
+								color: #FFFFFF;
 							}
-						}
-						&:hover {
-							background: darken(#FFFFFF, 10%);
-						}
-						&.active {
-							background: $blue;
-							a {
-							 color: lighten($light-blue, 50%);
-							 em {color: lighten($light-blue, 30%)}
+							&:hover {
+								background: darken(#FFFFFF, 10%);
 							}
-						}
-						.new-title {
-							font-size: 20px;
-							line-height: 1.15;
-							display: block;
-							margin-bottom: 5px;
-						}
-						em {display: block; color: $light-blue}
-						.news-btn {
-							color: $dark-blue;
-							text-transform: uppercase;
-							font-size: 22px;
-							text-align: right;
-							display: block;
+							.new-title {
+								color: $blue;
+								font-size: 20px;
+								line-height: 1.15;
+								display: block;
+								margin-bottom: 5px;
+							}
+							em {
+								display: block;
+								color: $light-blue
+							}
+
+							&.news-btn {
+								color: $dark-blue;
+								text-transform: uppercase;
+								font-size: 22px;
+								text-align: right;
+								display: block;
+							}
 						}
 					}
 				}
@@ -592,8 +610,8 @@ body#portal {
 	/* METRO */
 	.app-item {
 		background: $blue;
-		width: 250px;
-		height: 250px;
+		width: 250px !important;
+		height: 250px !important;
 		margin: 5px;
 		color: #FFFFFF;
 		
@@ -793,13 +811,13 @@ body#portal {
 			/* DIMENSÕES */
 			/*  médio */
 			&.medium {
+				width: 120px !important;
+				height: 120px !important;
 				.hidden-content header .expand-app-btn {display: inline-block;}
 				&>.fa-lock {
 					padding: 10px;
 					font-size: 18px;
 				}
-				width: 120px;
-				height: 120px;
 				.item-title {
 					h2 {font-size: 60px; padding-top: 18px;}
 				}
@@ -818,14 +836,14 @@ body#portal {
 			}
 			/* pequeno */
 			&.small {
+				width: 55px !important;
+				height: 55px !important;
 				.hidden-content header .expand-app-btn {display: inline-block;}
 				.hidden-content header .compress-app-btn {display: none;}
 				&>.fa-lock {
 					padding: 5px;
 					font-size: 14px;
 				}
-				width: 55px;
-				height: 55px;
 				.item-title {
 					h2 {font-size: 24px; padding-top: 15px;}
 					small { display: none;}

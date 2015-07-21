@@ -16,6 +16,22 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+    <!--/FAVICONS-->
+    <link rel="icon" href="img/favicons/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="img/favicons/favicon-24.png" sizes="24x24">
+    <link rel="icon" href="img/favicons/favicon-32.png" sizes="32x32">
+
+    <!--/TOUCHICONS-->
+    <!-- iPad com Retina Display -->
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <!-- iPhone com Retina Display -->
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <!-- Primeira e segunda geração de iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <!-- Versões antigas de iPhone, iPod Touch e Android 2.2+  -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   </head>
 
   <body id="portal" data-spy="scroll" data-target="#navbar-scrollspy">
@@ -119,20 +135,214 @@
 
             <nav class="navbar" style="margin-left:500px">
               <ul class="nav nav-pills navbar-right">
-                <li><a href="#">sem suporte ao Chrome</a></li>
-                <li><a href="#">sem acesso</a></li>
+                <li>
+                  <div class="checkbox">
+                  <label><input type="checkbox" class="switch" />sem suporte ao Chrome</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="checkbox">
+                  <label><input type="checkbox" class="switch" />sem acesso</label>
+                  </div>
+                </li>
               </ul>
             </nav>
 
           </div><!--/section-title-->
 
           <div class="alert alert-info alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Dica!</strong> Clique e arraste as aplicações para personalizar sua tela inicial.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong> Clique e arraste</strong> as aplicações para personalizar sua tela inicial.
           </div>
+
+
           <div id="portal-metro">
 
           <!--/ITEM-->
-            <div class="app-item red">
+            <div data-ss-colspan="3" class="app-item red">
+
+              <i class="fa fa-lock"></i>
+
+              <div class="item-title">
+                <h2>GE</h2>
+                <small>geo-referenciado</small>
+              </div>
+              
+              <div class="hidden-content">
+                <header>
+                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
+                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
+                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
+                </header>
+
+                <a href="despacho.html" class="call-to-action">
+                  <h3>OP</h3>
+                  <span>
+                    <small>Programação de manobras</small>
+                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
+                  </span>
+                </a>
+
+                <ul class="features-list">
+                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+                </ul>
+
+              </div><!--/hidden-content-->
+
+
+            </div><!--/item-->
+
+          <!--/ITEM-->
+            <div data-ss-colspan="3" class="app-item green">
+
+              <div class="item-title">
+                <h2>OP</h2>
+                <small>operação</small>
+              </div>
+              
+              <div class="hidden-content">
+                <header>
+                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
+                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
+                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
+                </header>
+
+                <a href="despacho.html" class="call-to-action">
+                  <h3>OP</h3>
+                  <span>
+                    <small>Programação de manobras</small>
+                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
+                  </span>
+                </a>
+
+                <ul class="features-list">
+                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+                </ul>
+
+              </div><!--/hidden-content-->
+
+
+            </div><!--/item-->
+
+          <!--/ITEM-->
+            <div data-ss-colspan="3" class="app-item">
+
+              <div class="item-title">
+                <h2>OP</h2>
+                <small>operação</small>
+              </div>
+              
+              <div class="hidden-content">
+                <header>
+                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
+                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
+                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
+                </header>
+
+                <a href="despacho.html" class="call-to-action">
+                  <h3>OP</h3>
+                  <span>
+                    <small>Programação de manobras</small>
+                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
+                  </span>
+                </a>
+
+                <ul class="features-list">
+                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+                </ul>
+
+              </div><!--/hidden-content-->
+
+
+            </div><!--/item-->
+
+
+
+          <!--/ITEM-->
+            <div data-ss-colspan="2" class="app-item medium red">
+
+              <div class="item-title">
+                <h2>OP</h2>
+                <small>operação</small>
+              </div>
+              
+              <div class="hidden-content">
+                <header>
+                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
+                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
+                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
+                </header>
+
+                <a href="despacho.html" class="call-to-action">
+                  <h3>OP</h3>
+                  <span>
+                    <small>Programação de manobras</small>
+                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
+                  </span>
+                </a>
+
+                <ul class="features-list">
+                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+                </ul>
+
+              </div><!--/hidden-content-->
+
+
+            </div><!--/item-->
+
+          <!--/ITEM-->
+            <div data-ss-colspan="2" class="app-item medium green">
+
+              <div class="item-title">
+                <h2>OP</h2>
+                <small>operação</small>
+              </div>
+              
+              <div class="hidden-content">
+                <header>
+                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
+                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
+                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
+                </header>
+
+                <a href="despacho.html" class="call-to-action">
+                  <h3>OP</h3>
+                  <span>
+                    <small>Programação de manobras</small>
+                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
+                  </span>
+                </a>
+
+                <ul class="features-list">
+                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
+                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
+                </ul>
+
+              </div><!--/hidden-content-->
+
+
+            </div><!--/item-->
+
+          <!--/ITEM-->
+            <div data-ss-colspan="2" class="app-item medium">
 
               <i class="fa fa-lock"></i>
 
@@ -146,195 +356,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
-                  <h3>OP</h3>
-                  <span>
-                    <small>Programação de manobras</small>
-                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
-                  </span>
-                </a>
-
-                <ul class="features-list">
-                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-                </ul>
-
-              </div><!--/hidden-content-->
-
-
-            </div><!--/item-->
-
-          <!--/ITEM-->
-            <div class="app-item green">
-
-              <div class="item-title">
-                <h2>OP</h2>
-                <small>operação</small>
-              </div>
-              
-              <div class="hidden-content">
-                <header>
-                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
-                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
-                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
-                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
-                </header>
-
-                <a href="op.html" class="call-to-action">
-                  <h3>OP</h3>
-                  <span>
-                    <small>Programação de manobras</small>
-                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
-                  </span>
-                </a>
-
-                <ul class="features-list">
-                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-                </ul>
-
-              </div><!--/hidden-content-->
-
-
-            </div><!--/item-->
-
-          <!--/ITEM-->
-            <div class="app-item">
-
-              <div class="item-title">
-                <h2>OP</h2>
-                <small>operação</small>
-              </div>
-              
-              <div class="hidden-content">
-                <header>
-                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
-                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
-                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
-                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
-                </header>
-
-                <a href="op.html" class="call-to-action">
-                  <h3>OP</h3>
-                  <span>
-                    <small>Programação de manobras</small>
-                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
-                  </span>
-                </a>
-
-                <ul class="features-list">
-                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-                </ul>
-
-              </div><!--/hidden-content-->
-
-
-            </div><!--/item-->
-
-
-
-          <!--/ITEM-->
-            <div class="app-item medium red">
-
-              <div class="item-title">
-                <h2>OP</h2>
-                <small>operação</small>
-              </div>
-              
-              <div class="hidden-content">
-                <header>
-                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
-                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
-                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
-                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
-                </header>
-
-                <a href="op.html" class="call-to-action">
-                  <h3>OP</h3>
-                  <span>
-                    <small>Programação de manobras</small>
-                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
-                  </span>
-                </a>
-
-                <ul class="features-list">
-                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-                </ul>
-
-              </div><!--/hidden-content-->
-
-
-            </div><!--/item-->
-
-          <!--/ITEM-->
-            <div class="app-item medium green">
-
-              <div class="item-title">
-                <h2>OP</h2>
-                <small>operação</small>
-              </div>
-              
-              <div class="hidden-content">
-                <header>
-                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
-                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
-                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
-                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
-                </header>
-
-                <a href="op.html" class="call-to-action">
-                  <h3>OP</h3>
-                  <span>
-                    <small>Programação de manobras</small>
-                    <i class="fa fa-lock hastooltip" title="Sem acesso. Consulte ____ para acessar a aplicação. "></i>
-                  </span>
-                </a>
-
-                <ul class="features-list">
-                  <li><a href="" target="blank">Controle de Manobras<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Manobras Simples<i class="fa fa-external-link"></i></a></li>
-                  <li><a href="" target="blank">Cadastro de Equipes<i class="fa fa-external-link"></i></a></li>
-                </ul>
-
-              </div><!--/hidden-content-->
-
-
-            </div><!--/item-->
-
-          <!--/ITEM-->
-            <div class="app-item medium">
-
-              <i class="fa fa-lock"></i>
-
-              <div class="item-title">
-                <h2>OP</h2>
-                <small>operação</small>
-              </div>
-              
-              <div class="hidden-content">
-                <header>
-                  <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
-                  <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
-                  <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
-                  <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
-                </header>
-
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -367,11 +393,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -403,11 +429,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -439,11 +465,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -476,11 +502,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -512,11 +538,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -548,11 +574,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -587,11 +613,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -623,11 +649,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -659,11 +685,11 @@
                   <a href="#app-modal" class="hastooltip" title="detalhar" data-toggle="modal"><i class="fa fa-search-plus"></i></a>
                   <a href="#" class="hastooltip compress-app-btn" title="diminuir atalho"><i class="fa fa-compress"></i></a> 
                   <a href="#" class="hastooltip expand-app-btn" title="aumentar atalho"><i class="fa fa-expand"></i></a>
-                  <a href="#" class="hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
+                  <a href="index.html" class="newtablink hastooltip" title="abrir em nova janela" target="blank"><i class="fa fa-external-link"></i></a>
                   <a href="#" class="hastooltip remove-app-item-btn" title="remover atalho"><i class="fa fa-remove"></i></a>
                 </header>
 
-                <a href="op.html" class="call-to-action">
+                <a href="despacho.html" class="call-to-action">
                   <h3>OP</h3>
                   <span>
                     <small>Programação de manobras</small>
@@ -846,7 +872,11 @@
               <li><a href="#">Cemig</a></li>
               <li><a href="#">Light</a></li>
               <li role="separator" class="divider">&nbsp;</li>
-              <li><a href="">Clipping</a></li>
+              <li>
+                  <div class="checkbox">
+                  <label><input type="checkbox" class="switch" />Clipping</label>
+                  </div>
+                </li>
             </ul>
           </nav>
 
@@ -901,25 +931,25 @@
                 <!-- Indicators -->
                 <ul class="carousel-indicators carousel-topics">
                   <li class="active" data-target="#carousel-example-generic" data-slide-to="0">
-
-                      <span class="new-title">Axxiom oferece treinamento para equipe de requisitos de software</span>
-                      <em>Quinta feira, 02 de Julho de 2015</em>
-
+                    <a href="#">
+                        <span class="new-title">Axxiom oferece treinamento para equipe de requisitos de software</span>
+                        <em>Quinta feira, 02 de Julho de 2015</em>
+                    </a>
                   </li>
                   <li data-target="#carousel-example-generic" data-slide-to="1">
-
+                    <a href="#">
                       <span class="new-title">Atenção para novas regras de atendimento</span>
                       <em>Quinta feira, 02 de Julho de 2015</em>
-
+                    </a>
                   </li>
                   <li data-target="#carousel-example-generic" data-slide-to="2">
-                    
+                    <a href="#">
                       <span class="new-title">Perdas de hidrelétricas devem crescer no 2º semestre, diz governo após questionamento de setor industrial</span>
-                      <em>Quinta feira, 02 de Julho de 2015 - via <a href="#" target="blank">G1</a> </em>
-                    
+                      <em>Quinta feira, 02 de Julho de 2015 - via G1 </em>
+                    </a>
                   </li>
                   <li>
-                    <a href="#">mais notícias &raquo;</a>
+                    <a href="#" class="news-btn">mais notícias &raquo;</a>
                   </li>
                 </ul>
               </div><!--/col4-->
@@ -1539,6 +1569,8 @@
     <script src="js/tag-it.js"></script>
     <script src="js/bootbox.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="http://packery.metafizzy.co/packery.pkgd.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/packery/1.4.2/packery.pkgd.min.js"></script>
 
     <script type="text/javascript">
 
@@ -1550,6 +1582,7 @@
     $(document).click(function(){
       $('.edit-section-menu').slideUp();
     });
+    $('body > :nth-child(2) .rise-section, body > :nth-child(5) .rise-section ').hide();
 
 
     /*  EDIT SECTION MENU */
@@ -1568,9 +1601,11 @@
 
         item.prev().insertAfter(item);
 
+        $('.rise-section, .lower-section').show();
+        $('body > :nth-child(2) .rise-section, body > :nth-child(5) .rise-section ').hide();
+
         return false
       });
-
 
       $('.lower-section').click( function() {
         var secao = $(this).parents('section');
@@ -1585,64 +1620,114 @@
 
         item.next().insertBefore(item);
 
+        $('.rise-section, .lower-section').show();
+        $('body > :nth-child(2) .rise-section, body > :nth-child(5) .rise-section ').hide();
+
         return false
       });
 
-    /*  METRO INTERFACE  */
 
-      /* SORTABLE */
-      $(function() {
-        $( "#portal-metro" ).sortable({
-          revert: true,
-          opacity: .5,
-          /*placeholder: {
-              element: function(currentItem) {
-                  return $("<div class='app-item' style='background: #CCCCCC; border: 3px dashed #aaa'>&nbsp;</div>")[0];
-              },
-              update: function(container, p) {
-                  return;
+
+
+      /*  METRO INTERFACE  */
+      /*  packery.js + draggable (jquery-ui) */
+
+      $( function() {
+        var $container = $('#portal-metro').packery({
+          columnWidth: 55,
+          rowHeight: 55,
+          gutter: 10
+        });
+
+        //update elements dimensions
+        $container.on( 'click', '.app-item', function( event ) {
+
+          var $target = $( event.target );
+          var app = $( event.target ).parents('.app-item');
+
+          //var isSmall = $target.hasClass('small');
+          //$target.toggleClass('changeSize');
+          //console.log($target);
+          //console.log(app);
+          
+          var details = $target.is('a[data-toggle="modal"], .fa-search-plus');
+          var compress = $target.is('.fa-compress, .compress-app-btn');
+          var expand = $target.is('.fa-expand, .expand-app-btn');
+          var newtab = $target.is('.newtablink, .fa-external-link, .call-to-action *, .call-to-action');
+          var remove = $target.is('.fa-remove, .remove-app-item-btn');
+
+
+          // SE CLIQUEI EM VER DETALHES...
+          if ( details ) {
+              var modalUrl = $(this).find('a[data-toggle="modal"]').attr('href');
+              $(modalUrl).modal('show');
+          }
+
+          // SE CLIQUEI EM DIMINUIR...
+          if (  compress ) {
+
+              if ( app.hasClass('medium') ) {
+                app.removeClass('medium');
+                app.addClass('small');
+              } else {
+                app.addClass('medium');
+              }  
+
+              $container.packery();
+          }
+
+          // SE CLIQUEI EM AUMENTAR...
+          if ( expand ) {
+
+              if ( app.hasClass('small') ) {
+                app.removeClass('small');
+                app.addClass('medium');
+              } else {
+                app.removeClass('medium');
               }
-          }*/
+
+              $container.packery();
+          }
+
+          // SE CLIQUEI EM ABRIR EM NOVA ABA...
+          if ( newtab ) {
+            
+              var url = app.find('.newtablink').attr('href');
+              window.open(url, '_blank');
+          }
+
+          // SE CLIQUEI EM REMOVER...
+          if (  remove ) {
+
+              app.fadeOut(500, function() {
+                $(this).remove();
+
+              $container.packery();
+
+              });
+              $('.hastooltip').tooltip('hide');
+          }
+
+          return false
+
         });
-        $( "#portal-metro" ).disableSelection();
+
+
+        //DRAGABBLE
+
+        // get item elements, jQuery-ify them
+        var $itemElems = $container.find('.app-item');
+
+        // make item elements draggable
+        $itemElems.draggable();
+
+        // bind Draggable events to Packery
+        $container.packery( 'bindUIDraggableEvents', $itemElems );
+
       });
 
 
-      /* REMOVE APP SHORTCUT */
-      $('.remove-app-item-btn').click(function() {
-        $(this).parents('.app-item').fadeOut(500, function() {
-          $(this).remove();
-        });
-        $('.hastooltip').tooltip('hide');
-        return false
-      });
-      /* EXPAND APP */
-      $('.expand-app-btn').click( function() {
-        var app = $(this).parents('.app-item');
-
-        if ( app.hasClass('small') ) {
-          app.removeClass('small');
-          app.addClass('medium');
-        } else {
-          app.removeClass('medium');
-        }
-        return false
-      });
-      /* COMPRESS APP */
-      $('.compress-app-btn').click( function() {
-        var app = $(this).parents('.app-item');
-
-        if ( app.hasClass('medium') ) {
-          app.removeClass('medium');
-          app.addClass('small');
-        } else {
-          app.addClass('medium');
-        }
-        return false
-      });
-
-
-      /*  SMOOTH SCROLLING */
+      //  SMOOTH SCROLLING
       $(function() {
         $('#navigation a[href*=#]:not([href=#])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -1656,6 +1741,25 @@
             }
           }
         });
+      });
+
+      //SWITCHES
+      $(document).ready( function() {
+
+        var switches = document.querySelectorAll('input[type="checkbox"].switch');
+
+        for (var i=0, sw; sw = switches[i++]; ) {
+          var div = document.createElement('div');
+          div.className = 'switch';
+          sw.parentNode.insertBefore(div, sw.nextSibling);
+        }
+
+      });
+
+      $('.carousel-indicators li').click( function(e) {
+        var url = $(this).find('a').attr('href');
+        window.open(url, '_blank');
+        e.preventDefault();
       });
 
     </script>

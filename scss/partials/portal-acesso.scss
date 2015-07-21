@@ -56,7 +56,7 @@ body#portal {
 	 * Inspired by Espresso’s “Tools” switch
 	 */
 
-
+	section {
 	input[type="checkbox"]:not(:checked), 
 	input[type="checkbox"]:checked { /* :checked here acting as a filter for older browsers */
 		position: absolute;
@@ -64,54 +64,55 @@ body#portal {
 	}
 
 	.checkbox {
-		label {
-			position: relative;
-			display: inline-block;
-			margin: 0;
-		}
+			label {
+				position: relative;
+				display: inline-block;
+				margin: 0;
+			}
 
-		input[type="checkbox"].switch + div {
-			width: 1.8em;
-			height: 1em;
-			border: 1px solid rgba(0,0,0,.3);
-			border-radius: 999px;
-			background: #eee;
-			overflow: hidden;
-			float: right;
-			position: relative;
-			top: 5px;
-			margin-left: 10px;
-			transition-duration: .4s;
-			transition-property: padding, width;
-		}
+			input[type="checkbox"].switch + div {
+				width: 1.8em;
+				height: 1em;
+				border: 1px solid rgba(0,0,0,.3);
+				border-radius: 999px;
+				background: #eee;
+				overflow: hidden;
+				float: right;
+				position: relative;
+				top: 5px;
+				margin-left: 10px;
+				transition-duration: .4s;
+				transition-property: padding, width;
+			}
 
-		input[type="checkbox"].switch:checked + div {
-			padding-left: .8em;
-			width: 1.8em;
-			background: $blue;
-		}
+			input[type="checkbox"].switch:checked + div {
+				padding-left: .8em;
+				width: 1.8em;
+				background: $blue;
+			}
 
-		input[type="checkbox"].switch + div:before {
-			content: '';
-			display: block;
-			width: 1em; height: 1em;
-			margin: -1px;
-			border: 2px solid #999;
-			border-radius: inherit;
-		}
+			input[type="checkbox"].switch + div:before {
+				content: '';
+				display: block;
+				width: 1em; height: 1em;
+				margin: -1px;
+				border: 2px solid #999;
+				border-radius: inherit;
+			}
 
-		input[type="checkbox"].switch:checked + div:before {
-			border: 2px solid $blue;
-			background: #fff;
-		}
+			input[type="checkbox"].switch:checked + div:before {
+				border: 2px solid $blue;
+				background: #fff;
+			}
 
-		input[type="checkbox"].switch:active + div:before {
-			background-color: $light-blue;
-		}
+			input[type="checkbox"].switch:active + div:before {
+				background-color: $light-blue;
+			}
 
-		input[type="checkbox"].switch:focus + div {
-			box-shadow: 0 0 .3em 1px $light-blue,
-			            0 1px 1px hsla(0,0%,100%,.8);
+			input[type="checkbox"].switch:focus + div {
+				box-shadow: 0 0 .3em 1px $light-blue,
+				            0 1px 1px hsla(0,0%,100%,.8);
+			}
 		}
 	}
 
@@ -618,8 +619,8 @@ body#portal {
 
 		/* mini */
 		&.mini {
-			width: 40px;
-			height: 40px;
+			width: 40px !important;
+			height: 40px !important;
 			text-align: center;
 			padding: 5px; 
 			.item-title {

@@ -1378,23 +1378,23 @@ body.entity-iframe {
 
 	&.pendente, &.criado {
 		background: $pendente;
-		&:hover { background: darken($pendente, 10%) }
+		&:hover { background: darken($pendente, 5%) }
 	}
 	&.designado, &.executado {
 		background: $designado;
-		&:hover { background: darken($designado, 10%) }
+		&:hover { background: darken($designado, 5%) }
 	}
 	&.acionado, &.executado-pda {
 		background: $acionado;
-		&:hover { background: darken($acionado, 10%) }
+		&:hover { background: darken($acionado, 5%) }
 	}
 	&.em-execucao, &.aguardando-execucao, &.aguardando-processamento {
 		background: $em-execucao;
-		&:hover { background: darken($em-execucao, 10%) }
+		&:hover { background: darken($em-execucao, 5%) }
 	}
 	&.finalizado, &.erro {
 		background: $finalizado;
-		&:hover { background: darken($finalizado, 10%) }
+		&:hover { background: darken($finalizado, 5%) }
 	}
 
 	&.pendente, &.criado, &.designado, &.executando, &.acionado, &.executado-pda, &.em-execucao, &.aguardando-execucao, &.aguardando-processamento, &.finalizado, &.erro {
@@ -1485,9 +1485,8 @@ body.entity-iframe {
 a.entity-symbol {
 	&.pendente, &.designado, &.acionado, &.em-execucao, &.finalizado {color: $inverse-text; color: rgba(255,255,255,.9);}
 	&:hover {
-		background: darken(#EEEEEE, 10%);
+		background: darken(#EEEEEE, 5%);
 		text-decoration: none;
-		color: #666;
 	}
 }
 .dropdown {

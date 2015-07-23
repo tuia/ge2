@@ -917,7 +917,7 @@
             </div>        
 
             <ul class="nav navbar-nav">
-              <li><a href="#" class="hastooltip" title="consultar equipes"><i class="fa fa-plus fa-2x"></i></a></li>
+              <li><a href="#incluir" class="hastooltip show-window-btn" title="incluir perfil funcional"><i class="fa fa-plus fa-2x"></i></a></li>
 
               <!-- filtrar -->
               <li class="btn-group filter-group">
@@ -971,10 +971,10 @@
                 <label>Tipo de usuário</label>
                 <div class="btn-group btn-group-justified" data-toggle="buttons">
                   <label class="btn btn-default">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Próprio
+                    <input type="checkbox" id="option2" autocomplete="off"> Próprio
                   </label>
                   <label class="btn btn-default">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> Terceirizado
+                    <input type="checkbox" id="option3" autocomplete="off"> Terceirizado
                   </label>
                 </div>
               </div>
@@ -1082,7 +1082,16 @@
               </td>
               <td class="text-success">Sim</td>
               <td>
-                <a href="#detalhes" class="btn btn-default btn-xs hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-files-o"></i></a>
+                <div role="group" class="btn-group">
+                  <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
+                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
+                  <div role="group" class="btn-group">
+                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
+                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">excluir</a></li>
+                      </ul>
+                    </div>
+                </div>
               </td>
             </tr>
 
@@ -1094,7 +1103,16 @@
               </td>
               <td class="text-danger">Não</td>
               <td>
-                <a href="#detalhes" class="btn btn-default btn-xs hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-files-o"></i></a>
+                <div role="group" class="btn-group">
+                  <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
+                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
+                  <div role="group" class="btn-group">
+                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
+                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">excluir</a></li>
+                      </ul>
+                    </div>
+                </div>
               </td>
             </tr>
 
@@ -1106,7 +1124,16 @@
               </td>
               <td class="text-danger">Não</td>
               <td>
-                <a href="#detalhes" class="btn btn-default btn-xs hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-files-o"></i></a>
+                <div role="group" class="btn-group">
+                  <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
+                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
+                  <div role="group" class="btn-group">
+                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
+                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">excluir</a></li>
+                      </ul>
+                    </div>
+                </div>
               </td>
             </tr>
 
@@ -1120,7 +1147,16 @@
               </td>
               <td class="text-success">Sim</td>
               <td>
-                <a href="#detalhes" class="btn btn-default btn-xs hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-files-o"></i></a>
+                <div role="group" class="btn-group">
+                  <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
+                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
+                  <div role="group" class="btn-group">
+                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
+                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">excluir</a></li>
+                      </ul>
+                    </div>
+                </div>
               </td>
             </tr>
 
@@ -1184,6 +1220,39 @@
         </div><!--/entity-window-header-->
         <div class="entity-body">
           <iframe src="aa-detalhes-de-perfil.html" frameborder="0" scrolling="no"></iframe>
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->      
+    </div><!--/entity-window-->
+
+
+    <!--/EXAMPLE-WINDOW-->
+    <div class="entity-window horizontal" id="editar">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/entity-window-header-->
+        <div class="entity-body">
+          <iframe src="aa-editar-detalhes-de-perfil.html" frameborder="0" scrolling="no"></iframe>
+        </div><!--/.entity-body-->
+      </div><!--/entity-content-->      
+    </div><!--/entity-window-->
+
+    <!--/EXAMPLE-WINDOW-->
+    <div class="entity-window horizontal" id="incluir">
+      <div class="entity-content">
+        <div class="entity-window-header">
+          <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
+          <div class="pull-right">
+            <a href="#" class="btn btn-xs btn-default hastooltip" data-title="destacar"><i class="fa fa-external-link"></i></a>
+            <a href="#" class="btn btn-xs btn-default btn-close"><i class="fa fa-times"></i></a>
+          </div>
+        </div><!--/entity-window-header-->
+        <div class="entity-body">
+          <iframe src="aa-incluir-perfil.html" frameborder="0" scrolling="no"></iframe>
         </div><!--/.entity-body-->
       </div><!--/entity-content-->      
     </div><!--/entity-window-->

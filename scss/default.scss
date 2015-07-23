@@ -731,9 +731,23 @@
 
 		.table {
 			margin: 10px 0 15px;
-			tr th {
-				text-transform: uppercase;
-			}
+
+		    thead {
+		    	tr {
+		    		th {
+		    			background: #EEEEEE;
+		    			color: #666666;
+		    			font-weight: 400;
+		    			font-size: 13px;
+		    			padding: 5px;
+		    			border-bottom: none;
+		    			vertical-align: middle;
+		    			text-align: center;
+		    			text-transform: uppercase;
+		    		}
+		    	}
+		    }
+
 			.btn-group {
 			  white-space: nowrap;
 			  .btn, .btn-group {
@@ -1067,8 +1081,8 @@ iframe {
 
 	http://css-tricks.com/snippets/jquery/fit-iframe-to-content/
 	http://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using
-	
-	min-height: 470px; */
+	*/
+	min-height: 470px; 
 
 }
 body.entity-iframe {
@@ -1125,6 +1139,14 @@ body.entity-iframe {
 		padding: 0; 
 		position: relative;
 	}
+}
+
+.entity-window-title {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 12px 10px;
+	border-bottom: 1px solid #eeeeee;
 }
 
 

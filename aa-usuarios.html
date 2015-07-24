@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Perfis funcionais</title>
+    <title>Usuários com acesso</title>
 
     <!-- STYLES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -129,7 +129,7 @@
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <strong>Perfis funcionais</strong>
+                <strong>Usuários com acesso</strong>
                 <span class="caret"></span>
               </a>
               <div class="dropdown-menu" role="tabpanel" style="width:250px">
@@ -909,15 +909,17 @@
       <div class="container">
 
         <div class="help-container filter-container">
+
+
           <!--/ACTIONS NAVBAR-->
           <nav id="actions-navbar" class="navbar navbar-default">
 
             <div class="navbar-title">
-              <h1><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Perfis funcionais</h1>
+              <h1><a href="#" class="bookmark-button marked" data-toggle="tooltip" data-title="adicionar aos favoritos"><i class="fa fa-bookmark"></i></a> Usuários com acesso</h1>
             </div>        
 
             <ul class="nav navbar-nav">
-              <li><a href="#incluir" class="hastooltip show-window-btn" title="incluir perfil funcional"><i class="fa fa-plus fa-2x"></i></a></li>
+              <li><a href="#incluir" class="hastooltip show-window-btn" title="conceder permissão à usuário"><i class="fa fa-plus fa-2x"></i></a></li>
 
               <!-- filtrar -->
               <li class="btn-group filter-group">
@@ -958,36 +960,75 @@
             cillum dolore eu fugiat nulla pariatur. </p>
           </div> 
 
-          <div class="well form research-container filter-content">
+          <div class="well form research-container filter-content check-table">
 
             <div class="row bordered vertical">
 
-              <div class="form-group col-xs-4">
-                <label>Nome do perfil</label>
-                <input type="text" class="form-control"/>
-              </div>
+              <div class="col-xs-6">
+                <div class="row">
 
-              <div class="form-group col-xs-4">
-                <label>Tipo de usuário</label>
-                <div class="btn-group btn-group-justified" data-toggle="buttons">
-                  <label class="btn btn-default">
-                    <input type="checkbox" id="option2" autocomplete="off"> Próprio
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="checkbox" id="option3" autocomplete="off"> Terceirizado
-                  </label>
+                  <h4>Usuário</h4>
+
+                  <div class="form-group col-xs-6">
+                    <label>Matrícula</label>
+                    <input type="text" class="form-control"/>
+                  </div>
+
+                  <div class="form-group col-xs-6">
+                    <label>Nome</label>
+                    <input type="text" class="form-control"/>
+                  </div>
+
+                  <div class="form-group col-xs-12">
+                    <label>Tipo de usuário</label>
+                    <div class="btn-group btn-group-justified" data-toggle="buttons">
+                      <label class="btn btn-default">
+                        <input type="checkbox" id="option2" autocomplete="off" /> Próprio
+                      </label>
+                      <label class="btn btn-default">
+                        <input type="checkbox" id="option3" autocomplete="off" /> Terceirizado
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="form-group col-xs-4" style="border-right: none">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> Mostrar somente perfis que requerem associação com área geográfica
-                  </label>
-                </div>
-              </div>
+              <div class="col-xs-6">
+                <h4>Permissão</h4>
+                <div class="row">
 
-              <div class="form-group col-xs-3"></div>
+                  <div class="col-xs-6" sty>
+                    <label>Validade</label>
+                    <div class="row compact">
+                      <div class="form-group col-xs-6">
+                        <input type="text" class="datepicker form-control" placeholder="início"/>
+                      </div>
+                      <div class="form-group col-xs-6">
+                        <input type="text" class="datepicker form-control" placeholder="término"/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-xs-6">
+                    <label>Áreas geográficas</label>
+                    <select class="selectpicker form-control" multiple data-live-search="true">
+                      <option>área a</option>
+                      <option>área b</option>
+                      <option>área c</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-xs-12">
+                    <label>Perfimissões de acesso</label>
+                    <select class="selectpicker form-control" multiple data-live-search="true">
+                      <option>permissão a</option>
+                      <option>permissão b</option>
+                      <option>permissão c</option>
+                    </select>
+                  </div>
+
+                </div><!--row-->
+              </div><!--col8-->
 
 
             </div><!--/row-->
@@ -1012,6 +1053,33 @@
           <p>Resultados filtrados por tipo de serviço <span class="label label-info">Abrir equipamento</span> e <span class="label label-info">Trocar dispositivo </span> e localização <span class="label label-info">São Bento - Belo Horizonte.</span> <a href="#" class="btn btn-default remove-filter-btn">Limpar Filtros</a> </p>
         </div>
 
+
+
+        <div class="table-options btn-toolbar disabled" role="toolbar">
+
+          <!--/checkbox-->
+          <div class="dropdown btn-group">
+            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+              <span class="checkbox">
+                <label><input type="checkbox" id="checkboxExample"> <span class="checklength">0</span> <small class="unity">selecionados</small> <span class="caret"></span></label>
+              </span><!--/.checkbox-->
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" class="check-table-all-btn">selecionar todos</a></li>
+              <li><a href="#" class="check-table-clear-btn">limpar seleção</a></li>
+            </ul>
+          </div><!--/btn-group-->
+
+          <div class="btn-group" role="group">
+            <a href="#" class="btn btn-default">
+              <img src="img/icons/user-allow.png" alt="concecer permissão" width="17" height="18" /> conceder permissão
+            </a>
+            <a href="#" class="btn btn-default">
+              <img src="img/icons/user-unallow.png" alt="revogar permissão" width="17" height="18" /> revogar permissão
+            </a>
+          </div>
+
+        </div>
 
         <div class="row">
           <div class="col-xs-8">
@@ -1061,12 +1129,12 @@
         </div>
 
         <!--TABLE-->
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered research-table">
           <thead data-spy="affix" data-offset-top="275">
             <tr>
-              <th>Nome do perfil</th>
-              <th>Requer associação com área geográfica?</th>
-              <th>Permissões de acesso</th>
+              <th>#</th>
+              <th>Nome / ID</th>
+              <th>Perfis associados</th>
               <th>opções</th>
             </tr>
           </thead>
@@ -1074,88 +1142,24 @@
 
           <!--LINHA-->
             <tr>
-              <td>Despachante</td>
-              <td class="text-success">Sim</td>
+              <td><input type="checkbox" class="check-table-row"/></td>
               <td>
-                <strong>Módulo de autorização:</strong> consultar perfis funcionais, editar perfis funcionais. <br />
-                <strong>G-DIS Visualizador:</strong> vista padrão. <br />
-                <strong>G-DIS Inspeção:</strong> consultar perfis funcionais, editar perfis funcionais, vista padrão.
-              </td>
-              <td>
-                <div role="group" class="btn-group">
-                  <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
-                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
-                  <div role="group" class="btn-group">
-                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
-                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">excluir</a></li>
-                      </ul>
-                    </div>
+                <div class="entity-card">
+                  <a title="copiar id" class="entity-symbol large" href="#">
+                    <i class="fa fa-user fa-2x"></i>
+                  </a>
+                  <div class="entity-card-data">
+                    <div class="entity-title">José Garcia de Abreu </div>
+                    <span class="entity-subitem"><span class="badge id">4564321 <a data-title="copiar" data-toggle="tooltip" class="copy-button" href="#" data-original-title="" title=""><i class="fa fa-files-o"></i></a></span></span>
+                  </div>
+                  <span class="clearfix"></span>
                 </div>
               </td>
-            </tr>
-
-          <!--LINHA-->
-            <tr>
-              <td>Atendente</td>
-              <td class="text-success">Sim</td>
-              <td>
-                <strong>Módulo de autorização:</strong> consultar perfis funcionais.
-              </td>
+              <td>despachante, gerente, gestor, eletricista</td>
               <td>
                 <div role="group" class="btn-group">
                   <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
-                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
-                  <div role="group" class="btn-group">
-                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
-                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">excluir</a></li>
-                      </ul>
-                    </div>
-                </div>
-              </td>
-            </tr>
-
-          <!--LINHA-->
-            <tr>
-              <td>Atendente</td>
-              <td class="text-danger">Não</td>
-              <td>
-                <strong>Módulo de autorização:</strong> consultar perfis funcionais.
-              </td>
-              <td>
-                <div role="group" class="btn-group">
-                  <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
-                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
-                  <div role="group" class="btn-group">
-                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
-                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">excluir</a></li>
-                      </ul>
-                    </div>
-                </div>
-              </td>
-            </tr>
-
-          <!--LINHA-->
-            <tr>
-              <td>Despachante empreiteira</td>
-              <td class="text-danger">Não</td>
-              <td>
-                <strong>Módulo de autorização:</strong> consultar perfis funcionais, editar perfis funcionais. <br />
-                <strong>G-DIS Visualizador:</strong> vista padrão. <br />
-                <strong>G-DIS Inspeção:</strong> consultar perfis funcionais, editar perfis funcionais, vista padrão.
-              </td>
-              <td>
-                <div role="group" class="btn-group">
-                  <a href="#detalhes" class="btn btn-default btn-sm hastooltip show-window-btn" title="ver detalhes"><i class="fa fa-file-text-o"></i></a>
-                  <a href="#editar" class="btn btn-default btn-sm hastooltip show-window-btn" title="editar"><i class="fa fa-pencil"></i></a>
-                  <div role="group" class="btn-group">
-                      <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button"><span class="caret"></span></button>
-                      <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">excluir</a></li>
-                      </ul>
-                    </div>
+                  <a href="#conceder" class="btn btn-default btn-sm hastooltip show-window-btn" title="conceder permissão"><img src="img/icons/user-allow.png" alt="concecer permissão" width="14" height="15" /> </a>
                 </div>
               </td>
             </tr>
@@ -1209,7 +1213,7 @@
 
 
     <!--/EXAMPLE-WINDOW-->
-    <div class="entity-window horizontal" id="detalhes">
+    <div class="entity-window small" id="detalhes">
       <div class="entity-content">
         <div class="entity-window-header">
           <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
@@ -1219,14 +1223,14 @@
           </div>
         </div><!--/entity-window-header-->
         <div class="entity-body">
-          <iframe src="aa-detalhes-de-perfil.html" frameborder="0" scrolling="no"></iframe>
+          <iframe src="aa-detalhes-de-usuario.html" frameborder="0" scrolling="no"></iframe>
         </div><!--/.entity-body-->
       </div><!--/entity-content-->      
     </div><!--/entity-window-->
 
 
     <!--/EXAMPLE-WINDOW-->
-    <div class="entity-window horizontal" id="editar">
+    <div class="entity-window" id="editar">
       <div class="entity-content">
         <div class="entity-window-header">
           <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>
@@ -1242,7 +1246,7 @@
     </div><!--/entity-window-->
 
     <!--/EXAMPLE-WINDOW-->
-    <div class="entity-window horizontal" id="incluir">
+    <div class="entity-window" id="incluir">
       <div class="entity-content">
         <div class="entity-window-header">
           <a href="#" class="bookmark-button" data-toggle="tooltip" data-placement="right" data-title="adicionar aos favoritos"><i class="fa fa-bookmark-o"></i></a>

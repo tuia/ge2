@@ -677,6 +677,26 @@ body#portal {
 		    	color: #FFFFFF;
 		    }
 
+
+		    /* ÚLTIMOS ITENS ABREM PARA A ESQUERDA */
+		    &:nth-child(9), &:nth-child(8), &:nth-child(7), &:nth-child(6) {
+		    	&:hover {
+		    		.hidden-content {
+		    			right: 100% !important;
+		    			left: auto !important;
+		    		}
+		    	}
+		    }
+		    &:nth-child(5) {
+		    	&:hover {
+		    		.hidden-content .features-list {
+		    			right: 100% !important;
+		    			left: auto !important;
+		    		}
+		    	}
+		    }
+
+
 			/* HOVER */
 			&:hover {
 				z-index: 1000 !important;
@@ -686,9 +706,8 @@ body#portal {
 				}
 
 				.hidden-content {
-					display: block;
-					visibility: visible;
 					opacity: 1;
+					visibility: visible;
 					z-index: 1000 !important;
 				}
 
@@ -702,11 +721,9 @@ body#portal {
 
 			
 
-
 			/* CONTEÚDO ESCONDIDO */
 			.hidden-content {
 				visibility: none;
-				display: none;
 				opacity: 0;
 				transition: opacity .1s linear;
 				transition-delay: .5s;
